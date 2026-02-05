@@ -6,7 +6,7 @@ Welcome to our painting application built with p5.js !
 👇 **Click the button below to start painting**
 
 <p align="center">
-  <a href="https://uob-comsm0166.github.io/2026-group-13/" style="font-size: 22px; font-weight: bold;">
+  <a href="https://uob-comsm0166.github.io/2026-group-13" target="_blank" style="font-size: 28px; font-weight: bold;">
     🚀 Launch the Paint App
   </a>
 </p>
