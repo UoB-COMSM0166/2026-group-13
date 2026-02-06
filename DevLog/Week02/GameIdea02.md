@@ -1,7 +1,10 @@
 # Game Idea 02: Kitten Run!
 
-## Game Screenshots
-![alt text](cat.png)
+## Screenshots
+*Early prototype sketch showing the core obstacle layout and player character.*
+<p align="center">
+  <img src="cat.png" alt="Kitten Run prototype screenshot" width="500">
+</p>
 
 ## Core Concept
 **Kitten Run!** is a 2D side-scrolling mini-game inspired by the mechanics of *Flappy Bird*. Players take control of a kitten protagonist, navigating through a hazardous environment to collect rewards while avoiding deadly obstacles.
