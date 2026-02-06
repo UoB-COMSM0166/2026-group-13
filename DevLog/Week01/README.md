@@ -5,11 +5,11 @@
 ## 添加信息
 添加姓名、邮箱、github用户名以及小组合照
 
-Clone Template Repository
+## Clone Template Repository
 Clone the instructor's template and set up the initial folder structure.
 
-Group Discussion
+## Group Discussion
 Each team member shared games they are interested in; no specific format or genre was restricted.
 
-Add Team Information
+## Add Team Information
 Update the documentation with names, emails, GitHub usernames, and a group photo.
