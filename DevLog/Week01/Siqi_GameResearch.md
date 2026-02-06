@@ -1,4 +1,4 @@
-# The Final Station
+# Game Inspiration: The Final Station
 <p align="center">
   <img src="img/Siqi_TheFinalStation.jpg" width="500">
 </p>
@@ -7,7 +7,7 @@
 
 ## Key Game Mechanics
 
-The main gameplay loop can be summarised as:  
+The main gameplay loop can be summarised as: 
 **Arrive at a location → Explore → Manage danger and resources → Complete objectives → Evacuate → Progress to the next location.**  
 This loop is repeated across different “stations,” each acting as a self-contained level with its own challenges and narrative fragments.
 
