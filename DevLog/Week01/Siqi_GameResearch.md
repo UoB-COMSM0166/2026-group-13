@@ -1,6 +1,6 @@
 # Game Inspiration: The Final Station
 <p align="center">
-  <img src="img/Siqi_TheFinalStation.jpg" width="500">
+  <img src="img/Siqi_TheFinalStation.jpg" width="550">
 </p>
 
 *This game is a 2D side-scrolling shooter video game that combines exploration, survival, and narrative elements. It shows how to create tension and emotional resonance without relying on complex systems, using simple mechanics in conjunction with clever level structures and resource constraints.*
