@@ -1,4 +1,4 @@
-# Game Idea 1
+# Game Idea 1: U help U
 
 ## Game Overview
 
