@@ -38,8 +38,11 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 
 ### Introduction
 
-- 5% ~250 words 
-- Describe your game, what is based on, what makes it novel? (what's the "twist"?) 
+ ***U help U***
+
+This is a side‑scrolling level-based platformer where the player can record their actions and let a past version of themselves replay those actions. The core fun comes from cooperating with your past selves to solve puzzles and overcome obstacles.
+
+At its core, this is a stage‑based platformer. Players progress through the game one level at a time, with each level functioning as an independent challenge. After completing a stage, they simply move on to the next one.
 
 ### Requirements 
 
