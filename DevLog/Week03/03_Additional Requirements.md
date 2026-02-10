@@ -1,4 +1,4 @@
-# 🧩 *U help U* — Additional Requirements from Paper Prototype
+# 🤝 *U help U* — Additional Requirements from Paper Prototype
 
 ## 1. High Precision Required for Recorded Actions
 During paper‑prototype testing, players quickly discover:
@@ -50,7 +50,7 @@ Each level requires:
 
 ---
 
-# 🐾 Game Idea 02: *Kitten Run!* — Additional Requirements from Paper Prototype
+# 😺 *Kitten Run!* — Additional Requirements from Paper Prototype
 
 ## 1. Players Understand the Gameplay Quickly but Also Get Bored Quickly
 
