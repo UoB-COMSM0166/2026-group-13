@@ -11,6 +11,7 @@
 - **Potential Playerr潜在玩家**
 The people who care about the first impression, how easy it is to pick up, and performance.
 - **职业玩家** 
+- **普通玩家**
 
 ### **2. Designers设计师**
 关卡策划/关卡系统设计师、ui设计、art designer美术设计师、write designer文案设计师等等
@@ -20,7 +21,7 @@ The people who focuses on the implementation and smooth execution of core functi
 
 ### **4. 测试（Tester）**
 
-### **5. lecturer /TA讲师/助教（课程授课教师**
+### **5. lecturer /TA讲师/助教（课程授课教师）**
 
 ### **6. 竞争对手（比如其他团队、市面游戏）**
 
@@ -44,6 +45,8 @@ The people who focuses on the implementation and smooth execution of core functi
 - **Catchy Title and Slogan** - As a potential player, I want to see a unique, memorable game title and a concise gameplay description, so that I can instantly understand what makes this game unique. Must include a "Hook Line" (under 20 words) that highlights the core challenge (e.g., "The ultimate one-life challenge").
 - **Superior Game Performance** - As a potential player, I want the game to load quickly within the p5.js web environment, so that I don't lose interest due to long wait times. When running on mainstream browsers (Chrome/Edge), the frame rate (FPS) must remain stable at approximately 60 FPS.
 4. **职业玩家**：
+5. **Normal Player**：  
+- **Technical Implementation & Stability** - As a normal player, I want the game to run smoothly without lag or unexpected crashes, so that I can focus on gameplay rather than technical issues.
 
 ### **Part two: Designers设计师**
 
@@ -61,7 +64,8 @@ The people who focuses on the implementation and smooth execution of core functi
 
 ### **Part eight: software engineering 本课程及学院**
 
-### **Part nine: platform平台：p5js**
+### **Part nine: platform平台：p5js**  
+- **Technical Implementation & Stability** - As the p5.js platform, I want the game logic and rendering to be implemented efficiently within the p5.js framework, so that the game can run reliably in a web browser environment.
 
 ### **Part ten: 市场相关人员**
 
