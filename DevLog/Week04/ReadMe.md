@@ -18,7 +18,7 @@ The people who care about the first impression, how easy it is to pick up, and p
 ### **3. Developer(Coder) 开发者（程序员）** 
 The people who focuses on the implementation and smooth execution of core functionalities, as well as maintainability, scalability, and debugging efficiency.
 
-### **4. 测试（Tester） **
+### **4. 测试（Tester）**
 
 ### **5. lecturer /TA讲师/助教（课程授课教师**
 
@@ -34,42 +34,36 @@ The people who focuses on the implementation and smooth execution of core functi
 
 <br>
 
-## Epics/User Stories
+## Epics and User Stories
 
-### **Epics Part one: Players**
-1. 高玩：
-2. 菜鸟/新手：
-3. Potential Player: Accessible Gameplay and Seamless Experience
-·Visual Hook
-As a potential player looking for a new game, I want to see a vibrant and dynamic cover art, so that my curiosity is sparked and I am encouraged to click through. The color scheme of the cover art must remain consistent with the in-game UI to create a unified brand identity.
-·Catchy Title and Slogan
-As a potential player, I want to see a unique, memorable game title and a concise gameplay description, so that I can instantly understand what makes this game unique. Must include a "Hook Line" (under 20 words) that highlights the core challenge (e.g., "The ultimate one-life challenge").
-·Superior Game Performance
-As a potential player, I want the game to load quickly within the p5.js web environment, so that I don't lose interest due to long wait times. When running on mainstream browsers (Chrome/Edge), the frame rate (FPS) must remain stable at approximately 60 FPS.
-4. 职业玩家：
+### **Part one: Players**
+1. **高玩**：
+2. **菜鸟/新手**：
+3. **Potential Player - Accessible Gameplay and Seamless Experience**
+- **Visual Hook** - As a potential player looking for a new game, I want to see a vibrant and dynamic cover art, so that my curiosity is sparked and I am encouraged to click through. The color scheme of the cover art must remain consistent with the in-game UI to create a unified brand identity.
+- **Catchy Title and Slogan** - As a potential player, I want to see a unique, memorable game title and a concise gameplay description, so that I can instantly understand what makes this game unique. Must include a "Hook Line" (under 20 words) that highlights the core challenge (e.g., "The ultimate one-life challenge").
+- **Superior Game Performance** - As a potential player, I want the game to load quickly within the p5.js web environment, so that I don't lose interest due to long wait times. When running on mainstream browsers (Chrome/Edge), the frame rate (FPS) must remain stable at approximately 60 FPS.
+4. **职业玩家**：
 
-### **Epics Part two: Designers设计师**
+### **Part two: Designers设计师**
 
-### **Epics Part three: Developer(Coder) **
-Epic: Robust Game Framework & Debugging System
-· Code Modularity
-As a coder, I want to build a class-based modular entity system, so that I can add new enemies or power-ups without breaking the existing logic. All game objects (e.g., Player, Enemy) must be encapsulated in separate .js files and invoked by the main script.
-· Real-time Debugging Tools
-As a coder, I want a toggleable "Debug Mode" that displays hitboxes, so that I can precisely fine-tune the physical collision logic. When Debug Mode is active, the console must output the player's current coordinates (x, y) in real-time.
+### **Part three: Developer(Coder) - Robust Game Framework & Debugging System**
+- **Code Modularity** - As a coder, I want to build a class-based modular entity system, so that I can add new enemies or power-ups without breaking the existing logic. All game objects (e.g., Player, Enemy) must be encapsulated in separate .js files and invoked by the main script.
+- **Real-time Debugging Tools** - As a coder, I want a toggleable "Debug Mode" that displays hitboxes, so that I can precisely fine-tune the physical collision logic. When Debug Mode is active, the console must output the player's current coordinates (x, y) in real-time.
 
-### **Epics Part four: Designers设计师**
+### **Part four: Designers设计师**
 
-### **Epics Part five: lecturer TA讲师/助教（课程授课教师）**
+### **Part five: lecturer TA讲师/助教（课程授课教师）**
 
-### **Epics Part six: 竞争对手**
+### **Part six: 竞争对手**
 
-### **Epics Part seven: 社区成员**
+### **Part seven: 社区成员**
 
-### **Epics Part eight: software engineering 本课程及学院**
+### **Part eight: software engineering 本课程及学院**
 
-### **Epics Part nine: platform平台：p5js**
+### **Part nine: platform平台：p5js**
 
-### **Epics Part ten: 市场相关人员**
+### **Part ten: 市场相关人员**
 
 <br>
 
