@@ -46,7 +46,8 @@ The people who focuses on the implementation and smooth execution of core functi
 - **Superior Game Performance** - As a potential player, I want the game to load quickly within the p5.js web environment, so that I don't lose interest due to long wait times. When running on mainstream browsers (Chrome/Edge), the frame rate (FPS) must remain stable at approximately 60 FPS.
 4. **职业玩家**：
 5. **Normal Player**：  
-- **Technical Implementation & Stability** - As a normal player, I want the game to run smoothly without lag or unexpected crashes, so that I can focus on gameplay rather than technical issues.
+- **Technical Implementation & Stability** - As a normal player, I want the game to run smoothly without lag or unexpected crashes, so that I can focus on gameplay rather than technical issues.  
+- **Game Balance & Difficulty Adjustment** - As a normal player, I want the game difficulty to increase smoothly over time (not in sudden spikes),so that the challenge feels fair and I stay motivated to continue playing.
 
 ### **Part two: Designers设计师**
 
@@ -66,6 +67,7 @@ The people who focuses on the implementation and smooth execution of core functi
 
 ### **Part nine: platform平台：p5js**  
 - **Technical Implementation & Stability** - As the p5.js platform, I want the game logic and rendering to be implemented efficiently within the p5.js framework, so that the game can run reliably in a web browser environment.
+- **Game Balance & Difficulty Adjustment** - As the p5.js platform, I want game difficulty to be controlled through adjustable parameters (e.g., movement speed, obstacle frequency, timing limits), so that balance changes can be made without rewriting core game logic.
 
 ### **Part ten: 市场相关人员**
 
