@@ -37,7 +37,7 @@ The people who focuses on the implementation and smooth execution of core functi
 
 ## Epics and User Stories
 
-### **Part one: Players**
+### **Part One: Players**
 1. **高玩**：
 2. **菜鸟/新手**：
 3. **Potential Player - Accessible Gameplay and Seamless Experience**
@@ -49,27 +49,27 @@ The people who focuses on the implementation and smooth execution of core functi
 - **Technical Implementation & Stability** - As a normal player, I want the game to run smoothly without lag or unexpected crashes, so that I can focus on gameplay rather than technical issues.  
 - **Game Balance & Difficulty Adjustment** - As a normal player, I want the game difficulty to increase smoothly over time (not in sudden spikes),so that the challenge feels fair and I stay motivated to continue playing.
 
-### **Part two: Designers设计师**
+### **Part Two: Designers设计师**
 
-### **Part three: Developer(Coder) - Robust Game Framework & Debugging System**
+### **Part Three: Developer(Coder) - Robust Game Framework & Debugging System**
 - **Code Modularity** - As a coder, I want to build a class-based modular entity system, so that I can add new enemies or power-ups without breaking the existing logic. All game objects (e.g., Player, Enemy) must be encapsulated in separate .js files and invoked by the main script.
 - **Real-time Debugging Tools** - As a coder, I want a toggleable "Debug Mode" that displays hitboxes, so that I can precisely fine-tune the physical collision logic. When Debug Mode is active, the console must output the player's current coordinates (x, y) in real-time.
 
-### **Part four: Designers设计师**
+### **Part Four: Designers设计师**
 
-### **Part five: lecturer TA讲师/助教（课程授课教师）**
+### **Part Five: lecturer TA讲师/助教（课程授课教师）**
 
-### **Part six: 竞争对手**
+### **Part Six: 竞争对手**
 
-### **Part seven: 社区成员**
+### **Part Seven: 社区成员**
 
-### **Part eight: software engineering 本课程及学院**
+### **Part Eight: software engineering 本课程及学院**
 
-### **Part nine: platform平台：p5js**  
+### **Part Nine: platform平台：p5js**  
 - **Technical Implementation & Stability** - As the p5.js platform, I want the game logic and rendering to be implemented efficiently within the p5.js framework, so that the game can run reliably in a web browser environment.
 - **Game Balance & Difficulty Adjustment** - As the p5.js platform, I want game difficulty to be controlled through adjustable parameters (e.g., movement speed, obstacle frequency, timing limits), so that balance changes can be made without rewriting core game logic.
 
-### **Part ten: 市场相关人员**
+### **Part Ten: 市场相关人员**
 
 <br>
 
