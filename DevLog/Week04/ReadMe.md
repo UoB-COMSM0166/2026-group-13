@@ -39,7 +39,11 @@ The people who focuses on the implementation and smooth execution of core functi
 
 ### **Part One: Players**
 1. **高玩**：
-2. **菜鸟/新手**：
+2. **New Player**：
+- **Gradual Onboarding Tutorial** - As a new player, I want the game to provide a beginner‑friendly tutorial so that I can quickly understand the core gameplay.  
+- **Clear Guidance When Lost** - As a new player, when I get lost or don’t know what to do next, I want to tap a hint button so the game can guide me to the next objective.
+- **Immediate Action Feedback** - As a new player, I want the game to give me immediate feedback on my actions so that I feel encouraged and motivated to continue.  
+- **Motivational Rewards After Levels** - As a new player, when I finish a level and start feeling tired or bored, I want the game to reward me with items such as skins, tools, or achievements so that I stay motivated to continue playing.
 3. **Potential Player - Accessible Gameplay and Seamless Experience**
 - **Visual Hook** - As a potential player looking for a new game, I want to see a vibrant and dynamic cover art, so that my curiosity is sparked and I am encouraged to click through. The color scheme of the cover art must remain consistent with the in-game UI to create a unified brand identity.
 - **Catchy Title and Slogan** - As a potential player, I want to see a unique, memorable game title and a concise gameplay description, so that I can instantly understand what makes this game unique. Must include a "Hook Line" (under 20 words) that highlights the core challenge (e.g., "The ultimate one-life challenge").
@@ -61,7 +65,9 @@ The people who focuses on the implementation and smooth execution of core functi
 - **Real-time Debugging Tools** - As a coder, I want a toggleable "Debug Mode" that displays hitboxes, so that I can precisely fine-tune the physical collision logic. When Debug Mode is active, the console must output the player's current coordinates (x, y) in real-time.
 
 ### **Part Four: Tester**
-
+- **Debug Tools for Efficient Testing** - As a tester, I want the development team to provide essential debug tools so that I can efficiently test complex scenarios.  
+- **Complete Flowcharts and User Paths** - As a tester, I want access to complete flowcharts and user paths so that I can ensure every branch and scenario is fully covered during testing.
+- **Bug Reports with Reproduction Steps** - As a tester, I want every bug report to include clear reproduction steps so that I can quickly verify whether the issue exists and confirm whether it has been fixed.
 ### **Part Five: lecturer TA讲师/助教（课程授课教师）**
 
 ### **Part Six: 竞争对手**
