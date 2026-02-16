@@ -50,18 +50,26 @@ The people who focuses on the implementation and smooth execution of core functi
 - **Game Balance & Difficulty Adjustment** - As a normal player, I want the game difficulty to increase smoothly over time (not in sudden spikes),so that the challenge feels fair and I stay motivated to continue playing.
 
 ### **Part Two: Designers设计师**
+- **Core Gameplay Mechanics** - As a game designer, I want configurable max recording attempts and duration parameters so that the recording mechanic adapts to puzzle complexity across different difficulty levels and follows the "one mechanic per level" design concept.
+- **Core Gameplay Mechanics** - As a UI designer, I want visual recording status controls (recording/ended/remaining attempts) for players, so that they can intuitively grasp core recording info and avoid operational mistakes.
+- **Level & World Design** - As a game designer, I want to design and iterate on level mechanisms (e.g. recording & replaying, collaborative puzzle-solving, the upside down world) with clear difficulty curves and unique fun points, So that the game maintains player engagement through a smooth learning experience and innovative gameplay.
+- **Enemy Design** - As an art designer, I want to design scene atmosphere effects for high-difficulty challenge levels (such as dark tones and smoke effects), so that I can create a tense challenge atmosphere and enhance the sense of immersion for players.
+- **Game Balance** - As a game designer, I want to balance the correlation between the number of recording attempts and level difficulty, so that the game can avoid being overly hard due to too few recording attempts or losing puzzle-solving challenge due to an excessive number of them.
 
 ### **Part Three: Developer(Coder) - Robust Game Framework & Debugging System**
 - **Code Modularity** - As a coder, I want to build a class-based modular entity system, so that I can add new enemies or power-ups without breaking the existing logic. All game objects (e.g., Player, Enemy) must be encapsulated in separate .js files and invoked by the main script.
 - **Real-time Debugging Tools** - As a coder, I want a toggleable "Debug Mode" that displays hitboxes, so that I can precisely fine-tune the physical collision logic. When Debug Mode is active, the console must output the player's current coordinates (x, y) in real-time.
 
-### **Part Four: Designers设计师**
+### **Part Four: Tester**
 
 ### **Part Five: lecturer TA讲师/助教（课程授课教师）**
 
 ### **Part Six: 竞争对手**
 
 ### **Part Seven: 社区成员**
+- **Player Feedback** - As a game community member, I want to set up a dedicated section for player experience feedback on the community, so that players can focus on posting and discussing game experience issues, and the development team can easily view and collect such feedback.
+- **Level & World Design** - As a game community member，I want to share my custom level solutions, replay clips of collaborative gameplay with "past me", and participate in community-themed challenges, So that I can interact with other players, showcase my strategic thinking, and extend the game’s playability through community content.
+
 
 ### **Part Eight: software engineering 本课程及学院**
 
