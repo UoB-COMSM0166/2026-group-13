@@ -100,7 +100,7 @@
 - **Enemy Design** - As an art designer, I want to design scene atmosphere effects for high-difficulty challenge levels (such as dark tones and smoke effects), so that I can create a tense challenge atmosphere and enhance the sense of immersion for players.
 - **Game Balance** - As a game designer, I want to balance the correlation between the number of recording attempts and level difficulty, so that the game can avoid being overly hard due to too few recording attempts or losing puzzle-solving challenge due to an excessive number of them.
 
-### ** Developer(Coder) - Robust Game Framework & Debugging System**
+### **Developer(Coder) - Robust Game Framework & Debugging System**
 - **Code Modularity** - As a coder, I want to build a class-based modular entity system, so that I can add new enemies or power-ups without breaking the existing logic. All game objects (e.g., Player, Enemy) must be encapsulated in separate .js files and invoked by the main script.
 - **Real-time Debugging Tools** - As a coder, I want a toggleable "Debug Mode" that displays hitboxes, so that I can precisely fine-tune the physical collision logic. When Debug Mode is active, the console must output the player's current coordinates (x, y) in real-time.
 
