@@ -8,9 +8,11 @@
 
 - **pro player** 
 
-    A high-level player who is extremely skilled, professional, and highly experienced at playing video games.
+    The people who is extremely skilled, professional, and highly experienced at playing video games.
 
-- **菜鸟/新手** 
+- **菜鸟/新手**
+
+    The people who is not good at playing games.
 
 - **Potential Playerr潜在玩家**
 
