@@ -6,10 +6,15 @@
 
 ### **1. Players**
 
-- **高玩** 
+- **pro player** 
+
+    A high-level player who is extremely skilled, professional, and highly experienced at playing video games.
+
 - **菜鸟/新手** 
+
 - **Potential Playerr潜在玩家**
-The people who care about the first impression, how easy it is to pick up, and performance.
+
+    The people who care about the first impression, how easy it is to pick up, and performance.
 - **职业玩家** 
 - **普通玩家**
 
@@ -31,25 +36,49 @@ The people who focuses on the implementation and smooth execution of core functi
 
 ### **9. platform平台：p5js**
 
-### **10. 市场相关人员（市场营销员、调查员、调研员之类的）**
+### **10. 市场相关人员 (Market-Related Personnel)**
+
+* **营销员 (Marketing Specialist)**
+
+  A professional who creates differentiated promotional content and activities, drives user conversion, and strengthens brand awareness.
+
+* **调研员 (Market Researcher)**
+
+  A professional who conducts user and market research, mines demand pain points, analyzes competitive patterns, and provides data support for decision-making.
+
+* **推广员 (Promotion Specialist)**
+
+  A professional who selects appropriate channels to reach target audiences, expands user coverage, and reduces customer acquisition costs through multi-dimensional promotion.
+
 
 <br>
 
 ## Epics and User Stories
 
 ### **Part One: Players**
-1. **高玩**：
-2. **New Player**：
+#### 高玩 (pro player)
+* **Hidden Easter Eggs & Secret Challenges** - As a hardcore player, I hope levels hide in-depth secret content (e.g., "reverse time-space" mechanics, secret passages requiring 10+ recording segments for collaboration). This lets me repeatedly explore, deconstruct rules, and unlock exclusive achievements and the "Time-Space Master" title, gaining a sense of exclusive honor.
+
+* **Extreme Difficulty Levels & Global Leaderboards** - As a hardcore player, I crave ultra-hardcore levels (no hints, complex nested terrain, millisecond-precision action prediction) paired with real-time global leaderboards. This allows me to compete with top players worldwide in clear time and recording counts, striving for the "optimal solution" throne to showcase my dual prowess in skill and strategy.
+
+* **Unlimited Multi-Segment Recording & Chain Collaboration** - As a hardcore player, I want the game to lift recording limits and support the coexistence of multiple "Past Selves." This way, I can design "time-space chain strategies" (e.g., three versions of myself from different timelines laying the groundwork and assisting in relay) to overcome extreme terrain and savor the thrill of meticulous planning.
+
+* **Custom Level Editor & Community Competition** - As a hardcore player, I want a fully functional level editor (custom terrain, platforms, checkpoints) that supports uploading and sharing user-created levels. This enables me to craft ultra-difficult challenge maps, compete with fellow hardcore players in the community, and extend the game's lifespan indefinitely through shared puzzle-solving ideas.
+#### New Player
+
 - **Gradual Onboarding Tutorial** - As a new player, I want the game to provide a beginner‑friendly tutorial so that I can quickly understand the core gameplay.  
 - **Clear Guidance When Lost** - As a new player, when I get lost or don’t know what to do next, I want to tap a hint button so the game can guide me to the next objective.
 - **Immediate Action Feedback** - As a new player, I want the game to give me immediate feedback on my actions so that I feel encouraged and motivated to continue.  
 - **Motivational Rewards After Levels** - As a new player, when I finish a level and start feeling tired or bored, I want the game to reward me with items such as skins, tools, or achievements so that I stay motivated to continue playing.
-3. **Potential Player - Accessible Gameplay and Seamless Experience**
+#### Potential Player - Accessible Gameplay and Seamless Experience
+
 - **Visual Hook** - As a potential player looking for a new game, I want to see a vibrant and dynamic cover art, so that my curiosity is sparked and I am encouraged to click through. The color scheme of the cover art must remain consistent with the in-game UI to create a unified brand identity.
 - **Catchy Title and Slogan** - As a potential player, I want to see a unique, memorable game title and a concise gameplay description, so that I can instantly understand what makes this game unique. Must include a "Hook Line" (under 20 words) that highlights the core challenge (e.g., "The ultimate one-life challenge").
 - **Superior Game Performance** - As a potential player, I want the game to load quickly within the p5.js web environment, so that I don't lose interest due to long wait times. When running on mainstream browsers (Chrome/Edge), the frame rate (FPS) must remain stable at approximately 60 FPS.
-4. **职业玩家**：
-5. **Normal Player**：  
+
+#### 职业玩家
+- **待补充** - As a待补充
+#### Normal Player
 - **Technical Implementation & Stability** - As a normal player, I want the game to run smoothly without lag or unexpected crashes, so that I can focus on gameplay rather than technical issues.  
 - **Game Balance & Difficulty Adjustment** - As a normal player, I want the game difficulty to increase smoothly over time (not in sudden spikes),so that the challenge feels fair and I stay motivated to continue playing.
 
@@ -83,7 +112,45 @@ The people who focuses on the implementation and smooth execution of core functi
 - **Technical Implementation & Stability** - As the p5.js platform, I want the game logic and rendering to be implemented efficiently within the p5.js framework, so that the game can run reliably in a web browser environment.
 - **Game Balance & Difficulty Adjustment** - As the p5.js platform, I want game difficulty to be controlled through adjustable parameters (e.g., movement speed, obstacle frequency, timing limits), so that balance changes can be made without rewriting core game logic.
 
-### **Part Ten: 市场相关人员**
+### **Part Ten: 市场相关人员 (Market-Related Personnel)**
+
+#### 营销员 (Marketing Specialist)
+
+
+
+* **Differentiated Brand Messaging** - As a marketing specialist, I want to craft core promotional slogans and content around the "self-collaboration" mechanic, so that the game’s unique selling point is clearly communicated to target audiences and stands out from competitors.
+
+* **Tiered Marketing Content Creation** - As a marketing specialist, I want to produce tailored content for new players (tutorial highlights, reward previews) and hardcore players (challenge clips, hidden easter eggs), so that different user groups are attracted by content that matches their interests.
+
+* **Brand Image Consistency** - As a marketing specialist, I want all promotional materials (posters, videos, social media posts) to align with the game’s UI color scheme and "self-breakthrough" theme, so that a unified and memorable brand identity is built.
+
+* **Conversion-Driven Campaigns** - As a marketing specialist, I want to design campaigns like "first recording challenge" or "level clearance lottery" with exclusive skins/achievements as rewards, so that potential users are motivated to try the game and convert into active players.
+
+#### 调研员 (Market Researcher)
+
+
+
+* **User Demand Mining** - As a market researcher, I want to conduct targeted surveys on new players (tutorial usability, hint function satisfaction) and hardcore players (level difficulty feedback, UGC editor needs), so that user pain points are identified to guide game optimization.
+
+* **Competitive Landscape Analysis** - As a market researcher, I want to analyze core mechanics, target audiences, and marketing strategies of competing 2D platformer games, so that the game’s unique adv
+
+  ntages are highlighted and market positioning is refined.a
+
+* **Market Trend Tracking** - As a market researcher, I want to monitor growth trends of web-based games and puzzle genres, so that feasible operation models (e.g., UGC ecology, cross-circle promotion) are proposed to support long-term game development.
+
+* **User Retention Analysis** - As a market researcher, I want to track retention rates, active durations, and core function usage of different user groups, so that key factors influencing user retention are identified to inform marketing and product adjustments.
+
+#### 推广员 (Promotion Specialist)
+
+
+
+* **Precise Channel Selection** - As a promotion specialist, I want to select channels like short video platforms (for casual users) and game communities (for hardcore players) based on user portraits, so that target audiences are reached efficiently with lower customer acquisition costs.
+
+* **Lightweight Promotion Adaptation** - As a promotion specialist, I want to create 15-30 second short videos highlighting "no download, fast loading, stable 60FPS", so that potential users are encouraged to click and try the game in 信息流 (feed) ads.
+
+* **KOL Collaboration** - As a promotion specialist, I want to partner with puzzle game KOLs and UGC creators to launch custom level contests or clearance strategy events, so that the game’s influence is expanded through influencer audiences.
+
+* **Promotion Effect Optimization** - As a promotion specialist, I want to track click-through rates, conversion rates, and customer acquisition costs of different channels, so that high-performance channels are prioritized and promotional materials are optimized for better results.
 
 <br>
 
