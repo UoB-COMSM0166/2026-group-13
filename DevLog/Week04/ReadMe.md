@@ -15,8 +15,8 @@
 - **Potential Playerr潜在玩家**
 
     The people who care about the first impression, how easy it is to pick up, and performance.
-- **职业玩家** 
-- **普通玩家**
+- **normal player**
+    The people who are average.
 
 ### **2. Designers设计师**
 关卡策划/关卡系统设计师、ui设计、art designer美术设计师、write designer文案设计师等等
@@ -55,7 +55,7 @@ The people who focuses on the implementation and smooth execution of core functi
 
 ## Epics and User Stories
 
-### **Part One: Players**
+### **Players**
 #### pro player
 * **Hidden Easter Eggs & Secret Challenges** - As a hardcore player, I hope levels hide in-depth secret content (e.g., "reverse time-space" mechanics, secret passages requiring 10+ recording segments for collaboration). This lets me repeatedly explore, deconstruct rules, and unlock exclusive achievements and the "Time-Space Master" title, gaining a sense of exclusive honor.
 
@@ -83,41 +83,33 @@ The people who focuses on the implementation and smooth execution of core functi
 - **Technical Implementation & Stability** - As a normal player, I want the game to run smoothly without lag or unexpected crashes, so that I can focus on gameplay rather than technical issues.  
 - **Game Balance & Difficulty Adjustment** - As a normal player, I want the game difficulty to increase smoothly over time (not in sudden spikes),so that the challenge feels fair and I stay motivated to continue playing.
 
-### **Part Two: Designers设计师**
+### **Designers**
 - **Core Gameplay Mechanics** - As a game designer, I want configurable max recording attempts and duration parameters so that the recording mechanic adapts to puzzle complexity across different difficulty levels and follows the "one mechanic per level" design concept.
 - **Core Gameplay Mechanics** - As a UI designer, I want visual recording status controls (recording/ended/remaining attempts) for players, so that they can intuitively grasp core recording info and avoid operational mistakes.
 - **Level & World Design** - As a game designer, I want to design and iterate on level mechanisms (e.g. recording & replaying, collaborative puzzle-solving, the upside down world) with clear difficulty curves and unique fun points, So that the game maintains player engagement through a smooth learning experience and innovative gameplay.
 - **Enemy Design** - As an art designer, I want to design scene atmosphere effects for high-difficulty challenge levels (such as dark tones and smoke effects), so that I can create a tense challenge atmosphere and enhance the sense of immersion for players.
 - **Game Balance** - As a game designer, I want to balance the correlation between the number of recording attempts and level difficulty, so that the game can avoid being overly hard due to too few recording attempts or losing puzzle-solving challenge due to an excessive number of them.
 
-### **Part Three: Developer(Coder) - Robust Game Framework & Debugging System**
+### ** Developer(Coder) - Robust Game Framework & Debugging System**
 - **Code Modularity** - As a coder, I want to build a class-based modular entity system, so that I can add new enemies or power-ups without breaking the existing logic. All game objects (e.g., Player, Enemy) must be encapsulated in separate .js files and invoked by the main script.
 - **Real-time Debugging Tools** - As a coder, I want a toggleable "Debug Mode" that displays hitboxes, so that I can precisely fine-tune the physical collision logic. When Debug Mode is active, the console must output the player's current coordinates (x, y) in real-time.
 
-### **Part Four: Tester**
+### **Tester**
 - **Debug Tools for Efficient Testing** - As a tester, I want the development team to provide essential debug tools so that I can efficiently test complex scenarios.  
 - **Complete Flowcharts and User Paths** - As a tester, I want access to complete flowcharts and user paths so that I can ensure every branch and scenario is fully covered during testing.
 - **Bug Reports with Reproduction Steps** - As a tester, I want every bug report to include clear reproduction steps so that I can quickly verify whether the issue exists and confirm whether it has been fixed.
-### **Part Five: lecturer TA讲师/助教（课程授课教师）**
 
-### **Part Six: 竞争对手**
-
-### **Part Seven: 社区成员**
+### **社区成员**
 - **Player Feedback** - As a game community member, I want to set up a dedicated section for player experience feedback on the community, so that players can focus on posting and discussing game experience issues, and the development team can easily view and collect such feedback.
 - **Level & World Design** - As a game community member，I want to share my custom level solutions, replay clips of collaborative gameplay with "past me", and participate in community-themed challenges, So that I can interact with other players, showcase my strategic thinking, and extend the game’s playability through community content.
 
-
-### **Part Eight: software engineering 本课程及学院**
-
-### **Part Nine: platform平台：p5js**  
+### **platform平台：p5js**  
 - **Technical Implementation & Stability** - As the p5.js platform, I want the game logic and rendering to be implemented efficiently within the p5.js framework, so that the game can run reliably in a web browser environment.
 - **Game Balance & Difficulty Adjustment** - As the p5.js platform, I want game difficulty to be controlled through adjustable parameters (e.g., movement speed, obstacle frequency, timing limits), so that balance changes can be made without rewriting core game logic.
 
-### **Part Ten: 市场相关人员 (Market-Related Personnel)**
+### **市场相关人员 (Market-Related Personnel)**
 
-#### 营销员 (Marketing Specialist)
-
-
+#### Marketing Specialist
 
 * **Differentiated Brand Messaging** - As a marketing specialist, I want to craft core promotional slogans and content around the "self-collaboration" mechanic, so that the game’s unique selling point is clearly communicated to target audiences and stands out from competitors.
 
@@ -127,9 +119,7 @@ The people who focuses on the implementation and smooth execution of core functi
 
 * **Conversion-Driven Campaigns** - As a marketing specialist, I want to design campaigns like "first recording challenge" or "level clearance lottery" with exclusive skins/achievements as rewards, so that potential users are motivated to try the game and convert into active players.
 
-#### 调研员 (Market Researcher)
-
-
+#### Market Researcher
 
 * **User Demand Mining** - As a market researcher, I want to conduct targeted surveys on new players (tutorial usability, hint function satisfaction) and hardcore players (level difficulty feedback, UGC editor needs), so that user pain points are identified to guide game optimization.
 
@@ -141,9 +131,7 @@ The people who focuses on the implementation and smooth execution of core functi
 
 * **User Retention Analysis** - As a market researcher, I want to track retention rates, active durations, and core function usage of different user groups, so that key factors influencing user retention are identified to inform marketing and product adjustments.
 
-#### 推广员 (Promotion Specialist)
-
-
+#### Promotion Specialist
 
 * **Precise Channel Selection** - As a promotion specialist, I want to select channels like short video platforms (for casual users) and game communities (for hardcore players) based on user portraits, so that target audiences are reached efficiently with lower customer acquisition costs.
 
