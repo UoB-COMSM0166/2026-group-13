@@ -32,7 +32,7 @@
 
 ### **3. Developer(Coder)** 
 
-    The people who focuses on the implementation and smooth execution of core functionalities, as well as maintainability, scalability, and debugging efficiency.
+The people who focuses on the implementation and smooth execution of core functionalities, as well as maintainability, scalability, and debugging efficiency.
 
 ### **4. Tester**
 
