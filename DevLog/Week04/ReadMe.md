@@ -10,35 +10,42 @@
 
     The people who is extremely skilled, professional, and highly experienced at playing video games.
 
-- **菜鸟/新手**
+- **New player**
 
     The people who is not good at playing games.
 
-- **Potential Playerr潜在玩家**
+- **Potential Playerr**
 
     The people who care about the first impression, how easy it is to pick up, and performance.
 - **normal player**
     The people who are average.
 
-### **2. Designers设计师**
-关卡策划/关卡系统设计师、ui设计、art designer美术设计师、write designer文案设计师等等
+### **2. Designers**
 
-### **3. Developer(Coder) 开发者（程序员）** 
+- **lever designer**
+
+- **ui designer**
+
+- **art designer**
+
+- **story designer**
+
+### **3. Developer(Coder) ** 
 The people who focuses on the implementation and smooth execution of core functionalities, as well as maintainability, scalability, and debugging efficiency.
 
-### **4. 测试（Tester）**
+### **4. Tester**
 
-### **5. lecturer /TA讲师/助教（课程授课教师）**
+### **5. lecturer/TA**
 
-### **6. 竞争对手（比如其他团队、市面游戏）**
+### **6. Competitor**
 
-### **7. 社区成员（比如游戏论坛成员、社交软件相关论坛用户）**
+### **7. Community member**
 
-### **8. software engineering软件工程（本课程及学院）**
+### **8. Software Engineering Module**
 
-### **9. platform平台：p5js**
+### **9. Platform：p5js**
 
-### **10. 市场相关人员 (Market-Related Personnel)**
+### **10. Market-Related Personnel**
 
 * **Marketing Specialist**
 
@@ -101,11 +108,11 @@ The people who focuses on the implementation and smooth execution of core functi
 - **Complete Flowcharts and User Paths** - As a tester, I want access to complete flowcharts and user paths so that I can ensure every branch and scenario is fully covered during testing.
 - **Bug Reports with Reproduction Steps** - As a tester, I want every bug report to include clear reproduction steps so that I can quickly verify whether the issue exists and confirm whether it has been fixed.
 
-### **社区成员**
+### **Community member**
 - **Player Feedback** - As a game community member, I want to set up a dedicated section for player experience feedback on the community, so that players can focus on posting and discussing game experience issues, and the development team can easily view and collect such feedback.
 - **Level & World Design** - As a game community member，I want to share my custom level solutions, replay clips of collaborative gameplay with "past me", and participate in community-themed challenges, So that I can interact with other players, showcase my strategic thinking, and extend the game’s playability through community content.
 
-### **platform平台：p5js**  
+### **platform：p5js**  
 - **Technical Implementation & Stability** - As the p5.js platform, I want the game logic and rendering to be implemented efficiently within the p5.js framework, so that the game can run reliably in a web browser environment.
 - **Game Balance & Difficulty Adjustment** - As the p5.js platform, I want game difficulty to be controlled through adjustable parameters (e.g., movement speed, obstacle frequency, timing limits), so that balance changes can be made without rewriting core game logic.
 
