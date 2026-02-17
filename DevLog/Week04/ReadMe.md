@@ -40,15 +40,15 @@ The people who focuses on the implementation and smooth execution of core functi
 
 ### **10. 市场相关人员 (Market-Related Personnel)**
 
-* **营销员 (Marketing Specialist)**
+* **Marketing Specialist**
 
   A professional who creates differentiated promotional content and activities, drives user conversion, and strengthens brand awareness.
 
-* **调研员 (Market Researcher)**
+* **Market Researcher**
 
   A professional who conducts user and market research, mines demand pain points, analyzes competitive patterns, and provides data support for decision-making.
 
-* **推广员 (Promotion Specialist)**
+* **Promotion Specialist**
 
   A professional who selects appropriate channels to reach target audiences, expands user coverage, and reduces customer acquisition costs through multi-dimensional promotion.
 
@@ -109,7 +109,7 @@ The people who focuses on the implementation and smooth execution of core functi
 - **Technical Implementation & Stability** - As the p5.js platform, I want the game logic and rendering to be implemented efficiently within the p5.js framework, so that the game can run reliably in a web browser environment.
 - **Game Balance & Difficulty Adjustment** - As the p5.js platform, I want game difficulty to be controlled through adjustable parameters (e.g., movement speed, obstacle frequency, timing limits), so that balance changes can be made without rewriting core game logic.
 
-### **市场相关人员 (Market-Related Personnel)**
+### **Market-Related Personnel**
 
 #### Marketing Specialist
 
