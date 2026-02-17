@@ -56,7 +56,7 @@ The people who focuses on the implementation and smooth execution of core functi
 ## Epics and User Stories
 
 ### **Part One: Players**
-#### 高玩 (pro player)
+#### pro player
 * **Hidden Easter Eggs & Secret Challenges** - As a hardcore player, I hope levels hide in-depth secret content (e.g., "reverse time-space" mechanics, secret passages requiring 10+ recording segments for collaboration). This lets me repeatedly explore, deconstruct rules, and unlock exclusive achievements and the "Time-Space Master" title, gaining a sense of exclusive honor.
 
 * **Extreme Difficulty Levels & Global Leaderboards** - As a hardcore player, I crave ultra-hardcore levels (no hints, complex nested terrain, millisecond-precision action prediction) paired with real-time global leaderboards. This allows me to compete with top players worldwide in clear time and recording counts, striving for the "optimal solution" throne to showcase my dual prowess in skill and strategy.
@@ -70,15 +70,16 @@ The people who focuses on the implementation and smooth execution of core functi
 - **Clear Guidance When Lost** - As a new player, when I get lost or don’t know what to do next, I want to tap a hint button so the game can guide me to the next objective.
 - **Immediate Action Feedback** - As a new player, I want the game to give me immediate feedback on my actions so that I feel encouraged and motivated to continue.  
 - **Motivational Rewards After Levels** - As a new player, when I finish a level and start feeling tired or bored, I want the game to reward me with items such as skins, tools, or achievements so that I stay motivated to continue playing.
-#### Potential Player - Accessible Gameplay and Seamless Experience
+#### Potential Player
 
 - **Visual Hook** - As a potential player looking for a new game, I want to see a vibrant and dynamic cover art, so that my curiosity is sparked and I am encouraged to click through. The color scheme of the cover art must remain consistent with the in-game UI to create a unified brand identity.
 - **Catchy Title and Slogan** - As a potential player, I want to see a unique, memorable game title and a concise gameplay description, so that I can instantly understand what makes this game unique. Must include a "Hook Line" (under 20 words) that highlights the core challenge (e.g., "The ultimate one-life challenge").
 - **Superior Game Performance** - As a potential player, I want the game to load quickly within the p5.js web environment, so that I don't lose interest due to long wait times. When running on mainstream browsers (Chrome/Edge), the frame rate (FPS) must remain stable at approximately 60 FPS.
 
-#### 职业玩家
-- **待补充** - As a待补充
 #### Normal Player
+
+* **Game Balance & Difficulty Adjustment（游戏平衡与难度调整）** - As a normal player, I want the game difficulty to increase smoothly over time (not in sudden spikes), so that the challenge feels fair and I stay motivated to continue playing.
+* **Intuitive Operation & UI Design（直观操作与界面设计）** - As a normal player, I want the game’s control layout (movement, jump, record) and UI elements (recording status, hints) to be intuitive and easy to understand, so that I can master basic operations without complicated learning.
 - **Technical Implementation & Stability** - As a normal player, I want the game to run smoothly without lag or unexpected crashes, so that I can focus on gameplay rather than technical issues.  
 - **Game Balance & Difficulty Adjustment** - As a normal player, I want the game difficulty to increase smoothly over time (not in sudden spikes),so that the challenge feels fair and I stay motivated to continue playing.
 
