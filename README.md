@@ -129,8 +129,51 @@ Players progress through the game one level at a time, with each level functioni
 
 ### Requirements 
 
-- 15% ~750 words
-- Early stages design. Ideation process. How did you decide as a team what to develop? Use case diagrams, user stories. 
+#### Skateholders
+
+#### 1. Players
+
+- pro player
+
+- New player
+
+- Potential Playerr
+
+- normal player
+
+#### 2. Designers
+
+- lever designer
+
+- UI designer
+
+- art designer
+
+- story designer
+
+#### 3. Developer(Coder)
+
+#### 4. Tester
+
+#### 5. lecturer/TA
+
+#### 6. Competitor
+
+#### 7. Community member
+
+#### 8. Software Engineering Module
+
+#### 9. Platform：p5js
+
+#### 10. Market-Related Personnel
+
+- Marketing Specialist
+
+- Market Researcher
+
+- Promotion Specialist
+
+#### Reflection
 
 ### Design
 
