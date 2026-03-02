@@ -19,7 +19,7 @@ LINK. Add a link here to your deployed game, you can also make the image above l
 VIDEO. Include a demo video of your game here (you don't have to wait until the end, you can insert a work in progress video)
 
 ## Game Demo
-**[Click here to play our U help U Demo1 now!](https://uob-comsm0166.github.io/2026-group-13/)**
+**[Click here to play our U help U Demo1 now!](https://uob-comsm0166.github.io/2026-group-13/docs/Demo1)**
 
 ## Your Group
 
