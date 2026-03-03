@@ -10,7 +10,7 @@ class Character {
     this.c = c;                         // 角色颜色
     this.label = label;                 // 角色标签（显示在头顶的文字）
     this.speed = 5;                     // 左右移动速度
-    this.jumpForce = -13;               // 跳跃力度（负数向上）
+    this.jumpForce = -11;               // 跳跃力度（负数向上）
     this.onGround = false;              // 是否在地面上（用于判断能否跳跃）
     this.facingRight = true;            // 朝向（用于渲染眼睛方向）
     this.didJumpThisFrame = false;      // 录制关键位：本帧是否触发了跳跃
