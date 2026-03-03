@@ -293,39 +293,38 @@ function resolveEntityCollisionX(a, b) {
 }
 
 // 实体碰撞 Y 轴修复：
-// 实现“踩在对方头上”的逻辑
+// 实现“踩在对方头上”，“托举电梯”，与“踩头”逻辑
 // 加入“顶头”检测，防止从下方撞击导致对方滞空或二段跳
 function resolveEntityCollisionY(a, b) {
   if (checkOverlap(a, b)) {
-    let centerA = a.pos.y + a.h / 2;
-    let centerB = b.pos.y + b.h / 2;
-    let overlapY = (a.h / 2 + b.h / 2) - abs(centerA - centerB);
+    let centerAY = a.pos.y + a.h / 2;
+    let centerBY = b.pos.y + b.h / 2;
+    let overlapY = (a.h / 2 + b.h / 2) - abs(centerAY - centerBY);
     
     if (overlapY > 0) {
-      if (centerA < centerB) { 
-        // a 在 b 的正上方
+      if (centerAY < centerBY) { 
+        // a 在 b 的正上方 (a 踩在 b 头上)
+        a.pos.y -= overlapY; // 始终把上方的 a 往上推，避免陷进去
+        
+        // 【核心托举逻辑】：如果底下的 b 正在往上跳，就把速度完美传递给 a！
         if (b.vel.y < 0) {
-          // b 正在往上跳，所以是 b 的头顶到了 a 的脚底
-          b.pos.y += overlapY; // 把 b 往下挤（爆头拦截）
-          b.vel.y = 0;         // b 失去向上的速度
+          a.vel.y = b.vel.y; // a 坐上了 b 的“电梯”，两人同步起飞
         } else {
-          // a 正常落在 b 的头上
-          a.pos.y -= overlapY; 
-          a.vel.y = 0; 
-          a.onGround = true; 
+          a.vel.y = 0;       // b 没跳，a 就稳稳踩在头上
         }
+        a.onGround = true;   // a 获得了地面的支撑，甚至可以在空中起跳！
+        
       } else { 
-        // b 在 a 的正上方
+        // b 在 a 的正上方 (b 踩在 a 头上)
+        b.pos.y -= overlapY; // 始终把上方的 b 往上推
+        
+        // 同理，如果底下的 a 正在往上跳，带着 b 一起飞
         if (a.vel.y < 0) {
-          // a 正在往上跳，a 的头顶到了 b 的脚底
-          a.pos.y += overlapY; // 把 a 往下挤
-          a.vel.y = 0;         // a 失去向上的速度
+          b.vel.y = a.vel.y; // b 坐上了 a 的“电梯”
         } else {
-          // b 正常落在 a 的头上
-          b.pos.y -= overlapY; 
           b.vel.y = 0; 
-          b.onGround = true; 
         }
+        b.onGround = true; 
       }
     }
   }
