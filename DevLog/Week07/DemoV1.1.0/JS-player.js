@@ -165,8 +165,11 @@ function startRecording() {
   levelState = 'RECORDING';
   recordingData = [];              // 清空旧的录制数据
   recordStartTime = millis();      // 记录开始的时间戳
+
+  // 关键修复：录制开始前，强行清空可能残留的跳跃指令！防止分身出场自跳
+  player.didJumpThisFrame = false;
   
-// 关键修改：录制期间只记录起点坐标，【不生成分身】！
+  // 关键修改：录制期间只记录起点坐标，【不生成分身】！
   recordStartPosX = player.pos.x;
   recordStartPosY = player.pos.y;
   clone = null; // 确保录制时画面上只有本体
@@ -176,7 +179,7 @@ function startReplay() {
   levelState = 'REPLAYING';
   replayIndex = 0;                 
   
-// 关键修改：录制或中断结束后，红色的分身在这里【凭空出现】！
+  // 关键修改：录制或中断结束后，红色的分身在这里【凭空出现】！
   clone = new Character(recordStartPosX, recordStartPosY, color(255, 80, 80), "分身");
   clone.facingRight = player.facingRight;
 }
@@ -187,6 +190,10 @@ function runGameLogic() {
     player.applyGravity();
     player.handleInput();
     player.move(floors);
+
+    // 关键修复：在闲置状态下也要及时清空跳跃指令，不能带到录制里
+    player.didJumpThisFrame = false;
+
     if (clone) clone.show();
     player.show();
   } 
@@ -267,23 +274,40 @@ function resolveEntityCollisionX(a, b) {
   }
 }
 
-// 实体碰撞 Y 轴修复：实现“踩在对方头上”的逻辑
+// 实体碰撞 Y 轴修复：
+// 实现“踩在对方头上”的逻辑
+// 加入“顶头”检测，防止从下方撞击导致对方滞空或二段跳
 function resolveEntityCollisionY(a, b) {
   if (checkOverlap(a, b)) {
     let centerA = a.pos.y + a.h / 2;
     let centerB = b.pos.y + b.h / 2;
     let overlapY = (a.h / 2 + b.h / 2) - abs(centerA - centerB);
+    
     if (overlapY > 0) {
       if (centerA < centerB) { 
-        // a 在 b 上面
-        a.pos.y -= overlapY; 
-        a.vel.y = 0; 
-        a.onGround = true; 
+        // a 在 b 的正上方
+        if (b.vel.y < 0) {
+          // b 正在往上跳，所以是 b 的头顶到了 a 的脚底
+          b.pos.y += overlapY; // 把 b 往下挤（爆头拦截）
+          b.vel.y = 0;         // b 失去向上的速度
+        } else {
+          // a 正常落在 b 的头上
+          a.pos.y -= overlapY; 
+          a.vel.y = 0; 
+          a.onGround = true; 
+        }
       } else { 
-        // b 在 a 上面
-        b.pos.y -= overlapY; 
-        b.vel.y = 0; 
-        b.onGround = true; 
+        // b 在 a 的正上方
+        if (a.vel.y < 0) {
+          // a 正在往上跳，a 的头顶到了 b 的脚底
+          a.pos.y += overlapY; // 把 a 往下挤
+          a.vel.y = 0;         // a 失去向上的速度
+        } else {
+          // b 正常落在 a 的头上
+          b.pos.y -= overlapY; 
+          b.vel.y = 0; 
+          b.onGround = true; 
+        }
       }
     }
   }
