@@ -260,25 +260,34 @@ function runGameLogic() {
   }
 }
 
-// 实体碰撞 X 轴修复：如果两个角色撞在一起，互相推开对方
+// 实体碰撞 X 轴修复：智能判断上下踩踏 vs 左右碰撞
 function resolveEntityCollisionX(a, b) {
   if (checkOverlap(a, b)) {
-    // 【踩踏物理核心修复】：判断是不是上下踩踏关系。
+    // 1. 计算 Y 轴（垂直方向）的重叠量
     let centerAY = a.pos.y + a.h / 2;
     let centerBY = b.pos.y + b.h / 2;
     let overlapY = (a.h / 2 + b.h / 2) - abs(centerAY - centerBY);
     
-    // 如果 Y 轴重叠小于 8 个像素，说明是一方踩在另一方头上，此时【绝对不要】进行横向推挤！直接 return 退出。
-    if (overlapY < 8) return; 
+    // 2. 计算 X 轴（水平方向）的重叠量
+    let centerAX = a.pos.x + a.w / 2;
+    let centerBX = b.pos.x + b.w / 2;
+    let overlapX = (a.w / 2 + b.w / 2) - abs(centerAX - centerBX);
 
-    // 只有在并排硬碰硬时，才互相推开
-    let centerA = a.pos.x + a.w / 2;
-    let centerB = b.pos.x + b.w / 2;
-    let overlapX = (a.w / 2 + b.w / 2) - abs(centerA - centerB);
+    // 【终极物理修复】：不再固定限制 8 个像素！
+    // 只要垂直重叠量(Y) < 水平重叠量(X)，就说明是“从上往下砸”或者“从下往上顶”。
+    // 此时 X 轴绝对不能互相推挤，直接退出函数，把后续工作留给 Y 轴碰撞去托举！
+    if (overlapY < overlapX) return; 
+
+    // 3. 只有当确实是左右“硬碰硬”时，才把彼此推开
     if (overlapX > 0) {
       let pushAmt = overlapX * 0.5; // 互相平分推开的距离
-      if (centerA < centerB) { a.pos.x -= pushAmt; b.pos.x += pushAmt; }
-      else { a.pos.x += pushAmt; b.pos.x -= pushAmt; }
+      if (centerAX < centerBX) { 
+        a.pos.x -= pushAmt; 
+        b.pos.x += pushAmt; 
+      } else { 
+        a.pos.x += pushAmt; 
+        b.pos.x -= pushAmt; 
+      }
     }
   }
 }
