@@ -185,34 +185,34 @@ function startReplay() {
 }
 
 function runGameLogic() {
-// 1) 闲置状态：只有本体
+  // 1) 闲置状态：只有本体
   if (levelState === 'IDLE') {
     player.applyGravity();
     player.handleInput();
     player.move(floors);
-
+    
     // 关键修复：在闲置状态下也要及时清空跳跃指令，不能带到录制里
-    player.didJumpThisFrame = false;
+    player.didJumpThisFrame = false; 
 
     if (clone) clone.show();
     player.show();
   } 
-// 2) 录制状态：你控制本体跑动，系统暗中记录（没有红色分身）
+  // 2) 录制状态：你控制本体跑动，系统暗中记录（没有红色分身）
   else if (levelState === 'RECORDING') {
     player.applyGravity();
     player.handleInput(); 
     player.move(floors);
     
-// 存入本体的坐标和动作
+    // 存入本体的坐标和动作
     recordingData.push({ x: player.pos.x, jumpCmd: player.didJumpThisFrame, frame: player.facingRight });
     player.didJumpThisFrame = false; 
     
-// 时间到了，自动进入回放并生成分身
+    // 时间到了，自动进入回放并生成分身
     if (millis() - recordStartTime > recordDuration) startReplay();
     
     player.show();
   } 
-// 3) 回放状态：红色分身出现并重复动作，你继续控制本体配合！
+  // 3) 回放状态：红色分身出现并重复动作，你继续控制本体配合！
   else if (levelState === 'REPLAYING') {
     player.applyGravity();
     player.handleInput(); // 你依然可以控制本体
@@ -236,14 +236,14 @@ function runGameLogic() {
       }
     }
 
-// 更新位置与地图碰撞
+    // 更新位置与地图碰撞
     player.pos.x += player.vel.x;
     if (clone) clone.pos.x += clone.vel.x;
     
     player.resolveMapCollisionX(floors);
     if (clone) clone.resolveMapCollisionX(floors);
     
-// 实体互相推挤
+    // 实体互相推挤
     if (clone) resolveEntityCollisionX(player, clone);
 
     player.pos.y += player.vel.y;
@@ -252,7 +252,7 @@ function runGameLogic() {
     player.resolveMapCollisionY(floors);
     if (clone) clone.resolveMapCollisionY(floors);
     
-// 实体互相踩踏
+    // 实体互相踩踏
     if (clone) resolveEntityCollisionY(player, clone);
 
     if (clone) clone.show();
@@ -263,6 +263,15 @@ function runGameLogic() {
 // 实体碰撞 X 轴修复：如果两个角色撞在一起，互相推开对方
 function resolveEntityCollisionX(a, b) {
   if (checkOverlap(a, b)) {
+    // 【踩踏物理核心修复】：判断是不是上下踩踏关系。
+    let centerAY = a.pos.y + a.h / 2;
+    let centerBY = b.pos.y + b.h / 2;
+    let overlapY = (a.h / 2 + b.h / 2) - abs(centerAY - centerBY);
+    
+    // 如果 Y 轴重叠小于 8 个像素，说明是一方踩在另一方头上，此时【绝对不要】进行横向推挤！直接 return 退出。
+    if (overlapY < 8) return; 
+
+    // 只有在并排硬碰硬时，才互相推开
     let centerA = a.pos.x + a.w / 2;
     let centerB = b.pos.x + b.w / 2;
     let overlapX = (a.w / 2 + b.w / 2) - abs(centerA - centerB);
