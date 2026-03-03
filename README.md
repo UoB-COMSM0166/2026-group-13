@@ -193,7 +193,7 @@ Players progress through the game one level at a time, with each level functioni
 - One quantitative evaluation (of your choice) 
 - Description of how code was tested. 
 
-1. Contextual Onboarding & Bilingual Support
+#### 1. Contextual Onboarding & Bilingual Support
 
 Issue: Players require clearer, real-time guidance on game controls and mechanics. Static instructions are insufficient.
 
@@ -201,7 +201,7 @@ Action Plan: Implement bilingual (English and Chinese) proximity-based tooltips.
 
 This aligns with Nielsen's "Recognition rather than recall". By providing contextual instructions exactly when and where they are needed, we significantly reduce the players' cognitive memory load.
 
-2. Learning Curve & Scaffolding (Level 0)
+#### 2. Learning Curve & Scaffolding (Level 0)
 
 Issue: Transitioning directly into Level 1 introduces too many mechanics at once, causing a steep learning curve for new players.
 
@@ -209,7 +209,7 @@ Action Plan: Design and insert a simple "Tutorial Level" (Level 0) prior to the 
 
 This addresses "Error prevention" and enhances "User control and freedom", ensuring players are comfortable with the physics and controls before facing actual challenges.
 
-3. Narrative Context & Conceptual Mapping
+#### 3. Narrative Context & Conceptual Mapping
 
 Issue: The core gameplay loop (the time-clone mechanic) feels abstract without a narrative foundation.
 
