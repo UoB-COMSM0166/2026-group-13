@@ -41,7 +41,6 @@ function preload() {
 }
 
 // 初始化，不可变动
-// 初始化，不可变动
 function setup() {
   createCanvas(800, 520); // 画面大小
   textAlign(CENTER, CENTER); // 让文字设置在画布的正中心
@@ -52,57 +51,30 @@ function setup() {
   
   // 游戏一启动就应用初始的 50% 音量
   outputVolume(gameVolume / 100);
-
-  // --- 新增：初始化故事滚动的起点在屏幕最下方 ---
-  crawlScrollY = height; 
 }
 
 // 主循环，不可变动
 function draw() {
-  // 修改：如果不是游玩状态，且不是故事滚动状态，才画灰色背景
-  if (gameState !== "PLAYING" && gameState !== ST_STORY_CRAWL) {
+  if (gameState !== "PLAYING") {
     background(248); // 画面的背景颜色
     rectMode(CENTER);
-  } else if (gameState === "PLAYING") {
+  } else {
     rectMode(CORNER);
   }
 
   switch (gameState) {
-    case ST_STORY_CRAWL: drawStoryCrawl(); break; // <-- 新增：播放星战故事动画
     case "MENU": drawMenu(); break;
     case "LEVEL": drawLevel(); break;
     case "PLAYING": drawPlaying(); break;
     case "SETTING": drawSetting(); break;
   }
 
-  // 修改：在故事滚动期间，不显示右上角/左上角的喇叭，保持画面纯净
-  if (gameState !== "PLAYING" && gameState !== ST_STORY_CRAWL) drawSoundIcon();
+  if (gameState !== "PLAYING") drawSoundIcon();
 }
 
-// === 键盘指令枢纽 ===
-// === 键盘指令枢纽 ===
+  // === 键盘指令枢纽 ===
 function keyPressed() {
-  // --- 故事滚动 / 菜单 界面按键处理 ---
-  if (gameState === ST_STORY_CRAWL || gameState === "MENU") {
-    if (key === 'Enter') {
-      if (gameState === ST_STORY_CRAWL) {
-        // ★ 修改：看故事时按 Enter，跳过并直接加载第一关开始游戏！
-        crawlFinished = true; 
-        loadLevel(currentLevel);
-        gameState = "PLAYING";
-        changeBGM(level1BGM);
-      } else if (gameState === "MENU") {
-        // 菜单界面按 Enter，也进入故事动画
-        gameState = ST_STORY_CRAWL;
-        crawlScrollY = height;
-        crawlFinished = false;
-        if (currentBGM) currentBGM.stop(); 
-      }
-    }
-    return; // 处理完界面按键后直接返回
-  }
-
-  // 仅在游玩状态下响应后续按键
+  // 仅在游玩状态下响应
   if (gameState !== "PLAYING") return;
 
   // 结算界面逻辑
@@ -111,91 +83,21 @@ function keyPressed() {
     return;
   }
 
-  // 录制逻辑 (支持中断)
+  // 录制逻辑 (修改点：支持中断)
   if (key === 'r' || key === 'R') {
     if (levelState === 'IDLE') {
       startRecording();
     } else if (levelState === 'RECORDING') {
-      startReplay(); 
+      startReplay(); // 提前中断录制，直接开始回放
     }
   }
 
-  // 跳跃逻辑（永远只控制本体）
-  if (key === ' ' || key === 'w' || key === 'W') {
-    if (player.onGround) {
+  // 跳跃逻辑
+  if (key === ' ' || key === 'w' || key === 'W') 
+  {
+    if (player.onGround) 
+    {
       player.jump();
     }
   }
-}
-
-// --- 绘制星球大战式的文字滚动动画 ---
-function drawStoryCrawl() {
-  // 1. 绘制宇宙背景 (深蓝色/黑色)
-  background(0, 5, 25); 
-
-  // 绘制简单的星星氛围
-  fill(255);
-  noStroke();
-  randomSeed(99); 
-  for(let i=0; i<50; i++) {
-    ellipse(random(width), random(height), random(1, 3));
-  }
-
-  // 2. 设置文字样式
-  fill(255, 220, 0); 
-  textAlign(CENTER, TOP);
-  textStyle(BOLD);
-  noStroke();
-
-  let startX = width / 2;
-  
-  if (crawlScrollY === undefined) {
-    crawlScrollY = height; 
-  }
-
-  let currentY = crawlScrollY;
-  let lineHeight = 28; 
-  let totalTextHeight = starWarsStory.length * lineHeight;
-
-  for (let i = 0; i < starWarsStory.length; i++) {
-    let alpha = 255;
-    if (currentY < 150) {
-      alpha = map(currentY, 0, 150, 0, 255); 
-    }
-    fill(255, 220, 20, alpha); 
-
-    if (i === 0 || i === 2) {
-      textSize(28);
-    } else {
-      textSize(20);
-    }
-
-    text(starWarsStory[i], startX, currentY);
-    currentY += lineHeight; 
-  }
-
-  crawlScrollY -= crawlSpeed;
-
-  // 检查是否完全播完
-  if (crawlScrollY + totalTextHeight < -100) {
-    if (!crawlFinished) {
-      crawlFinished = true;
-      // ★ 修改：播完了自动进入游戏第一关！
-      loadLevel(currentLevel);
-      gameState = "PLAYING";
-      changeBGM(level1BGM);
-    }
-  }
-
-  // 3. 左边上角醒目的跳过提示 (带呼吸闪烁效果)
-  push();
-  // 利用 sin() 函数和 frameCount 制造透明度在 155 到 255 之间来回渐变的呼吸灯效果
-  let pulseAlpha = 205 + sin(frameCount * 0.08) * 50; 
-  fill(255, 255, 255, pulseAlpha); 
-  textAlign(LEFT, TOP);
-  textSize(18);
-  textStyle(BOLD);
-  // 留出一些边距
-  text("Press [ENTER] to Skip Introduction >>", 20, 20);
-  pop();
 }
