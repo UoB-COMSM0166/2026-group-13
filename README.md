@@ -189,12 +189,33 @@ Players progress through the game one level at a time, with each level functioni
 ### Evaluation
 
 - 15% ~750 words
-
-- One qualitative evaluation (of your choice) 
-
+- One qualitative evaluation (of your choice)
 - One quantitative evaluation (of your choice) 
-
 - Description of how code was tested. 
+
+1. Contextual Onboarding & Bilingual Support
+
+Issue: Players require clearer, real-time guidance on game controls and mechanics. Static instructions are insufficient.
+
+Action Plan: Implement bilingual (English and Chinese) proximity-based tooltips. Following the TA's recommendation, UI prompts (e.g., "Press [E] to interact" / "按 [E] 互动") will dynamically appear when the player's character approaches specific interactive elements, such as buttons or traps.
+
+This aligns with Nielsen's "Recognition rather than recall". By providing contextual instructions exactly when and where they are needed, we significantly reduce the players' cognitive memory load.
+
+2. Learning Curve & Scaffolding (Level 0)
+
+Issue: Transitioning directly into Level 1 introduces too many mechanics at once, causing a steep learning curve for new players.
+
+Action Plan: Design and insert a simple "Tutorial Level" (Level 0) prior to the first official stage. This safe, low-stakes environment will allow players to practice basic movements and test the core mechanics without the threat of failing. It doesn't need to be too complex; it should mainly introduce the game's controls to new players.
+
+This addresses "Error prevention" and enhances "User control and freedom", ensuring players are comfortable with the physics and controls before facing actual challenges.
+
+3. Narrative Context & Conceptual Mapping
+
+Issue: The core gameplay loop (the time-clone mechanic) feels abstract without a narrative foundation.
+
+Action Plan: Introduce a brief narrative sequence or story screen at the start of the game. This will establish the world's lore, explaining the concept of manipulating time and cooperating with one's "past self" and "present self" to solve puzzles.
+
+This improves the "Match between system and the real world". Providing a narrative metaphor (co-op with a past self) makes the complex time-manipulation mechanic more intuitive and mentally accessible for the player.
 
 ### Process 
 
