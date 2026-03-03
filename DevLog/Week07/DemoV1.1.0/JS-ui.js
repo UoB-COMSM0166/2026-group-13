@@ -259,6 +259,14 @@ function mousePressed() {
   //   changeBGM(menuBGM);
   // }
   
+  // 1. Debug---音量无法调节的问题
+  // 新增：判断是否在 SETTING 界面点击了音量条
+  if (gameState === "SETTING" && mouseY > 250 && mouseY < 350 && mouseX > 180 && mouseX < 620) {
+    gameVolume = constrain(map(mouseX, 200, 600, 0, 100), 0, 100);
+    try { outputVolume(gameVolume / 100); } catch(e) {}
+    return false; // 处理完音量就拦截，防止触发其他事件
+  }
+
   if (gameState === "MENU") {
     for (let btn of menuButtons) {
       if (checkClick(btn)) {
@@ -308,6 +316,18 @@ function checkClick(btn) {
          mouseX < btn.x + btn.w / 2 && 
          mouseY > btn.y - btn.h / 2 && 
          mouseY < btn.y + btn.h / 2;
+}
+
+// 2. Debug---音量无法调节的问题
+// 新增：加入鼠标拖拽逻辑，并阻止浏览器默认行为
+function mouseDragged() {
+  if (gameState === "SETTING" && mouseY > 250 && mouseY < 350 && mouseX > 180 && mouseX < 620) {
+    gameVolume = constrain(map(mouseX, 200, 600, 0, 100), 0, 100);
+    try { outputVolume(gameVolume / 100); } catch(e) {}
+    
+    // 返回 false 极其重要：能阻止浏览器默认的网页拖拽/文字选中行为
+    return false; 
+  }
 }
 
 // --- 新增函数：绘制星球大战式的文字滚动动画 ---
