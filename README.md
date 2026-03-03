@@ -193,6 +193,8 @@ Players progress through the game one level at a time, with each level functioni
 - One quantitative evaluation (of your choice) 
 - Description of how code was tested. 
 
+### --- Qualitative ---
+
 #### (1) Contextual Onboarding & Bilingual Support
 
 Issue: Players require clearer, real-time guidance on game controls and mechanics. Static instructions are insufficient.
