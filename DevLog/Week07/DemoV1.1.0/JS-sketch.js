@@ -43,7 +43,9 @@ function preload() {
 // 初始化，不可变动
 // 初始化，不可变动
 function setup() {
-  createCanvas(800, 520); // 画面大小
+  let canvas = createCanvas(800, 520); // 画面大小
+  canvas.elt.setAttribute("tabindex", "0");
+  canvas.elt.focus();
   textAlign(CENTER, CENTER); // 让文字设置在画布的正中心
   noSmooth(); // 保持像素画风 
 
@@ -84,22 +86,28 @@ function draw() {
 function keyPressed() {
   // --- 故事滚动 / 菜单 界面按键处理 ---
   if (gameState === ST_STORY_CRAWL || gameState === "MENU") {
-    if (key === 'Enter') {
+    if (keyCode === ENTER) {
+      let unlock = (typeof userStartAudio === "function") ? userStartAudio() : Promise.resolve();
       if (gameState === ST_STORY_CRAWL) {
         // ★ 修改：看故事时按 Enter，跳过并直接加载第一关开始游戏！
         crawlFinished = true; 
         loadLevel(currentLevel);
         gameState = "PLAYING";
-        changeBGM(level1BGM);
-      } else if (gameState === "MENU") {
+        unlock.then(() => changeBGM(level1BGM));
+      } else {
         // 菜单界面按 Enter，也进入故事动画
         gameState = ST_STORY_CRAWL;
         crawlScrollY = height;
         crawlFinished = false;
         if (currentBGM) currentBGM.stop(); 
+        unlock.then(() => changeBGM(menuBGM));
       }
     }
-    return; // 处理完界面按键后直接返回
+    // 阻止WASD键导致页面滚动、焦点丢失
+   const k = (key || "").toLowerCase();
+    if (k === 'w' || k === 'a' || k === 's' || k === 'd' || key === ' ' || keyCode === ENTER) {
+      return false; // 阻止默认行为/焦点干扰
+    }
   }
 
   // 仅在游玩状态下响应后续按键

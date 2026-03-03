@@ -234,6 +234,13 @@ function drawWinScreen() {
 
 // --- 控制逻辑与输入响应（UI 控制响应） ---
 function mousePressed() {
+   // 先解锁音频（必须在用户点击事件里）
+  if (typeof userStartAudio === "function") {
+    userStartAudio().then(() => {
+      // 如果此时还在 MENU，就确保菜单音乐真的开始
+      if (gameState === "MENU") changeBGM(menuBGM);
+    });
+  }
   
   // 新增：判断是否点击了左上角的静音喇叭 (X:20~50, Y:30~60)
   if (gameState !== "PLAYING" && mouseX >= 20 && mouseX <= 50 && mouseY >= 30 && mouseY <= 60) {
@@ -248,9 +255,9 @@ function mousePressed() {
   }
   
   // 只要在菜单界面点击屏幕，就确保播放菜单音乐
-  if (gameState === "MENU") {
-    changeBGM(menuBGM);
-  }
+  // if (gameState === "MENU") {
+  //   changeBGM(menuBGM);
+  // }
   
   if (gameState === "MENU") {
     for (let btn of menuButtons) {
