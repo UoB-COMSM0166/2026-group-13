@@ -217,7 +217,9 @@ function drawDeadScreen() {
 }
 
 //胜利界面
+// 胜利界面
 function drawWinScreen() {
+  // 绘制半透明黑底
   fill(0, 0, 0, 150);
   rectMode(CORNER);
   rect(0, 0, width, height);
@@ -227,15 +229,29 @@ function drawWinScreen() {
   textSize(60);
   text("LEVEL CLEARED!", width / 2, height / 2 - 20);
   
+  // 绘制副标题提示文本
   fill(255);
   textSize(20);
-  text("配合完美! 按 'C' 重新开始", width / 2, height / 2 + 40);
+  
+  // ★ 核心修改：根据不同的关卡，显示不同的文案
+  if (currentLevel === 1) {
+    // 第一关专属文案
+    text("恭喜通关！Congratulations！\n按 'C' 进入下一关", width / 2, height / 2 + 40);
+    
+  } else if (currentLevel === 2) {
+    // 第二关文案
+    text("配合完美! 按 'C' 重新开始", width / 2, height / 2 + 40);
+    
+  } else {
+    // 兜底选项（防止以后加了第 3 关忘记写文案）
+    text("按 'C' 继续", width / 2, height / 2 + 40);
+  }
 }
 
 // --- 控制逻辑与输入响应（UI 控制响应） ---
 function mousePressed() {
   
-  // 主界面：判断是否点击了左上角的静音喇叭 (X:20~50, Y:30~60)
+  // 新增：判断是否点击了左上角的静音喇叭 (X:20~50, Y:30~60)
   if (gameState !== "PLAYING" && mouseX >= 20 && mouseX <= 50 && mouseY >= 30 && mouseY <= 60) {
   if (gameVolume > 0) {
       savedVolume = gameVolume; // 记住现在的音量
@@ -247,7 +263,6 @@ function mousePressed() {
     return; // 关键：点击了喇叭就直接结束，不要再往下判断其他按钮了
   }
   
-  // 游戏bgm的内容
   // 只要在菜单界面点击屏幕，就确保播放菜单音乐
   if (gameState === "MENU") {
     changeBGM(menuBGM);
@@ -257,12 +272,13 @@ function mousePressed() {
     for (let btn of menuButtons) {
       if (checkClick(btn)) {
         if (btn.id === "play") {
-          loadLevel(currentLevel);
-          gameState = "PLAYING";
           
-        // 背景音乐
-        changeBGM(level1BGM); // ★ 2. 切换到关卡音乐
-        
+          // ★ 核心修改：点击 PLAY，不再直接进游戏，而是进入故事滚动动画
+          gameState = ST_STORY_CRAWL;
+          crawlScrollY = height; // 重置文字从屏幕最底下开始
+          crawlFinished = false;
+          if (currentBGM) currentBGM.stop(); // 暂时停掉菜单音乐，安静看开场
+          
         } else if (btn.id === "setting") {
           gameState = "SETTING";
         } else if (btn.id === "level") {
@@ -290,17 +306,8 @@ function mousePressed() {
     if (gameState === "PLAYING" || gameState === "SETTING") {
     if (checkClick(backButton)) {
       gameState = "MENU";
-      changeBGM(menuBGM); // ★ 4. 切回菜单音乐
+      changeBGM(menuBGM); // 切回菜单音乐
     }
-  }
-}
-
-function mouseDragged() {
-  // 设置界面的音量条滑动
-  if (gameState === "SETTING" && mouseY > 280 && mouseY < 320 && mouseX > 200 && mouseX < 600) {
-    gameVolume = constrain(map(mouseX, 200, 600, 0, 100), 0, 100);
-    // 同步更新真实的系统音量 (把 0~100 转换成 0.0~1.0)
-    outputVolume(gameVolume / 100);
   }
 }
 
@@ -310,4 +317,69 @@ function checkClick(btn) {
          mouseX < btn.x + btn.w / 2 && 
          mouseY > btn.y - btn.h / 2 && 
          mouseY < btn.y + btn.h / 2;
+}
+
+// --- 新增函数：绘制星球大战式的文字滚动动画 ---
+function drawStoryCrawl() {
+  // 1. 绘制宇宙背景 (深蓝色/黑色)
+  background(0, 5, 25); 
+
+  // --- 可以在这里可选地添加简单的星星 (纯粹为了氛围) ---
+  fill(255);
+  noStroke();
+  randomSeed(99); // 确保星星位置固定
+  for(let i=0; i<50; i++) {
+    ellipse(random(width), random(height), random(1, 3));
+  }
+  // --------------------------------------------------
+
+  // 2. 设置文字样式 (黄色，仿星球大战)
+  fill(255, 220, 0); 
+  textAlign(CENTER, TOP);
+  textStyle(BOLD);
+  noStroke();
+
+  // 3. 计算文字其实位置
+  let startX = width / 2;
+  
+  // 如果是第一次运行，初始化滚动坐标到屏幕下方
+  if (crawlScrollY === undefined) {
+    crawlScrollY = height; 
+  }
+
+  // 4. 循环绘制每一行文字
+  let currentY = crawlScrollY;
+  let lineHeight = 28; // 行间距
+  let totalTextHeight = starWarsStory.length * lineHeight;
+
+  for (let i = 0; i < starWarsStory.length; i++) {
+    // 简单的淡出效果：当文字靠近屏幕顶部时透明度变低
+    let alpha = 255;
+    if (currentY < 150) {
+      alpha = map(currentY, 0, 150, 0, 255); // 在顶部 150 像素内淡出
+    }
+    fill(255, 220, 20, alpha); // 应用透明度
+
+    // 针对标题加粗加大
+    if (i === 0 || i === 2) {
+      textSize(28);
+    } else {
+      textSize(20);
+    }
+
+    text(starWarsStory[i], startX, currentY);
+    currentY += lineHeight; // 下移一行
+  }
+
+  // 5. 更新滚动坐标 (向上移动)
+  crawlScrollY -= crawlSpeed;
+
+  // 6. 检查是否完全播完 (所有文字都移出了屏幕顶部 + 缓冲区)
+  if (crawlScrollY + totalTextHeight < -100) {
+    if (!crawlFinished) {
+      crawlFinished = true;
+      // 播完了自动跳转到标题界面
+      gameState = "TITLE";
+    }
+  }
 }
