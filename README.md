@@ -179,6 +179,12 @@ Players progress through the game one level at a time, with each level functioni
 
 - 15% ~750 words 
 - System architecture. Class diagrams, behavioural diagrams. 
+#### Class Diagram
+
+![Class Diagram](./assets/GameDiagram.png)
+
+> ⚠️Work in Progress
+
 
 ### Implementation
 
