@@ -45,7 +45,7 @@ class RecordClip {
    *
    * @param {InputFrame} frame
    */
-  addFrame(frame) {
+  addFrame(frame) { // 核心方法1：压入新的帧数据。
     if (!(frame instanceof InputFrame)) {
       throw new Error("RecordClip.addFrame(frame): frame 必须是 InputFrame 实例");
     }
@@ -65,7 +65,7 @@ class RecordClip {
    *
    * @returns {InputFrame|null}
    */
-  getFrame(index) {
+  getFrame(index) { // 核心方法2：检索特定时间点的操作。
     if (index < 0 || index >= this.frames.length) {
       return null;
     }
@@ -87,7 +87,7 @@ class RecordClip {
    * 这里保留起点坐标，但清空帧数据和时长
    * 如果您想连起点也清掉，可以在 reset() 里另做处理
    */
-  clear() {
+  clear() { // 核心方法3：重置内存，准备下一次录制。
     this.frames = [];
     this.durationMs = 0;
   }
