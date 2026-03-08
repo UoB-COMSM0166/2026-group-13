@@ -38,13 +38,11 @@
 
 ### 3. RecordClip
 `RecordClip` 是数据的集合容器，代表了一次从“按下录制”到“停止录制”的完整过程。
-数据结构：内部维护一个 frames[] 数组。
-空间坐标：存储 startX 和 startY，确保分身回放时能从玩家当时的起始点开始，避免位移偏差。
+- 数据结构：内部维护一个 frames[] 数组。
+- 空间坐标：存储 startX 和 startY，确保分身回放时能从玩家当时的起始点开始，避免位移偏差。
 
 ### 4. RecordSystem
-RecordSystem 是整个模块的单例控制器，负责调度上述所有类。
-
-主要职责
-进度管理：维护 replayIndex 指针，控制回放流。
-时长控制：监控 maxDurationMs，防止录制数据过大导致内存溢出。
-接口提供：为外部 CharacterController 提供简单的 start/stop 接口。
+`RecordSystem` 是整个模块的单例控制器，负责调度上述所有类。
+- 进度管理：维护 replayIndex 指针，控制回放流。
+- 时长控制：监控 maxDurationMs，防止录制数据过大导致内存溢出。
+- 接口提供：为外部 CharacterController 提供简单的 start/stop 接口。
