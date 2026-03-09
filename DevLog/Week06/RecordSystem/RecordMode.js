@@ -10,15 +10,9 @@
  * IDLE       : 空闲状态，既没有录制，也没有回放
  * RECORDING  : 正在录制玩家（或控制源）的逐帧控制意图
  * REPLAYING  : 正在按顺序回放已经录好的控制片段
- * 
- * | 状态 | 含义 | 备注 |
-| :--- | :--- | :--- |
-| `IDLE` | 闲置状态 | 默认状态，不进行任何数据处理。 |
-| `RECORDING` | 录制中 | 系统正在实时捕获玩家的 `InputFrame`。 |
-| `REPLAYING` | 回放中 | 系统正从 `RecordClip` 中提取数据驱动分身。 |
  */
 const RecordMode = Object.freeze({
-  IDLE: "IDLE",
-  RECORDING: "RECORDING",
-  REPLAYING: "REPLAYING"
+  IDLE: "IDLE", // 闲置|默认状态，不进行任何数据处理
+  RECORDING: "RECORDING", // 录制中，系统正在实时捕获玩家的 `InputFrame`
+  REPLAYING: "REPLAYING" // 回放中，系统正从 `RecordClip` 中提取数据驱动分身
 });
