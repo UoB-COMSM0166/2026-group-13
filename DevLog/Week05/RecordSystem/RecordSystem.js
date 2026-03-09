@@ -298,3 +298,19 @@ class RecordSystem {
     return this.currentClip !== null && !this.currentClip.isEmpty();
   }
 }
+
+/*
+RecordSystem 类是录制与回放模块的主控制器，
+用于统一管理系统状态、当前录制片段以及录制/回放流程。
+该类通过 mode 字段维护 IDLE、RECORDING 和 REPLAYING 三种运行状态，
+并通过 currentClip 保存当前录制得到的 RecordClip 对象。
+在录制阶段，startRecording() 负责初始化新的录制片段与起始时间，captureFrame() 用于逐帧写入 InputFrame，
+并在超过最大录制时长后自动停止；
+在回放阶段，startReplay() 负责进入回放模式，
+updateReplay() 则按顺序逐帧返回应执行的输入数据。
+除此之外，该类还提供了 interrupt()、reset()、isRecording()、isReplaying()、hasClip() 等辅助方法，
+以支持更完整的游戏流程控制。
+整体上，该类负责的是“录制/回放流程调度”，
+而不直接处理角色移动、碰撞或物理计算，
+这些行为会交由外部控制模块实现。
+*/
