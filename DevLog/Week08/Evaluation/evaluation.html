@@ -13,21 +13,20 @@
         .question { margin-bottom: 15px; padding: 10px; background: #f9f9f9; border-radius: 4px; }
         .options { display: flex; justify-content: space-between; max-width: 400px; margin-top: 10px; }
         
-        /* 针对 NASA TLX 滑块与刻度线的新样式 */
+        /* NASA TLX Slider Styles */
         .tlx-slider-container { margin: 20px 0 10px 0; position: relative; }
         .tlx-slider { width: 100%; margin: 0; position: relative; z-index: 2; cursor: pointer; }
         
-        /* 绘制 21 根刻度线 */
+        /* 21 Tick Marks */
         .ruler { 
             display: flex; 
             justify-content: space-between; 
-            padding: 0 10px; /* 使线条与默认滑块的圆点中心对齐 */
-            margin-top: -5px; /* 将刻度线向上提，贴紧滑块 */
-            pointer-events: none; /* 让鼠标点击能穿透刻度线，直接点到滑块 */
+            padding: 0 10px; 
+            margin-top: -5px; 
+            pointer-events: none; 
         }
         .tick { width: 2px; height: 12px; background-color: #7f8c8d; }
-        /* 还原课件细节：中间第 11 根线更长 */
-        .tick:nth-child(11) { height: 18px; margin-top: -6px; background-color: #2c3e50; }
+        .tick:nth-child(11) { height: 18px; margin-top: -6px; background-color: #2c3e50; } /* Center tick */
         
         .tlx-labels { display: flex; justify-content: space-between; font-size: 0.9em; color: #666; margin-top: 5px; }
         
@@ -89,7 +88,7 @@
         <h2>Data Management</h2>
         <p>Records currently saved: <span id="recordCount" style="font-size: 1.5em; font-weight: bold; color: #e74c3c;">0</span></p>
         <p style="font-size: 0.9em; color: #666;">Note: Please do not refresh or close the browser tab until you have downloaded the CSV, otherwise the unsaved data will be lost.</p>
-        <button type="button" class="btn-success" onclick="exportToCSV()">Download Data as CSV</button>
+        <button type="button" class="btn-success" onclick="exportToCSV()">Download Detailed Data as CSV</button>
     </div>
 </div>
 
@@ -129,7 +128,6 @@
         susContainer.innerHTML += html;
     });
 
-    // 生成 21 条刻度线的 HTML
     let ticksHtml = '<div class="ruler">';
     for(let i=0; i<21; i++) {
         ticksHtml += '<div class="tick"></div>';
@@ -153,10 +151,13 @@
     function calculateAndSave() {
         let susSum = 0;
         let allSusAnswered = true;
+        let susAnswers = [];
+
         for (let i = 1; i <= 10; i++) {
             const ele = document.querySelector(`input[name="sus${i}"]:checked`);
             if (ele) {
                 let val = parseInt(ele.value);
+                susAnswers.push(val);
                 susSum += (i % 2 !== 0) ? (val - 1) : (5 - val);
             } else {
                 allSusAnswered = false;
@@ -171,8 +172,11 @@
         const finalSus = susSum * 2.5;
 
         let tlxSum = 0;
+        let tlxAnswers = [];
+
         tlxDimensions.forEach(dim => {
             const tick = parseInt(document.getElementById(dim.id).value);
+            tlxAnswers.push(tick);
             const score = (tick - 1) * 5;
             tlxSum += score;
         });
@@ -185,7 +189,9 @@
             userId: userId,
             difficulty: difficulty,
             susScore: finalSus.toFixed(1),
-            tlxScore: finalTlx.toFixed(1)
+            tlxScore: finalTlx.toFixed(1),
+            susDetails: susAnswers,
+            tlxDetails: tlxAnswers
         });
 
         document.getElementById('resUser').innerText = userId;
@@ -209,10 +215,19 @@
         }
 
         let csvContent = "\uFEFF";
-        csvContent += "Participant ID,Difficulty Level,SUS Score,NASA TLX Score\n";
+        
+        csvContent += "Participant ID,Difficulty Level,SUS Score,NASA TLX Score,SUS_Q1,SUS_Q2,SUS_Q3,SUS_Q4,SUS_Q5,SUS_Q6,SUS_Q7,SUS_Q8,SUS_Q9,SUS_Q10,TLX_Mental,TLX_Physical,TLX_Temporal,TLX_Performance,TLX_Effort,TLX_Frustration\n";
 
         evaluationData.forEach(row => {
-            csvContent += `${row.userId},${row.difficulty},${row.susScore},${row.tlxScore}\n`;
+            let rowData = [
+                row.userId, 
+                row.difficulty, 
+                row.susScore, 
+                row.tlxScore,
+                ...row.susDetails,
+                ...row.tlxDetails
+            ];
+            csvContent += rowData.join(",") + "\n";
         });
 
         const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
@@ -220,7 +235,7 @@
         const url = URL.createObjectURL(blob);
         
         link.setAttribute("href", url);
-        link.setAttribute("download", "U_help_U_Cowork_Evaluation_Data.csv");
+        link.setAttribute("download", "U_help_U_Cowork_Detailed_Evaluation.csv");
         link.style.visibility = 'hidden';
         
         document.body.appendChild(link);
