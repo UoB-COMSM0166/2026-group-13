@@ -12,8 +12,25 @@
         .info-group label { font-weight: bold; margin-right: 10px; }
         .question { margin-bottom: 15px; padding: 10px; background: #f9f9f9; border-radius: 4px; }
         .options { display: flex; justify-content: space-between; max-width: 400px; margin-top: 10px; }
-        .tlx-slider { width: 100%; margin: 10px 0; }
-        .tlx-labels { display: flex; justify-content: space-between; font-size: 0.9em; color: #666; }
+        
+        /* 针对 NASA TLX 滑块与刻度线的新样式 */
+        .tlx-slider-container { margin: 20px 0 10px 0; position: relative; }
+        .tlx-slider { width: 100%; margin: 0; position: relative; z-index: 2; cursor: pointer; }
+        
+        /* 绘制 21 根刻度线 */
+        .ruler { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 0 10px; /* 使线条与默认滑块的圆点中心对齐 */
+            margin-top: -5px; /* 将刻度线向上提，贴紧滑块 */
+            pointer-events: none; /* 让鼠标点击能穿透刻度线，直接点到滑块 */
+        }
+        .tick { width: 2px; height: 12px; background-color: #7f8c8d; }
+        /* 还原课件细节：中间第 11 根线更长 */
+        .tick:nth-child(11) { height: 18px; margin-top: -6px; background-color: #2c3e50; }
+        
+        .tlx-labels { display: flex; justify-content: space-between; font-size: 0.9em; color: #666; margin-top: 5px; }
+        
         button { display: block; width: 100%; padding: 15px; background: #3498db; color: white; border: none; font-size: 18px; border-radius: 4px; cursor: pointer; margin-top: 20px; }
         button:hover { background: #2980b9; }
         .btn-success { background: #27ae60; }
@@ -46,6 +63,16 @@
         <h2>Part 2: NASA Task Load Index (TLX)</h2>
         <p>Please rate your perceived workload for the task you just completed.</p>
         <div id="tlx-container"></div>
+        
+        <datalist id="tickmarks">
+            <option value="1"></option><option value="2"></option><option value="3"></option>
+            <option value="4"></option><option value="5"></option><option value="6"></option>
+            <option value="7"></option><option value="8"></option><option value="9"></option>
+            <option value="10"></option><option value="11"></option><option value="12"></option>
+            <option value="13"></option><option value="14"></option><option value="15"></option>
+            <option value="16"></option><option value="17"></option><option value="18"></option>
+            <option value="19"></option><option value="20"></option><option value="21"></option>
+        </datalist>
 
         <button type="button" onclick="calculateAndSave()">Calculate & Save Record</button>
     </form>
@@ -67,7 +94,6 @@
 </div>
 
 <script>
-    // SUS Questions definition
     const susQuestions = [
         "1. I think that I would like to use this system frequently",
         "2. I found the system unnecessarily complex",
@@ -81,7 +107,6 @@
         "10. I needed to learn a lot of things before I could get going with this system"
     ];
 
-    // TLX Dimensions definition
     const tlxDimensions = [
         { id: "mental", title: "Mental Demand", q: "How mentally demanding was the task?", low: "Very Low", high: "Very High" },
         { id: "physical", title: "Physical Demand", q: "How physically demanding was the task?", low: "Very Low", high: "Very High" },
@@ -91,10 +116,8 @@
         { id: "frustration", title: "Frustration", q: "How insecure, discouraged, irritated, stressed, and annoyed were you?", low: "Very Low", high: "Very High" }
     ];
 
-    // Array to store all submitted records
     let evaluationData = [];
 
-    // Render SUS Form
     const susContainer = document.getElementById('sus-container');
     susQuestions.forEach((q, index) => {
         let html = `<div class="question"><p>${q}</p><div class="options">
@@ -106,21 +129,28 @@
         susContainer.innerHTML += html;
     });
 
-    // Render TLX Form
+    // 生成 21 条刻度线的 HTML
+    let ticksHtml = '<div class="ruler">';
+    for(let i=0; i<21; i++) {
+        ticksHtml += '<div class="tick"></div>';
+    }
+    ticksHtml += '</div>';
+
     const tlxContainer = document.getElementById('tlx-container');
     tlxDimensions.forEach(dim => {
         tlxContainer.innerHTML += `
             <div class="question">
                 <p><strong>${dim.title}:</strong> ${dim.q}</p>
-                <input type="range" id="${dim.id}" class="tlx-slider" min="1" max="21" value="11" step="1">
-                <div class="tlx-labels"><span>${dim.low}</span><span>${dim.high}</span></div>
+                <div class="tlx-slider-container">
+                    <input type="range" id="${dim.id}" class="tlx-slider" min="1" max="21" value="11" step="1" list="tickmarks">
+                    ${ticksHtml}
+                    <div class="tlx-labels"><span>${dim.low}</span><span>${dim.high}</span></div>
+                </div>
             </div>
         `;
     });
 
-    // Calculate and Save Data function
     function calculateAndSave() {
-        // 1. Calculate SUS
         let susSum = 0;
         let allSusAnswered = true;
         for (let i = 1; i <= 10; i++) {
@@ -140,7 +170,6 @@
         
         const finalSus = susSum * 2.5;
 
-        // 2. Calculate Raw NASA TLX
         let tlxSum = 0;
         tlxDimensions.forEach(dim => {
             const tick = parseInt(document.getElementById(dim.id).value);
@@ -149,7 +178,6 @@
         });
         const finalTlx = tlxSum / 6;
 
-        // 3. Save Data to Array
         const userId = document.getElementById('userId').value || "Anonymous";
         const difficulty = document.getElementById('difficulty').value;
         
@@ -160,7 +188,6 @@
             tlxScore: finalTlx.toFixed(1)
         });
 
-        // 4. Update UI Display
         document.getElementById('resUser').innerText = userId;
         document.getElementById('resDiff').innerText = difficulty;
         document.getElementById('resSus').innerText = finalSus.toFixed(1);
@@ -169,35 +196,25 @@
         document.getElementById('result').style.display = 'block';
         document.getElementById('recordCount').innerText = evaluationData.length;
         
-        // 5. Reset Form for the next participant
         document.getElementById('evalForm').reset();
         
-        // Give a clear alert
         alert("Record successfully calculated and saved! Ready for the next submission.");
-        
-        // Scroll back to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Export Array to CSV file
     function exportToCSV() {
         if (evaluationData.length === 0) {
             alert("No data to export yet! Please submit at least one record.");
             return;
         }
 
-        // Add UTF-8 BOM to ensure Excel reads characters correctly
         let csvContent = "\uFEFF";
-        
-        // Add Header Row
         csvContent += "Participant ID,Difficulty Level,SUS Score,NASA TLX Score\n";
 
-        // Add Data Rows
         evaluationData.forEach(row => {
             csvContent += `${row.userId},${row.difficulty},${row.susScore},${row.tlxScore}\n`;
         });
 
-        // Create download link
         const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
         const link = document.createElement("a");
         const url = URL.createObjectURL(blob);
