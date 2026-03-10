@@ -16,8 +16,11 @@
         .tlx-labels { display: flex; justify-content: space-between; font-size: 0.9em; color: #666; }
         button { display: block; width: 100%; padding: 15px; background: #3498db; color: white; border: none; font-size: 18px; border-radius: 4px; cursor: pointer; margin-top: 20px; }
         button:hover { background: #2980b9; }
+        .btn-success { background: #27ae60; }
+        .btn-success:hover { background: #2ecc71; }
         #result { margin-top: 20px; padding: 20px; background: #e8f6f3; border-left: 5px solid #1abc9c; display: none; }
         .score-highlight { font-size: 1.2em; font-weight: bold; color: #d35400; }
+        .data-management { margin-top: 40px; padding: 20px; background: #e8ebf6; border-radius: 8px; border-left: 5px solid #34495e; }
     </style>
 </head>
 <body>
@@ -25,17 +28,17 @@
 <div class="container">
     <h1>Game Evaluation Form</h1>
     
-    <div class="info-group">
-        <label for="userId">Participant ID:</label>
-        <input type="text" id="userId" placeholder="e.g., P01" required>
-        <label for="difficulty" style="margin-left: 20px;">Difficulty Level:</label>
-        <select id="difficulty">
-            <option value="Level 1">Level 1</option>
-            <option value="Level 2">Level 2</option>
-        </select>
-    </div>
-
     <form id="evalForm">
+        <div class="info-group">
+            <label for="userId">Participant ID:</label>
+            <input type="text" id="userId" placeholder="e.g., P01" required>
+            <label for="difficulty" style="margin-left: 20px;">Difficulty Level:</label>
+            <select id="difficulty">
+                <option value="Level 1">Level 1</option>
+                <option value="Level 2">Level 2</option>
+            </select>
+        </div>
+
         <h2>Part 1: System Usability Scale (SUS)</h2>
         <p>Please rate the following statements from 1 (Strongly disagree) to 5 (Strongly agree).</p>
         <div id="sus-container"></div>
@@ -44,15 +47,22 @@
         <p>Please rate your perceived workload for the task you just completed.</p>
         <div id="tlx-container"></div>
 
-        <button type="button" onclick="calculateScores()">Submit & Calculate Scores</button>
+        <button type="button" onclick="calculateAndSave()">Calculate & Save Record</button>
     </form>
 
     <div id="result">
-        <h3>Evaluation Results</h3>
+        <h3>Last Submission Result</h3>
         <p><strong>Participant:</strong> <span id="resUser"></span> | <strong>Difficulty:</strong> <span id="resDiff"></span></p>
         <p><strong>SUS Score:</strong> <span id="resSus" class="score-highlight"></span> / 100</p>
         <p><strong>NASA TLX (Raw) Score:</strong> <span id="resTlx" class="score-highlight"></span> / 100</p>
-        <p><em>Please record these scores in your data spreadsheet.</em></p>
+        <p><em>(This record has been temporarily saved in the browser memory)</em></p>
+    </div>
+
+    <div class="data-management">
+        <h2>Data Management</h2>
+        <p>Records currently saved: <span id="recordCount" style="font-size: 1.5em; font-weight: bold; color: #e74c3c;">0</span></p>
+        <p style="font-size: 0.9em; color: #666;">Note: Please do not refresh or close the browser tab until you have downloaded the CSV, otherwise the unsaved data will be lost.</p>
+        <button type="button" class="btn-success" onclick="exportToCSV()">Download Data as CSV</button>
     </div>
 </div>
 
@@ -81,6 +91,9 @@
         { id: "frustration", title: "Frustration", q: "How insecure, discouraged, irritated, stressed, and annoyed were you?", low: "Very Low", high: "Very High" }
     ];
 
+    // Array to store all submitted records
+    let evaluationData = [];
+
     // Render SUS Form
     const susContainer = document.getElementById('sus-container');
     susQuestions.forEach((q, index) => {
@@ -93,7 +106,7 @@
         susContainer.innerHTML += html;
     });
 
-    // Render TLX Form (21 ticks as per presentation)
+    // Render TLX Form
     const tlxContainer = document.getElementById('tlx-container');
     tlxDimensions.forEach(dim => {
         tlxContainer.innerHTML += `
@@ -105,8 +118,8 @@
         `;
     });
 
-    // Calculate Scores function
-    function calculateScores() {
+    // Calculate and Save Data function
+    function calculateAndSave() {
         // 1. Calculate SUS
         let susSum = 0;
         let allSusAnswered = true;
@@ -114,7 +127,6 @@
             const ele = document.querySelector(`input[name="sus${i}"]:checked`);
             if (ele) {
                 let val = parseInt(ele.value);
-                // Odd items: scale position - 1. Even items: 5 - scale position
                 susSum += (i % 2 !== 0) ? (val - 1) : (5 - val);
             } else {
                 allSusAnswered = false;
@@ -132,22 +144,71 @@
         let tlxSum = 0;
         tlxDimensions.forEach(dim => {
             const tick = parseInt(document.getElementById(dim.id).value);
-            // Score = (tick number - 1) * 5
             const score = (tick - 1) * 5;
             tlxSum += score;
         });
         const finalTlx = tlxSum / 6;
 
-        // Display Results
-        document.getElementById('resUser').innerText = document.getElementById('userId').value || "Anonymous";
-        document.getElementById('resDiff').innerText = document.getElementById('difficulty').value;
+        // 3. Save Data to Array
+        const userId = document.getElementById('userId').value || "Anonymous";
+        const difficulty = document.getElementById('difficulty').value;
+        
+        evaluationData.push({
+            userId: userId,
+            difficulty: difficulty,
+            susScore: finalSus.toFixed(1),
+            tlxScore: finalTlx.toFixed(1)
+        });
+
+        // 4. Update UI Display
+        document.getElementById('resUser').innerText = userId;
+        document.getElementById('resDiff').innerText = difficulty;
         document.getElementById('resSus').innerText = finalSus.toFixed(1);
         document.getElementById('resTlx').innerText = finalTlx.toFixed(1);
         
         document.getElementById('result').style.display = 'block';
+        document.getElementById('recordCount').innerText = evaluationData.length;
         
-        // Scroll to results
-        document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        // 5. Reset Form for the next participant
+        document.getElementById('evalForm').reset();
+        
+        // Give a clear alert
+        alert("Record successfully calculated and saved! Ready for the next submission.");
+        
+        // Scroll back to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Export Array to CSV file
+    function exportToCSV() {
+        if (evaluationData.length === 0) {
+            alert("No data to export yet! Please submit at least one record.");
+            return;
+        }
+
+        // Add UTF-8 BOM to ensure Excel reads characters correctly
+        let csvContent = "\uFEFF";
+        
+        // Add Header Row
+        csvContent += "Participant ID,Difficulty Level,SUS Score,NASA TLX Score\n";
+
+        // Add Data Rows
+        evaluationData.forEach(row => {
+            csvContent += `${row.userId},${row.difficulty},${row.susScore},${row.tlxScore}\n`;
+        });
+
+        // Create download link
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement("a");
+        const url = URL.createObjectURL(blob);
+        
+        link.setAttribute("href", url);
+        link.setAttribute("download", "U_help_U_Cowork_Evaluation_Data.csv");
+        link.style.visibility = 'hidden';
+        
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     }
 </script>
 
