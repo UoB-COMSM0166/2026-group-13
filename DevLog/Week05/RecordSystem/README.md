@@ -46,3 +46,66 @@
 - 进度管理：维护 replayIndex 指针，控制回放流。
 - 时长控制：监控 maxDurationMs，防止录制数据过大导致内存溢出。
 - 接口提供：为外部 CharacterController 提供简单的 start/stop 接口。
+
+## RecordSystem Architecture
+
+### 录制与回放的整体流程 Recording and Replay Pipeline
+
+```
+录制：
+Keyboard / Input Layer
+        ↓
+外部每帧收集玩家真实输入
+        ↓
+生成 InputFrame
+        ↓
+RecordSystem.captureFrame(frame)
+        ↓
+RecordClip 保存历史帧
+
+回放：
+决定何时开始回放Keyboard / UI / Game Flow
+        ↓
+外部触发RecordSystem.startReplay()
+        ↓
+(主循环每帧调用)
+RecordSystem.updateReplay()
+        ↓
+返回当前帧InputFrame
+        ↓
+CharacterController.applyInputFrame (frame, controlledEntity) 
+【把这个 帧 交给 角色控制系统】
+        ↓
+Physics / Collision / Animation
+【角色进入 物理碰撞 流程】
+```
+
+```
+Recording Pipeline
+
+Keyboard / Input Layer
+        ↓
+Collect player input every frame
+        ↓
+Generate InputFrame
+        ↓
+RecordSystem.captureFrame(frame)
+        ↓
+RecordClip stores frame history
+
+
+Replay Pipeline
+
+Keyboard / UI / Game Flow
+        ↓
+External trigger → RecordSystem.startReplay()
+        ↓
+(Main loop calls every frame)
+RecordSystem.updateReplay()
+        ↓
+Return InputFrame
+        ↓
+CharacterController.applyInputFrame(frame, controlledEntity)
+        ↓
+Physics / Collision / Animation
+```
