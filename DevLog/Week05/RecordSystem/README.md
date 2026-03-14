@@ -1,7 +1,7 @@
 # RecordSystem 模块设计说明
 
 ## 模块概述
-`RecordSystem` 模块用于实现本项目中的**录制与回放（Record & Replay）**机制。
+`RecordSystem` 模块用于实现本项目中的 录制与回放（Record & Replay）机制。
 在游戏中，玩家可以记录自己的一段操作，然后生成一个“分身”按照相同的操作顺序进行回放。该机制是本游戏关卡设计的重要核心玩法。
 
 ### 1. 核心玩法示例
@@ -42,7 +42,9 @@
 - 空间坐标：存储 startX 和 startY，确保分身回放时能从玩家当时的起始点开始，避免位移偏差。
 
 ### 4. RecordSystem
-`RecordSystem` 是整个模块的单例控制器，负责调度上述所有类。
+`RecordSystem` 是整个模块的主控制器 core controller（通常在游戏中作为单一实例使用），负责调度上述所有类。
+<br>
+注：RecordSystem 还提供 stopReplay()，供外部系统在需要时提前终止回放。
 - 进度管理：维护 replayIndex 指针，控制回放流。
 - 时长控制：监控 maxDurationMs，防止录制数据过大导致内存溢出。
 - 接口提供：为外部 CharacterController 提供简单的 start/stop 接口。

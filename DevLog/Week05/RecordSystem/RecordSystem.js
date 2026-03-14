@@ -203,6 +203,28 @@ class RecordSystem {
   }
 
   /**
+  * 停止当前回放
+  * 常用于：
+  * - 玩家按键主动取消回放
+  * - 分身回放过程中被外部事件打断
+  * - 游戏流程要求提前结束 replay
+  *
+  * 注意：
+  * 这里只负责“停止回放并恢复为空闲状态”
+  * 不会删除 currentClip，因为通常还希望之后可以重新播放同一段录制
+  */
+  stopReplay() {
+    // 只有在回放状态下，才需要停止回放
+    if (!this.isReplaying()) return;
+
+    // 退出回放模式，恢复为空闲状态
+    this.mode = RecordMode.IDLE;
+
+    // 回放索引重置为 0，方便下次从头开始播放
+    this.replayIndex = 0;
+  }
+
+  /**
    * 中断当前录制流程
    * 示例场景：
    * - 玩家录到一半，主动按键结束录制
@@ -254,6 +276,8 @@ class RecordSystem {
    *
    * @returns {InputFrame|null}
    */
+
+  // 注意：正常回放逻辑用 updateReplay()，其只是辅助查看状态
   getCurrentFrame() {
     // 如果没有当前录制片段，则返回 null
     if (!this.currentClip) return null;
