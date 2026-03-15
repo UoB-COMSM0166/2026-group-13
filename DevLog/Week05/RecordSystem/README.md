@@ -1,89 +1,60 @@
-# RecordSystem 模块设计说明
+# RecordSystem Module Design Specification
 
-## 模块概述
-`RecordSystem` 模块用于实现本项目中的 录制与回放（Record & Replay）机制。
-在游戏中，玩家可以记录自己的一段操作，然后生成一个“分身”按照相同的操作顺序进行回放。该机制是本游戏关卡设计的重要核心玩法。
+## Module Overview
+The `RecordSystem` module is used to implement the Record & Replay mechanism in this project. In the game, players can record a sequence of their own operations, and then generate a "clone" to replay them in the exact same sequence. This mechanism is a crucial core gameplay element of the game's level design.
 
-### 1. 核心玩法示例
-* **路径记录**：玩家录制一段移动路线。
-* **分身生成**：回放时生成分身重复这段动作。
-* **协作挑战**：玩家本体与分身协作完成机关、平台或时间类挑战。
+### 1. Core Gameplay Examples
+* **Path Recording**: The player records a movement route.
+* **Clone Generation**: A clone is generated during replay to repeat these actions.
+* **Cooperative Challenges**: The player character and the clone cooperate to complete mechanism, platforming, or time-based challenges.
 
-### 2. 模块主要功能
-1.  **记录**：捕捉玩家逐帧的控制意图。
-2.  **存储**：将操作保存为完整的 `RecordClip` 片段。
-3.  **回放**：在回放阶段按顺序输出控制意图驱动分身。
-
----
-
-## 设计目标
-* **逐帧记录**：按帧（frame）粒度记录水平移动、跳跃、朝向、交互等操作，确保回放平滑。
-* **片段化管理**：每次录制封装为 `RecordClip` 对象，包含起始位置、时长及数据数组。
-* **顺序驱动**：回放阶段严格按序输出 `InputFrame` 数据。
-* **高内聚低耦合**：模块独立负责逻辑，不涉及物理、碰撞或渲染。
+### 2. Main Module Functions
+1.  **Recording**: Captures the player's control intentions frame by frame.
+2.  **Storage**: Saves the operations as a complete `RecordClip` fragment.
+3.  **Replay**: Outputs the control intentions in sequence to drive the clone during the replay phase.
 
 ---
 
-## 核心类说明 (Core Class Specifications)
+## Design Goals
+* **Frame-by-Frame Recording**: Records operations such as horizontal movement, jumping, facing direction, and interactions at a frame granularity to ensure smooth replay.
+* **Fragmented Management**: Each recording is encapsulated as a `RecordClip` object, which includes the starting position, duration, and data array.
+* **Sequential Drive**: Strictly outputs `InputFrame data in order during the replay phase.
+* **High Cohesion and Low Coupling**: The module is independently responsible for logic and does not involve physics, collision, or rendering.
 
-由四个核心组件协作完成，分别负责状态管理、单帧数据、片段存储和全局控制。
+---
+
+## Core Class Specifications
+
+It is accomplished through the collaboration of four core components, which are responsible for state management, single-frame data, clip storage, and global control respectively.
 
 ---
 
 ### 1. RecordMode
-`RecordMode` 是一个静态枚举对象，用于定义录制系统的运行状态。它确保了系统在录制、回放和空闲之间有清晰的边界。
+`RecordMode` is a static enumeration object used to define the operating state of the recording system. It ensures that the system has clear boundaries between recording, replaying, and idle states.
 
 ### 2. InputFrame
-`InputFrame` 是录制系统的最小数据单元，承载了某一帧时刻角色的控制意图；它记录的是“行为”而非“按键”。
+`InputFrame` is the smallest data unit of the recording system, carrying the character's control intentions at a specific frame; it records "behaviors" rather than "keystrokes".
 
 ### 3. RecordClip
-`RecordClip` 是数据的集合容器，代表了一次从“按下录制”到“停止录制”的完整过程。
-- 数据结构：内部维护一个 frames[] 数组。
-- 空间坐标：存储 startX 和 startY，确保分身回放时能从玩家当时的起始点开始，避免位移偏差。
+`RecordClip` is a data collection container representing a complete process from "pressing record" to "stopping record".
+- Data Structure: Internally maintains a frames[] array.
+- Spatial Coordinates: Stores startX and startY to ensure that the clone starts replaying from the player's exact starting point at that time, avoiding displacement deviations.
 
 ### 4. RecordSystem
-`RecordSystem` 是整个模块的主控制器 core controller（通常在游戏中作为单一实例使用），负责调度上述所有类。
+`RecordSystem` is the core controller of the entire module (typically used as a singleton in the game), responsible for dispatching all the aforementioned classes.
 <br>
-注：RecordSystem 还提供 stopReplay()，供外部系统在需要时提前终止回放。
-- 进度管理：维护 replayIndex 指针，控制回放流。
-- 时长控制：监控 maxDurationMs，防止录制数据过大导致内存溢出。
-- 接口提供：为外部 CharacterController 提供简单的 start/stop 接口。
+Note: RecordSystem also provides stopReplay(), for external systems to terminate the replay prematurely when needed.
+
+- Progress Management: Maintains the replayIndex pointer to control the replay flow.
+- Duration Control: Monitors maxDurationMs to prevent the recording data from becoming too large and causing memory overflow.
+- Interface Provision: Provides simple start/stop interfaces for the external CharacterController.
 
 ## RecordSystem Architecture
 
-### 录制与回放的整体流程 Recording and Replay Pipeline
+### Recording and Replay Pipeline (Overall recording and playback process)
 
 ```
-录制：
-Keyboard / Input Layer
-        ↓
-外部每帧收集玩家真实输入
-        ↓
-生成 InputFrame
-        ↓
-RecordSystem.captureFrame(frame)
-        ↓
-RecordClip 保存历史帧
-
-回放：
-决定何时开始回放Keyboard / UI / Game Flow
-        ↓
-外部触发RecordSystem.startReplay()
-        ↓
-(主循环每帧调用)
-RecordSystem.updateReplay()
-        ↓
-返回当前帧InputFrame
-        ↓
-CharacterController.applyInputFrame (frame, controlledEntity) 
-【把这个 帧 交给 角色控制系统】
-        ↓
-Physics / Collision / Animation
-【角色进入 物理碰撞 流程】
-```
-
-```
-Recording Pipeline
+Recording Pipeline:
 
 Keyboard / Input Layer
         ↓
@@ -96,7 +67,7 @@ RecordSystem.captureFrame(frame)
 RecordClip stores frame history
 
 
-Replay Pipeline
+Replay Pipeline:
 
 Keyboard / UI / Game Flow
         ↓

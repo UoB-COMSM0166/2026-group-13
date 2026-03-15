@@ -1,15 +1,15 @@
-# 最小调用示例（外部系统如何使用 RecordSystem）
+# Minimal Usage Example (How External Systems Use RecordSystem)
 
-`RecordSystem` 模块只负责 **录制与回放逻辑**，  
-而 **何时触发回放**、**如何将回放帧应用到角色**，则由外部系统负责（例如键盘输入、UI 控制或游戏流程管理）。
+`RecordSystem` module is solely responsible for the **recording and replay logic**，  
+while when to trigger a replay and how to apply replay frames to the character are handled by external systems (such as keyboard input, UI controls, or game flow management).
 
-最简单的集成示例。
+This is the simplest integration example.
 
 ---
 
-## 在游戏主循环中调用回放
+## Calling Replay in the Main Game Loop
 
-在游戏主循环（例如 `update()` 或 `draw()`）中，每一帧检查是否正在回放，并获取当前回放帧。
+In the main game loop (for example, `update()` or `draw()`), check whether a replay is currently in progress every frame and retrieve the current replay frame.
 
 ```javascript
 // 示例：在游戏主循环中处理 replay
@@ -31,18 +31,18 @@ function updateGame() {
 }
 ```
 
-## 通过外部输入触发回放
+## Triggering Replay via External Input
 
-### 回放通常由 键盘输入、UI 按钮或游戏流程控制触发，例如：
+### Replays are typically triggered by keyboard input, UI buttons, or game flow controls, for example:
 ```
 function keyPressed() {
 
-    // 按 P 键开始回放
+    // Press P to playback
     if (key === 'P') {
         recordSystem.startReplay();
     }
 
-    // 按 R 键提前停止回放
+    // Press R to stop playback early
     if (key === 'R') {
         recordSystem.stopReplay();
     }
@@ -50,9 +50,13 @@ function keyPressed() {
 }
 ```
 
-## 设计原则
-RecordSystem 模块只负责：
-- 记录玩家逐帧输入
-- 保存录制片段（RecordClip）
-- 按顺序回放 InputFrame
-它不会直接控制角色移动、物理或碰撞系统。这些行为由外部模块（如 CharacterController、Physics、Collision 等）负责，进而保证模块之间的低耦合（low coupling），使录制与回放系统保持独立与可复用。
+## Design Principles
+
+The RecordSystem module is strictly responsible for:
+- recording player input frame-by-frame
+- saving recorded clips (RecordClip)
+- replaying InputFrames in sequence. 
+
+It does not directly control character movement, physics, or collision systems. These behaviors are the responsibility of external modules (such as CharacterController, Physics, Collision, etc.). 
+
+Thereby ensuring low coupling between modules and keeping the recording and replay system independent and reusable.
