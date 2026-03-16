@@ -92,39 +92,41 @@ Both the ‘present self’ and the ‘past self’ are subject to gravity and f
 Both can stand on the floor, a floating platform, or on top of the other (standing vertically against them, with velocity reduced to zero, and maintaining a stable stance); they are both solid, impenetrable units.​
 
  ***游戏目标（Game Goal）​​***
-1. 关卡目标​
+1. Level Objectives​ 
 
-基础目标：
+Fundamental Objective：
 
-操控「现在的自己」到达关卡指定终点（比如绿色旗帜、发光传送门等可视化标记）。​
+Navigate the "Present Self" to the designated terminal point (e.g., visual markers such as green flags or luminous portals).
 
-进阶目标：​
+Advanced Objectives：​
 
-最短录制次数通关（越少次录制 “过去的自己” 越优，考验规划能力）；​
+Minimum Recording Cycles: Complete the level with the fewest recordings of the "Past Self" to evaluate the player’s strategic planning efficiency;
 
-无多余操作录制（录制的行动完全服务于协作，无无效移动，追求 “一次成型”）；​
+Optimized Execution: Achieve a "one-take" recording where every action serves a collaborative purpose, eliminating redundant movements or technical waste.
 
-隐藏目标：收集关卡内的 “时光碎片”（分散在高台、隐蔽位置，需 “过去的自己” 与 “现在的自己” 配合才能拿到）。​
+Hidden Objectives：
 
-2. 核心体验目标​
+Collectible Acquisition: Retrieve "Time Shards" scattered across elevated or obscured locations, requiring synchronized coordination between the Past and Present avatars.​
 
-让玩家直观感受 “与过去的自己协作” 的奇妙感，体会 “自我突破” 的成就感；​
+2. Core Experience Goals
 
-培养空间预判能力和逻辑规划能力（需提前设想 “过去的行动” 如何为 “现在的突破” 铺路）；​
+Provide players with an intuitive sense of "collaborating with one's past," fostering a rewarding feeling of self-transcendence;
 
-传递 “每一次尝试都不是徒劳，过去的自己会成为现在的助力” 的隐喻，强化自我成长的主题。​
+Cultivate spatial reasoning and proactive planning, requiring players to envision how "past actions" pave the way for "present breakthroughs";
 
-四、核心亮点（差异化特色）​
+Convey the theme of personal growth—that no attempt is futile, as one's past efforts serve as a foundation for present success.
 
-“过去与现在” 的强代入感
+四、Core Highlights (Differentiation)
 
-操作录制而非位置录制：“过去的自己” 的轨迹是实时演算的，受物理规则影响（比如录制时跳上平台，回放时 “现在的自己” 可踩在 “过去的自己” 肩上再跳更高），避免固定脚本的僵硬感，增加协作灵活性。​
+Immersive "Past-Present" Integration
 
-双向互踩的实心物理：“过去” 与 “现在” 互为协作平台，突破传统 “辅助单位单向助力” 的设定，形成 “我踩你、你踩我” 的双向协作，玩法更具创意与策略空间。​
+​Action-Based Recording vs. Positional Recording: The trajectory of the "Past Self" is calculated via real-time physics rather than static scripts. For instance, if a player jumps onto a platform during recording, the "Present Self" can use the "Past Self's" shoulders as a dynamic platform to reach higher ground.
 
-无压力探索氛围：无时间限制、无死亡惩罚，玩家可反复录制、调整 “过去的自己” 的行动，专注于 “规划协作” 的乐趣，降低解谜焦虑。​
+Bidirectional Interaction: Both entities function as physical platforms for one another. This transcends the traditional "one-way support" trope, allowing for complex "leapfrogging" strategies ($A$ supports $B$, and $B$ subsequently supports $A$), expanding the creative and tactical depth of the gameplay.
 
-极简视觉与清晰反馈：粉色背景 + 高对比度角色（白色 “现在”、蓝色半透 “过去”），搭配 “NOW/PAST” 标识，让玩家快速区分两个 “自己”，降低识别成本，专注于协作逻辑。​
+Non-Punitive Environment: By removing time constraints and death penalties, the game encourages iterative recording and adjustment. This allows players to focus on the joy of collaborative planning while mitigating puzzle-solving anxiety.
+
+Visual Clarity: Utilizing high-contrast character designs (Solid White for "Present"; Translucent Blue for "Past") against a pink backdrop, supplemented by "NOW/PAST" UI indicators. This minimizes cognitive load and allows players to focus entirely on the logic of collaboration.
 
 
 ### Requirements 
