@@ -155,12 +155,12 @@ The people who focuses on the implementation and smooth execution of core functi
 
 ## Reflection
 
-在我们推进游戏进度时，团队将史诗、用户故事和验收标准应用于我们的“录制与回放”机制构建的横版卷轴平台闯关挑战游戏，并对于作为实用的需求工程工具而非抽象的文档练习有了更清晰的理解。
+As we progressed with our game, our team applied epics, user stories, and acceptance criteria to side-scrolling platformer puzzle game built on a "record and replay" mechanic, gaining a clearer understanding of them as practical requirements engineering tools rather than abstract documentation exercises.
 
-在史诗级故事层面，我们学习了如何将整体设计意图转化为指导开发决策的战略目标。它帮助我们设定了诸如易于上手的新手引导、低挫败感的游戏体验以及机制驱动的创造力等目标。这些宏观主题确保了各个功能始终与整体玩家体验保持一致，而不是孤立地实现。例如，定义“零挫折、短周期”这一史诗，确保即使在设计像“颠倒世界”这样复杂的关卡时，我们的开发重点也能始终与“最小操作 与 最大巧妙性”的核心愿景保持一致。
+At the epic level, we learned how to translate overarching design intentions into strategic goals that guide development decisions. It helped us set objectives such as an accessible onboarding experience, a low-frustration gameplay experience, and mechanic-driven creativity. These macro-themes ensured that individual features remained consistently aligned with the overall player experience, rather than being implemented in isolation. For instance, defining the epic "Zero Frustration, Short Cycles" ensured that even when designing complex levels like the "Upside-Down World," our development focus remained aligned with the core vision of "minimum operation with maximum ingenuity."
 
-用户故事则将我们的关注点从机制设计转移到了体验设计。通过应用“作为玩家，我想要……，以便……”的格式，我们将诸如记录玩家操作或限制回放次数等技术概念重新定义为以玩家为中心的动机，例如清晰度、满足感和巧妙解决问题的成就感。这种方法还帮助我们区分新手玩家、经验丰富的玩家和评估人员，从而使我们能够在早期阶段优先考虑可用性和学习曲线。例如，我们没有简单地编写克隆功能，而是定义了：“作为玩家，我希望利用我的‘过去自我’作为垫脚石，以便到达更高的平台”。这明确了克隆机制的实际游戏价值。
+User stories, in turn, shifted our focus from mechanic design to experience design. By applying the "As a player, I want to..., so that..." format, we redefined technical concepts—such as recording player actions or limiting the number of replays—into player-centric motivations, such as clarity, satisfaction, and the sense of achievement in cleverly solving problems. This approach also helped us distinguish between novice players, experienced players, and assessors, allowing us to prioritize usability and the learning curve in the early stages. For example, rather than simply coding a clone feature, we defined: "As a player, I want to use my 'past self' as a stepping stone so that I can reach higher platforms." This clarified the practical gameplay value of the cloning mechanic.
 
-最后，验收标准为我们提供了必要的约束与技术严谨性，使我们的想法可测试且可实现。通过使用 Given-When-Then 结构，我们定义了清晰时间循环逻辑的可测试结果。例如：“给定录制阶段结束，当回放阶段开始时，‘过去的自己’实体必须执行与录制输入完全相同的顺序。” 将抽象的谜题构想转化为客观、可测试的需求，有效地防止了范围蔓延，并确保创意在 p5.js 环境下保持技术可行性。
+Finally, acceptance criteria provided us with the necessary constraints and technical rigor, making our ideas testable and achievable. By using the Given-When-Then structure, we defined testable outcomes for clear time-loop logic. For example: "Given the recording phase has ended, when the replay phase begins, then the 'past self' entity must execute the exact same sequence as the recorded inputs." Translating abstract puzzle concepts into objective, testable requirements effectively prevented scope creep and ensured that our ideas remained technically feasible within the p5.js environment.
 
-总而言之，这项实践表明，需求方法并非对创造力的限制，而是帮助我们将复杂的游戏创意转化为连贯、可玩且具有真正用户价值的系统框架。
+In conclusion, this practice demonstrated that requirements methodologies are not constraints on creativity, but rather a systematic framework that helps us transform complex game ideas into coherent, playable experiences with genuine user value.
