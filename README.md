@@ -45,33 +45,33 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 Players progress through the game one level at a time, with each level functioning as an independent challenge. After completing a stage, they simply move on to the next one.
 
  ***核心玩法（How to Play）​***
-1. 基础操作（全状态通用）​
+#### 1. Basic Controls (Applies to all modes)​
 
-移动：A/D 键 或 方向键←→（仅左右横板移动）​
+Movement: A/D keys (horizontal movement only)​
 
-跳跃：空格键（无任何限制，随时可跳，支持空中连跳）​
+Jump: W key or Space bar (no restrictions; jump at any time; supports consecutive jumps in mid-air)​
 
-录制 / 回放：R 键（一键开启录制、结束录制并触发回放）​
+Record / Replay: R key (toggles recording on/off and triggers replay)
 
-2. 三大核心模式（流程闭环）​
+#### 2. Three Core Modes (Closed-Loop Process)​
 
-（1）探索模式（初始状态）​
+(1) Exploration Mode (Initial State)​
 
-玩家操控「现在的自己」（白色实心方块，带 “NOW” 标识），可自由探索关卡地形（地板、悬浮平台），观察障碍布局，规划 “过去的自己” 需要配合的行动路线。​
+The player controls ‘Present Self’ (main character), freely exploring the level’s terrain (floors, floating platforms), observing the layout of obstacles, and planning the route that ‘Past Self’ must follow to coordinate with them.​
 
-核心规则：「现在的自己」受重力影响，可站在地板、平台上，无其他限制；此时无 “过去的自己”，仅专注于场景探查与策略规划。​
+Core Rule: ‘Present Self’ is subject to gravity and can stand on floors and platforms without any other restrictions; at this stage, there is no ‘Past Self’, so the focus is solely on exploring the scene and planning strategy.​
 
-（2）录制模式（按 R 键开启）​
+(2) Recording Mode (activated by pressing the R key)​
 
-开启后，屏幕顶部显示 “录制中” 提示，「现在的自己」的行动（左右移动、跳跃）会被逐帧记录 —— 记录的是 “操作指令” 而非固定位置，确保回放时能适配物理规则。​
+Once activated, a “Recording” prompt appears at the top left of the screen. The recording lasts for 10 seconds, during which “Present Self”’s movements (moving left/right, jumping) are recorded frame by frame — recording “control commands” rather than fixed positions, ensuring compliance with physical laws during playback.​
 
-核心规则：录制过程中，「现在的自己」仍可自由行动，需自主规划 “有价值的协作轨迹”（比如停在关键高台、移动到特定辅助位置、完成一段连续跳跃等）；录制期间不会生成 “过去的自己”，仅记录行动数据。​
+Core rule: During recording, the ‘present self’ remains free to move and must independently plan ‘valuable collaborative trajectories’ (such as stopping at key elevated platforms, moving to specific support positions, or completing a sequence of jumps); no ‘past self’ is generated during recording, only action data is logged.
 
-再次按 R 键结束录制，自动切换到 “协作回放模式”，同时生成「过去的自己」（蓝色半透方块，带 “PAST” 标识）。​
+Press the R key again or wait for the countdown to end to stop recording. The game will automatically switch to “Co-op Replay Mode” and generate a “Past Self” (clone).​
 
-（3）协作回放模式（录制结束后自动进入）​
+(3) Collaborative Replay Mode (entered automatically upon completion of recording)​
 
-「现在的自己」保持可操控状态，「过去的自己」按录制的操作指令实时演算物理轨迹（完全复现录制时的行动，受重力、地形影响，不是固定脚本）。​
+The “present self” remains controllable, whilst the “past self” calculates its physical trajectory in real time based on the recorded commands (fully reproducing the actions taken during recording; subject to gravity and terrain, not a fixed script).​
 
 核心规则：​
 
