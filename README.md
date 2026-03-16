@@ -92,7 +92,7 @@ Both the ‘present self’ and the ‘past self’ are subject to gravity and f
 Both can stand on the floor, a floating platform, or on top of the other (standing vertically against them, with velocity reduced to zero, and maintaining a stable stance); they are both solid, impenetrable units.​
 
  ***游戏目标（Game Goal）​​***
-1. Level Objectives​ 
+#### 1. Level Objectives​ 
 
 Fundamental Objective：
 
@@ -108,7 +108,7 @@ Hidden Objectives：
 
 Collectible Acquisition: Retrieve "Time Shards" scattered across elevated or obscured locations, requiring synchronized coordination between the Past and Present avatars.​
 
-2. Core Experience Goals
+#### 2. Core Experience Goals
 
 Provide players with an intuitive sense of "collaborating with one's past," fostering a rewarding feeling of self-transcendence;
 
@@ -116,17 +116,17 @@ Cultivate spatial reasoning and proactive planning, requiring players to envisio
 
 Convey the theme of personal growth—that no attempt is futile, as one's past efforts serve as a foundation for present success.
 
-四、Core Highlights (Differentiation)
+ ***Core Highlights (Differentiation) ​​***
 
 Immersive "Past-Present" Integration
 
-​Action-Based Recording vs. Positional Recording: The trajectory of the "Past Self" is calculated via real-time physics rather than static scripts. For instance, if a player jumps onto a platform during recording, the "Present Self" can use the "Past Self's" shoulders as a dynamic platform to reach higher ground.
+(1) ​Action-Based Recording vs. Positional Recording: The trajectory of the "Past Self" is calculated via real-time physics rather than static scripts. For instance, if a player jumps onto a platform during recording, the "Present Self" can use the "Past Self's" shoulders as a dynamic platform to reach higher ground.
 
-Bidirectional Interaction: Both entities function as physical platforms for one another. This transcends the traditional "one-way support" trope, allowing for complex "leapfrogging" strategies ($A$ supports $B$, and $B$ subsequently supports $A$), expanding the creative and tactical depth of the gameplay.
+(2) Bidirectional Interaction: Both entities function as physical platforms for one another. This transcends the traditional "one-way support" trope, allowing for complex "leapfrogging" strategies ($A$ supports $B$, and $B$ subsequently supports $A$), expanding the creative and tactical depth of the gameplay.
 
-Non-Punitive Environment: By removing time constraints and death penalties, the game encourages iterative recording and adjustment. This allows players to focus on the joy of collaborative planning while mitigating puzzle-solving anxiety.
+(3) Non-Punitive Environment: By removing time constraints and death penalties, the game encourages iterative recording and adjustment. This allows players to focus on the joy of collaborative planning while mitigating puzzle-solving anxiety.
 
-Visual Clarity: Utilizing high-contrast character designs (Solid White for "Present"; Translucent Blue for "Past") against a pink backdrop, supplemented by "NOW/PAST" UI indicators. This minimizes cognitive load and allows players to focus entirely on the logic of collaboration.
+(4) Visual Clarity: Utilizing high-contrast character designs (Solid White for "Present"; Translucent Blue for "Past") against a pink backdrop, supplemented by "NOW/PAST" UI indicators. This minimizes cognitive load and allows players to focus entirely on the logic of collaboration.
 
 
 ### Requirements 
