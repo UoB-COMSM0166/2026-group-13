@@ -73,23 +73,23 @@ Press the R key again or wait for the countdown to end to stop recording. The ga
 
 The “present self” remains controllable, whilst the “past self” calculates its physical trajectory in real time based on the recorded commands (fully reproducing the actions taken during recording; subject to gravity and terrain, not a fixed script).​
 
-核心规则：​
+#### Core Rules:​
 
-「现在的自己」与「过去的自己」均为 “实心箱子” 物理属性，可双向互踩（现在能踩在过去的自己身上，过去的自己也能踩在现在的自己身上，站稳不滑、不穿透）。​
+Both the ‘present self’ and the ‘past self’ possess the ‘solid box’ physical property, allowing them to stand on top of one another in both directions (the present self can stand on the past self, and the past self can stand on the present self; they remain stable without slipping or passing through one another).​
 
-两者水平方向不可重叠（碰撞后自动水平推离），垂直方向可站立叠加，互不干扰行动逻辑。​
+The two cannot overlap horizontally (they are automatically pushed apart horizontally upon collision), but may stand on top of one another vertically without interfering with each other’s movement logic.
 
-回放过程中，玩家操控「现在的自己」利用「过去的自己」的轨迹突破障碍（比如踩在 “过去的自己” 肩上跳上更高平台、让 “过去的自己” 停在悬空位置作为临时跳板等）。​
+During playback, the player controls ‘Present Self’ to use ‘Past Self’s’ trajectory to overcome obstacles (for example, standing on ‘Past Self’s’ shoulders to jump onto a higher platform, or having ‘Past Self’ pause in mid-air to serve as a temporary springboard).
 
-若需调整 “过去的自己” 的行动，可再次按 R 键中断回放，回到 “探索模式” 重新录制（新录制的内容会覆盖旧的 “过去的自己”，同一时间仅存在一个 “过去的自己”）。​
+If you need to adjust the actions of the ‘past self’, press the R key again to pause the replay, return to ‘Exploration Mode’ and re-record (the new recording will overwrite the old ‘past self’; only one ‘past self’ can exist at a time).
 
-回放结束后（录制的操作帧全部执行完毕），「过去的自己」自动消失，回到 “探索模式”，可重新录制新的 “过去的自己”。​
+Once the replay has finished (and all recorded action frames have been executed), the ‘past self’ will automatically disappear, returning to ‘Exploration Mode’, where you can record a new ‘past self’.​
 
-3. 物理规则（核心共识）​
+#### 3. Physical Rules (Core Consensus)​
 
-「现在的自己」与「过去的自己」均受重力影响，自然下落，遵循相同的物理逻辑。​
+Both the ‘present self’ and the ‘past self’ are subject to gravity and fall naturally, following the same physical principles.​
 
-两者均可站在地板、悬浮平台、对方顶部（垂直贴紧，速度清零，稳定站立），均为不可穿透的实心单位。​
+Both can stand on the floor, a floating platform, or on top of the other (standing vertically against them, with velocity reduced to zero, and maintaining a stable stance); they are both solid, impenetrable units.​
 
  ***游戏目标（Game Goal）​​***
 1. 关卡目标​
