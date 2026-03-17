@@ -17,23 +17,11 @@ class InputFrame {
    *
    * @param {boolean} jumpPressed
    * 这一帧是否触发跳跃动作
-   *
-   * @param {boolean} facingRight
-   * 这一帧角色是否应保持朝向右边
-   * 这个字段很重要，因为当 moveX = 0 时，角色仍然可能需要保持上一次朝向
-   *
-   * @param {boolean} interactPressed
-   * 这一帧是否触发交互动作（例如按钮、机关、开箱等）
-   *
-   * @param {boolean} useItemPressed
-   * 这一帧是否触发使用道具动作（例如放炸弹、使用特殊物品）
+   * 
    */
   constructor(
-    moveX = 0, // 默认不水平移动
-    jumpPressed = false,     // 默认这一帧不跳跃
-    facingRight = true,      // 默认角色朝右
-    interactPressed = false, // 默认这一帧不交互
-    useItemPressed = false   // 默认这一帧不使用道具
+    moveX = 0,           // 默认不水平移动
+    jumpPressed = false, // 默认这一帧不跳跃
   ) {
     /**
      * 水平移动意图: 保存水平移动意图到当前对象
@@ -48,30 +36,6 @@ class InputFrame {
      * @type {boolean}
      */
     this.jumpPressed = jumpPressed;
-
-    /**
-     * 保存角色朝向, 是否朝向右边
-     * true  = 朝右
-     * false = 朝左
-     * 即使 moveX = 0（角色不移动），这个字段依然很有价值，
-     * 因为待机、攻击、交互等动作往往仍然依赖角色朝向
-     * @type {boolean}
-     */
-    this.facingRight = facingRight;
-
-    /**
-     * 保存这一帧是否触发交互动作
-     * 例如按按钮、开门、开箱子、启动机关等
-     * @type {boolean}
-     */
-    this.interactPressed = interactPressed;
-
-    /**
-     * 保存这一帧是否触发使用道具动作
-     * 例如放炸弹、使用特殊物品、释放技能等
-     * @type {boolean}
-     */
-    this.useItemPressed = useItemPressed;
   }
 
   /**
@@ -93,9 +57,6 @@ class InputFrame {
     return new InputFrame(
       this.moveX, // 复制当前对象的水平移动意图
       this.jumpPressed, // 跳跃状态
-      this.facingRight, // 朝向
-      this.interactPressed, // 交互状态
-      this.useItemPressed // 道具使用状态
     );
   }
 
@@ -114,9 +75,6 @@ class InputFrame {
     return new InputFrame(
       obj.moveX ?? 0,               // 如果 obj.moveX 存在，就用它；否则默认 0
       obj.jumpPressed ?? false,     // 如果提供了 jumpPressed 就用，否则默认 false
-      obj.facingRight ?? true,      // 如果提供了 facingRight 就用，否则默认 true
-      obj.interactPressed ?? false, // 如果提供了 interactPressed 就用，否则默认 false
-      obj.useItemPressed ?? false   // 如果提供了 useItemPressed 就用，否则默认 false
     );
   }
 
@@ -131,9 +89,6 @@ class InputFrame {
     return {
       moveX: this.moveX,                     // 导出水平移动意图
       jumpPressed: this.jumpPressed,         // 导出跳跃状态
-      facingRight: this.facingRight,         // 导出角色朝向
-      interactPressed: this.interactPressed, // 导出交互状态
-      useItemPressed: this.useItemPressed    // 导出使用道具状态
     };
   }
 }

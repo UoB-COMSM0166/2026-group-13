@@ -1,6 +1,4 @@
-// RecordSystem.js
-// --------------------------------------------------
-// 录制模块主控制器
+// RecordSystem.js 录制模块主控制器
 //
 // 职责：
 // 1. 管理录制系统状态（IDLE / RECORDING / REPLAYING）
@@ -8,20 +6,7 @@
 // 3. 负责开始录制、记录逐帧控制意图、停止录制
 // 4. 负责开始回放、逐帧输出当前应执行的 InputFrame
 //
-// 不负责：
-// - 不直接移动角色
-// - 不直接处理碰撞
-// - 不直接处理物理
-//
-// 这些交给其它外部模块（如 CharacterController / Physics / Collision）
-// --------------------------------------------------
-
-/*
-注：
-我的模块是包含录制+回放数据的功能，不过回放是需要外部触发.类似于汽车发动机。
-目前还没有添加回放的触发方式，即键盘输入/UI触发
-（是录制完后自动回放，还是按哪个键来触发回放，还待定）。
-*/
+// 本模块包含录制+回放数据的功能，暂定录制完后自动回放
 
 class RecordSystem {
   /**
@@ -91,30 +76,73 @@ class RecordSystem {
   }
 
   /**
+   * 某一帧控制的所有信息：moveX，jump
    * 记录当前这一帧的控制意图数据，并写入当前录制片段
-   *
    * @param {InputFrame} frame
    */
-  captureFrame(frame) {
+  addFrame(frame) {
     // 如果当前不是录制状态，直接忽略
-    //（如果当前系统不在录制状态，则这一帧不应被记录，直接返回）
     if (!this.isRecording()) return;
 
-    // 如果没有 currentClip，说明录制尚未正确开始
-    //（如果 currentClip 不存在，说明录制还没有正确初始化，直接返回）
+    //如果 currentClip 不存在，说明录制还没有正确初始化，直接返回
     if (!this.currentClip) return;
 
     // 将这一帧控制意图（输入数据）加入当前录制片段
     this.currentClip.addFrame(frame);
 
-    // 实时更新录制时长
-    //（根据“当前时间 - 录制开始时间”计算录制已持续多久）
+    // 根据“当前时间 - 录制开始时间”计算录制已持续多久，实时更新录制时长
     this.currentClip.durationMs = millis() - this.recordStartTime;
 
     // 如果录制时长达到或超过最大允许值（超时），则自动停止录制
     if (this.currentClip.durationMs >= this.maxDurationMs) {
       this.stopRecording();
     }
+  }
+
+  /**
+   * 新增内容————
+   * 
+   * 接口：记录玩家输入 (供外部 CharacterController 调用)
+   * 供外界（例如角色控制器或按键监听系统）在录制期间每帧调用的便捷接口
+   * 负责接收原始的玩家输入，将其封装为 InputFrame 后储存
+   * @param {number} moveX - 水平移动意图 (-1 向左, 0 不动, 1 向右)
+   * @param {boolean} jumpPressed - 这一帧是否按下了跳跃键
+   *
+   * 调用示例：
+   * let currentMoveX = 0;
+   * if (keyIsDown(65)) currentMoveX = -1; // A键
+   * if (keyIsDown(68)) currentMoveX = 1;  // D键
+   * let isJumping = keyIsDown(32);        // W键/空格
+   * 
+   * 你这边只需要调用我写好的这个方法，会把数据传给你
+   * recordSystem.recordPlayerInput(currentMoveX, isJumping);
+   * 
+   * 之后如何打包成 InputFrame，怎么存进 currentClip，
+   * 超时后怎么自动停止，我这边的系统内部已经写好了
+   * ==========================================
+   */
+  recordPlayerInput(moveX, jumpPressed) {
+    // 如果当前不在录制状态，直接忽略外界发来的数据
+    if (!this.isRecording()) return;
+
+    // 1. 封装打包：将外界传来的两个核心变量，实例化成一帧标准的数据对象
+    // （因为目前是 MVP 阶段目标，只传前两个参数，后面的朝向等属性保持默认即可）
+    const frame = new InputFrame(moveX, jumpPressed);
+
+    // 2. 储存交接：调用我这边原本写好的 addFrame 方法，把这帧数据塞进 clip 数组里
+    this.addFrame(frame);
+  }
+
+  /**
+   * 新增内容————
+   * 提供了一个把打包好的数组交出去的接口：
+   * 
+   * 录制结束后，提供一个方法，拿到打包/记录好的信息
+   * 将录制好的 clip 集合交给 ControllerManager
+   * @returns {RecordClip|null} 返回当前录制片段（包含所有的 frames 数组和起始坐标）
+   */
+  getClip() {
+    return this.currentClip;
   }
 
   /**
@@ -259,7 +287,6 @@ class RecordSystem {
   /**
    * 获取当前回放片段的起始位置
    * 方便外部系统创建分身或回放角色时放到正确起点
-   *
    * @returns {{x:number, y:number}|null}
    */
   getReplayStartPosition() {
@@ -273,7 +300,6 @@ class RecordSystem {
   /**
    * 获取当前正在回放到哪一帧
    * 主要用于调试和 UI 显示
-   *
    * @returns {InputFrame|null}
    */
 
@@ -300,7 +326,6 @@ class RecordSystem {
 
   /**
    * 当前是否正在回放
-   *
    * @returns {boolean}
    */
   isReplaying() {
@@ -310,7 +335,6 @@ class RecordSystem {
   /**
    * 当前是否处于空闲状态
    * 这个方法不在您原始 UML 图里，但实际项目里很常用
-   *
    * @returns {boolean}
    */
   isIdle() {
@@ -322,11 +346,61 @@ class RecordSystem {
    * 条件：
    * 1. currentClip 不为 null
    * 2. currentClip 中至少有一帧数据
-   * 
    * @returns {boolean}
    */
   hasClip() {
     return this.currentClip !== null && !this.currentClip.isEmpty();
+  }
+
+  /**
+   * 添加：状态机
+   * 状态机核心处理器：根据当前状态和输入条件，执行动作并转移状态
+   * @param {string} trigger - 触发条件，例如 "PRESS_R" (按下R键) 或 "TIMEOUT" (时间到/播放完)
+   * @param {number} [playerX=0] - 玩家当前 X 坐标（仅在从 IDLE 开始录制时需要）
+   * @param {number} [playerY=0] - 玩家当前 Y 坐标（仅在从 IDLE 开始录制时需要）
+   */
+  handleStateTransition(trigger, playerX = 0, playerY = 0) {
+    switch (this.mode) {
+      
+      // 状态 1：空闲状态 (IDLE)
+      case RecordMode.IDLE:
+        if (trigger === "PRESS_R") {
+          // 动作：执行开始录制逻辑
+          this.startRecording(playerX, playerY);
+        }
+        break;
+
+      // 状态 2：录制状态 (RECORDING)
+      case RecordMode.RECORDING:
+        // 无论是时间到了，还是玩家主动按 R 键打断，都会结束录制并自动开始回放
+        if (trigger === "TIMEOUT" || trigger === "PRESS_R") {
+          // 动作 1：停止录制
+          this.stopRecording();
+          
+          // 动作 2：自动尝试开始回放
+          const canReplay = this.startReplay();
+          
+          if (!canReplay) {
+            // 如果片段为空无法回放，直接退回空闲状态
+            this.reset(); 
+          }
+        }
+        break;
+
+      // 状态 3：回放状态 (REPLAYING)
+      case RecordMode.REPLAYING:
+        // 如果录像播放完毕，或者玩家按 R 键强行打断回放
+        if (trigger === "TIMEOUT" || trigger === "PRESS_R") {
+          // 动作：重置整个录制系统
+          this.reset();
+          
+          // 如果是按 R 键打断，可能玩家想立刻直接开始下一次录制
+          if (trigger === "PRESS_R") {
+             this.startRecording(playerX, playerY);
+          }
+        }
+        break;
+    }
   }
 }
 
