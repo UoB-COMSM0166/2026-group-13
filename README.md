@@ -142,6 +142,8 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 - Describe implementation of your game, in particular highlighting the TWO areas of *technical challenge* in developing your game. 
 
+(Draft)
+
 *U Help U* is developed using the p5.js library and follows an object-oriented, modular design approach. Our system architecture encapsulates core game components into distinct classes, including the main player, time-clones, a custom physics engine, and a collision detection system. To deliver the core experience of "collaborating with your past self," we had to overcome several significant technical hurdles during development. Specifically, we highlight the following two primary technical challenges:
 
 **Technical Challenge 1: Deterministic Replay and Physics State Synchronization for Clones**
