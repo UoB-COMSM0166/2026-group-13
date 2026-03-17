@@ -35,147 +35,94 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 ## Project Report
 
 ### Introduction
+***U Help U***
 
- ***U help U***
+*U Help U* is a 2D side‑scrolling platformer puzzle game built around the concept of **self‑collaboration**. Players control the “Present Self” to record actions, and upon playback, a “Past Self” is generated. This Past Self faithfully reproduces the recorded inputs and physics‑based trajectory, acting as a **solid cooperative unit** that can interact physically with the Present Self—standing on each other, boosting each other, and enabling creative traversal strategies.
 
-《U Help U》是一款 2D 横板跳跃类 “自我协作” 解谜游戏，核心创意是：玩家操控 “现在的自己” 录制行动，回放时生成 “过去的自己”—— 这个 “过去的自己” 会完整复现录制时的操作与物理轨迹，作为 “实心协作单位” 与 “现在的自己” 双向互踩、互相辅助，通过 “过去的自己助力现在的自己” 突破地形障碍，最终达成关卡目标。游戏没有敌人，核心挑战在于 “预判过去与现在的行动配合”，传递 “每一次尝试都有价值，过去的经历会成为现在的底气” 的核心体验。
+The game contains no enemies. Its core challenge lies in predicting and coordinating the interaction between past and present actions, delivering the thematic experience that **“every attempt has value—your past efforts become the foundation for your present success.”**
 
-"U Help U" is a 2D side-scrolling platformer puzzle game centered around the core concept of "self-collaboration". Players control "Your Present Self" to record actions, and upon playback, "Your Past Self" is generated — this past incarnation fully reproduces the recorded operations and physical trajectories. Acting as a solid collaborative unit, it interacts with "Your Present Self" through mutual standing (both can stand firmly on top of each other without slipping or phasing through) and mutual assistance. By leveraging "Your Past Self to empower Your Present Self," players overcome terrain obstacles to ultimately achieve the level objectives.
+Each level is a standalone challenge. After completing one, players proceed to the next.
 
-Players progress through the game one level at a time, with each level functioning as an independent challenge. After completing a stage, they simply move on to the next one.
+---
 
- ***核心玩法（How to Play）​***
-#### 1. Basic Controls (Applies to all modes)​
+### Core Gameplay (How to Play)
 
-Movement: A/D keys (horizontal movement only)​
+#### 1. Basic Controls  
+- **Movement**: A / D  
+- **Jump**: W or Space  
+- **Record / Replay**: R  
 
-Jump: W key or Space bar (no restrictions; jump at any time; supports consecutive jumps in mid-air)​
+#### 2. Three Core Modes (Closed‑Loop System)
 
-Record / Replay: R key (toggles recording on/off and triggers replay)
+#### (1) Exploration Mode  
+The player controls the Present Self to explore the terrain, observe obstacles, and plan the route that the Past Self must follow.  
+- Affected by gravity  
+- No Past Self exists yet  
+- Focus on observation and planning  
 
-#### 2. Three Core Modes (Closed-Loop Process)​
+#### (2) Recording Mode  
+Activated by pressing R. A “Recording” indicator appears, and a 10‑second recording begins. The system records **input commands**, not fixed positions.  
+- Present Self moves freely  
+- Players create “useful collaborative trajectories”  
+- Press R again or wait for the timer to end  
+- Playback begins automatically  
 
-(1) Exploration Mode (Initial State)​
+#### (3) Collaborative Replay Mode  
+A Past Self is generated and replays the recorded actions using real‑time physics.  
+- Present Self remains controllable  
+- Past Self follows recorded inputs under gravity  
+- Both entities can stand on each other  
+- Press R to interrupt and re‑record  
+- Past Self disappears when playback ends  
 
-The player controls ‘Present Self’ (main character), freely exploring the level’s terrain (floors, floating platforms), observing the layout of obstacles, and planning the route that ‘Past Self’ must follow to coordinate with them.​
+#### 3. Physical Rules  
+- Both selves are affected by gravity  
+- Both can stand on floors, platforms, or each other  
+- Vertical stacking allowed; horizontal overlap prevented  
+- Both are solid, impenetrable units  
 
-Core Rule: ‘Present Self’ is subject to gravity and can stand on floors and platforms without any other restrictions; at this stage, there is no ‘Past Self’, so the focus is solely on exploring the scene and planning strategy.​
+---
 
-(2) Recording Mode (activated by pressing the R key)​
+### Game Goals
 
-Once activated, a “Recording” prompt appears at the top left of the screen. The recording lasts for 10 seconds, during which “Present Self”’s movements (moving left/right, jumping) are recorded frame by frame — recording “control commands” rather than fixed positions, ensuring compliance with physical laws during playback.​
+#### 1. Level Objectives  
+- **Primary**: Reach the designated endpoint  
+- **Advanced**:  
+  - Complete with the fewest recordings  
+  - Achieve a perfect one‑take recording  
+- **Hidden**:  
+  - Collect **Time Shards** in elevated or hidden locations  
 
-Core rule: During recording, the ‘present self’ remains free to move and must independently plan ‘valuable collaborative trajectories’ (such as stopping at key elevated platforms, moving to specific support positions, or completing a sequence of jumps); no ‘past self’ is generated during recording, only action data is logged.
+#### 2. Core Experience Goals  
+- Create the feeling of “collaborating with your past self”  
+- Encourage spatial reasoning and forward planning  
+- Reinforce the theme that past efforts empower present breakthroughs  
 
-Press the R key again or wait for the countdown to end to stop recording. The game will automatically switch to “Co-op Replay Mode” and generate a “Past Self” (clone).​
+---
 
-(3) Collaborative Replay Mode (entered automatically upon completion of recording)​
+### Core Highlights (Differentiation)
 
-The “present self” remains controllable, whilst the “past self” calculates its physical trajectory in real time based on the recorded commands (fully reproducing the actions taken during recording; subject to gravity and terrain, not a fixed script).​
+#### Immersive Past–Present Integration  
+- **Action‑Based Recording**: Playback uses real‑time physics, not scripted positions  
+- **Bidirectional Interaction**: Both selves can serve as platforms for each other  
+- **Non‑Punitive Design**: No time limits or death penalties  
+- **Visual Clarity**:  
+  - Present Self: solid white  
+  - Past Self: translucent blue  
+  - Background: pink  
+  - UI labels: “NOW” and “PAST”  
 
-#### Core Rules:​
-
-Both the ‘present self’ and the ‘past self’ possess the ‘solid box’ physical property, allowing them to stand on top of one another in both directions (the present self can stand on the past self, and the past self can stand on the present self; they remain stable without slipping or passing through one another).​
-
-The two cannot overlap horizontally (they are automatically pushed apart horizontally upon collision), but may stand on top of one another vertically without interfering with each other’s movement logic.
-
-During playback, the player controls ‘Present Self’ to use ‘Past Self’s’ trajectory to overcome obstacles (for example, standing on ‘Past Self’s’ shoulders to jump onto a higher platform, or having ‘Past Self’ pause in mid-air to serve as a temporary springboard).
-
-If you need to adjust the actions of the ‘past self’, press the R key again to pause the replay, return to ‘Exploration Mode’ and re-record (the new recording will overwrite the old ‘past self’; only one ‘past self’ can exist at a time).
-
-Once the replay has finished (and all recorded action frames have been executed), the ‘past self’ will automatically disappear, returning to ‘Exploration Mode’, where you can record a new ‘past self’.​
-
-#### 3. Physical Rules (Core Consensus)​
-
-Both the ‘present self’ and the ‘past self’ are subject to gravity and fall naturally, following the same physical principles.​
-
-Both can stand on the floor, a floating platform, or on top of the other (standing vertically against them, with velocity reduced to zero, and maintaining a stable stance); they are both solid, impenetrable units.​
-
- ***游戏目标（Game Goal）​​***
-#### 1. Level Objectives​ 
-
-Fundamental Objective：
-
-Navigate the "Present Self" to the designated terminal point (e.g., visual markers such as green flags or luminous portals).
-
-Advanced Objectives：​
-
-Minimum Recording Cycles: Complete the level with the fewest recordings of the "Past Self" to evaluate the player’s strategic planning efficiency;
-
-Optimized Execution: Achieve a "one-take" recording where every action serves a collaborative purpose, eliminating redundant movements or technical waste.
-
-Hidden Objectives：
-
-Collectible Acquisition: Retrieve "Time Shards" scattered across elevated or obscured locations, requiring synchronized coordination between the Past and Present avatars.​
-
-#### 2. Core Experience Goals
-
-Provide players with an intuitive sense of "collaborating with one's past," fostering a rewarding feeling of self-transcendence;
-
-Cultivate spatial reasoning and proactive planning, requiring players to envision how "past actions" pave the way for "present breakthroughs";
-
-Convey the theme of personal growth—that no attempt is futile, as one's past efforts serve as a foundation for present success.
-
- ***Core Highlights (Differentiation) ​​***
-
-Immersive "Past-Present" Integration
-
-(1) ​Action-Based Recording vs. Positional Recording: The trajectory of the "Past Self" is calculated via real-time physics rather than static scripts. For instance, if a player jumps onto a platform during recording, the "Present Self" can use the "Past Self's" shoulders as a dynamic platform to reach higher ground.
-
-(2) Bidirectional Interaction: Both entities function as physical platforms for one another. This transcends the traditional "one-way support" trope, allowing for complex "leapfrogging" strategies ($A$ supports $B$, and $B$ subsequently supports $A$), expanding the creative and tactical depth of the gameplay.
-
-(3) Non-Punitive Environment: By removing time constraints and death penalties, the game encourages iterative recording and adjustment. This allows players to focus on the joy of collaborative planning while mitigating puzzle-solving anxiety.
-
-(4) Visual Clarity: Utilizing high-contrast character designs (Solid White for "Present"; Translucent Blue for "Past") against a pink backdrop, supplemented by "NOW/PAST" UI indicators. This minimizes cognitive load and allows players to focus entirely on the logic of collaboration.
-
+---
 
 ### Requirements 
+<figure style="text-align: center;">
+  <img src="./assets/Stakeholders.png" alt="Stakeholders">
+  <figcaption style="font-size: 1.3em; font-weight: bold;">
+    Stakeholders
+  </figcaption>
+</figure>
 
-#### Skateholders
-
-#### 1. Players
-
-- pro player
-
-- New player
-
-- Potential Playerr
-
-- normal player
-
-#### 2. Designers
-
-- lever designer
-
-- UI designer
-
-- art designer
-
-- story designer
-
-#### 3. Developer(Coder)
-
-#### 4. Tester
-
-#### 5. lecturer/TA
-
-#### 6. Competitor
-
-#### 7. Community member
-
-#### 8. Software Engineering Module
-
-#### 9. Platform：p5js
-
-#### 10. Market-Related Personnel
-
-- Marketing Specialist
-
-- Market Researcher
-
-- Promotion Specialist
-
-#### Reflection
+---
 
 ### Design
 
@@ -187,12 +134,15 @@ Immersive "Past-Present" Integration
 
 > ⚠️Work in Progress
 
+---
 
 ### Implementation
 
 - 15% ~750 words
 
 - Describe implementation of your game, in particular highlighting the TWO areas of *technical challenge* in developing your game. 
+
+---
 
 ### Evaluation
 
