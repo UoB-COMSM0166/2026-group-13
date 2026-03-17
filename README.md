@@ -142,6 +142,20 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 - Describe implementation of your game, in particular highlighting the TWO areas of *technical challenge* in developing your game. 
 
+*U Help U* is developed using the p5.js library and follows an object-oriented, modular design approach. Our system architecture encapsulates core game components into distinct classes, including the main player, time-clones, a custom physics engine, and a collision detection system. To deliver the core experience of "collaborating with your past self," we had to overcome several significant technical hurdles during development. Specifically, we highlight the following two primary technical challenges:
+
+**Technical Challenge 1: Deterministic Replay and Physics State Synchronization for Clones**
+
+The core gameplay loop of *U Help U* relies heavily on recording player inputs and generating "ghost clones" to replay these actions for cooperative puzzle-solving. The most critical technical hurdle was achieving absolute "deterministic replay" within the JavaScript/p5.js environment. Initially, we attempted to record the absolute spatial coordinates of the player frame-by-frame. However, due to browser frame rate (FPS) fluctuations and unstable delta times, the clones experienced severe spatial drift during playback. This minor physical deviation led to critical collision failures—for example, a clone narrowly missing a trigger button, or the "Present Self" failing to stand stably on top of the clone.
+
+To resolve this, we abandoned absolute coordinate tracking and designed a robust Input Recorder utilizing a Fixed Time Step. During the recording phase, the system precisely samples the player's input vectors (e.g., key states and durations); during playback, these inputs are re-injected into the real-time physics engine. By implementing this approach, we ensured 100% physical state synchronization and collision accuracy between the main entity and its clones across complex platforming sequences, completely eliminating spatial drift.
+
+**Technical Challenge 2: Decoupling Complex Puzzle Logic via Event-Driven Architecture**
+
+As level designs became more intricate, the game environment incorporated the main player, multiple clones, gravity-sensitive switches, timed doors, and various traps. Initially, managing the interactions between these entities using standard conditional statements (if/else) within the entity classes led to highly coupled, unmaintainable "spaghetti code". This architecture made it exceedingly difficult to debug state changes or introduce new interactive mechanics.
+
+To overcome this architectural bottleneck, we undertook a major refactoring of the game's core interaction logic by implementing an Event-Driven Architecture (specifically, an Event Bus system). The technical complexity lay in designing a centralized event dispatcher that allows all game entities to communicate asynchronously. Under this new architecture, entities no longer reference each other directly. For example, when a player or clone steps on a pressure plate, the plate simply broadcasts a "stepped_on" event; any linked door or trap listening for this event will then independently trigger its respective animation and state change. This decoupled design not only eradicated hard-coded dependencies but also laid the technical groundwork for highly scalable and complex puzzle designs in future development.
+
 ---
 
 ### Evaluation
