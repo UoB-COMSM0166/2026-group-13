@@ -8,6 +8,19 @@
 //
 // 本模块包含录制+回放数据的功能，暂定录制完后自动回放
 
+/*
+修改————
+
+暂时删除以下部分：
+facingRight
+interactPressed
+useItemPressed
+
+只保留：
+moveX
+jumpPressed
+*/
+
 class RecordSystem {
   /**
    * 构造函数：创建一个新的录制系统
@@ -76,8 +89,14 @@ class RecordSystem {
   }
 
   /**
+   * 修改————
+   * 
    * 某一帧控制的所有信息：moveX，jump
    * 记录当前这一帧的控制意图数据，并写入当前录制片段
+   * 
+   * 【我之前这里写的 captureFrame 对应你给 addFrame 的功能】
+   * 【即拦截非录制状态，并把帧数据存入片段中】
+   * 【既然是addFrame，我也把名称统一改成了 addFrame】
    * @param {InputFrame} frame
    */
   addFrame(frame) {
@@ -114,11 +133,11 @@ class RecordSystem {
    * if (keyIsDown(68)) currentMoveX = 1;  // D键
    * let isJumping = keyIsDown(32);        // W键/空格
    * 
-   * 你这边只需要调用我写好的这个方法，会把数据传给你
+   * 你这边调用我写好的方法即可，会把数据传给你
    * recordSystem.recordPlayerInput(currentMoveX, isJumping);
    * 
    * 之后如何打包成 InputFrame，怎么存进 currentClip，
-   * 超时后怎么自动停止，我这边的系统内部已经写好了
+   * 超时后怎么自动停止，系统内部已经写好
    * ==========================================
    */
   recordPlayerInput(moveX, jumpPressed) {
@@ -302,7 +321,6 @@ class RecordSystem {
    * 主要用于调试和 UI 显示
    * @returns {InputFrame|null}
    */
-
   // 注意：正常回放逻辑用 updateReplay()，其只是辅助查看状态
   getCurrentFrame() {
     // 如果没有当前录制片段，则返回 null
@@ -353,7 +371,8 @@ class RecordSystem {
   }
 
   /**
-   * 添加：状态机
+   * 新增内容————
+   *
    * 状态机核心处理器：根据当前状态和输入条件，执行动作并转移状态
    * @param {string} trigger - 触发条件，例如 "PRESS_R" (按下R键) 或 "TIMEOUT" (时间到/播放完)
    * @param {number} [playerX=0] - 玩家当前 X 坐标（仅在从 IDLE 开始录制时需要）

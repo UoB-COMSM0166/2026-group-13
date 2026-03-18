@@ -16,6 +16,9 @@ class CharacterController {//多例模式，每个可操控角色拥有一个实
     }
 
     /**
+    * 
+    * 修改————
+    * 
     * -----------接口（关联录制回放模块）-------------
     * 添加者：
     * 录制系统（徐思齐）
@@ -46,7 +49,7 @@ class CharacterController {//多例模式，每个可操控角色拥有一个实
     }
 
     /*
-    以下为 MVP 阶段暂时删除的逻辑（为减负）
+    以下为 MVP 阶段暂时删除的逻辑（减负用）
 
     处理角色朝向
     controlledEntity.facingRight = frame.facingRight;

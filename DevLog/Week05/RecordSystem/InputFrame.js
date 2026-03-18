@@ -5,6 +5,19 @@
 // 这意味着它既可以来自玩家键盘，也可以来自 AI、脚本、回放系统。
 // --------------------------------------------------
 
+/*
+修改————
+
+暂时删除以下部分：
+facingRight
+interactPressed
+useItemPressed
+
+只保留：
+moveX
+jumpPressed
+*/
+
 class InputFrame {
   /**
    * 创建一个新的逐帧控制意图对象
