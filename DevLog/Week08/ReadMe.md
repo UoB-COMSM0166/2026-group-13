@@ -6,3 +6,6 @@
   收集10 users游玩数据
 - Upload the evaluation results  
   上传评估结果
+
+## Questionnaire Form Link 游戏用户定量评估链接
+[Click here to open the Game Evaluation Form (SUS & NASA TLX)](https://sicixu.github.io/2026-group-13/DevLog/Week08/Evaluation/evaluation.html)
