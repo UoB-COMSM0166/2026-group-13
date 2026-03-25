@@ -27,8 +27,9 @@ function resolveFirst(a, b) {
     const staBottom = b.y;
     const staTop = b.y + b.collider.h;
 
-    const crossedFromAbove = prevBottom >= staTop && currBottom < staTop;
-    const crossedFromBelow = prevTop <= staBottom && currTop > staBottom;
+    const landingTolerance = 6;
+    const crossedFromAbove = prevBottom >= staTop - landingTolerance && currBottom < staTop;
+    const crossedFromBelow = prevTop <= staBottom + landingTolerance && currTop > staBottom;
 
     // 使用帧穿越判定优先决定上下碰撞来源，避免被挤穿平台
     if(crossedFromAbove) {
@@ -54,7 +55,7 @@ function resolveFirst(a, b) {
     } else {
         const platformTop = b.y + b.collider.h;
 
-        if(prevY >= platformTop) {
+        if(prevY >= platformTop - landingTolerance) {
             // 上一帧在平台上方 → 正常落在平台上
             collisionMsg = "bottom";
             a.y = platformTop;

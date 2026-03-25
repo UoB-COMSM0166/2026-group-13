@@ -8,7 +8,7 @@ import { RecordPlayState } from "../RecordSystem/RecordPlayState.js";
 export class Level4 extends BaseLevel {
     constructor(p, eventBus) {
         super(p, eventBus);
-        this.bgAssetKey = "bgImageLevel2"; // 先复用现有背景，之后再换
+        this.bgAssetKey = "bgImageLevel2";
         const wallThickness = 20;
 
         // 左右墙
@@ -16,41 +16,35 @@ export class Level4 extends BaseLevel {
         this.entities.add(new Wall(p.width - wallThickness, 0, wallThickness, p.height));
 
         // 地面
-        this.entities.add(new Ground(0, 0, p.width, 80));
+        this.mainGround = new Ground(0, 0, p.width, 80);
+        this.entities.add(this.mainGround);
 
-        // 阶梯平台
-        // 平台 1（按钮1）
-        this.entities.add(new Ground(150, 130, 120, 30, true));
+        // ===== 平台（整体拉长，避免守卫掉落）=====
+        this.groundP0 = new Ground(140, 130, 190, 30, true);   // 按钮1
+        this.groundP1 = new Ground(400, 220, 210, 30, true);   // 按钮2
+        this.groundP2 = new Ground(640, 300, 320, 30, true);   // 按钮3 + 守卫1
+        this.groundP3 = new Ground(980, 440, 300, 30, true);   // 按钮4 + 守卫2
+        this.groundP4 = new Ground(1180, 580, 120, 25, true);  // 终点前平台
 
-        
-        // 辅助平台 A
-        this.entities.add(new Ground(300, 170, 100, 25, true));
+        // 辅助平台
+        this.helperA = new Ground(250, 500, 110, 24, true);
+        this.helperB = new Ground(610, 180, 120, 24, true);
+        this.helperC = new Ground(930, 250, 120, 24, true);
 
-        // 平台 2（按钮2）
-        this.entities.add(new Ground(430, 240, 130, 30, true));
+        this.entities.add(this.groundP0);
+        this.entities.add(this.groundP1);
+        this.entities.add(this.groundP2);
+        this.entities.add(this.groundP3);
+        this.entities.add(this.groundP4);
+        this.entities.add(this.helperA);
+        this.entities.add(this.helperB);
+        this.entities.add(this.helperC);
 
-        // 平台 3（按钮3）
-        this.entities.add(new Ground(670, 320, 140, 30, true));
-
-        // 辅助平台 B
-        this.entities.add(new Ground(860, 450, 100, 25, true));
-
-        // 平台 4（按钮4）
-        this.entities.add(new Ground(1000, 480, 150, 30, true));
-
-        // 门前平台
-        this.entities.add(new Ground(1160, 560, 100, 25, true));
-
-        this.entities.add(new Ground(880, 210, 100, 24, true));
-        this.entities.add(new Ground(1080, 260, 90, 24, true));
-        this.entities.add(new Ground(280, 170, 90, 24, true));
-        this.entities.add(new Ground(200, 500, 100, 24, true));
-        this.entities.add(new Ground(430,380,130,25,true));
-        // 四个按钮（代表四个密码终端）
-        this.button1 = new Button(200, 160, 20, 5);
-        this.button2 = new Button(485, 270, 20, 5);
-        this.button3 = new Button(730, 350, 20, 5);
-        this.button4 = new Button(1065, 510, 20, 5);
+        // ===== 按钮 =====
+        this.button1 = new Button(220, 160, 22, 5);
+        this.button2 = new Button(500, 250, 22, 5);
+        this.button3 = new Button(790, 330, 22, 5);
+        this.button4 = new Button(1120, 470, 22, 5);
 
         this.entities.add(this.button1);
         this.entities.add(this.button2);
@@ -58,10 +52,9 @@ export class Level4 extends BaseLevel {
         this.entities.add(this.button4);
 
         // 终点门
-        this.portal = new Portal(1190, 590, 50, 50);
+        this.portal = new Portal(1210, 610, 50, 50);
         this.entities.add(this.portal);
 
-        // 记录四个按钮是否已破解完成
         this.buttonSolved = {
             b1: false,
             b2: false,
@@ -70,18 +63,9 @@ export class Level4 extends BaseLevel {
         };
 
         // 玩家
-        const player = new Player(50, 80, 40, 40);
+        const player = new Player(60, 80, 40, 40);
         player.createListeners();
         this.entities.add(player);
-
-        // 怪物
-       this.enemySpawnPoints = [
-            { x: 80, y: 80 },
-            { x: 220, y: 160 },
-            { x: 470, y: 270 },
-            { x: 720, y: 350 },
-            { x: 1020, y: 510 },
-        ];
 
         // 录制系统
         this.recordSystem = new RecordSystem(
@@ -92,35 +76,73 @@ export class Level4 extends BaseLevel {
         );
         this.recordSystem.createListeners();
 
-        // 物理和碰撞系统
+        // 守卫列表
+        this.guards = [];
+
+        // 守卫1：看守按钮3
+        this.guard1 = this.createGuard({
+            x: 760,
+            y: 360,
+            patrolLeft: 740,
+            patrolRight: 860,
+            guardButton: "b3",
+        });
+
+        // 守卫2：看守按钮4
+        this.guard2 = this.createGuard({
+            x: 1030,
+            y: 490,
+            patrolLeft: 1070,
+            patrolRight: 1185,
+            guardButton: "b4",
+        });
+
+        // 系统
         this.physicsSystem = new PhysicsSystem(this.entities);
         this.collisionSystem = new CollisionSystem(this.entities, eventBus);
-
-        this.enemy = null;
-        this.spawnEnemyRandom();
     }
 
-    spawnEnemyRandom() {
-        const point = this.enemySpawnPoints[
-            Math.floor(Math.random() * this.enemySpawnPoints.length)
-        ];
+    createGuard({ x, y, patrolLeft, patrolRight, guardButton }) {
+        const guard = new Enemy(x, y, 36, 36, 1.15);
 
-        this.enemy = new Enemy(point.x, point.y, 36, 36, 1.4);
-        this.entities.add(this.enemy);
-        this.syncSystemsEntities();
+        guard.aiMode = "patrol";
+        guard.homeX = x;
+        guard.homeY = y;
+        guard.patrolLeft = patrolLeft;
+        guard.patrolRight = patrolRight;
+        guard.patrolDir = 1;
+        guard.aggroRange = 220;
+        guard.verticalTolerance = 55;
+        guard.guardButton = guardButton;
+        guard.lostTargetTimer = 0;
+
+        this.guards.push(guard);
+        this.entities.add(guard);
+        return guard;
+    }
+
+    updatePhysics() {
+        this.updateGuardsAI();
+
+        for (const entity of this.entities) {
+            if (!this.guards.includes(entity) && entity.update && typeof entity.update === "function") {
+                entity.update(this.p);
+            }
+        }
+
+        if (this.physicsSystem && typeof this.physicsSystem.physicsEntry === "function") {
+            this.physicsSystem.physicsEntry();
+        }
+
+        this.keepGuardsInsidePatrolRange();
     }
 
     updateCollision(p = this.p, eventBus = this.eventBus) {
         this.collisionSystem.collisionEntry(eventBus);
 
-        this.updateEnemyTarget();
-        // 检查怪物碰到分身：怪和分身一起消失
-        this.checkEnemyHitsReplayer();
+        this.checkGuardsHitReplayer();
+        this.checkGuardsHitPlayer(eventBus);
 
-        // 检查怪物碰到玩家：失败
-        this.checkEnemyHitsPlayer(eventBus);
-
-        // 只要踩到一次，就记为已破解
         if (this.button1.isPressed) {
             this.buttonSolved.b1 = true;
             this.button1.solved = true;
@@ -138,7 +160,6 @@ export class Level4 extends BaseLevel {
             this.button4.solved = true;
         }
 
-        // 四个全部完成后开门
         if (
             this.buttonSolved.b1 &&
             this.buttonSolved.b2 &&
@@ -147,273 +168,188 @@ export class Level4 extends BaseLevel {
         ) {
             this.portal.openPortal();
         }
-
     }
 
-    getGroundEntities() {
-    const grounds = [];
-    for (const entity of this.entities) {
-        if (entity.type === "ground" && entity.collider) {
-            grounds.push(entity);
-        }
-    }
-    return grounds;
-}
+    updateGuardsAI() {
+        if (!this.guards || this.guards.length === 0) return;
 
-isEnemyGrounded(enemy) {
-    if (!enemy || !enemy.collider) return false;
-
-    const enemyLeft = enemy.x + 4;
-    const enemyRight = enemy.x + enemy.collider.w - 4;
-    const enemyBottom = enemy.y;
-
-    for (const ground of this.getGroundEntities()) {
-        const groundLeft = ground.x;
-        const groundRight = ground.x + ground.collider.w;
-        const groundTop = ground.y + ground.collider.h;
-
-        const overlapX = enemyRight > groundLeft && enemyLeft < groundRight;
-        const closeToTop = Math.abs(enemyBottom - groundTop) <= 2;
-
-        if (overlapX && closeToTop) {
-            return true;
-        }
-    }
-    return false;
-}
-
-isGroundAhead(enemy, dir) {
-    if (!enemy || !enemy.collider) return false;
-
-    const probeX = dir > 0
-        ? enemy.x + enemy.collider.w + 20
-        : enemy.x - 20;
-
-    const enemyBottom = enemy.y;
-
-    for (const ground of this.getGroundEntities()) {
-        const groundLeft = ground.x;
-        const groundRight = ground.x + ground.collider.w;
-        const groundTop = ground.y + ground.collider.h;
-
-        const insideX = probeX >= groundLeft && probeX <= groundRight;
-        const heightClose = Math.abs(enemyBottom - groundTop) <= 12;
-
-        if (insideX && heightClose) {
-            return true;
-        }
-    }
-    return false;
-}
-
-    isHigherPlatformAhead(enemy, dir) {
-        if (!enemy || !enemy.collider) return false;
-
-        const probeLeft = dir > 0
-            ? enemy.x + enemy.collider.w + 4
-            : enemy.x - 40;
-
-        const probeRight = dir > 0
-            ? enemy.x + enemy.collider.w + 40
-            : enemy.x - 4;
-
-        const enemyBottom = enemy.y;
-
-        for (const ground of this.getGroundEntities()) {
-            const groundLeft = ground.x;
-            const groundRight = ground.x + ground.collider.w;
-            const groundTop = ground.y + ground.collider.h;
-
-            const overlapAhead = probeRight >= groundLeft && probeLeft <= groundRight;
-            const higherThanCurrent = groundTop > enemyBottom + 8;
-            const notTooHigh = groundTop < enemyBottom + 110;
-
-            if (overlapAhead && higherThanCurrent && notTooHigh) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    updateEnemyAI() {
-        if (!this.enemy) return;
-
-        this.enemy.tickAIState();
-        this.updateEnemyTarget();
-
-        const target = this.enemy.target;
-        if (!target) {
-            this.enemy.movementComponent.velX = 0;
-            return;
-        }
-
-        const dx = target.x - this.enemy.x;
-        const dy = target.y - this.enemy.y;
-
-        const grounded = this.isEnemyGrounded(this.enemy);
-        const targetHigher = dy > 20;
-        const targetLower = dy < -20;
-
-        let dir = dx >= 0 ? 1 : -1;
-
-        // 只要目标在更高处，而且怪物站在平台上，
-        // 就优先去找“当前平台更合适的边缘”
-        if (grounded && targetHigher) {
-            dir = this.getClimbDirection(this.enemy, target);
-        }
-
-        const groundAhead = this.isGroundAhead(this.enemy, dir);
-        const higherPlatformAhead = this.isHigherPlatformAhead(this.enemy, dir);
-
-        // 很接近目标且目标不更高时，才停
-        if (Math.abs(dx) < 4 && !targetHigher) {
-            this.enemy.movementComponent.velX = 0;
-        } else {
-            this.enemy.movementComponent.velX = dir * this.enemy.speed;
-        }
-
-        // 情况1：前面已经没地了，说明走到边缘了，直接跳
-        if (grounded && !groundAhead) {
-            this.enemy.jump(9);
-            return;
-        }
-
-        // 情况2：前方有更高平台，而且目标在更高处，跳上去
-        if (grounded && higherPlatformAhead && targetHigher) {
-            this.enemy.jump(9);
-            return;
-        }
-
-        // 玩家在更低处时，不主动往上乱跳
-        if (targetLower) {
-            return;
-        }
-    }
-
-
-
-    updatePhysics() {
-        // 先跑怪物 AI，再做物理
-        this.updateEnemyAI();
-
-        // 其他实体保留原本 update
-        for (const entity of this.entities) {
-            if (entity !== this.enemy && entity.update && typeof entity.update === "function") {
-                entity.update(this.p);
-            }
-        }
-
-        if (this.physicsSystem && typeof this.physicsSystem.physicsEntry === "function") {
-            this.physicsSystem.physicsEntry();
-        }
-    }
-
-    updateEnemyTarget() {
-        if (!this.enemy || !this.recordSystem) return;
-
-        // 录制阶段：怪物暂停
         if (this.recordSystem.state === RecordPlayState.Recording) {
-            this.enemy.setTarget(null);
-            this.enemy.movementComponent.velX = 0;
-            this.enemy.movementComponent.velY = 0;
+            for (const guard of this.guards) {
+                if (!guard) continue;
+                guard.movementComponent.velX = 0;
+            }
             return;
         }
 
         const player = this.referenceOfPlayer();
         const replayer = this.referenceOfReplayer();
 
-        // 有正在回放的分身时，优先追分身；否则追玩家
-        if (replayer && replayer.isReplaying) {
-            this.enemy.setTarget(replayer);
-        } else {
-            this.enemy.setTarget(player);
+        for (const guard of this.guards) {
+            if (!guard) continue;
+
+            if (typeof guard.tickAIState === "function") {
+                guard.tickAIState();
+            }
+
+            const target = this.pickGuardTarget(guard, player, replayer);
+
+            if (target) {
+                guard.aiMode = "chase";
+                guard.lostTargetTimer = 18;
+                this.moveGuardTowardX(guard, target.x);
+            } else {
+                if (guard.lostTargetTimer > 0) {
+                    guard.lostTargetTimer--;
+                    this.moveGuardTowardX(guard, guard.homeX);
+                } else {
+                    guard.aiMode = "patrol";
+                    this.patrolGuard(guard);
+                }
+            }
         }
     }
 
-    getSupportingGround(enemy) {
-        if (!enemy || !enemy.collider) return null;
-
-        const enemyLeft = enemy.x + 4;
-        const enemyRight = enemy.x + enemy.collider.w - 4;
-        const enemyBottom = enemy.y;
-
-        for (const ground of this.getGroundEntities()) {
-            const groundLeft = ground.x;
-            const groundRight = ground.x + ground.collider.w;
-            const groundTop = ground.y + ground.collider.h;
-
-            const overlapX = enemyRight > groundLeft && enemyLeft < groundRight;
-            const closeToTop = Math.abs(enemyBottom - groundTop) <= 2;
-
-            if (overlapX && closeToTop) {
-                return ground;
-            }
+    pickGuardTarget(guard, player, replayer) {
+        // 优先追实体分身
+        if (replayer && replayer.isReplaying && this.isTargetVisibleToGuard(guard, replayer)) {
+            return replayer;
         }
+
+        // 没有实体分身时，再追玩家
+        if (player && this.isTargetVisibleToGuard(guard, player)) {
+            return player;
+        }
+
         return null;
     }
 
-    getClimbDirection(enemy, target) {
-        const ground = this.getSupportingGround(enemy);
-        if (!ground || !enemy || !target) return target.x >= enemy.x ? 1 : -1;
+    isTargetVisibleToGuard(guard, target) {
+        if (!guard || !target || !target.collider) return false;
 
-        const groundLeft = ground.x;
-        const groundRight = ground.x + ground.collider.w;
-        const enemyCenter = enemy.x + enemy.collider.w / 2;
+        const dx = Math.abs((target.x + target.collider.w / 2) - (guard.x + guard.collider.w / 2));
+        const dy = Math.abs(target.y - guard.y);
 
-        // 两个边缘到目标 x 的距离
-        const distToLeftEdge = Math.abs(target.x - groundLeft);
-        const distToRightEdge = Math.abs(target.x - groundRight);
+        // 只在同一平台附近的小范围内追击
+        const withinX = dx <= guard.aggroRange;
+        const withinY = dy <= guard.verticalTolerance;
 
-        // 选更接近目标的那一侧边缘
-        const targetEdgeX = distToLeftEdge < distToRightEdge ? groundLeft : groundRight;
-
-        return targetEdgeX >= enemyCenter ? 1 : -1;
+        return withinX && withinY;
     }
 
-    checkEnemyHitsReplayer() {
-        const replayer = this.referenceOfReplayer();
-        if (!this.enemy || !replayer) return;
+    patrolGuard(guard) {
+        if (!guard) return;
 
-        // 只有“正在回放的实体分身”才会吸引并消灭怪物
-        if (!replayer.isReplaying) return;
+        if (guard.x <= guard.patrolLeft) {
+            guard.patrolDir = 1;
+        }
+        if (guard.x >= guard.patrolRight) {
+            guard.patrolDir = -1;
+        }
 
-        if (this.isOverlap(this.enemy, replayer)) {
-            this.entities.delete(this.enemy);
-            this.enemy = null;
+        guard.movementComponent.velX = guard.patrolDir * guard.speed;
+    }
 
-            this.removeReplayer();
-            this.syncSystemsEntities();
+    moveGuardTowardX(guard, targetX) {
+        const centerX = guard.x + guard.collider.w / 2;
+        const dx = targetX - centerX;
+
+        if (Math.abs(dx) < 6) {
+            guard.movementComponent.velX = 0;
+            return;
+        }
+
+        guard.movementComponent.velX = dx > 0 ? guard.speed : -guard.speed;
+    }
+
+    keepGuardsInsidePatrolRange() {
+        for (const guard of this.guards) {
+            if (!guard || !guard.collider) continue;
+
+            // 不让守卫离开自己的巡逻台太远
+            if (guard.x < guard.patrolLeft - 10) {
+                guard.x = guard.patrolLeft - 10;
+                guard.movementComponent.velX = 0;
+                guard.patrolDir = 1;
+            }
+
+            if (guard.x + guard.collider.w > guard.patrolRight + 10) {
+                guard.x = guard.patrolRight + 10 - guard.collider.w;
+                guard.movementComponent.velX = 0;
+                guard.patrolDir = -1;
+            }
         }
     }
-        
 
+    checkGuardsHitReplayer() {
+        const replayer = this.referenceOfReplayer();
+        if (!replayer || !replayer.isReplaying) return;
 
+        for (const guard of this.guards) {
+            if (!guard) continue;
+
+            if (this.isOverlap(guard, replayer)) {
+                // 先删掉守卫
+                this.entities.delete(guard);
+
+                // 从 guards 数组里移除
+                this.guards = this.guards.filter(g => g !== guard);
+
+                // 再删掉实体分身
+                this.removeReplayer();
+
+                // 同步系统实体集合
+                this.syncSystemsEntities();
+                return;
+            }
+        }
+    }
+
+    checkGuardsHitPlayer(eventBus = this.eventBus) {
+        const player = this.referenceOfPlayer();
+        if (!player) return;
+
+        for (const guard of this.guards) {
+            if (!guard) continue;
+
+            if (this.isOverlap(guard, player)) {
+                player.triggerDeath("enemy");
+                eventBus.publish("autoResult", "lose");
+                return;
+            }
+        }
+    }
+
+    isOverlap(a, b) {
+        if (!a || !b || !a.collider || !b.collider) return false;
+
+        return (
+            a.x < b.x + b.collider.w &&
+            a.x + a.collider.w > b.x &&
+            a.y < b.y + b.collider.h &&
+            a.y + a.collider.h > b.y
+        );
+    }
 
     draw(p = this.p) {
-        // 先画地面/平台
         for (const entity of this.entities) {
             if (entity.type === "ground") {
                 entity.draw(p);
             }
         }
 
-        // 再画其他实体
         for (const entity of this.entities) {
             if (entity.type !== "ground") {
                 entity.draw(p);
             }
         }
 
-        // 绘制录制 UI
         this.recordSystem.draw && this.recordSystem.draw(p);
 
-        // 每帧释放按钮瞬时状态
         this.button1.releaseButton();
         this.button2.releaseButton();
         this.button3.releaseButton();
         this.button4.releaseButton();
 
-        // 可选：调试时显示按钮完成状态
         this.drawSolvedHint(p);
     }
 
@@ -428,27 +364,5 @@ isGroundAhead(enemy, dir) {
         p.text(`B3: ${this.buttonSolved.b3 ? "OK" : "..."}`, 280, -40);
         p.text(`B4: ${this.buttonSolved.b4 ? "OK" : "..."}`, 380, -40);
         p.pop();
-    }
-
-
-    isOverlap(a, b) {
-        if (!a || !b || !a.collider || !b.collider) return false;
-
-        return (
-            a.x < b.x + b.collider.w &&
-            a.x + a.collider.w > b.x &&
-            a.y < b.y + b.collider.h &&
-            a.y + a.collider.h > b.y
-        );
-    }
-
-    checkEnemyHitsPlayer(eventBus = this.eventBus) {
-        const player = this.referenceOfPlayer();
-        if (!player || !this.enemy) return;
-
-        if (this.isOverlap(this.enemy, player)) {
-            player.triggerDeath("enemy");
-            eventBus.publish("autoResult", "lose");
-        }
     }
 }
