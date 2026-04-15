@@ -115,12 +115,63 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 ---
 
 ### Requirements 
+#### **Ideation process**:
+During the first stage of our game design, the first problem that came to us was which type of games we should choose. Each member of our group did detailed research about the specific game type he or she wanted to design, and finally carried out six ideas(each member with one idea). Then our group arranged a meeting and played all the games that could serve as prototypes for our game. The original ideas include Roguelike, Tower Defense, Simulation, PvP, puzzle-solving, etc. And after several hours of discussion, we finally decided to design a 2D platform puzzle-adventure game.
+
+However, a distinctive characteristic of our game is an important part that sets it apart from others. While trying various puzzle games, a game called U vs U attracted us, which has the key game mechanics that players need to find ways to escape from their past selves or kill them before their past self reaches the finish line. That is really an amazing mechanic that only needs one player, but needs to think from two different sides. And the concept of two selves existing in different times and spaces is also quite novel. As a result, we finally decided on the final idea of our game: U help U, a 2D platform puzzle-adventure game in which the player can release a clone through an operation called recording. The clone will replay all the movements and operations that were done by the player during recording time, just like the player’s phantom(The principle behind the recording is to capture each key press during the recording time, and let the clone repeat the movement caused by these key presses during replay time). What the player needs to do is to cooperate with the clone to clear each level. In our initial concept, we can design each level with a different style, so that the player can play various kinds of games in our game.
+
+#### **User Stories**:
+Based on this initial game idea, we formulated a series of user stories to help us prioritize the tasks. Our user stories are based on the format “As a __, I want to __, so that__”, to consider different requirements from different sides. Here are some crucial user stories on basic game controls, core game mechanics, game interactions, and user interface. Click [here](./DevLog/Week04/Requirements-v2.0.md) to view the full user stories, the epics we developed in the early stages, and their completion status.
 <figure style="text-align: center;">
-  <img src="./assets/Stakeholders.png" alt="Stakeholders">
-  <figcaption style="font-size: 1.3em; font-weight: bold;">
-    Stakeholders
+  <img src="./assets/Requirements/user story.png" alt="Table 1: User stories">
+  <figcaption>Table 1: A Few User Stories</figcaption>
+</figure>
+
+In addition to player-centred user stories, we also considered requirements from the perspectives of designers and developers. This helped us ensure that the game would not only be enjoyable for players, but also practical to extend, balance, and maintain during development.
+Overall, these user stories provided a structured way to translate our initial game concept into a clearer set of development goals. They helped us identify the most important gameplay expectations from different perspectives, prioritise key tasks during development, and ensure that both player experience and project maintainability were taken into account. They also served as a bridge between the early design idea and the more detailed functional and non-functional requirements defined later in the project.
+
+
+#### **Onion Model**:
+<figure style="text-align: center;">
+  <img src="./assets/Requirements/Stakeholders.png" alt="Stakeholders">
+  <figcaption>
+    Figure 1: Onion Model: Stakeholders
   </figcaption>
 </figure>
+The stakeholder onion model was also used to identify the main groups involved in or affected by the game, and to clarify their different roles and levels of influence throughout our project.
+<figure style="text-align: center;">
+  <img src="./assets/Requirements/onion model table.png" alt="Table 2: Onion Model">
+  <figcaption>Table 2: Stakeholder in Onion Model</figcaption>
+</figure>
+
+#### **Early-stage Design**:
+During our early design stage, we mainly focused on designing different levels with various gameplay styles, such as roguelike in one level and shooting in another, but all combined with the record and reply mechanism. Because there are still some great ideas and map designs that were carried out by some group members. In this way, players can not only focus on puzzle solving using clones, but also can enjoy other different kinds of game styles in only one game. But with the deepening of research and development, we find that the game as a whole seems a bit disjointed. If each stage uses a different style, it seems that it is hard to find a suitable theme for the whole game. So we changed the development strategy to only focus on puzzle solving with the record system.
+
+In our first sprint(first demo version), we mainly focused on creating one level with a relatively easy puzzle(two buttons, the player and clone need to press them at the same time) to let players and testers get familiar with the game mechanics and how to cooperate with the record & replay system. For players who are more confident in their gaming skills, we also developed a level where players need to time their use of clone as stepping stones carefully to cross the chasm.
+
+#### **Use-Case Diagram**：
+<figure style="text-align: center;">
+  <img src="./assets/Requirements/User-case diagram.png" alt="Figure 2: User-Case Diagram">
+  <figcaption>Figure 2: User-Case Diagram</figcaption>
+</figure>
+Above is our user-case diagram and the following table summarizes the main purpose and design value of it:<br>
+<figure style="text-align: center;">
+  <img src="./assets/Requirements/User-case diagram table.png" alt="Table 3: User-Case Diagram Table">
+  <figcaption>Table 3: User-Case Diagram Table</figcaption>
+</figure>
+
+#### **Requirements Definition**：
+We attended each lab and testing marathon, gathering advice and feedback from different testers and players. After weekly meetings and bug fixing, our finalized functional and non-functional requirements are as follows:<br>
+<figure style="text-align: center;">
+  <img src="./assets/Requirements/FR.png" alt="Table 4: Functional Requirements for U help U">
+  <figcaption>Table 4: Functional Requirements for U help U</figcaption>
+</figure>
+<figure style="text-align: center;">
+  <img src="./assets/Requirements/NFR.png" alt="Table 5: Non-Functional Requirements for U help U">
+  <figcaption>Table 5: Non-Functional Requirements for U help U"</figcaption>
+</figure>
+
+
 
 ---
 
