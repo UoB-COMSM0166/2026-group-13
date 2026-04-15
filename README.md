@@ -227,9 +227,30 @@ Based on the quantitative evaluation results and the core mechanics of our time-
 
 ### Conclusion
 
-- 10% ~500 words
+Our project: **U Help U**, successfully transforms an abstract idea into a coherent and playable game. Instead of relying on combat, the game requires players to record the actions of their "present self" and then cooperate with their "past self" to complete levels. The core challenge is one of planning, observation, and spatial reasoning rather than reflex alone.
 
-- Reflect on the project as a whole. Lessons learnt. Reflect on challenges. Future work, describe both immediate next steps for your current game and also what you would potentially do if you had chance to develop a sequel.
+#### Lessons
+- First is that a good game concept alone is not enough; it must be supported by communication between the team and players, a detailed structure, and an iterative mechanism. This helped us move from vague ideas like just "record and replay" toward clearer player-centered goals.
+
+- Second came from the implementation level: When the core mechanics are built upon "precise replay," the technical system becomes an indispensable part of the gameplay itself. Because the loop relies on the "past self" to accurately reproduce previously recorded actions, even minor deviations in timing, collision, or movement can cause level solving to fail. Therefore, shifting from "recording coordinates" to "recording input," combined with a fixed time step, is a fundamental design decision that determines the viability of the gameplay.
+
+- Third concerns software engineering practices. Early development is slow due to over-engineering, with excessive focus on future extensibility before a stable Minimum Viable Product is built. But after that, our team subsequently refined our development strategy by drawing ideas from more mature examples, clarifying interface boundaries, and reorganizing the codebase into clearer modules.
+
+#### Challenges
+For technical, it can be summarized as jumping behavior, stacked interactions, box collisions, record-system state management, and level balancing. In game architecture, for example, the inheritance hierarchy of the entity tree is difficult to perfect in a single pass. To solve this, we adopt “generality” as the key criterion for determining ownership. 
+
+Another is teamwork. We initially encountered issues with unclear interface definitions. We then collaboratively refined the shared interfaces, explicitly identifying the key data that needed to be accessed by other systems (position/velocity), as well as the methods that should be exposed for external use (including state updates and input handling).
+
+From design, a key was ensuring that the “record and replay” mechanic did not merely remain novel but was also genuinely intuitive and easy to understand. Thus, we developed a coherent narrative framework supported by in-game signposts, research logs, and guided instructions, helping players recognize that clones should be treated as collaborators.
+
+#### Future
+Looking ahead, if we have the chance to develop a larger next version, the project offers many promising directions, such as multi-phase recording, custom level creation, hidden challenge routes, and community-based competition. Building on this foundation, additional features could include in-game shops, cosmetic rewards, pets, AI-guided NPCs, and level sharing systems. The sequel could further develop the game’s worldbuilding. Through elements like signposts, archival records, NPC dialogue, and memory fragments, the concept of “collaborating with your past self” can evolve from a gameplay mechanic into a more emotionally resonant narrative experience.
+
+<div align="center">
+    <img src="assets/Conclusion part picture 1.png" width="500">
+</div>
+
+Overall, our project successfully achieved its core creative objective: transforming repetition into something meaningful. Previous attempts are not discarded because of failure but become practical resources for driving progress. Yes, what truly drives progress is never a single perfect attempt, but rather continuous repetition, revisions, iteration, and the value accumulated from all past efforts.
 
 ### Contribution Statement
 
