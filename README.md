@@ -176,14 +176,175 @@ We attended each lab and testing marathon, gathering advice and feedback from di
 ---
 
 ### Design
+- [1 Top Level Architecture](#1-top-level-architecture)
+  - [1.1 Event System](#11-event-system)
+  - [1.2 Level Manager](#12-level-manager)
+  - [1.3 Page Switcher](#13-page-switcher)
 
-- 15% ~750 words 
-- System architecture. Class diagrams, behavioural diagrams. 
-#### Class Diagram
+- [2 Core Runtime Loop of Level Execution](#2-core-runtime-loop-of-level-execution)
+  - [2.1 Game Entity System](#21-game-entity-system)
+  - [2.2 Collision System](#22-collision-system)
+  - [2.3 Character Control System](#23-character-control-system)
+  - [2.4 Physics System](#24-physics-system)
+  - [2.5 UI System](#25-ui-system)
 
-![Class Diagram](./assets/GameDiagram.png)
+- [3 Mechanism Systems](#3-mechanism-systems)
+  - [3.1 Record System](#31-record-system)
+  - [3.2 Environmental Mechanisms](#32-environmental-mechanisms)
 
-> ⚠️Work in Progress
+#### 1 Top Level Architecture
+<figure style="text-align: center;">
+  <img src="./assets/uml/top-level-architecture.png" alt="diagram" width="600">
+  <figcaption>Figure 1</figcaption>
+</figure>
+This class diagram illustrates four core classes in the game and their collaboration: AppCoordinator, EventBus, SwitcherMain, and LevelManager, which are responsible for overall orchestration, event dispatching, page switching, and level management respectively.
+<figure style="text-align: center;">
+  <img src="./assets/sequence-diagrams/setup.png" alt="diagram" width="600">
+  <figcaption>Figure 2</figcaption>
+</figure>
+The sequence diagram shows the initialization order of these four core classes during game startup. 
+
+#### 1.1 Event System
+<div align="center">
+
+<table>
+  <tr>
+    <th>EventType</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>LOAD_LEVEL</td>
+    <td>Requests loading a specific level and entering gameplay.</td>
+  </tr>
+  <tr>
+    <td>UNLOAD_LEVEL</td>
+    <td>Requests unloading the current level and clearing resources.</td>
+  </tr>
+  <tr>
+    <td>RETURN_LEVEL_CHOICE</td>
+    <td>Returns to the level‑selection screen.</td>
+  </tr>
+  <tr>
+    <td>AUTO_RESULT</td>
+    <td>Triggers level result evaluation (win or lose).</td>
+  </tr>
+  <tr>
+    <td>PAUSE_GAME</td>
+    <td>Pauses all gameplay updates.</td>
+  </tr>
+  <tr>
+    <td>RESUME_GAME</td>
+    <td>Resumes gameplay updates.</td>
+  </tr>
+  <tr>
+    <td>SIGNBOARD_INTERACTED</td>
+    <td>Player interacts with a signboard to display its message.</td>
+  </tr>
+  <tr>
+    <td>SIGNBOARD_OUT_OF_RANGE</td>
+    <td>Player leaves signboard range and the message is hidden.</td>
+  </tr>
+  <tr>
+    <td>NPC_DIALOGUE_START</td>
+    <td>Begins an NPC dialogue sequence.</td>
+  </tr>
+  <tr>
+    <td>NPC_DIALOGUE_NEXT</td>
+    <td>Advances to the next line of NPC dialogue.</td>
+  </tr>
+  <tr>
+    <td>NPC_DIALOGUE_END</td>
+    <td>Ends the NPC dialogue and returns control to the player.</td>
+  </tr>
+</table>
+
+</div>
+
+The event system adopts a publish–subscribe model to centrally manage the dispatching of game events. 
+#### 1.2 Level Manager
+<figure style="text-align: center;">
+  <img src="./assets/uml/level-manager.png" alt="diagram" width="600">
+  <figcaption>Figure 3</figcaption>
+</figure>
+The LevelManager handles orchestration, Level executes level logic, CheckpointSystem manages respawn points, and Room represents spatial partitions within a level.
+
+#### 1.3 Page Switcher
+<figure style="text-align: center;">
+  <img src="./assets/uml/page-switcher.png" alt="diagram" width="600">
+  <figcaption>Figure 4</figcaption>
+</figure>
+The Switcher is responsible for switching between static UI pages and level pages, and forwarding update and draw calls to the currently active page.
+
+#### 2 Core Runtime Loop of Level Execution
+<figure style="text-align: center;">
+  <img src="./assets/sequence-diagrams/loop.png" alt="diagram" width="600">
+  <figcaption>Figure 5</figcaption>
+</figure>
+The sequence diagram illustrates the execution order of the game’s main loop: each frame calls update() to refresh system states, followed by draw() to render the interface.
+
+#### 2.1 Game Entity System
+<figure style="text-align: center;">
+  <img src="./assets/uml/game-entity.png" alt="diagram" width="600">
+  <figcaption>Figure 6</figcaption>
+</figure>
+The Game Entity System defines all in game entities, providing unified data structures, shared behaviors, and consistent interfaces for characters, platforms, and interactive elements. The GameEntity base class provides fundamental attributes, while derived classes may include additional components such as collision and control components.
+
+#### 2.2 Collision System
+<figure style="text-align: center;">
+  <img src="./assets/uml/collision-system.png" alt="diagram" width="600">
+  <figcaption>Figure 7</figcaption>
+</figure>
+
+The collision system implements a complete pipeline of collision detection → collision resolution → collision response, ensuring correct physical interactions, trigger events, and blocking behavior between entities.
+- CollideSystem orchestrates the entire collision process.
+-	CollisionDetector determines whether two entities collide.
+-	CollisionResolver determines the collision direction and outputs a collisionMsg for the next stage.
+-	CollisionResponder performs the actual response based on the resolved result.
+
+#### 2.3 Character Control System
+<figure style="text-align: center;">
+  <img src="./assets/uml/control-system.png" alt="diagram" width="600">
+  <figcaption>Figure 8</figcaption>
+</figure>
+The character control system processes native browser keyboard events, interprets player intent, validates whether the intent can be executed, and maps validated actions to updates of velocity and acceleration in the character’s movement component.
+
+#### 2.4 Physics System
+<figure style="text-align: center;">
+  <img src="./assets/uml/physics-system.png" alt="diagram" width="600">
+  <figcaption>Figure 9</figcaption>
+</figure>
+The physics system updates entity positions by applying velocity and acceleration.
+
+#### 2.5 UI System
+<figure style="text-align: center;">
+  <img src="./assets/uml/UI-system.png" alt="diagram" width="600">
+  <figcaption>Figure 10</figcaption>
+</figure>
+The UI module manages all interface rendering and interaction logic, including static pages, level pages, UI components, and transition effects.
+
+#### 3 Mechanism Systems
+#### 3.1 Record System
+<figure style="text-align: center;">
+  <img src="./assets/uml/record-system.png" alt="diagram" width="600">
+  <figcaption>Figure 11</figcaption>
+</figure>
+The recording system is the core mechanic of the game. It manages recording states, captures player actions, and replays them. RecordSystem serves as the central component, combining RecordUI for interface rendering and relying on Clip to store recorded data.
+<figure style="text-align: center;">
+  <img src="./assets/uml/record-state-diagram.png" alt="diagram" width="600">
+  <figcaption>Figure 12</figcaption>
+</figure>
+The state machine defines the full lifecycle of the recording system—from Ready to Record, to Recording, to Ready to Replay, and finally Replaying. It ensures that the recording and replay processes are controllable, resettable, and free from state conflicts through explicit states, input events, and action logic.
+
+#### 3.2 Environmental Mechanisms
+<figure style="text-align: center;">
+  <img src="./assets/uml/mechanism1.png" alt="diagram" width="600">
+  <figcaption>Figure 13</figcaption>
+</figure>
+<figure style="text-align: center;">
+  <img src="./assets/uml/mechanism2.png" alt="diagram" width="600">
+  <figcaption>Figure 14</figcaption>
+</figure>
+The mechanism system manages reusable level mechanisms, including circuit based door unlocking and controllable moving platforms. Diagram V shows the class structure of the mechanism system: ButtonPlatformLinkSystem and WireIndicatorSystem handle different linkage logics.
 
 ---
 
