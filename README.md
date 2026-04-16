@@ -23,7 +23,7 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 
 ## Your Group
 
-![GROUP PHOTO](https://raw.githubusercontent.com/moosry/2026-group-13/refs/heads/main/docs/DevLog/Week01/img/Group_Picture01.jpg)
+![GROUP PHOTO](./DevLog/Week01/img/Group_Picture01.jpg)
 
 - Group member 1, Zhiqing Zhang, ek25873@bristol.ac.uk, role
 - Group member 2, Siqi Xu, lv25773@bristol.ac.uk, role
@@ -156,7 +156,7 @@ In our first sprint(first demo version), we mainly focused on creating one level
 </figure>
 Above is our user-case diagram and the following table summarizes the main purpose and design value of it:<br>
 <figure style="text-align: center;">
-  <img src="./assets/Requirements/User-case diagram table.png" alt="Table 3: User-Case Diagram Table">
+  <img src="./assets/Requirements/user-case diagram table.png" alt="Table 3: User-Case Diagram Table">
   <figcaption>Table 3: User-Case Diagram Table</figcaption>
 </figure>
 
