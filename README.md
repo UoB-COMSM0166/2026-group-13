@@ -432,10 +432,78 @@ Based on the quantitative evaluation results and the core mechanics of our time-
 * **Challenge:** Refactoring the game's core interaction logic by implementing an Event-Driven Architecture (such as the Observer pattern or an Event Bus system). The technical difficulty is designing a centralized event dispatcher that allows entities to communicate asynchronously. For example, a pressure plate simply broadcasts a "stepped_on" event, and any linked door or trap listens for this event to trigger its animation and state change. This eliminates direct hard-coded dependencies and lays the technical groundwork for highly scalable and complex puzzle designs.
 
 ### Process 
+# I. The Tools and The Specific Cooperation Methods We Used 
 
-- 15% ~750 words
+- **Meetings (In-person and Online):**  
+  In-person meetings are conducted after class to facilitate face-to-face discussions, which enhance efficiency and allow for flexible supplementation of any limitations associated with online meetings. Online meetings are primarily held via Tencent Meeting, with at least one full-group meeting per week to synchronize overall progress and strategic direction. Specific issues related to the module will be addressed by the relevant team members at any time as needed.
 
-- Teamwork. How did you work together, what tools and methods did you use? Did you define team roles? Reflection on how you worked together. Be honest, we want to hear about what didn't work as well as what did work, and importantly how your team adapted throughout the project.
+- **Kanban and Idea Tracking (Notion):**  
+  Notion is used for task allocation, progress tracking, and the consolidation of new ideas. Any emerging ideas related to game design or system architecture are recorded in a timely manner, enabling all team members to review and discuss them, and ensuring that valuable insights are not lost in transient chat records.
+
+- **Wechat Group:**  
+  The primary channel for rapid information dissemination. Any updates to tasks on Notion are communicated synchronously within the group. Obstacles or urgent issues are raised in the group at the earliest opportunity.
+
+- **Version Control (GitHub):**  
+  The only platform to submit all codes and releasing versions.
+
+- **Other Tools:**  
+  - Class Diagram Tool — (Lucidchart)  
+  - Drawing Tool — (Procreate)  
+  - Estimation Tool — (Planning Poker)  
+  - Voting Tool — (Online anonymous questionnaire)  
+  - Parallel Development — (Git Branching)  
+  - AI Assistance — (Copilot, Claude)
+
+---
+
+# II. Role Allocations and Distributions
+
+<div align="center">
+    <img src="assets/Process part picture1.png" width="500">
+</div>
+
+# III. Excellently Executions During The Process
+
+- **Continuous Version Iteration:**  
+  A functional demo was completed in the early stages of the project, followed by frequent updates throughout development. Each delivery also constituted a fully playable version, with no incomplete prototypes submitted which follows the idea of delivering working software frequently in Agile method.
+
+<div align="center">
+    <img src="assets/Process part picture2.png" width="500">
+</div>
+
+- **Embracing Changes:**  
+  New ideas continued to emerge throughout the development process. Even when changes required modifications to underlying code logic or core gameplay, sometimes involving complete rewrites, we were willing to pursue them. Rather than settling for a sub-optimal version, we prioritized making meaningful improvements.
+
+- **Bold Architectural Refactoring:**  
+  Without altering any existing functionality, we repeatedly carried out comprehensive refactoring of the code base to enhance scalability and maintainability. Even in the mid-to-late stages of the project, when structural issues were identified, we committed plenty of time to rewriting, ultimately achieving a clear, well-organized, and extensible code structure.
+
+---
+
+# IV. Challenges Encountered and Adjustments
+
+- **Fragmented Collaboration and Lack of Integration:**  
+  In the early stages of the project, team members had limited experience in project development, JavaScript, and game design. As a result, individuals explored independently, leading to siloed work, insufficient communication, and knowledge fragmentation. This was reflected in unclear code interfaces and limited understanding between modules.  
+  **Adjustment:** The team transitioned to a module ownership structure, where each member took responsibility for a specific component, overseeing its design, development, and integration while still contributing to other modules. This significantly improved communication, strengthened inter-module coordination, and enhanced integration efficiency in later stages.
+
+- **Loose Progress Management:**  
+  Initially, there were no clearly defined deadlines, resulting in a slow and unstructured workflow.  
+  **Adjustment:** Deadlines were established for each task, with module owners mutually monitoring and ensuring progress.
+
+- **Inefficient Information Synchronization:**  
+  Task updates were recorded only in Notion without proactively informing all members, leaving some unaware of others’ progress and making code integration difficult.  
+  **Adjustment:** It was agreed that all Notion updates would be simultaneously communicated in the WeChat group, which noticeably improved responsiveness.
+
+- **Pace Misalignment:**  
+  During the project, there were differences in working pace and standards of completion among team members, which is common in diverse teams. Variations in individual approaches occasionally led to misaligned pacing and misunderstandings in collaboration.  
+  **Adjustment:** Through ongoing discussions, the team gradually aligned on a shared pace and common goals. Continuous communication helped establish a more consistent workflow, making collaboration smoother and effectively reducing potential misunderstandings.
+
+- **Low Efficiency in Full-team Meetings:**  
+  Meetings involving all six members often became unfocused, and the involvement of non-relevant participants led to inefficient use of human resources and slower decision-making.  
+  **Adjustment:** A hybrid approach combining full-team and small-group meetings was adopted. Full-team meetings were held weekly to align on overall direction, while specific issues were addressed in smaller meetings of 2–3 members as needed.
+
+---
+
+# V. Others’ thoughts
 
 ### Conclusion
 
