@@ -526,13 +526,9 @@ From design, a key was ensuring that the “record and replay” mechanic did no
 #### Future
 Looking ahead, if we have the chance to develop a larger next version, the project offers many promising directions, such as multi-phase recording, custom level creation, hidden challenge routes, and community-based competition. Building on this foundation, additional features could include in-game shops, cosmetic rewards, pets, AI-guided NPCs, and level sharing systems. The sequel could further develop the game’s worldbuilding. Through elements like signposts, archival records, NPC dialogue, and memory fragments, the concept of “collaborating with your past self” can evolve from a gameplay mechanic into a more emotionally resonant narrative experience.
 
-<br>
 <div align="center">
     <img src="assets/Conclusion part picture 1.png" width="500">
-    <br>
-    <em>Figure: The future development directions of our game</em>
 </div>
-<br>
 
 Overall, our project successfully achieved its core creative objective: transforming repetition into something meaningful. Previous attempts are not discarded because of failure but become practical resources for driving progress. Yes, what truly drives progress is never a single perfect attempt, but rather continuous repetition, revisions, iteration, and the value accumulated from all past efforts.
 
