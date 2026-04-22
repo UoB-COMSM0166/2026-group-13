@@ -715,6 +715,13 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 ## **⚙️ Conclusion**
 
+### **Overview**:
+- [1 Lessons](#1-lessons)
+- [2 Challenges](#2-challenges)
+- [3 Future](#3-future)
+
+<br>
+
 &emsp;&emsp;Our project: **U Help U**, successfully transforms an abstract idea into a coherent and playable game. Instead of relying on combat, the game requires players to record the actions of their "present self" and then cooperate with their "past self" to complete levels. The core challenge is one of planning, observation, and spatial reasoning rather than reflex alone.
 
 ### **1 Lessons**:
@@ -738,9 +745,10 @@ A Past Self is generated and replays the recorded actions using real‑time phys
   <br>
   <img src="./assets/Conclusion/Conclusion part picture 1.png" width="800">
   <br>
-  <b></b>
+  <b>Figure: The future development directions of our game</b>
   <br>
 </div>
+<br>
 
 &emsp;&emsp;Overall, our project successfully achieved its core creative objective: transforming repetition into something meaningful. Previous attempts are not discarded because of failure but become practical resources for driving progress. Yes, what truly drives progress is never a single perfect attempt, but rather continuous repetition, revisions, iteration, and the value accumulated from all past efforts.
 
