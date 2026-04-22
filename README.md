@@ -223,25 +223,37 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 &emsp;&emsp;During our early design stage, we mainly focused on designing different levels with various gameplay styles, such as roguelike in one level and shooting in another, but all combined with the record and reply mechanism. Because there are still some great ideas and map designs that were carried out by some group members. In this way, players can not only focus on puzzle solving using clones, but also can enjoy other different kinds of game styles in only one game. But with the deepening of research and development, we find that the game as a whole seems a bit disjointed. If each stage uses a different style, it seems that it is hard to find a suitable theme for the whole game. So we changed the development strategy to only focus on puzzle solving with the record system.
 
 &emsp;&emsp;In our first sprint(first demo version), we mainly focused on creating one level with a relatively easy puzzle(two buttons, the player and clone need to press them at the same time) to let players and testers get familiar with the game mechanics and how to cooperate with the record & replay system. For players who are more confident in their gaming skills, we also developed a level where players need to time their use of clone as stepping stones carefully to cross the chasm.
+<div align="center">
+  <br>
+  <img src="./assets/Requirements/paper prototype 1.gif" width="380">
+  <img src="./assets/Requirements/paper prototype 2.gif" width="380">
+  <br><br>
+  <img src="./assets/Requirements/paper prototype 3.gif" width="380">
+  <img src="./assets/Requirements/paper prototype 4.gif" width="380">
+  <br>
+  <b>Figure 2: Early design prototypes and gameplay concepts</b>
+  <br>
+  <br>
+</div>
 
 ### **5 Use-Case Diagram**：
 
 <div align="center">
   <br>
-  <img src="./assets/Requirements/User-case diagram.png" width="800">
+  <img src="./assets/Requirements/Use-case diagram.png" width="800">
   <br>
-  <b>Figure 2: User-Case Diagram</b>
+  <b>Figure 3: Use-Case Diagram</b>
   <br>
   <br>
 </div>
 
-&emsp;&emsp;Above is our user-case diagram and the following table summarizes the main purpose and design value of it:
+&emsp;&emsp;Above is our use-case diagram and the following table summarizes the main purpose and design value of it:
 
 <div align="center">
   <br>
-  <img src="./assets/Requirements/user-case diagram table.png" width="800">
+  <img src="./assets/Requirements/use-case diagram table.png" width="800">
   <br>
-  <b>Table 3: User-Case Diagram Table</b>
+  <b>Table 3: Use-Case Diagram Table</b>
   <br>
   <br>
 </div>
