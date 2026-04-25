@@ -711,7 +711,44 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 ## **⚙️ Sustainability, ethics and accessibility**
 
-(placeholder)
+### **Overview**:
+- [1 Environmental](#1-environmental)
+- [2 Social](#2-social)
+- [3 Technical](#3-technical)
+
+<br>
+
+&emsp;&emsp;We evaluate our game across three dimensions: ***Environmental***, ***Social***, and ***Technical***, while treating ***Ethics*** and ***Accessibility*** as cross-cutting concerns. They are related to whether players can access and engage with the game effectively, the core mechanics are communicated in a clear and equitable manner, and whether the project can be responsibly developed and sustained in the future.
+
+### **1 Environmental**
+One of the games’ most obvious features is its relatively lightweight web-based format. As **U Help U** is developed using p5.js and runs directly in the browser, rather than being distributed as a large standalone package, players can access the game without the need for heavy downloads, installations, or frequent patch updates.
+
+Performance optimization is also an important part of environmental sustainability. In system design and implementation, we strive to avoid placing unnecessary computational load on the browser, adopted several Green Software Foundation-style practices, to improve maintainability and avoid wasteful rework. For example, we deliberately selected lightweight 2D assets, to reduce GPU usage during runtime and maintain more controlled overall resource consumption. In addition, we seek to limit the size of image and audio assets, thereby lowering bandwidth demands and energy consumption during loading and data transfer.
+
+Of course, we cannot exaggerate and say that this project is "fully environmentally friendly", but during the development process, our careful consideration was given to balancing environmental impact with rendering/computational efficiency and resource lightweighting.
+
+### **2 Social**
+This dimension is most closely linked to ethics and accessibility. For ethical, our gamne offers an experience that departs from traditional platform games. Rather than progressing through combat, enemies, or domination, advancement is achieved through observation, recording, and collaboration with your 'past self'. No time limit, no death penalty, players will feel that "each attempt holds value." Yes, our game is not just about providing entertainment; It also shaping how players understand failure and challenge.
+
+Accessibility is also central to social impact. From visual clarity, the 'present self' is represented as a *solid mauve* <img src="./assets/Sustainability/0%20present%20self.png" height="22" align="absmiddle"> figure, while 'past self' is depicted as semi-transparent dusty rose <img src="./assets/Sustainability/1%20past%20self.png" height="22" align="absmiddle">. We also add bilingual prompts, context-sensitive tutorials, and clearer onboarding processes. Additionally, we have implemented a configurable key binding system in the game settings, allowing players to customize controls according to their personal preferences. All aimed at reducing the cognitive barrier with understanding the time-based clone game mechanic.
+
+However, we should be honest that our current accessibility support remains limited. Features like color-blind modes, screen reader compatibility, and broader accommodation for physical impairments have not yet been fully implemented. Nevertheless, from a social and ethical perspective, this project has taken a meaningful step forward.
+
+### **3 Technical**
+From technical, the game is built upon a modular framework composed of multiple independent systems, including scene /level management, an event system, collision handling, character control, recording functionality, achievement system, etc. This structure allows us to separate different responsibilities, reducing the risk of *"a change in one place affecting the whole system"*. Like, during frame updates driven by `draw`, collision, control, physics, and level management are broken down into relatively clear modules that work collaboratively. The adoption of event-driven architecture further disrupts interactions between mechanisms, such as switches, doors, traps, and characters, allowing them to interact through a more transparent messaging mechanism rather than relying on tightly coupled, hard-coded connections.
+
+The impact of technical design extends beyond whether the game simply functions; it also includes what we learned through development and what the project contributes to future work. It also carries ethical implications: if we claim this is an open, collaborative, and extensible project, then the codebase shouldn't be limited to the original author's readability. Instead, it should provide a clear code structure, comprehension pathways, and well-defined module boundaries for future maintainers and students taking the course. The direction is clear: our project is not just a working prototype, but a system that can be responsibly maintained and extended over time.
+
+<div align="center">
+  <br>
+  <img src="./assets/Sustainability/Class Exercise Example - SusAF sustainability awareness framework.png" width="800">
+  <br>
+  <b>Figure: Class Exercise Example - SusAF sustainability awareness framework</b>
+  <br>
+</div>
+<br>
+
+In summary, in the scope of a student project, our project **U Help U** shows a substantial engagement with issues of sustainability, ethics, and accessibility. While some aspects have not yet been fully realized for the game, sustainability is inherently embedded into the project itself: our backlog, planning, and iterations. We will pay careful attention to each line of code, provide meaningful support to diverse players, and make a deliberate commitment to enabling future development in a responsible manner.
 
 ## **⚙️ Conclusion**
 
