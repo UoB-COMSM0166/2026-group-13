@@ -544,28 +544,97 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 ## **⚙️ Implementation**
 
 ### **Overview**:
-- [Technical Challenge 1](#technical-challenge-1)
-- [Technical Challenge 2](#technical-challenge-2)
+- [1 Overall Implementation Approach](#1-overall-implementation-approach)
+- [2 Technical Challenge 1 — Leaderboard System](#2-technical-challenge-1--leaderboard-system)
+  - [2.1 Early Attempts and Problems](#22-early-attempts-and-problems)
+  - [2.2 Final Solution](#23-final-solution)
+- [3 Technical Challenge 2 — Level Editor & Sharing System](#3-technical-challenge-2--level-editor--sharing-system)
+  - [3.1 Early Attempts and Problems](#31-early-attempts-and-problems)
+  - [3.2 Final Solution](#32-final-solution)
 
+### **1 Overall Implementation Approach**：
 
+&emsp;&emsp;*U Help U* is implemented using the p5.js library and follows an object‑oriented, modular architecture.  
+The game loop runs in a fixed update–draw cycle, coordinating physics updates, collision detection, UI rendering, and level logic.  
+Core systems such as the LevelManager, UI system, Record System, Leaderboard System, and Level Editor communicate through well‑defined interfaces.
 
-&emsp;&emsp;*U Help U* is developed using the p5.js library and follows an object-oriented, modular design approach. Our system architecture encapsulates core game components into distinct classes, including the main player, time-clones, a custom physics engine, and a collision detection system. To deliver the core experience of "collaborating with your past self," we had to overcome several significant technical hurdles during development. Specifically, we highlight the following two primary technical challenges:
+&emsp;&emsp;During development, we encountered two major technical challenges:  
+- implementing a robust leaderboard system that supports guest/registered accounts, name conflict resolution, and data migration;  
+- designing a fully functional level editor with upload/download sharing and safe serialization.
 
-### **Technical Challenge 1**:
+### **2 Technical Challenge 1 — Leaderboard System**：
 
-***Deterministic Replay and Physics State Synchronization for Clones***
+#### **2.1 Early Attempts and Problems**：
+Our initial approach stored all data in `localStorage`. This failed because:
+- data could not be shared across devices  
+- multiple players could not coexist  
+- renaming caused data overwrites  
+- name conflicts were impossible to resolve cleanly  
 
-&emsp;&emsp;The core gameplay loop of *U Help U* relies heavily on recording player inputs and generating "ghost clones" to replay these actions for cooperative puzzle-solving. The most critical technical hurdle was achieving absolute "deterministic replay" within the JavaScript/p5.js environment. Initially, we attempted to record the absolute spatial coordinates of the player frame-by-frame. However, due to browser frame rate (FPS) fluctuations and unstable delta times, the clones experienced severe spatial drift during playback. This minor physical deviation led to critical collision failures—for example, a clone narrowly missing a trigger button, or the "Present Self" failing to stand stably on top of the clone.
+We also tried uploading raw JSON, but this created issues with duplicate names and inconsistent data formats.
 
-&emsp;&emsp;To resolve this, we abandoned absolute coordinate tracking and designed a robust Input Recorder utilizing a Fixed Time Step. During the recording phase, the system precisely samples the player's input vectors (e.g., key states and durations); during playback, these inputs are re-injected into the real-time physics engine. By implementing this approach, we ensured 100% physical state synchronization and collision accuracy between the main entity and its clones across complex platforming sequences, completely eliminating spatial drift.
+#### **2.2 Final Solution**：
+We implemented a **dual‑layer data architecture**:
 
-### **Technical Challenge 2**:
+#### **Local Layer**：
+- stores guest progress  
+- caches leaderboard data for fast loading  
+- supports offline play  
 
-***Decoupling Complex Puzzle Logic via Event-Driven Architecture***
+#### **Server Layer**：
+- stores global leaderboard entries  
+- resolves name conflicts  
+- maintains persistent user accounts  
 
-&emsp;&emsp;As level designs became more intricate, the game environment incorporated the main player, multiple clones, gravity-sensitive switches, timed doors, and various traps. Initially, managing the interactions between these entities using standard conditional statements (if/else) within the entity classes led to highly coupled, unmaintainable "spaghetti code". This architecture made it exceedingly difficult to debug state changes or introduce new interactive mechanics.
+#### **Key Features**：
+- **Guest → Registered migration**  
+  - merges local data into the registered account  
+  - preserves all scores  
+- **Rename system**  
+  - renaming does not affect uploaded records  
+  - leaderboard auto‑refreshes  
+- **Name conflict resolution**  
+  - duplicates automatically become `Alex#1`, `Alex#2`, etc.  
+  - preserves the player’s preferred name  
 
-&emsp;&emsp;To overcome this architectural bottleneck, we undertook a major refactoring of the game's core interaction logic by implementing an Event-Driven Architecture (specifically, an Event Bus system). The technical complexity lay in designing a centralized event dispatcher that allows all game entities to communicate asynchronously. Under this new architecture, entities no longer reference each other directly. For example, when a player or clone steps on a pressure plate, the plate simply broadcasts a "stepped_on" event; any linked door or trap listening for this event will then independently trigger its respective animation and state change. This decoupled design not only eradicated hard-coded dependencies but also laid the technical groundwork for highly scalable and complex puzzle designs in future development.
+- **Real‑time leaderboard**  
+  - uploads score after each level  
+  - sorts by completion time  
+  - highlights the current player  
+
+### **3 Technical Challenge 2 — Level Editor & Sharing System**：
+
+### **3.1 Early Attempts and Problems**：
+&emsp;&emsp;Our first attempt stored the entire level object directly.  
+This caused:
+- circular references in JSON  
+- inconsistent behavior across browsers  
+- inability to load maps on other devices  
+- old maps breaking after updates  
+
+### **3.2 Final Solution**：
+
+#### **Custom Serialization Format**：
+&emsp;&emsp;We designed a clean, safe JSON structure:
+- tile grid  
+- entity list  
+- triggers and links  
+- metadata (author, version, timestamp)
+
+Before upload:
+- remove runtime states (velocity, collision flags, temporary variables)
+- validate map size, entity types, coordinates
+
+After download:
+- reconstruct objects from JSON  
+- auto‑fill missing fields for backward compatibility  
+- reject invalid or malicious data  
+
+#### **Sharing System**：
+- upload to server  
+- browse community maps  
+- download and play instantly  
+- versioning support (v1, v2, v3…)
 
 
 ## **⚙️ Evaluation**
