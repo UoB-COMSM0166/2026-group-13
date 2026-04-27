@@ -94,13 +94,14 @@ Its core challenge lies in predicting and coordinating the interaction between p
 Each level is a standalone challenge. After completing one, players proceed to the next.
 
 
-
 ### Core Gameplay (How to Play)
 
 #### 1. Basic Controls  
-- **Movement**: A / D  
-- **Jump**: W or Space  
-- **Record / Replay**: R  
+- **Movement**: A / D / ← / →
+- **Jump**: W / Space / ↑
+- **Record / Stop**: C
+- **Replay**: R  
+- **Interaction**: E
 
 #### 2. Three Core Modes (Closed‑Loop System)
 
@@ -111,44 +112,34 @@ The player controls the Present Self to explore the terrain, observe obstacles, 
 - Focus on observation and planning  
 
 #### (2) Recording Mode  
-Activated by pressing R. A “Recording” indicator appears, and a 10‑second recording begins. The system records **input commands**, not fixed positions.  
+Activated by pressing C. A “Recording” indicator appears, and a 5‑second recording begins. The system records **input commands**, not fixed positions.  
 - Present Self moves freely  
 - Players create “useful collaborative trajectories”  
-- Press R again or wait for the timer to end  
-- Playback begins automatically  
+- Press C again or wait for the timer to end  
 
 #### (3) Collaborative Replay Mode  
 A Past Self is generated and replays the recorded actions using real‑time physics.  
 - Present Self remains controllable  
 - Past Self follows recorded inputs under gravity  
 - Both entities can stand on each other  
-- Press R to interrupt and re‑record  
+- Press R to interrupt and then press C to re‑record  
 - Past Self disappears when playback ends  
 
 #### 3. Physical Rules  
 - Both selves are affected by gravity  
 - Both can stand on floors, platforms, or each other  
 - Vertical stacking allowed; horizontal overlap prevented  
-- Both are solid, impenetrable units  
-
-
 
 ### Game Goals
 
 #### 1. Level Objectives  
 - **Primary**: Reach the designated endpoint  
-- **Advanced**:  
-  - Complete with the fewest recordings  
-  - Achieve a perfect one‑take recording  
-- **Hidden**:  
-  - Collect **Time Shards** in elevated or hidden locations  
+- **Advanced**: Complete with the less time
 
 #### 2. Core Experience Goals  
 - Create the feeling of “collaborating with your past self”  
 - Encourage spatial reasoning and forward planning  
 - Reinforce the theme that past efforts empower present breakthroughs  
-
-
 
 ### Core Highlights (Differentiation)
 
@@ -156,11 +147,6 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 - **Action‑Based Recording**: Playback uses real‑time physics, not scripted positions  
 - **Bidirectional Interaction**: Both selves can serve as platforms for each other  
 - **Non‑Punitive Design**: No time limits or death penalties  
-- **Visual Clarity**:  
-  - Present Self: solid white  
-  - Past Self: translucent blue  
-  - Background: pink  
-  - UI labels: “NOW” and “PAST”  
 
 
 ### 🎮 Game Entities Exhibition
