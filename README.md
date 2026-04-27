@@ -982,7 +982,7 @@ In summary, in the scope of a student project, our project **U Help U** shows a 
 
 - Second came from the implementation level: When the core mechanics are built upon "precise replay," the technical system becomes an indispensable part of the gameplay itself. Because the loop relies on the "past self" to accurately reproduce previously recorded actions, even minor deviations in timing, collision, or movement can cause level solving to fail. Therefore, shifting from "recording coordinates" to "recording input," combined with a fixed time step, is a fundamental design decision that determines the viability of the gameplay.
 
-- Third concerns software engineering practices. Early development is slow due to flawed engineering and failed to adequately solve extensibility. But after that, our team subsequently refined our development strategy by drawing ideas from more mature examples, clarifying interface boundaries, and reorganizing the codebase into clearer modules.
+- Third concerns software engineering practices. Early development is slow due to flawed engineering and failed to adequately solve extensibility. But after that, we subsequently refined our development strategy by drawing ideas from more mature examples, clarifying interface boundaries, and reorganizing the codebase into clearer modules.
 
 ### **2 Challenges**:
 &emsp;&emsp;For technical, it can be summarized as jumping behavior, stacked interactions, box collisions, record-system state management, and level balancing. In game architecture, for example, the inheritance hierarchy of the entity tree is difficult to perfect in a single pass. To solve this, we adopt “generality” as the key criterion for determining ownership. 
