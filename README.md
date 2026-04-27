@@ -996,7 +996,7 @@ In summary, in the scope of a student project, our project **U Help U** shows a 
 
 <div align="center">
   <br>
-  <img src="./assets/Conclusion/Conclusion part picture 1.png" width="800">
+  <img src="./assets/Conclusion/Conclusion part picture.png" width="800">
   <br>
   <b>Figure: The future development directions of our game</b>
   <br>
