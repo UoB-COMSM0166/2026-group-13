@@ -7,7 +7,7 @@
 </p>
 
 <div align="center">
-  <a href="https://uob-comsm0166.github.io/2026-group-13/Demo1">
+  <a href="https://angelicaserein.github.io/UhelpU/">
     <img src="./assets/game-entry.png" width="800">
     <br>
     <br>
