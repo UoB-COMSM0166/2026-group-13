@@ -885,11 +885,14 @@ After download:
 
 <div align="center">
   <br>
-  <img src="./assets/process/Process part picture1.png" width="800">
+  <a href="https://uob-comsm0166.github.io/2026-group-13/assets/process/Team-roles.html" target="_blank" title="Click to view interactive team roles">
+    <img src="./assets/process/team-roles.png" width="800" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  </a>
   <br>
-  <b></b>
+  <p><i>Click the image above to view our interactive team dossier.</i></p>
   <br>
 </div>
+
 
 ### **3 Excellently Executions During The Process**:
 
@@ -898,7 +901,7 @@ After download:
 
 <div align="center">
   <br>
-  <img src="./assets/process/Process part picture2.png" width="800">
+  <img src="./assets/process/version-iteration.png" width="800">
   <br>
   <b></b>
   <br>
