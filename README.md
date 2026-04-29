@@ -1,4 +1,4 @@
-<h1 align="center"><b>🎮️ U Help U 🎮️</b></h1>
+﻿<h1 align="center"><b>🎮️ U Help U 🎮️</b></h1>
 
 <p align="center">
 <b><i>Two selves. One timeline —</i></b>
@@ -64,6 +64,72 @@
     <td>hz25681@bristol.ac.uk</td>
     <td>role</td>
   </tr>
+</table>
+
+<br>
+
+<h1 align="center"><b>Week Log</b></h1>
+
+<table align="center" width="100%">
+  <thead>
+    <tr>
+      <th width="10%">Week</th>
+      <th width="28%">Image</th>
+      <th width="62%">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><b><a href="./week-log/Week01/README.md">Week 01</a></b></td>
+      <td align="center"><img src="./week-log/Week01/img/Group_Picture01.jpg" width="200"/></td>
+      <td>Game research & feasibility analysis. Each member researched 46 commercial games and 18 prior group projects, evaluating p5.js implementation viability, game types, and mechanics to guide the project direction.</td>
+    </tr>
+    <tr>
+      <td align="center"><b><a href="./week-log/Week02/ReadMe.md">Week 02</a></b></td>
+      <td align="center"><img src="./week-log/Week02/cat.png" width="200"/></td>
+      <td>Repository setup & idea sharing. Cloned the project template, established the folder structure, added team information to README, and each member shared their game ideas to determine the final project direction.</td>
+    </tr>
+    <tr>
+      <td align="center"><b><a href="./week-log/Week03/ReadMe.md">Week 03</a></b></td>
+      <td align="center">—</td>
+      <td>Paper prototypes & final idea. Explored paper prototypes for "U Help U" and "Kitten Run", defined additional requirements, and finalised the game concept around the record-and-replay mechanic.</td>
+    </tr>
+    <tr>
+      <td align="center"><b><a href="./week-log/Week04/Requirements-v2.0.md">Week 04</a></b></td>
+      <td align="center">—</td>
+      <td>Requirements analysis. Conducted stakeholder identification using the onion model, developed user stories from player/designer/developer perspectives, and defined functional and non-functional requirements.</td>
+    </tr>
+    <tr>
+      <td align="center"><b><a href="./week-log/Week05/ReadMe.md">Week 05</a></b></td>
+      <td align="center">—</td>
+      <td>Architecture & initial implementation. Drew class and sequence diagrams, began implementing core systems (Animation, CharacterControl, Collision, GameEntity, LevelManager, RecordSystem), and kicked off Sprint 1 during reading week.</td>
+    </tr>
+    <tr>
+      <td align="center"><b><a href="./week-log/Week06/ReadMe.md">Week 06</a></b></td>
+      <td align="center">—</td>
+      <td>First demo. Built and uploaded the first playable game demo, integrating the record-replay mechanic with basic level design and collision handling.</td>
+    </tr>
+    <tr>
+      <td align="center"><b><a href="./week-log/Week07/ReadMe.md">Week 07</a></b></td>
+      <td align="center">—</td>
+      <td>Demo iteration. Uploaded and tested multiple demo versions (v1.1.0 → v2.3.1), refining gameplay mechanics, level terrain, and UI based on internal testing feedback.</td>
+    </tr>
+    <tr>
+      <td align="center"><b><a href="./week-log/Week08/ReadMe.md">Week 08</a></b></td>
+      <td align="center">—</td>
+      <td>User evaluation. Developed a web-based evaluation program, collected SUS and NASA-TLX data from 10 participants across Level 1 and Level 2, and ran Wilcoxon Signed-Rank Tests to analyse usability and workload.</td>
+    </tr>
+    <tr>
+      <td align="center"><b><a href="./week-log/Week09/Evaluation.md">Week 09</a></b></td>
+      <td align="center">—</td>
+      <td>Evaluation analysis & code merging. Analysed qualitative and quantitative evaluation results, merged dual-switcher code, and iterated on level design with new skeleton layouts.</td>
+    </tr>
+    <tr>
+      <td align="center"><b><a href="./week-log/Week10/README.md">Week 10</a></b></td>
+      <td align="center">—</td>
+      <td>Black-box testing. Conducted systematic manual black-box testing of core mechanics (recording duration, state switching, collision, physics) using equivalence partitioning and boundary value analysis.</td>
+    </tr>
+  </tbody>
 </table>
 
 <br>
@@ -966,7 +1032,7 @@ However, we should be honest that our current accessibility support remains limi
 
 ### **3 Technical**
 
-From technical, the game is built upon a modular framework composed of multiple independent systems, including scene /level management, an event system, collision handling, character control, recording functionality, achievement system, etc. This structure allows us to separate different responsibilities, reducing the risk of _"a change in one place affecting the whole system"_. 
+From technical, the game is built upon a modular framework composed of multiple independent systems, including scene /level management, an event system, collision handling, character control, recording functionality, achievement system, etc. This structure allows us to separate different responsibilities, reducing the risk of _"a change in one place affecting the whole system"_.
 
 For example, during frame updates driven by `draw`, collision, control, physics, and level management are broken down into relatively clear modules, allowing mechanisms like switches, doors, traps, and characters to interact through a more transparent messaging mechanism rather than relying on tightly coupled, hard-coded connections. Furthermore, our current system limits the collection of player information; the game can be played without requiring players to input data involving personal privacy.
 

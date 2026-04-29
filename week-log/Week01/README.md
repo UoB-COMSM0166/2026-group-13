@@ -1,11 +1,72 @@
-## Clone Template Repository 克隆模板库
-Clone the instructor's template and set up the initial folder structure.
-克隆老师的模板，建立部分文件夹
+## 总体汇总分析（Week 01）
 
-## Group Discussion 小组讨论
-Each team member shared games they are interested in; no specific format or genre was restricted.
-每人分享自己感兴趣的游戏，不限形式
+本周我们从两个维度进行了前期调研与可行性判断：
 
-## Add Team Information 添加信息
-Update the documentation with names, emails, GitHub usernames, and a group photo.
-添加姓名、邮箱、github用户名以及小组合照
+- 市面游戏样本：共研究 46 个游戏，重点评估其 p5.js 实现可行性，并从游戏类型、交互方式、地图结构、存活方式、玩法亮点、复活机制、攻击方式等维度进行归纳。
+- 往年小组项目样本：共整理 18 个往年小组作品，提取其游戏类型、项目描述与可参考性，用于对比本组方案的落地难度与创新空间。
+
+### 图 1：市面游戏汇总截图（待插入）
+
+> 在此处插入“46 个市面游戏”的汇总截图。
+
+### 图 2：往年小组作业汇总截图（待插入）
+
+> 在此处插入“18 个往年小组项目”的汇总截图。
+
+基于上述汇总，我们后续的设计方向将优先选择：
+
+- 核心循环清晰、反馈直接、机制可分阶段实现的玩法。
+- 在保证实现可行性的前提下，保留一定机制联动与叙事表达空间。
+
+## 每位成员 Game Research 总结（中文版）
+
+### Siqi（参考游戏：The Final Station）
+
+- 原文链接：[Siqi_GameResearch.md](Siqi_GameResearch.md)
+
+- 重点分析了“到达站点 -> 探索 -> 资源与风险管理 -> 完成目标 -> 撤离”的关卡循环。
+- 提炼了可复用的关卡结构：线性主路径 + 小分支 + 机关解锁（电力、门禁、开关）。
+- 强调“弱主角”与稀缺资源（弹药、医疗）带来的紧张节奏，适合小组项目分模块开发。
+- 认为环境叙事（灯光、音效、场景细节、文本碎片）能在低成本下提升沉浸感。
+
+### Wenlei（参考方向：休闲游戏 + 环境叙事游戏）
+
+- 原文链接：[Wenlei_GameResearch.md](Wenlei_GameResearch.md)
+
+- 从 Fruit Ninja、Cut the Rope 等休闲游戏总结了即时反馈、物理模拟、低门槛规则的重要性。
+- 指出高频、低延迟的视觉反馈可显著提升操作爽感与持续游玩意愿。
+- 从 INSIDE、Little Nightmares 提炼“少文本叙事”思路：通过场景、符号和行为传达故事。
+- 强调“谜题即叙事载体”，让玩家在互动中主动拼接剧情。
+
+### Xuelin（参考游戏：Hollow Knight）
+
+- 原文链接：[Xuelin_GameResearch.md](Xuelin_GameResearch.md)
+
+- 梳理了战斗系统中的核心权衡：同一资源（Soul）同时用于输出与回复。
+- 总结了探索循环：探索 -> 战斗 -> 失败/成功 -> 学习 -> 深入探索。
+- 关注非线性地图与多路径推进对重玩价值和探索动力的提升。
+- 提出“弱化文字说明、强化环境叙事”的表达方式，适合动作探索类项目。
+
+### ZJR（参考游戏：Degrees of Separation + Stranger Things 系列）
+
+- 原文链接：[zjr_GameResearch.md](zjr_GameResearch.md)
+
+- 重点研究“双世界并行”结构：两个世界规则不同，但状态相互影响。
+- 提炼了“收集侧/战斗侧”协作循环：一侧收集资源，另一侧转化为战斗优势。
+- 关注双人协作与同步达成目标机制，强调分工配合和失败共担。
+- 在实现层面倾向简化操作、突出规则联动，适配网页端与像素风呈现。
+
+### ZZQ（参考游戏：UVSU）
+
+- 原文链接：[research_game_analysis_uvsu_zzq.md](research_game_analysis_uvsu_zzq.md)
+
+- 研究了确定性平台解谜系统，核心机制是“过去的自己”作为敌人/挑战对象。
+- 总结了因果驱动玩法：移动跳跃 -> 触发机关 -> 对抗过去行为 -> 获取钥匙 -> 解锁新区域。
+- 强调轻惩罚设计（即时复活、低失败成本）以鼓励试错和学习。
+- 提出该思路适合时间回放、机制叠加与因果链关卡设计。
+
+### 组内整体启发（Week 01）
+
+- 多数研究都指向“清晰核心循环 + 渐进复杂度 + 明确反馈”这一通用设计框架。
+- 叙事方式上普遍倾向环境叙事与机制叙事，而非大量文本。
+- 可行的项目方向包括：双世界联动、资源权衡、生存压力、协作分工、时间回放解谜。
