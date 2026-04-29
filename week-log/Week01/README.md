@@ -1,72 +1,79 @@
-## 总体汇总分析（Week 01）
+﻿## Game Research
 
-本周我们从两个维度进行了前期调研与可行性判断：
+This week we conducted preliminary research and feasibility assessment from two perspectives:
 
-- 市面游戏样本：共研究 46 个游戏，重点评估其 p5.js 实现可行性，并从游戏类型、交互方式、地图结构、存活方式、玩法亮点、复活机制、攻击方式等维度进行归纳。
-- 往年小组项目样本：共整理 18 个往年小组作品，提取其游戏类型、项目描述与可参考性，用于对比本组方案的落地难度与创新空间。
+- Commercial game samples: We analysed over 50 games, focusing on their p5.js implementation feasibility, and categorised them by game genre, interaction style, map structure, survival mechanics, gameplay highlights, respawn systems, and attack patterns.
+- Previous group project samples: We reviewed 18 past group projects, extracting game types, project descriptions, and reference value to compare the implementation difficulty and innovation potential of our own design.
 
-### 图 1：市面游戏汇总截图（待插入）
+📋 **Game Research Summary**: [Reference Games — Everyone](https://angelica-serein.notion.site/Reference-Games-Everyone-d83b2f38a2aa8273b95f01f7046d4f93?source=copy_link)
 
-> 在此处插入“46 个市面游戏”的汇总截图。
+### Figure 1: Commercial Games Summary Screenshots
 
-### 图 2：往年小组作业汇总截图（待插入）
+<p align="center">
+  <img src="img/game research1.png" width="90%">
+  <img src="img/game research2.png" width="90%">
+</p>
 
-> 在此处插入“18 个往年小组项目”的汇总截图。
+### Figure 2: Previous Group Projects Summary Screenshot
 
-基于上述汇总，我们后续的设计方向将优先选择：
+<p align="center">
+  <img src="img/game research3.png" width="90%">
+</p>
 
-- 核心循环清晰、反馈直接、机制可分阶段实现的玩法。
-- 在保证实现可行性的前提下，保留一定机制联动与叙事表达空间。
+Based on the above research, our design direction will prioritise:
 
-## 每位成员 Game Research 总结（中文版）
+- Gameplay with a clear core loop, direct feedback, and mechanics that can be implemented incrementally.
+- Retaining some space for mechanic synergy and narrative expression while ensuring implementation feasibility.
 
-### Siqi（参考游戏：The Final Station）
+## Individual Game Research Summaries
 
-- 原文链接：[Siqi_GameResearch.md](Siqi_GameResearch.md)
+### Siqi (Reference Game: The Final Station)
 
-- 重点分析了“到达站点 -> 探索 -> 资源与风险管理 -> 完成目标 -> 撤离”的关卡循环。
-- 提炼了可复用的关卡结构：线性主路径 + 小分支 + 机关解锁（电力、门禁、开关）。
-- 强调“弱主角”与稀缺资源（弹药、医疗）带来的紧张节奏，适合小组项目分模块开发。
-- 认为环境叙事（灯光、音效、场景细节、文本碎片）能在低成本下提升沉浸感。
+- Full write-up: [Siqi_GameResearch.md](Siqi_GameResearch.md)
 
-### Wenlei（参考方向：休闲游戏 + 环境叙事游戏）
+- Analysed the level loop: "arrive at station → explore → resource and risk management → complete objective → evacuate".
+- Identified a reusable level structure: linear main path + small branches + trigger-based unlocks (power, access control, switches).
+- Highlighted how a "weak protagonist" and scarce resources (ammo, medicine) create tension — well-suited to modular group development.
+- Noted that environmental storytelling (lighting, sound, scene details, text fragments) can enhance immersion at low cost.
 
-- 原文链接：[Wenlei_GameResearch.md](Wenlei_GameResearch.md)
+### Wenlei (Reference Direction: Casual Games + Environmental Narrative Games)
 
-- 从 Fruit Ninja、Cut the Rope 等休闲游戏总结了即时反馈、物理模拟、低门槛规则的重要性。
-- 指出高频、低延迟的视觉反馈可显著提升操作爽感与持续游玩意愿。
-- 从 INSIDE、Little Nightmares 提炼“少文本叙事”思路：通过场景、符号和行为传达故事。
-- 强调“谜题即叙事载体”，让玩家在互动中主动拼接剧情。
+- Full write-up: [Wenlei_GameResearch.md](Wenlei_GameResearch.md)
 
-### Xuelin（参考游戏：Hollow Knight）
+- Summarised the importance of instant feedback, physics simulation, and low-barrier rules from casual games like Fruit Ninja and Cut the Rope.
+- Noted that high-frequency, low-latency visual feedback significantly improves gameplay feel and player retention.
+- Extracted a "minimal text narrative" approach from INSIDE and Little Nightmares: conveying story through scenes, symbols, and behaviour.
+- Emphasised "puzzles as narrative vehicles", letting players piece together the story through interaction.
 
-- 原文链接：[Xuelin_GameResearch.md](Xuelin_GameResearch.md)
+### Xuelin (Reference Game: Hollow Knight)
 
-- 梳理了战斗系统中的核心权衡：同一资源（Soul）同时用于输出与回复。
-- 总结了探索循环：探索 -> 战斗 -> 失败/成功 -> 学习 -> 深入探索。
-- 关注非线性地图与多路径推进对重玩价值和探索动力的提升。
-- 提出“弱化文字说明、强化环境叙事”的表达方式，适合动作探索类项目。
+- Full write-up: [Xuelin_GameResearch.md](Xuelin_GameResearch.md)
 
-### ZJR（参考游戏：Degrees of Separation + Stranger Things 系列）
+- Mapped the core trade-off in the combat system: the same resource (Soul) is used for both dealing damage and healing.
+- Summarised the exploration loop: explore → combat → fail/succeed → learn → explore further.
+- Highlighted how non-linear maps and multi-path progression enhance replayability and exploration motivation.
+- Proposed a "less text, more environmental storytelling" approach, suitable for action-exploration projects.
 
-- 原文链接：[zjr_GameResearch.md](zjr_GameResearch.md)
+### ZJR (Reference Games: Degrees of Separation + Stranger Things series)
 
-- 重点研究“双世界并行”结构：两个世界规则不同，但状态相互影响。
-- 提炼了“收集侧/战斗侧”协作循环：一侧收集资源，另一侧转化为战斗优势。
-- 关注双人协作与同步达成目标机制，强调分工配合和失败共担。
-- 在实现层面倾向简化操作、突出规则联动，适配网页端与像素风呈现。
+- Full write-up: [zjr_GameResearch.md](zjr_GameResearch.md)
 
-### ZZQ（参考游戏：UVSU）
+- Studied the "dual-world parallel" structure: two worlds with different rules whose states mutually influence each other.
+- Identified a "collect side / combat side" cooperation loop: one side gathers resources, the other converts them into combat advantages.
+- Focused on two-player co-op and synchronised goal completion, emphasising division of labour and shared consequences.
+- Favoured simplified controls with prominent rule synergy for web-based pixel-style implementation.
 
-- 原文链接：[research_game_analysis_uvsu_zzq.md](research_game_analysis_uvsu_zzq.md)
+### ZZQ (Reference Game: UVSU)
 
-- 研究了确定性平台解谜系统，核心机制是“过去的自己”作为敌人/挑战对象。
-- 总结了因果驱动玩法：移动跳跃 -> 触发机关 -> 对抗过去行为 -> 获取钥匙 -> 解锁新区域。
-- 强调轻惩罚设计（即时复活、低失败成本）以鼓励试错和学习。
-- 提出该思路适合时间回放、机制叠加与因果链关卡设计。
+- Full write-up: [research_game_analysis_uvsu_zzq.md](research_game_analysis_uvsu_zzq.md)
 
-### 组内整体启发（Week 01）
+- Studied a deterministic platform puzzle system where the core mechanic is "your past self" acting as an enemy/challenge.
+- Summarised the causality-driven gameplay: move/jump → trigger mechanism → counter past behaviour → collect key → unlock new area.
+- Highlighted light-punishment design (instant respawn, low failure cost) to encourage experimentation and learning.
+- Suggested this approach suits time-replay mechanics, stacked mechanics, and causality-chain level design.
 
-- 多数研究都指向“清晰核心循环 + 渐进复杂度 + 明确反馈”这一通用设计框架。
-- 叙事方式上普遍倾向环境叙事与机制叙事，而非大量文本。
-- 可行的项目方向包括：双世界联动、资源权衡、生存压力、协作分工、时间回放解谜。
+### Overall Team Insights
+
+- Most research converged on the universal design framework: "clear core loop + progressive complexity + explicit feedback".
+- Narrative approaches generally favour environmental and mechanic-driven storytelling over heavy text.
+- Viable project directions include: dual-world interaction, resource trade-offs, survival pressure, cooperative roles, and time-replay puzzles.

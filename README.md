@@ -68,7 +68,7 @@
 
 <br>
 
-<h1 align="center"><b>Week Log</b></h1>
+<h1 align="center"><b>Workshop</b></h1>
 
 <table align="center" width="100%">
   <thead>
@@ -82,52 +82,52 @@
     <tr>
       <td align="center"><b><a href="./week-log/Week01/README.md">Week 01</a></b></td>
       <td align="center"><img src="./week-log/Week01/img/Group_Picture01.jpg" width="200"/></td>
-      <td>Game research & feasibility analysis. Each member researched 46 commercial games and 18 prior group projects, evaluating p5.js implementation viability, game types, and mechanics to guide the project direction.</td>
+      <td>Game Research - Analysis of over 50 games.</td>
     </tr>
     <tr>
       <td align="center"><b><a href="./week-log/Week02/ReadMe.md">Week 02</a></b></td>
-      <td align="center"><img src="./week-log/Week02/cat.png" width="200"/></td>
-      <td>Repository setup & idea sharing. Cloned the project template, established the folder structure, added team information to README, and each member shared their game ideas to determine the final project direction.</td>
+      <td align="center"><img src="./week-log/Week02/img/cat.png" width="200"/></td>
+      <td>Drawing App and Two game ideas.</td>
     </tr>
     <tr>
       <td align="center"><b><a href="./week-log/Week03/ReadMe.md">Week 03</a></b></td>
       <td align="center">—</td>
-      <td>Paper prototypes & final idea. Explored paper prototypes for "U Help U" and "Kitten Run", defined additional requirements, and finalised the game concept around the record-and-replay mechanic.</td>
+      <td>Built paper prototypes and finalized the record-replay concept.</td>
     </tr>
     <tr>
       <td align="center"><b><a href="./week-log/Week04/Requirements-v2.0.md">Week 04</a></b></td>
       <td align="center">—</td>
-      <td>Requirements analysis. Conducted stakeholder identification using the onion model, developed user stories from player/designer/developer perspectives, and defined functional and non-functional requirements.</td>
+      <td>Defined user stories and functional/non-functional requirements.</td>
     </tr>
     <tr>
       <td align="center"><b><a href="./week-log/Week05/ReadMe.md">Week 05</a></b></td>
       <td align="center">—</td>
-      <td>Architecture & initial implementation. Drew class and sequence diagrams, began implementing core systems (Animation, CharacterControl, Collision, GameEntity, LevelManager, RecordSystem), and kicked off Sprint 1 during reading week.</td>
+      <td>Designed architecture diagrams and implemented core systems.</td>
     </tr>
     <tr>
       <td align="center"><b><a href="./week-log/Week06/ReadMe.md">Week 06</a></b></td>
       <td align="center">—</td>
-      <td>First demo. Built and uploaded the first playable game demo, integrating the record-replay mechanic with basic level design and collision handling.</td>
+      <td>Released the first playable demo with core mechanics.</td>
     </tr>
     <tr>
       <td align="center"><b><a href="./week-log/Week07/ReadMe.md">Week 07</a></b></td>
       <td align="center">—</td>
-      <td>Demo iteration. Uploaded and tested multiple demo versions (v1.1.0 → v2.3.1), refining gameplay mechanics, level terrain, and UI based on internal testing feedback.</td>
+      <td>Iterated demo versions and refined gameplay, terrain, and UI.</td>
     </tr>
     <tr>
       <td align="center"><b><a href="./week-log/Week08/ReadMe.md">Week 08</a></b></td>
       <td align="center">—</td>
-      <td>User evaluation. Developed a web-based evaluation program, collected SUS and NASA-TLX data from 10 participants across Level 1 and Level 2, and ran Wilcoxon Signed-Rank Tests to analyse usability and workload.</td>
+      <td>Ran user tests and analyzed SUS/NASA-TLX results.</td>
     </tr>
     <tr>
       <td align="center"><b><a href="./week-log/Week09/Evaluation.md">Week 09</a></b></td>
       <td align="center">—</td>
-      <td>Evaluation analysis & code merging. Analysed qualitative and quantitative evaluation results, merged dual-switcher code, and iterated on level design with new skeleton layouts.</td>
+      <td>Merged key code and updated levels from evaluation findings.</td>
     </tr>
     <tr>
       <td align="center"><b><a href="./week-log/Week10/README.md">Week 10</a></b></td>
       <td align="center">—</td>
-      <td>Black-box testing. Conducted systematic manual black-box testing of core mechanics (recording duration, state switching, collision, physics) using equivalence partitioning and boundary value analysis.</td>
+      <td>Performed black-box testing on core mechanics.</td>
     </tr>
   </tbody>
 </table>
@@ -394,7 +394,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 ### **2 User Stories**:
 
-&emsp;&emsp;Based on this initial game idea, we formulated a series of user stories to help us prioritize the tasks. Our user stories are based on the format “As a __, I want to __, so that__”, to consider different requirements from different sides. Here are some crucial user stories on basic game controls, core game mechanics, game interactions, and user interface. Click [here](./week-log/Week04/Requirements-v2.0.md) to view the full user stories, the epics we developed in the early stages, and their completion status.
+&emsp;&emsp;Based on this initial game idea, we formulated a series of user stories to help us prioritize the tasks. Our user stories are based on the format “As a **, I want to **, so that\_\_”, to consider different requirements from different sides. Here are some crucial user stories on basic game controls, core game mechanics, game interactions, and user interface. Click [here](./week-log/Week04/Requirements-v2.0.md) to view the full user stories, the epics we developed in the early stages, and their completion status.
 
 <div align="center">
   <br>
@@ -958,7 +958,6 @@ After download:
   <p><i>Click the image above to view our interactive team dossier.</i></p>
   <br>
 </div>
-
 
 ### **3 Excellently Executions During The Process**:
 
