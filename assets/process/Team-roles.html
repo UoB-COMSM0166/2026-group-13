@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Nexus - Executive Role Distribution</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #050508;
+    --surface: #0f0f15;
+    --surface2: #161621;
+    --border: rgba(255,255,255,0.08);
+    --border-hover: rgba(255,255,255,0.18);
+    --text: #f0eff5;
+    --text-muted: #8a899a;
+    --text-dim: #5a5970;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 64px 64px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  header {
+    position: relative;
+    z-index: 1;
+    padding: 80px 48px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(40px, 7vw, 84px);
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    color: var(--text);
+  }
+
+  h1 span {
+    display: block;
+    color: var(--text-muted);
+    font-weight: 400;
+    font-size: 0.4em;
+    letter-spacing: 0.02em;
+    margin-top: 16px;
+    text-transform: uppercase;
+  }
+
+  .count-bar {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+
+  .count-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .count-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .count-label {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .count-divider {
+    width: 1px;
+    height: 48px;
+    background: var(--border);
+  }
+
+  .grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 1px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 48px 120px; /* 增加了底部留白，替代了原本footer的空间 */
+    border-top: 1px solid var(--border);
+  }
+
+  .card {
+    background: var(--bg);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 44px 40px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card:hover { background: var(--surface); transform: translateY(-2px); }
+  .card:hover::before, .card.active::before { transform: scaleX(1); }
+  .card.active { background: var(--surface2); }
+
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    background: var(--accent-dim);
+    color: var(--accent);
+    border: 1px solid var(--accent-border);
+    flex-shrink: 0;
+  }
+
+  .card-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+  }
+
+  .name {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+  }
+
+  .name-en {
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .main-role {
+    font-size: 15px;
+    color: var(--accent);
+    margin-bottom: 32px;
+    font-weight: 600;
+    line-height: 1.5;
+    min-height: 3em;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tag {
+    font-size: 10px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    border: 1px solid var(--accent-border);
+    color: var(--accent-tag);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.2s;
+  }
+
+  .card:hover .tag, .card.active .tag {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+  }
+
+  .tag-more {
+    border-color: var(--border);
+    color: var(--text-dim);
+  }
+
+  .expand-icon {
+    position: absolute;
+    bottom: 32px;
+    right: 40px;
+    font-family: 'Syne', sans-serif;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s;
+    font-weight: 700;
+  }
+
+  .card:hover .expand-icon { color: var(--accent); }
+
+  .arrow {
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid currentColor;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card.active .arrow { transform: rotate(45deg); }
+
+  .detail {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 48px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.6s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  .detail.open { max-height: 1000px; padding-bottom: 60px; }
+
+  .detail-inner {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 6px solid var(--d-accent);
+    border-radius: 0 0 24px 24px;
+    padding: 60px;
+    margin-bottom: 4px;
+    position: relative;
+  }
+
+  .detail-top {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .detail-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .detail-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: var(--text);
+  }
+
+  .detail-main {
+    font-size: 18px;
+    color: var(--d-accent);
+    margin-top: 8px;
+    font-weight: 600;
+  }
+
+  .detail-section-label {
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 24px;
+    font-weight: 700;
+  }
+
+  .detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .detail-tag {
+    font-size: 13px;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: 1px solid var(--d-border);
+    color: var(--d-tag);
+    font-weight: 600;
+    background: var(--d-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 12px;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    transition: all 0.3s;
+  }
+
+  .close-btn:hover { border-color: var(--accent); color: var(--text); background: var(--surface2); }
+
+  @media (max-width: 768px) {
+    header, .grid, .detail { padding-left: 24px; padding-right: 24px; }
+    .grid { grid-template-columns: 1fr; }
+    .detail-top { flex-direction: column; align-items: flex-start; text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Executive Roles<span>Strategic Ownership & Engineering Excellence</span></h1>
+  <div class="count-bar">
+    <div class="count-item">
+      <span class="count-num">06</span>
+      <span class="count-label">Lead Experts</span>
+    </div>
+    <div class="count-divider"></div>
+    <div class="count-item">
+      <span class="count-num" id="tag-count">0</span>
+      <span class="count-label">Core Competencies</span>
+    </div>
+    <div class="count-divider"></div>
+    <div class="count-item">
+      <span class="count-num">01</span>
+      <span class="count-label">Strategic Project</span>
+    </div>
+  </div>
+</header>
+
+<div class="grid" id="grid"></div>
+<div class="detail" id="detail">
+  <div class="detail-inner" id="detail-inner">
+    <button class="close-btn" onclick="closeDetail()">EXIT ✕</button>
+    <div class="detail-top">
+      <div class="detail-avatar" id="d-av"></div>
+      <div>
+        <div class="detail-name" id="d-name"></div>
+        <div class="detail-main" id="d-main"></div>
+      </div>
+    </div>
+    <div class="detail-section-label">Master Competencies & Responsibilities</div>
+    <div class="detail-tags" id="d-tags"></div>
+  </div>
+</div>
+
+<script>
+const members = [
+  {
+    name: "Wenlei", en: "Wenlei Miao",
+    main: "Chief Technology Officer & Lead Systems Architect",
+    accent: "#fb923c",
+    accentDim: "rgba(251,146,60,0.08)",
+    accentBorder: "rgba(251,146,60,0.25)",
+    accentTag: "#fdba74",
+    tags: ["Technical Lead", "Framework Architecture", "Systems QA Lead", "Engineering Productivity Director", "Agile Delivery Strategist"]
+  },
+  {
+    name: "Zhiqing", en: "Zhiqing Zhang",
+    main: "Principal Full-Stack Engineer & Creative Director",
+    accent: "#34d399",
+    accentDim: "rgba(52,211,153,0.08)",
+    accentBorder: "rgba(52,211,153,0.25)",
+    accentTag: "#6ee7b7",
+    tags: ["UI/UX Principal", "Technical Architecture", "Full-Stack Development", "Level Design Director", "Lead Game Strategist", "Lead Video Editor", "Core Engine QA", "Backend & Data Architect"]
+  },
+  {
+    name: "Xuelin", en: "Xuelin Ma",
+    main: "Lead Narrative Strategist & Systems Designer",
+    accent: "#f472b6",
+    accentDim: "rgba(244,114,182,0.08)",
+    accentBorder: "rgba(244,114,182,0.25)",
+    accentTag: "#f9a8d4",
+    tags: ["Narrative Architecture", "World Building", "Visual Asset Technician", "Image Processing Specialist"]
+  },
+  {
+    name: "Jingran", en: "Jingran Zhang",
+    main: "Chief Creative Officer & Executive Art Director",
+    accent: "#a78bfa",
+    accentDim: "rgba(167,139,250,0.08)",
+    accentBorder: "rgba(167,139,250,0.25)",
+    accentTag: "#c4b5fd",
+    tags: ["Lead Artist", "Cinematography Director", "Visual Content Strategy", "Executive Video Editor", "Character Animation Lead"]
+  },
+  {
+    name: "Yiyuan", en: "Yiyuan Yao",
+    main: "Quality Assurance Director & Technical Communications Lead",
+    accent: "#60a5fa",
+    accentDim: "rgba(96,165,250,0.08)",
+    accentBorder: "rgba(96,165,250,0.25)",
+    accentTag: "#93c5fd",
+    tags: ["Quality Assurance Director", "Functional QA Lead", "Technical Documentation Architect", "Standardized Content Strategist"]
+  },
+  {
+    name: "Siqi", en: "Siqi Xu",
+    main: "Principal Gameplay Architect & Senior Level Designer",
+    accent: "#fbbf24",
+    accentDim: "rgba(251,191,36,0.08)",
+    accentBorder: "rgba(251,191,36,0.25)",
+    accentTag: "#fcd34d",
+    tags: ["Lead Gameplay Architect", "Senior Level Designer", "System QA Engineer", "Core Mechanics Design"]
+  }
+];
+
+let totalTags = 0;
+members.forEach(m => totalTags += m.tags.length);
+document.getElementById('tag-count').textContent = totalTags < 10 ? '0' + totalTags : totalTags;
+
+const grid = document.getElementById('grid');
+let activeCard = null;
+
+members.forEach((m, i) => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.style.setProperty('--accent', m.accent);
+  card.style.setProperty('--accent-dim', m.accentDim);
+  card.style.setProperty('--accent-border', m.accentBorder);
+  card.style.setProperty('--accent-tag', m.accentTag);
+
+  const preview = m.tags.slice(0, 4);
+  const remaining = m.tags.length - 4;
+
+  card.innerHTML = `
+    <div class="card-header">
+      <div class="avatar">${m.name[0]}</div>
+      <span class="card-num">MOD-0${i+1}</span>
+    </div>
+    <div class="name">${m.name}</div>
+    <div class="name-en">${m.en}</div>
+    <div class="main-role">${m.main}</div>
+    <div class="tags">
+      ${preview.map(t => `<span class="tag">${t}</span>`).join('')}
+      ${remaining > 0 ? `<span class="tag tag-more">+${remaining}</span>` : ''}
+    </div>
+    <div class="expand-icon">
+      VIEW DOSSIER
+      <div class="arrow">↗</div>
+    </div>
+  `;
+
+  card.addEventListener('click', () => openDetail(m, card));
+  grid.appendChild(card);
+});
+
+function openDetail(m, card) {
+  const det = document.getElementById('detail');
+  const inner = document.getElementById('detail-inner');
+
+  if (activeCard === card) {
+    closeDetail();
+    return;
+  }
+
+  if (activeCard) activeCard.classList.remove('active');
+  card.classList.add('active');
+  activeCard = card;
+
+  inner.style.setProperty('--d-accent', m.accent);
+  inner.style.setProperty('--d-dim', m.accentDim);
+  inner.style.setProperty('--d-border', m.accentBorder);
+  inner.style.setProperty('--d-tag', m.accentTag);
+
+  document.getElementById('d-av').textContent = m.name[0];
+  document.getElementById('d-av').style.background = m.accentDim;
+  document.getElementById('d-av').style.color = m.accent;
+  document.getElementById('d-av').style.border = `1.5px solid ${m.accentBorder}`;
+  document.getElementById('d-name').textContent = m.name + ' · ' + m.en;
+  document.getElementById('d-main').textContent = m.main;
+  document.getElementById('d-tags').innerHTML = m.tags.map(t =>
+    `<span class="detail-tag">${t}</span>`
+  ).join('');
+
+  det.classList.add('open');
+  setTimeout(() => {
+    const yOffset = -20; 
+    const y = det.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({top: y, behavior: 'smooth'});
+  }, 100);
+}
+
+function closeDetail() {
+  document.getElementById('detail').classList.remove('open');
+  if (activeCard) { activeCard.classList.remove('active'); activeCard = null; }
+}
+</script>
+</body>
+</html>
