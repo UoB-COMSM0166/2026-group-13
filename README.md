@@ -73,21 +73,21 @@
 <table align="center" width="100%">
   <thead>
     <tr>
-      <th width="10%">Week</th>
-      <th width="28%">Image</th>
-      <th width="62%">Description</th>
+      <th width="10%">Link</th>
+      <th width="62%">Image</th>
+      <th width="28%">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td align="center"><b><a href="./week-log/Week01/README.md">Week 01</a></b></td>
-      <td align="center"><img src="./week-log/Week01/img/Group_Picture01.jpg" width="200"/></td>
-      <td>Game Research - Analysis of over 50 games.</td>
+      <td align="center"><img src="./assets/workshop/week01.png" width="260"/></td>
+      <td>Game Research - Analysis of over 50 games. <a href="https://angelica-serein.notion.site/Reference-Games-Everyone-d83b2f38a2aa8273b95f01f7046d4f93?source=copy_link">Reference Games</a></td>
     </tr>
     <tr>
       <td align="center"><b><a href="./week-log/Week02/ReadMe.md">Week 02</a></b></td>
-      <td align="center"><img src="./week-log/Week02/img/cat.png" width="200"/></td>
-      <td>Drawing App and Two game ideas.</td>
+      <td align="center"><img src="./assets/workshop/week02.png" width="260"/></td>
+      <td><a href="https://moosry.github.io/p5.js-Paint-App/">Drawing App</a> and Two game ideas.</td>
     </tr>
     <tr>
       <td align="center"><b><a href="./week-log/Week03/ReadMe.md">Week 03</a></b></td>

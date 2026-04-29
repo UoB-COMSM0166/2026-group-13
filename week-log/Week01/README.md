@@ -1,26 +1,26 @@
 ﻿## Game Research
 
-This week we conducted preliminary research and feasibility assessment from two perspectives:
+&emsp;&emsp;This week we conducted preliminary research and feasibility assessment from two perspectives:
 
 - Commercial game samples: We analysed over 50 games, focusing on their p5.js implementation feasibility, and categorised them by game genre, interaction style, map structure, survival mechanics, gameplay highlights, respawn systems, and attack patterns.
 - Previous group project samples: We reviewed 18 past group projects, extracting game types, project descriptions, and reference value to compare the implementation difficulty and innovation potential of our own design.
 
 📋 **Game Research Summary**: [Reference Games — Everyone](https://angelica-serein.notion.site/Reference-Games-Everyone-d83b2f38a2aa8273b95f01f7046d4f93?source=copy_link)
 
-### Figure 1: Commercial Games Summary Screenshots
-
 <p align="center">
   <img src="img/game research1.png" width="90%">
   <img src="img/game research2.png" width="90%">
 </p>
 
-### Figure 2: Previous Group Projects Summary Screenshot
+<p align="center"><b>Figure 1: Commercial Games Summary Screenshots</b></p>
 
 <p align="center">
   <img src="img/game research3.png" width="90%">
 </p>
 
-Based on the above research, our design direction will prioritise:
+<p align="center"><b>Figure 2: Previous Group Projects Summary Screenshot</b></p>
+
+&emsp;&emsp;Based on the above research, our design direction will prioritise:
 
 - Gameplay with a clear core loop, direct feedback, and mechanics that can be implemented incrementally.
 - Retaining some space for mechanic synergy and narrative expression while ensuring implementation feasibility.
@@ -54,7 +54,7 @@ Based on the above research, our design direction will prioritise:
 - Highlighted how non-linear maps and multi-path progression enhance replayability and exploration motivation.
 - Proposed a "less text, more environmental storytelling" approach, suitable for action-exploration projects.
 
-### ZJR (Reference Games: Degrees of Separation + Stranger Things series)
+### Jingran (Reference Games: Degrees of Separation + Stranger Things series)
 
 - Full write-up: [zjr_GameResearch.md](zjr_GameResearch.md)
 
@@ -63,7 +63,7 @@ Based on the above research, our design direction will prioritise:
 - Focused on two-player co-op and synchronised goal completion, emphasising division of labour and shared consequences.
 - Favoured simplified controls with prominent rule synergy for web-based pixel-style implementation.
 
-### ZZQ (Reference Game: UVSU)
+### Zhiqing (Reference Game: UVSU)
 
 - Full write-up: [research_game_analysis_uvsu_zzq.md](research_game_analysis_uvsu_zzq.md)
 
