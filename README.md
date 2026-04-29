@@ -85,155 +85,167 @@
 
 ## **⚙️ Introduction**
 
-***U Help U***
+**_U Help U_**
 
-*U Help U* is a 2D side‑scrolling platformer puzzle game built around the concept of **self‑collaboration**. Players control the “Present Self” to record actions, and upon playback, a “Past Self” is generated. This Past Self faithfully reproduces the recorded inputs and physics‑based trajectory, acting as a **solid cooperative unit** that can interact physically with the Present Self—standing on each other, boosting each other, and enabling creative traversal strategies.
+_U Help U_ is a 2D side‑scrolling platformer puzzle game built around the concept of **self‑collaboration**. Players control the “Present Self” to record actions, and upon playback, a “Past Self” is generated. This Past Self faithfully reproduces the recorded inputs and physics‑based trajectory, acting as a **solid cooperative unit** that can interact physically with the Present Self—standing on each other, boosting each other, and enabling creative traversal strategies.
 
 Its core challenge lies in predicting and coordinating the interaction between past and present actions, delivering the thematic experience that **“every attempt has value—your past efforts become the foundation for your present success.”**
 
 Each level is a standalone challenge. After completing one, players proceed to the next.
 
-
 ### Core Gameplay (How to Play)
 
-#### 1. Basic Controls  
+#### 1. Basic Controls
+
 - **Movement**: A / D / ← / →
 - **Jump**: W / Space / ↑
 - **Record / Stop**: C
-- **Replay**: R  
+- **Replay**: R
 - **Interaction**: E
 
 #### 2. Three Core Modes (Closed‑Loop System)
 
-#### (1) Exploration Mode  
-The player controls the Present Self to explore the terrain, observe obstacles, and plan the route that the Past Self must follow.  
-- Affected by gravity  
-- No Past Self exists yet  
-- Focus on observation and planning  
+#### (1) Exploration Mode
 
-#### (2) Recording Mode  
-Activated by pressing C. A “Recording” indicator appears, and a 5‑second recording begins. The system records **input commands**, not fixed positions.  
-- Present Self moves freely  
-- Players create “useful collaborative trajectories”  
-- Press C again or wait for the timer to end  
+The player controls the Present Self to explore the terrain, observe obstacles, and plan the route that the Past Self must follow.
 
-#### (3) Collaborative Replay Mode  
-A Past Self is generated and replays the recorded actions using real‑time physics.  
-- Present Self remains controllable  
-- Past Self follows recorded inputs under gravity  
-- Both entities can stand on each other  
-- Press R to interrupt and then press C to re‑record  
-- Past Self disappears when playback ends  
+- Affected by gravity
+- No Past Self exists yet
+- Focus on observation and planning
 
-#### 3. Physical Rules  
-- Both selves are affected by gravity  
-- Both can stand on floors, platforms, or each other  
-- Vertical stacking allowed; horizontal overlap prevented  
+#### (2) Recording Mode
+
+Activated by pressing C. A “Recording” indicator appears, and a 5‑second recording begins. The system records **input commands**, not fixed positions.
+
+- Present Self moves freely
+- Players create “useful collaborative trajectories”
+- Press C again or wait for the timer to end
+
+#### (3) Collaborative Replay Mode
+
+A Past Self is generated and replays the recorded actions using real‑time physics.
+
+- Present Self remains controllable
+- Past Self follows recorded inputs under gravity
+- Both entities can stand on each other
+- Press R to interrupt and then press C to re‑record
+- Past Self disappears when playback ends
+
+#### 3. Physical Rules
+
+- Both selves are affected by gravity
+- Both can stand on floors, platforms, or each other
+- Vertical stacking allowed; horizontal overlap prevented
 
 ### Game Goals
 
-#### 1. Level Objectives  
-- **Primary**: Reach the designated endpoint  
+#### 1. Level Objectives
+
+- **Primary**: Reach the designated endpoint
 - **Advanced**: Complete with the less time
 
-#### 2. Core Experience Goals  
-- Create the feeling of “collaborating with your past self”  
-- Encourage spatial reasoning and forward planning  
-- Reinforce the theme that past efforts empower present breakthroughs  
+#### 2. Core Experience Goals
+
+- Create the feeling of “collaborating with your past self”
+- Encourage spatial reasoning and forward planning
+- Reinforce the theme that past efforts empower present breakthroughs
 
 ### Core Highlights (Differentiation)
 
-#### Immersive Past–Present Integration  
-- **Action‑Based Recording**: Playback uses real‑time physics, not scripted positions  
-- **Bidirectional Interaction**: Both selves can serve as platforms for each other  
-- **Non‑Punitive Design**: No time limits or death penalties  
+#### Immersive Past–Present Integration
 
+- **Action‑Based Recording**: Playback uses real‑time physics, not scripted positions
+- **Bidirectional Interaction**: Both selves can serve as platforms for each other
+- **Non‑Punitive Design**: No time limits or death penalties
 
 ### 🎮 Game Entities Exhibition
 
 #### 1. Character
+
 <table width="100%">
 <thead>
 <tr><th width="15%">Name</th><th width="20%">State / Form</th><th width="25%">Image</th><th width="40%">Description</th></tr>
 </thead>
 <tbody>
-<tr><td rowspan="4" align="center"><img src="https://img.shields.io/badge/-Player-5B3A7D?style=flat-square" /></td><td align="center">Idle Animation</td><td align="center"><img src="Picture/主角待机.gif" width="180"/></td><td align="center">The player yawns if idle for 2 seconds.</td></tr>
-<tr><td align="center">Dynamic Trail Effect</td><td align="center"><img src="Picture/主角移动.gif" width="180"/></td><td align="center">Trailing effects are generated while the player is moving.</td></tr>
-<tr><td align="center">Jump & Landing VFX</td><td align="center"><img src="Picture/主角跳跃动图.gif" width="180"/></td><td align="center">Visual feedback and particle effects triggered during jumping and landing.</td></tr>
-<tr><td align="center">Death Animation</td><td align="center"><img src="Picture/主角死亡.gif" width="180"/></td><td align="center">Feedback animation triggered when colliding with obstacles or hostile targets.</td></tr>
-<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Phantom-5B3A7D?style=flat-square" /></td><td align="center">Invisible when Idle</td><td align="center"><img src="Picture/分身隐身.gif" width="180"/></td><td align="center">The phantom remains invisible when no playback is occurring.</td></tr>
-<tr><td align="center">Visible during Playback</td><td align="center"><img src="Picture/分身显形.gif" width="180"/></td><td align="center">The phantom becomes visible and gains collision volume during playback.</td></tr>
-<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-NPC-5B3A7D?style=flat-square" /></td><td align="center">Default Animation</td><td align="center"><img src="Picture/NPC待机.gif" width="180"/></td><td align="center">Idle state when not in interaction.</td></tr>
-<tr><td align="center">Dialogue Trigger</td><td align="center"><img src="Picture/NPC第二形态.gif" width="180"/></td><td align="center">The NPC displays a cute expression during interaction.</td></tr>
-<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Enemies-5B3A7D?style=flat-square" /></td><td align="center">Stomp Kill</td><td align="center"><img src="Picture/消灭敌人.gif" width="180"/></td><td align="center">Patrol units; can only be defeated by stomping from above. Stomping allows the player to jump higher.</td></tr>
-<tr><td align="center">Killed by Enemy</td><td align="center"><img src="Picture/被敌人击杀.gif" width="180"/></td><td align="center">The player is defeated when colliding with an enemy from the side.</td></tr>
+<tr><td rowspan="4" align="center"><img src="https://img.shields.io/badge/-Player-5B3A7D?style=flat-square" /></td><td align="center">Idle Animation</td><td align="center"><img src="./assets/introduction/主角待机.gif" width="180"/></td><td align="center">The player yawns if idle for 2 seconds.</td></tr>
+<tr><td align="center">Dynamic Trail Effect</td><td align="center"><img src="./assets/introduction/主角移动.gif" width="180"/></td><td align="center">Trailing effects are generated while the player is moving.</td></tr>
+<tr><td align="center">Jump & Landing VFX</td><td align="center"><img src="./assets/introduction/主角跳跃动图.gif" width="180"/></td><td align="center">Visual feedback and particle effects triggered during jumping and landing.</td></tr>
+<tr><td align="center">Death Animation</td><td align="center"><img src="./assets/introduction/主角死亡.gif" width="180"/></td><td align="center">Feedback animation triggered when colliding with obstacles or hostile targets.</td></tr>
+<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Phantom-5B3A7D?style=flat-square" /></td><td align="center">Invisible when Idle</td><td align="center"><img src="./assets/introduction/分身隐身.gif" width="180"/></td><td align="center">The phantom remains invisible when no playback is occurring.</td></tr>
+<tr><td align="center">Visible during Playback</td><td align="center"><img src="./assets/introduction/分身显形.gif" width="180"/></td><td align="center">The phantom becomes visible and gains collision volume during playback.</td></tr>
+<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-NPC-5B3A7D?style=flat-square" /></td><td align="center">Default Animation</td><td align="center"><img src="./assets/introduction/NPC待机.gif" width="180"/></td><td align="center">Idle state when not in interaction.</td></tr>
+<tr><td align="center">Dialogue Trigger</td><td align="center"><img src="./assets/introduction/NPC第二形态.gif" width="180"/></td><td align="center">The NPC displays a cute expression during interaction.</td></tr>
+<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Enemies-5B3A7D?style=flat-square" /></td><td align="center">Stomp Kill</td><td align="center"><img src="./assets/introduction/消灭敌人.gif" width="180"/></td><td align="center">Patrol units; can only be defeated by stomping from above. Stomping allows the player to jump higher.</td></tr>
+<tr><td align="center">Killed by Enemy</td><td align="center"><img src="./assets/introduction/被敌人击杀.gif" width="180"/></td><td align="center">The player is defeated when colliding with an enemy from the side.</td></tr>
 </tbody>
 </table>
 
 #### 2. Interactables
+
 <table width="100%">
 <thead>
 <tr><th width="15%">Name</th><th width="20%">State / Form</th><th width="25%">Image</th><th width="40%">Description</th></tr>
 </thead>
 <tbody>
-<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Portal-5B3A7D?style=flat-square" /></td><td align="center">Legacy Activation</td><td align="center"><img src="Picture/老版本大门.gif" width="180"/></td><td align="center">Opened by standing on two buttons simultaneously in older versions.</td></tr>
-<tr><td align="center">Current Activation</td><td align="center"><img src="Picture/电流打开大门.gif" width="180"/></td><td align="center">Activated by stepping on a button to release electrical current.</td></tr>
-<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Spike-5B3A7D?style=flat-square" /></td><td align="center">Basic Form</td><td align="center"><img src="Picture/普通地刺.gif" width="180"/></td><td align="center">Standard metal spikes; a permanent hazard.</td></tr>
-<tr><td align="center">Colored Form</td><td align="center"><img src="Picture/带颜色地刺.gif" width="180"/></td><td align="center">Colored spikes controlled by buttons; colors correspond to logic switches.</td></tr>
-<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Checkpoint-5B3A7D?style=flat-square" /></td><td align="center">Inactive</td><td align="center"><img src="Picture/普通存档点.gif" width="180"/></td><td align="center">Waypoints in the scene waiting to be activated.</td></tr>
-<tr><td align="center">Auto-activation</td><td align="center"><img src="Picture/存档点开启.gif" width="180"/></td><td align="center">Automatically activates when the player is nearby; the player respawns here after death.</td></tr>
-<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Signboard-5B3A7D?style=flat-square" /></td><td align="center">Proximity Prompt</td><td align="center"><img src="Picture/公告板交互.gif" width="180"/></td><td align="center">Press the 'E' key to interact when close to the sign.</td></tr>
-<tr><td align="center">Detailed Reading</td><td align="center"><img src="Picture/公告板内容.gif" width="180"/></td><td align="center">Interact to read the detailed content provided on the board.</td></tr>
-<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Teleport%20Point-5B3A7D?style=flat-square" /></td><td align="center">Inactive</td><td align="center"><img src="Picture/普通传送门.gif" width="180"/></td><td align="center">Initial silent state; teleportation is unavailable.</td></tr>
-<tr><td align="center">Active</td><td align="center"><img src="Picture/开启传送门.gif" width="180"/></td><td align="center">A number appears on the gate when active; players press the key to teleport.</td></tr>
-<tr><td align="center"><img src="https://img.shields.io/badge/-Box-5B3A7D?style=flat-square" /></td><td align="center">Physical Collision</td><td align="center"><img src="Picture/推动箱子.gif" width="180"/></td><td align="center">Features real collision volume and is pushable, following realistic physics.</td></tr>
+<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Portal-5B3A7D?style=flat-square" /></td><td align="center">Legacy Activation</td><td align="center"><img src="./assets/introduction/老版本大门.gif" width="180"/></td><td align="center">Opened by standing on two buttons simultaneously in older versions.</td></tr>
+<tr><td align="center">Current Activation</td><td align="center"><img src="./assets/introduction/电流打开大门.gif" width="180"/></td><td align="center">Activated by stepping on a button to release electrical current.</td></tr>
+<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Spike-5B3A7D?style=flat-square" /></td><td align="center">Basic Form</td><td align="center"><img src="./assets/introduction/普通地刺.gif" width="180"/></td><td align="center">Standard metal spikes; a permanent hazard.</td></tr>
+<tr><td align="center">Colored Form</td><td align="center"><img src="./assets/introduction/带颜色地刺.gif" width="180"/></td><td align="center">Colored spikes controlled by buttons; colors correspond to logic switches.</td></tr>
+<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Checkpoint-5B3A7D?style=flat-square" /></td><td align="center">Inactive</td><td align="center"><img src="./assets/introduction/普通存档点.gif" width="180"/></td><td align="center">Waypoints in the scene waiting to be activated.</td></tr>
+<tr><td align="center">Auto-activation</td><td align="center"><img src="./assets/introduction/存档点开启.gif" width="180"/></td><td align="center">Automatically activates when the player is nearby; the player respawns here after death.</td></tr>
+<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Signboard-5B3A7D?style=flat-square" /></td><td align="center">Proximity Prompt</td><td align="center"><img src="./assets/introduction/公告板交互.gif" width="180"/></td><td align="center">Press the 'E' key to interact when close to the sign.</td></tr>
+<tr><td align="center">Detailed Reading</td><td align="center"><img src="./assets/introduction/公告板内容.gif" width="180"/></td><td align="center">Interact to read the detailed content provided on the board.</td></tr>
+<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Teleport%20Point-5B3A7D?style=flat-square" /></td><td align="center">Inactive</td><td align="center"><img src="./assets/introduction/普通传送门.gif" width="180"/></td><td align="center">Initial silent state; teleportation is unavailable.</td></tr>
+<tr><td align="center">Active</td><td align="center"><img src="./assets/introduction/开启传送门.gif" width="180"/></td><td align="center">A number appears on the gate when active; players press the key to teleport.</td></tr>
+<tr><td align="center"><img src="https://img.shields.io/badge/-Box-5B3A7D?style=flat-square" /></td><td align="center">Physical Collision</td><td align="center"><img src="./assets/introduction/推动箱子.gif" width="180"/></td><td align="center">Features real collision volume and is pushable, following realistic physics.</td></tr>
 </tbody>
 </table>
 
 #### 3. Prompts
+
 <table width="100%">
 <thead>
 <tr><th width="15%">Name</th><th width="20%">State / Form</th><th width="25%">Image</th><th width="40%">Description</th></tr>
 </thead>
 <tbody>
-<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-KeyPrompt-5B3A7D?style=flat-square" /></td><td align="center">Dynamic Fade</td><td align="center"><img src="Picture/教学系统UI.gif" width="180"/></td><td align="center">Hidden UI that surfaces only when the player approaches specific interactive objects.</td></tr>
-<tr><td align="center">Unit Key Tips</td><td align="center"><img src="Picture/其他键位提示.gif" width="180"/></td><td align="center">Contextual key prompts for NPCs, Teleport Points, or Signboards.</td></tr>
-<tr><td align="center"><img src="https://img.shields.io/badge/-TextPrompt-5B3A7D?style=flat-square" /></td><td align="center">Proximity Trigger</td><td align="center"><img src="Picture/靠近触发提示.gif" width="180"/></td><td align="center">Text notifications triggered when the player approaches.</td></tr>
+<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-KeyPrompt-5B3A7D?style=flat-square" /></td><td align="center">Dynamic Fade</td><td align="center"><img src="./assets/introduction/教学系统UI.gif" width="180"/></td><td align="center">Hidden UI that surfaces only when the player approaches specific interactive objects.</td></tr>
+<tr><td align="center">Unit Key Tips</td><td align="center"><img src="./assets/introduction/其他键位提示.gif" width="180"/></td><td align="center">Contextual key prompts for NPCs, Teleport Points, or Signboards.</td></tr>
+<tr><td align="center"><img src="https://img.shields.io/badge/-TextPrompt-5B3A7D?style=flat-square" /></td><td align="center">Proximity Trigger</td><td align="center"><img src="./assets/introduction/靠近触发提示.gif" width="180"/></td><td align="center">Text notifications triggered when the player approaches.</td></tr>
 </tbody>
 </table>
 
 #### 4. Systems
+
 <table width="100%">
 <thead>
 <tr><th width="15%">Name</th><th width="20%">State / Form</th><th width="25%">Image</th><th width="40%">Description</th></tr>
 </thead>
 <tbody>
-<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Button--Wire--Portal%20System-5B3A7D?style=flat-square" /></td><td align="center">Electrical Activation</td><td align="center"><img src="Picture/电流打开大门.gif" width="180"/></td><td align="center">Player/Phantom steps on the button to release current and activate the final gate.</td></tr>
-<tr><td align="center">Current Fade / Gate Close</td><td align="center"><img src="Picture/电流消失时大门关闭.gif" width="180"/></td><td align="center">When the button is released, the current fades and the gate eventually closes.</td></tr>
+<tr><td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Button--Wire--Portal%20System-5B3A7D?style=flat-square" /></td><td align="center">Electrical Activation</td><td align="center"><img src="./assets/introduction/电流打开大门.gif" width="180"/></td><td align="center">Player/Phantom steps on the button to release current and activate the final gate.</td></tr>
+<tr><td align="center">Current Fade / Gate Close</td><td align="center"><img src="./assets/introduction/电流消失时大门关闭.gif" width="180"/></td><td align="center">When the button is released, the current fades and the gate eventually closes.</td></tr>
 <tr>
     <td rowspan="2" align="center"><img src="https://img.shields.io/badge/-Button--Spikes%20System-5B3A7D?style=flat-square" /></td>
     <td align="center">Button-Controlled Spikes</td>
-    <td align="center"><img src="Picture/按钮地刺.gif" width="180"/></td>
+    <td align="center"><img src="./assets/introduction/按钮地刺.gif" width="180"/></td>
     <td align="center">Press the button to toggle spike visibility; the player dies upon contact when spikes are visible.</td>
 </tr>
 <tr height="0" style="line-height:0;"><td colspan="3" style="padding:0; margin:0; font-size:0;">&nbsp;</td></tr>
-<tr><td align="center"><img src="https://img.shields.io/badge/-Button--Platform%20System-5B3A7D?style=flat-square" /></td><td align="center">Button-Controlled Platform</td><td align="center"><img src="Picture/按钮传送门.gif" width="180"/></td><td align="center">Press the button to toggle platform visibility; the platform gains collision when visible.</td></tr>
+<tr><td align="center"><img src="https://img.shields.io/badge/-Button--Platform%20System-5B3A7D?style=flat-square" /></td><td align="center">Button-Controlled Platform</td><td align="center"><img src="./assets/introduction/按钮传送门.gif" width="180"/></td><td align="center">Press the button to toggle platform visibility; the platform gains collision when visible.</td></tr>
 </tbody>
 </table>
 
 #### 5. Terrain
+
 <table width="100%">
 <thead>
 <tr><th width="15%">Name</th><th width="20%">State / Form</th><th width="25%">Image</th><th width="40%">Description</th></tr>
 </thead>
 <tbody>
-<tr><td align="center"><img src="https://img.shields.io/badge/-Platform-5B3A7D?style=flat-square" /></td><td align="center">Platform Form</td><td align="center"><img src="Picture/平台.gif" width="180"/></td><td align="center">Visual representation of the floating platforms.</td></tr>
-<tr><td align="center"><img src="https://img.shields.io/badge/-Ground-5B3A7D?style=flat-square" /></td><td align="center">Ground Form</td><td align="center"><img src="Picture/地面.gif" width="180"/></td><td align="center">Visual representation of the standard walking ground.</td></tr>
-<tr><td align="center"><img src="https://img.shields.io/badge/-Groundwall-5B3A7D?style=flat-square" /></td><td align="center">Wall Form</td><td align="center"><img src="Picture/Wall.png" width="50"/></td><td align="center">Visual representation of the terrain boundaries and walls.</td></tr>
+<tr><td align="center"><img src="https://img.shields.io/badge/-Platform-5B3A7D?style=flat-square" /></td><td align="center">Platform Form</td><td align="center"><img src="./assets/introduction/平台.gif" width="180"/></td><td align="center">Visual representation of the floating platforms.</td></tr>
+<tr><td align="center"><img src="https://img.shields.io/badge/-Ground-5B3A7D?style=flat-square" /></td><td align="center">Ground Form</td><td align="center"><img src="./assets/introduction/地面.gif" width="180"/></td><td align="center">Visual representation of the standard walking ground.</td></tr>
+<tr><td align="center"><img src="https://img.shields.io/badge/-Groundwall-5B3A7D?style=flat-square" /></td><td align="center">Wall Form</td><td align="center"><img src="./assets/introduction/Wall.png" width="50"/></td><td align="center">Visual representation of the terrain boundaries and walls.</td></tr>
 </tbody>
 </table>
-
-
 
 ### 🎮 Recording System Exhibition
 
@@ -241,7 +253,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 <tbody>
 <tr>
 <td align="center" style="padding: 20px;">
-<img src="Picture/录制前.gif" width="800" /><br><br>
+<img src="./assets/introduction/录制前.gif" width="800" /><br><br>
 <img src="https://img.shields.io/badge/-1.%20ReadyToCapture-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
 • <b>Phase Description:</b> The player observes the level terrain and mechanism distribution. The system is on standby, ready to record position and interaction logic.<br>
@@ -252,7 +264,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 </tr>
 <tr>
 <td align="center" style="padding: 20px;">
-<img src="Picture/录制中.gif" width="800" /><br><br>
+<img src="./assets/introduction/录制中.gif" width="800" /><br><br>
 <img src="https://img.shields.io/badge/-2.%20Capturing-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
 • <b>Phase Description:</b> All player operations are being recorded. The system captures the motion path and interaction in real-time.<br>
@@ -263,7 +275,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 </tr>
 <tr>
 <td align="center" style="padding: 20px;">
-<img src="Picture/录制后.gif" width="500" /><br><br>
+<img src="./assets/introduction/录制后.gif" width="500" /><br><br>
 <img src="https://img.shields.io/badge/-3.%20PhantomStandby-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
 • <b>Phase Description:</b> Recording finished. The phantom appears in a transparent state, ready for playback at any moment.<br>
@@ -274,7 +286,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 </tr>
 <tr>
 <td align="center" style="padding: 20px;">
-<img src="Picture/回放中.gif" width="800" /><br><br>
+<img src="./assets/introduction/回放中.gif" width="800" /><br><br>
 <img src="https://img.shields.io/badge/-4.%20PhantomAwakens-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
 • <b>Phase Description:</b> The phantom repeats all actions recorded, assisting the player in solving level puzzles.<br>
@@ -285,7 +297,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 </tr>
 <tr>
 <td align="center" style="padding: 20px;">
-<img src="Picture/回放后.gif" width="500" /><br><br>
+<img src="./assets/introduction/回放后.gif" width="500" /><br><br>
 <img src="https://img.shields.io/badge/-5.%20PhantomStandby-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
 • <b>Phase Description:</b> Playback ends. The phantom returns to a transparent state, staying at the finish point or awaiting instructions.<br>
@@ -300,6 +312,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 ## **⚙️ Requirements**
 
 ### **Overview**:
+
 - [1 Ideation process](#1-ideation-process)
 - [2 User Stories](#2-user-stories)
 - [3 Onion Model](#3-onion-model)
@@ -307,19 +320,19 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 - [5 Use-Case Diagram](#5-use-case-diagram)
 - [6 Requirements Definition](#6-requirements-definition)
 
-
-
 ### **1 Ideation process**:
+
 &emsp;&emsp;During the first stage of our game design, the first problem that came to us was which type of games we should choose. Each member of our group did detailed research about the specific game type he or she wanted to design, and finally carried out six ideas(each member with one idea). Then our group arranged a meeting and played all the games that could serve as prototypes for our game. The original ideas include Roguelike, Tower Defense, Simulation, PvP, puzzle-solving, etc. And after several hours of discussion, we finally decided to design a 2D platform puzzle-adventure game.
 
 &emsp;&emsp;However, a distinctive characteristic of our game is an important part that sets it apart from others. While trying various puzzle games, a game called U vs U attracted us, which has the key game mechanics that players need to find ways to escape from their past selves or kill them before their past self reaches the finish line. That is really an amazing mechanic that only needs one player, but needs to think from two different sides. And the concept of two selves existing in different times and spaces is also quite novel. As a result, we finally decided on the final idea of our game: U help U, a 2D platform puzzle-adventure game in which the player can release a clone through an operation called recording. The clone will replay all the movements and operations that were done by the player during recording time, just like the player’s phantom(The principle behind the recording is to capture each key press during the recording time, and let the clone repeat the movement caused by these key presses during replay time). What the player needs to do is to cooperate with the clone to clear each level. In our initial concept, we can design each level with a different style, so that the player can play various kinds of games in our game.
 
 ### **2 User Stories**:
-&emsp;&emsp;Based on this initial game idea, we formulated a series of user stories to help us prioritize the tasks. Our user stories are based on the format “As a __, I want to __, so that__”, to consider different requirements from different sides. Here are some crucial user stories on basic game controls, core game mechanics, game interactions, and user interface. Click [here](./DevLog/Week04/Requirements-v2.0.md) to view the full user stories, the epics we developed in the early stages, and their completion status.
+
+&emsp;&emsp;Based on this initial game idea, we formulated a series of user stories to help us prioritize the tasks. Our user stories are based on the format “As a **, I want to **, so that\_\_”, to consider different requirements from different sides. Here are some crucial user stories on basic game controls, core game mechanics, game interactions, and user interface. Click [here](./DevLog/Week04/Requirements-v2.0.md) to view the full user stories, the epics we developed in the early stages, and their completion status.
 
 <div align="center">
   <br>
-  <img src="./assets/Requirements/user story.png" width="800">
+  <img src="./assets/requirements/user story.png" width="800">
   <br>
   <b>Table 1: A Few User Stories</b>
   <br>
@@ -329,12 +342,11 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 &emsp;&emsp;In addition to player-centred user stories, we also considered requirements from the perspectives of designers and developers. This helped us ensure that the game would not only be enjoyable for players, but also practical to extend, balance, and maintain during development.
 &emsp;&emsp;Overall, these user stories provided a structured way to translate our initial game concept into a clearer set of development goals. They helped us identify the most important gameplay expectations from different perspectives, prioritise key tasks during development, and ensure that both player experience and project maintainability were taken into account. They also served as a bridge between the early design idea and the more detailed functional and non-functional requirements defined later in the project.
 
-
 ### **3 Onion Model**:
 
 <div align="center">
   <br>
-  <img src="./assets/Requirements/Stakeholders.png" width="800">
+  <img src="./assets/requirements/Stakeholders.png" width="800">
   <br>
   <b>Figure 1: Onion Model: Stakeholders</b>
   <br>
@@ -345,7 +357,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/Requirements/onion model table.png" width="800">
+  <img src="./assets/requirements/onion model table.png" width="800">
   <br>
   <b>Table 2: Stakeholder in Onion Model</b>
   <br>
@@ -353,16 +365,18 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 </div>
 
 ### **4 Early-Stage Design**:
+
 &emsp;&emsp;During our early design stage, we mainly focused on designing different levels with various gameplay styles, such as roguelike in one level and shooting in another, but all combined with the record and reply mechanism. Because there are still some great ideas and map designs that were carried out by some group members. In this way, players can not only focus on puzzle solving using clones, but also can enjoy other different kinds of game styles in only one game. But with the deepening of research and development, we find that the game as a whole seems a bit disjointed. If each stage uses a different style, it seems that it is hard to find a suitable theme for the whole game. So we changed the development strategy to only focus on puzzle solving with the record system.
 
 &emsp;&emsp;In our first sprint(first demo version), we mainly focused on creating one level with a relatively easy puzzle(two buttons, the player and clone need to press them at the same time) to let players and testers get familiar with the game mechanics and how to cooperate with the record & replay system. For players who are more confident in their gaming skills, we also developed a level where players need to time their use of clone as stepping stones carefully to cross the chasm.
+
 <div align="center">
   <br>
-  <img src="./assets/Requirements/paper prototype 1.gif" width="380">
-  <img src="./assets/Requirements/paper prototype 2.gif" width="380">
+  <img src="./assets/requirements/paper prototype 1.gif" width="380">
+  <img src="./assets/requirements/paper prototype 2.gif" width="380">
   <br><br>
-  <img src="./assets/Requirements/paper prototype 3.gif" width="380">
-  <img src="./assets/Requirements/paper prototype 4.gif" width="380">
+  <img src="./assets/requirements/paper prototype 3.gif" width="380">
+  <img src="./assets/requirements/paper prototype 4.gif" width="380">
   <br>
   <b>Figure 2: Early design prototypes and gameplay concepts</b>
   <br>
@@ -373,7 +387,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/Requirements/Use-case diagram.png" width="800">
+  <img src="./assets/requirements/Use-case diagram.png" width="800">
   <br>
   <b>Figure 3: Use-Case Diagram</b>
   <br>
@@ -384,7 +398,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/Requirements/use-case diagram table.png" width="800">
+  <img src="./assets/requirements/use-case diagram table.png" width="800">
   <br>
   <b>Table 3: Use-Case Diagram Table</b>
   <br>
@@ -392,11 +406,12 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 </div>
 
 ### **6 Requirements Definition**：
+
 &emsp;&emsp;We attended each lab and testing marathon, gathering advice and feedback from different testers and players. After weekly meetings and bug fixing, our finalized functional and non-functional requirements are as follows:
 
 <div align="center">
   <br>
-  <img src="./assets/Requirements/FR.png" width="800">
+  <img src="./assets/requirements/FR.png" width="800">
   <br>
   <b>Table 4: Functional Requirements for U help U</b>
   <br>
@@ -405,17 +420,17 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/Requirements/NFR.png" width="800">
+  <img src="./assets/requirements/NFR.png" width="800">
   <br>
   <b>Table 5: Non-Functional Requirements for U help U</b>
   <br>
   <br>
 </div>
 
-
 ## **⚙️ Design**
 
 ### **Overview**:
+
 - [1 Top Level Architecture](#1-top-level-architecture)
   - [1.1 Event System](#11-event-system)
   - [1.2 Level Manager](#12-level-manager)
@@ -432,13 +447,11 @@ A Past Self is generated and replays the recorded actions using real‑time phys
   - [3.1 Record System](#31-record-system)
   - [3.2 Environmental Mechanisms](#32-environmental-mechanisms)
 
-
-
 ### **1 Top Level Architecture**:
 
 <div align="center">
   <br>
-  <img src="./assets/Design/uml/top-level-architecture.png" width="800">
+  <img src="./assets/design/uml/top-level-architecture.png" width="800">
   <br>
   <b>Figure 1</b>
   <br>
@@ -449,14 +462,14 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/Design/sequence-diagrams/setup.png" width="800">
+  <img src="./assets/design/sequence-diagrams/setup.png" width="800">
   <br>
   <b>Figure 2</b>
   <br>
   <br>
 </div>
 
-&emsp;&emsp;The sequence diagram shows the initialization order of these four core classes during game startup. 
+&emsp;&emsp;The sequence diagram shows the initialization order of these four core classes during game startup.
 
 #### **1.1 Event System**:
 
@@ -515,13 +528,13 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 </div>
 
-&emsp;&emsp;The event system adopts a publish–subscribe model to centrally manage the dispatching of game events. 
+&emsp;&emsp;The event system adopts a publish–subscribe model to centrally manage the dispatching of game events.
 
 #### **1.2 Level Manager**:
 
 <div align="center">
   <br>
-  <img src="./assets/Design/uml/level-manager.png" width="800">
+  <img src="./assets/design/uml/level-manager.png" width="800">
   <br>
   <b>Figure 3</b>
   <br>
@@ -534,7 +547,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/Design/uml/page-switcher.png" width="800">
+  <img src="./assets/design/uml/page-switcher.png" width="800">
   <br>
   <b>Figure 4</b>
   <br>
@@ -547,7 +560,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/Design/sequence-diagrams/loop.png" width="800">
+  <img src="./assets/design/sequence-diagrams/loop.png" width="800">
   <br>
   <b>Figure 5</b>
   <br>
@@ -560,7 +573,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/Design/uml/game-entity.png" width="800">
+  <img src="./assets/design/uml/game-entity.png" width="800">
   <br>
   <b>Figure 6</b>
   <br>
@@ -573,7 +586,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/Design/uml/collision-system.png" width="800">
+  <img src="./assets/design/uml/collision-system.png" width="800">
   <br>
   <b>Figure 7</b>
   <br>
@@ -581,16 +594,17 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 </div>
 
 &emsp;&emsp;The collision system implements a complete pipeline of collision detection → collision resolution → collision response, ensuring correct physical interactions, trigger events, and blocking behavior between entities.
+
 - CollideSystem orchestrates the entire collision process.
--	CollisionDetector determines whether two entities collide.
--	CollisionResolver determines the collision direction and outputs a collisionMsg for the next stage.
--	CollisionResponder performs the actual response based on the resolved result.
+- CollisionDetector determines whether two entities collide.
+- CollisionResolver determines the collision direction and outputs a collisionMsg for the next stage.
+- CollisionResponder performs the actual response based on the resolved result.
 
 #### **2.3 Character Control System**:
 
 <div align="center">
   <br>
-  <img src="./assets/Design/uml/control-system.png" width="800">
+  <img src="./assets/design/uml/control-system.png" width="800">
   <br>
   <b>Figure 8</b>
   <br>
@@ -603,7 +617,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/Design/uml/physics-system.png" width="800">
+  <img src="./assets/design/uml/physics-system.png" width="800">
   <br>
   <b>Figure 9</b>
   <br>
@@ -616,7 +630,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/Design/uml/UI-system.png" width="800">
+  <img src="./assets/design/uml/UI-system.png" width="800">
   <br>
   <b>Figure 10</b>
   <br>
@@ -631,7 +645,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/Design/uml/record-system.png" width="800">
+  <img src="./assets/design/uml/record-system.png" width="800">
   <br>
   <b>Figure 11</b>
   <br>
@@ -642,7 +656,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/Design/uml/record-state-diagram.png" width="800">
+  <img src="./assets/design/uml/record-state-diagram.png" width="800">
   <br>
   <b>Figure 12</b>
   <br>
@@ -655,7 +669,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/Design/uml/mechanism1.png" width="800">
+  <img src="./assets/design/uml/mechanism1.png" width="800">
   <br>
   <b>Figure 13</b>
   <br>
@@ -664,7 +678,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/Design/uml/mechanism2.png" width="800">
+  <img src="./assets/design/uml/mechanism2.png" width="800">
   <br>
   <b>Figure 14</b>
   <br>
@@ -673,10 +687,10 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 &emsp;&emsp;The mechanism system manages reusable level mechanisms, including circuit based door unlocking and controllable moving platforms. Diagram V shows the class structure of the mechanism system: ButtonPlatformLinkSystem and WireIndicatorSystem handle different linkage logics.
 
-
 ## **⚙️ Implementation**
 
 ### **Overview**:
+
 - [1 Overall Implementation Approach](#1-overall-implementation-approach)
 - [2 Technical Challenge 1 — Leaderboard System](#2-technical-challenge-1--leaderboard-system)
   - [2.1 Early Attempts and Problems](#22-early-attempts-and-problems)
@@ -687,92 +701,106 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 ### **1 Overall Implementation Approach**：
 
-&emsp;&emsp;*U Help U* is implemented using the p5.js library and follows an object‑oriented, modular architecture.  
+&emsp;&emsp;_U Help U_ is implemented using the p5.js library and follows an object‑oriented, modular architecture.  
 The game loop runs in a fixed update–draw cycle, coordinating physics updates, collision detection, UI rendering, and level logic.  
 Core systems such as the LevelManager, UI system, Record System, Leaderboard System, and Level Editor communicate through well‑defined interfaces.
 
-&emsp;&emsp;During development, we encountered two major technical challenges:  
-- implementing a robust leaderboard system that supports guest/registered accounts, name conflict resolution, and data migration;  
+&emsp;&emsp;During development, we encountered two major technical challenges:
+
+- implementing a robust leaderboard system that supports guest/registered accounts, name conflict resolution, and data migration;
 - designing a fully functional level editor with upload/download sharing and safe serialization.
 
 ### **2 Technical Challenge 1 — Leaderboard System**：
 
 #### **2.1 Early Attempts and Problems**：
+
 Our initial approach stored all data in `localStorage`. This failed because:
-- data could not be shared across devices  
-- multiple players could not coexist  
-- renaming caused data overwrites  
-- name conflicts were impossible to resolve cleanly  
+
+- data could not be shared across devices
+- multiple players could not coexist
+- renaming caused data overwrites
+- name conflicts were impossible to resolve cleanly
 
 We also tried uploading raw JSON, but this created issues with duplicate names and inconsistent data formats.
 
 #### **2.2 Final Solution**：
+
 We implemented a **dual‑layer data architecture**:
 
 #### **Local Layer**：
-- stores guest progress  
-- caches leaderboard data for fast loading  
-- supports offline play  
+
+- stores guest progress
+- caches leaderboard data for fast loading
+- supports offline play
 
 #### **Server Layer**：
-- stores global leaderboard entries  
-- resolves name conflicts  
-- maintains persistent user accounts  
+
+- stores global leaderboard entries
+- resolves name conflicts
+- maintains persistent user accounts
 
 #### **Key Features**：
-- **Guest → Registered migration**  
-  - merges local data into the registered account  
-  - preserves all scores  
-- **Rename system**  
-  - renaming does not affect uploaded records  
-  - leaderboard auto‑refreshes  
-- **Name conflict resolution**  
-  - duplicates automatically become `Alex#1`, `Alex#2`, etc.  
-  - preserves the player’s preferred name  
 
-- **Real‑time leaderboard**  
-  - uploads score after each level  
-  - sorts by completion time  
-  - highlights the current player  
+- **Guest → Registered migration**
+  - merges local data into the registered account
+  - preserves all scores
+- **Rename system**
+  - renaming does not affect uploaded records
+  - leaderboard auto‑refreshes
+- **Name conflict resolution**
+  - duplicates automatically become `Alex#1`, `Alex#2`, etc.
+  - preserves the player’s preferred name
+
+- **Real‑time leaderboard**
+  - uploads score after each level
+  - sorts by completion time
+  - highlights the current player
 
 ### **3 Technical Challenge 2 — Level Editor & Sharing System**：
 
 ### **3.1 Early Attempts and Problems**：
+
 &emsp;&emsp;Our first attempt stored the entire level object directly.  
 This caused:
-- circular references in JSON  
-- inconsistent behavior across browsers  
-- inability to load maps on other devices  
-- old maps breaking after updates  
+
+- circular references in JSON
+- inconsistent behavior across browsers
+- inability to load maps on other devices
+- old maps breaking after updates
 
 ### **3.2 Final Solution**：
 
 #### **Custom Serialization Format**：
+
 &emsp;&emsp;We designed a clean, safe JSON structure:
-- tile grid  
-- entity list  
-- triggers and links  
+
+- tile grid
+- entity list
+- triggers and links
 - metadata (author, version, timestamp)
 
 Before upload:
+
 - remove runtime states (velocity, collision flags, temporary variables)
 - validate map size, entity types, coordinates
 
 After download:
-- reconstruct objects from JSON  
-- auto‑fill missing fields for backward compatibility  
-- reject invalid or malicious data  
+
+- reconstruct objects from JSON
+- auto‑fill missing fields for backward compatibility
+- reject invalid or malicious data
 
 #### **Sharing System**：
-- upload to server  
-- browse community maps  
-- download and play instantly  
-- versioning support (v1, v2, v3…)
 
+- upload to server
+- browse community maps
+- download and play instantly
+- versioning support (v1, v2, v3…)
 
 ## **⚙️ Evaluation**
 
 ### **Overview**:
+
 - [1 Qualitative](#1-qualitative)
   - [1.1 Contextual Onboarding & Bilingual Support](#11-contextual-onboarding--bilingual-support)
   - [1.2 Learning Curve & Scaffolding (Level 0)](#12-learning-curve--scaffolding-level-0)
@@ -780,8 +808,6 @@ After download:
 - [2 Quantitative](#2-quantitative)
   - [2.1 Evaluation Findings](#21-evaluation-findings)
   - [2.2 Reconsidered Technical Challenges](#22-reconsidered-technical-challenges)
-
-
 
 ### **1 Qualitative**:
 
@@ -815,25 +841,23 @@ After download:
 
 &emsp;&emsp;We conducted a quantitative user evaluation with 10 participants, using a within-subjects design to compare the user experience between Level 1 and Level 2. Participants completed the NASA Task Load Index (TLX) and System Usability Scale (SUS) after playing each level. We then ran a Wilcoxon Signed-Rank Test (with an alpha level of 0.05) to determine if there were significant differences in perceived workload and usability.
 
-* **System Usability Scale (SUS):** The test yielded **W = 21.0** and **p = 0.857**. Since p > 0.05, there is **no significant difference** in usability between the two levels. Both levels scored well above the industry average of 68 (Level 1 mean: 71.5; Level 2 mean: 73.25). This is a positive outcome, indicating that our core UI and control mechanics remain stable, intuitive, and easy to use regardless of the difficulty progression.
+- **System Usability Scale (SUS):** The test yielded **W = 21.0** and **p = 0.857**. Since p > 0.05, there is **no significant difference** in usability between the two levels. Both levels scored well above the industry average of 68 (Level 1 mean: 71.5; Level 2 mean: 73.25). This is a positive outcome, indicating that our core UI and control mechanics remain stable, intuitive, and easy to use regardless of the difficulty progression.
 
-* **NASA Task Load Index (TLX):** The test yielded **W = 10.0** and **p = 0.138**. Since p > 0.05, there is **no significant difference** in perceived workload between the two levels. Although the absolute mean score increased from 37.93 (Level 1) to 46.67 (Level 2), the lack of statistical significance suggests a strong "learning effect." Players mastered the mechanics in the first level, which counteracted the static difficulty increase in the second level.
+- **NASA Task Load Index (TLX):** The test yielded **W = 10.0** and **p = 0.138**. Since p > 0.05, there is **no significant difference** in perceived workload between the two levels. Although the absolute mean score increased from 37.93 (Level 1) to 46.67 (Level 2), the lack of statistical significance suggests a strong "learning effect." Players mastered the mechanics in the first level, which counteracted the static difficulty increase in the second level.
 
 #### **2.2 Reconsidered Technical Challenges**:
 
 &emsp;&emsp;Based on the quantitative evaluation results and the core mechanics of our time-clone puzzle platformer, we have reconsidered our primary technical challenges for the ongoing development:
 
-
 ## **⚙️ Process**
 
 ### **Overview**:
+
 - [1 The Tools and The Specific Cooperation Methods We Used](#1-the-tools-and-the-specific-cooperation-methods-we-used)
 - [2 Role Allocations and Distributions](#2-role-allocations-and-distributions)
 - [3 Excellently Executions During The Process](#3-excellently-executions-during-the-process)
 - [4 Challenges Encountered and Adjustments](#4-challenges-encountered-and-adjustments)
 - [5 Others’ thoughts](#5-others-thoughts)
-
-
 
 ### **1 The Tools and The Specific Cooperation Methods We Used**:
 
@@ -849,19 +873,19 @@ After download:
 - **Version Control (GitHub):**  
   The only platform to submit all codes and releasing versions.
 
-- **Other Tools:**  
-  - Class Diagram Tool — (Lucidchart)  
-  - Drawing Tool — (Procreate)  
-  - Estimation Tool — (Planning Poker)  
-  - Voting Tool — (Online anonymous questionnaire)  
-  - Parallel Development — (Git Branching)  
+- **Other Tools:**
+  - Class Diagram Tool — (Lucidchart)
+  - Drawing Tool — (Procreate)
+  - Estimation Tool — (Planning Poker)
+  - Voting Tool — (Online anonymous questionnaire)
+  - Parallel Development — (Git Branching)
   - AI Assistance — (Copilot, Claude)
 
 ### **2 Role Allocations and Distributions**:
 
 <div align="center">
   <br>
-  <img src="./assets/Process/Process part picture1.png" width="800">
+  <img src="./assets/process/Process part picture1.png" width="800">
   <br>
   <b></b>
   <br>
@@ -874,7 +898,7 @@ After download:
 
 <div align="center">
   <br>
-  <img src="./assets/Process/Process part picture2.png" width="800">
+  <img src="./assets/process/Process part picture2.png" width="800">
   <br>
   <b></b>
   <br>
@@ -909,20 +933,23 @@ After download:
   **Adjustment:** A hybrid approach combining full-team and small-group meetings was adopted. Full-team meetings were held weekly to align on overall direction, while specific issues were addressed in smaller meetings of 2–3 members as needed.
 
 ### **5 Others’ thoughts**:
+
 (placeholder)
 
 ## **⚙️ Sustainability, ethics and accessibility**
 
 ### **Overview**:
+
 - [1 Environmental](#1-environmental)
 - [2 Social](#2-social)
 - [3 Technical](#3-technical)
 
 <br>
 
-&emsp;&emsp;We evaluate our game across three dimensions: ***Environmental***, ***Social***, and ***Technical***, while treating ***Ethics*** and ***Accessibility*** as cross-cutting concerns. They are related to whether players can access and engage with the game effectively, the core mechanics are communicated in a clear and equitable manner, and whether the project can be responsibly developed and sustained in the future.
+&emsp;&emsp;We evaluate our game across three dimensions: **_Environmental_**, **_Social_**, and **_Technical_**, while treating **_Ethics_** and **_Accessibility_** as cross-cutting concerns. They are related to whether players can access and engage with the game effectively, the core mechanics are communicated in a clear and equitable manner, and whether the project can be responsibly developed and sustained in the future.
 
 ### **1 Environmental**
+
 One of the games’ most obvious features is its relatively lightweight web-based format. As **U Help U** is developed using p5.js and runs directly in the browser, rather than being distributed as a large standalone package, players can access the game without the need for heavy downloads, installations, or frequent patch updates.
 
 Performance optimization is also an important part of environmental sustainability. In system design and implementation, we strive to avoid placing unnecessary computational load on the browser, adopted several Green Software Foundation-style practices, to improve maintainability and avoid wasteful rework. For example, we deliberately selected lightweight 2D assets, to reduce GPU usage during runtime and maintain more controlled overall resource consumption. In addition, we seek to limit the size of image and audio assets, thereby lowering bandwidth demands and energy consumption during loading and data transfer.
@@ -930,20 +957,22 @@ Performance optimization is also an important part of environmental sustainabili
 Of course, we cannot exaggerate and say that this project is "fully environmentally friendly", but during the development process, our careful consideration was given to balancing environmental impact with rendering/computational efficiency and resource lightweighting.
 
 ### **2 Social**
+
 This dimension is most closely linked to ethics and accessibility. For ethical, our gamne offers an experience that departs from traditional platform games. Rather than progressing through combat, enemies, or domination, advancement is achieved through observation, recording, and collaboration with your 'past self'. No time limit, no death penalty, players will feel that "each attempt holds value." Yes, our game is not just about providing entertainment; It also shaping how players understand failure and challenge.
 
-Accessibility is also central to social impact. From visual clarity, the 'present self' is represented as a *solid mauve* <img src="./assets/Sustainability/0%20present%20self.png" height="22" align="absmiddle"> figure, while 'past self' is depicted as semi-transparent dusty rose <img src="./assets/Sustainability/1%20past%20self.png" height="22" align="absmiddle">. We also add bilingual prompts, context-sensitive tutorials, and clearer onboarding processes. Additionally, we have implemented a configurable key binding system in the game settings, allowing players to customize controls according to their personal preferences. All aimed at reducing the cognitive barrier with understanding the time-based clone game mechanic.
+Accessibility is also central to social impact. From visual clarity, the 'present self' is represented as a _solid mauve_ <img src="./assets/sustainability/0%20present%20self.png" height="22" align="absmiddle"> figure, while 'past self' is depicted as semi-transparent dusty rose <img src="./assets/sustainability/1%20past%20self.png" height="22" align="absmiddle">. We also add bilingual prompts, context-sensitive tutorials, and clearer onboarding processes. Additionally, we have implemented a configurable key binding system in the game settings, allowing players to customize controls according to their personal preferences. All aimed at reducing the cognitive barrier with understanding the time-based clone game mechanic.
 
 However, we should be honest that our current accessibility support remains limited. Features like color-blind modes, screen reader compatibility, and broader accommodation for physical impairments have not yet been fully implemented. Nevertheless, from a social and ethical perspective, this project has taken a meaningful step forward.
 
 ### **3 Technical**
-From technical, the game is built upon a modular framework composed of multiple independent systems, including scene /level management, an event system, collision handling, character control, recording functionality, achievement system, etc. This structure allows us to separate different responsibilities, reducing the risk of *"a change in one place affecting the whole system"*. Like, during frame updates driven by `draw`, collision, control, physics, and level management are broken down into relatively clear modules that work collaboratively. The adoption of event-driven architecture further disrupts interactions between mechanisms, such as switches, doors, traps, and characters, allowing them to interact through a more transparent messaging mechanism rather than relying on tightly coupled, hard-coded connections.
+
+From technical, the game is built upon a modular framework composed of multiple independent systems, including scene /level management, an event system, collision handling, character control, recording functionality, achievement system, etc. This structure allows us to separate different responsibilities, reducing the risk of _"a change in one place affecting the whole system"_. Like, during frame updates driven by `draw`, collision, control, physics, and level management are broken down into relatively clear modules that work collaboratively. The adoption of event-driven architecture further disrupts interactions between mechanisms, such as switches, doors, traps, and characters, allowing them to interact through a more transparent messaging mechanism rather than relying on tightly coupled, hard-coded connections.
 
 The impact of technical design extends beyond whether the game simply functions; it also includes what we learned through development and what the project contributes to future work. It also carries ethical implications: if we claim this is an open, collaborative, and extensible project, then the codebase shouldn't be limited to the original author's readability. Instead, it should provide a clear code structure, comprehension pathways, and well-defined module boundaries for future maintainers and students taking the course. The direction is clear: our project is not just a working prototype, but a system that can be responsibly maintained and extended over time.
 
 <div align="center">
   <br>
-  <img src="./assets/Sustainability/Class Exercise Example - SusAF sustainability awareness framework.png" width="800">
+  <img src="./assets/sustainability/Class Exercise Example - SusAF sustainability awareness framework.png" width="800">
   <br>
   <b>Figure: Class Exercise Example - SusAF sustainability awareness framework</b>
   <br>
@@ -955,6 +984,7 @@ In summary, in the scope of a student project, our project **U Help U** shows a 
 ## **⚙️ Conclusion**
 
 ### **Overview**:
+
 - [1 Lessons](#1-lessons)
 - [2 Challenges](#2-challenges)
 - [3 Future](#3-future)
@@ -964,6 +994,7 @@ In summary, in the scope of a student project, our project **U Help U** shows a 
 &emsp;&emsp;Our project: **U Help U**, successfully transforms an abstract idea into a coherent and playable game. Instead of relying on combat, the game requires players to record the actions of their "present self" and then cooperate with their "past self" to complete levels. The core challenge is one of planning, observation, and spatial reasoning rather than reflex alone.
 
 ### **1 Lessons**:
+
 - First is that a good game concept alone is not enough; it must be supported by communication between the team and players, a detailed structure, and an iterative mechanism. This helped us move from vague ideas like just "record and replay" toward clearer player-centered goals.
 
 - Second came from the implementation level: When the core mechanics are built upon "precise replay," the technical system becomes an indispensable part of the gameplay itself. Because the loop relies on the "past self" to accurately reproduce previously recorded actions, even minor deviations in timing, collision, or movement can cause level solving to fail. Therefore, shifting from "recording coordinates" to "recording input," combined with a fixed time step, is a fundamental design decision that determines the viability of the gameplay.
@@ -971,18 +1002,20 @@ In summary, in the scope of a student project, our project **U Help U** shows a 
 - Third concerns software engineering practices. Early development is slow due to flawed engineering and failed to adequately solve extensibility. But after that, we subsequently refined our development strategy by drawing ideas from more mature examples, clarifying interface boundaries, and reorganizing the codebase into clearer modules.
 
 ### **2 Challenges**:
-&emsp;&emsp;For technical, it can be summarized as jumping behavior, stacked interactions, box collisions, record-system state management, and level balancing. In game architecture, for example, the inheritance hierarchy of the entity tree is difficult to perfect in a single pass. To solve this, we adopt “generality” as the key criterion for determining ownership. 
+
+&emsp;&emsp;For technical, it can be summarized as jumping behavior, stacked interactions, box collisions, record-system state management, and level balancing. In game architecture, for example, the inheritance hierarchy of the entity tree is difficult to perfect in a single pass. To solve this, we adopt “generality” as the key criterion for determining ownership.
 
 &emsp;&emsp;Another is teamwork. We initially encountered issues with unclear interface definitions. We then collaboratively refined the shared interfaces, explicitly identifying the key data that needed to be accessed by other systems (position/velocity), as well as the methods that should be exposed for external use (including state updates and input handling).
 
 &emsp;&emsp;From design, a key was ensuring that the “record and replay” mechanic did not merely remain novel but was also genuinely intuitive and easy to understand. Thus, we developed a coherent narrative framework supported by in-game signposts, research logs, and guided instructions, helping players recognize that clones should be treated as collaborators.
 
 ### **3 Future**:
+
 &emsp;&emsp;Looking ahead, if we have the chance to develop a larger next version, the project offers many promising directions, such as multi-phase recording, custom level creation, hidden challenge routes, and community-based competition. Building on this foundation, additional features could include in-game shops, cosmetic rewards, pets, AI-guided NPCs, and level sharing systems. The sequel could further develop the game’s worldbuilding. Through elements like signposts, archival records, NPC dialogue, and memory fragments, the concept of “collaborating with your past self” can evolve from a gameplay mechanic into a more emotionally resonant narrative experience.
 
 <div align="center">
   <br>
-  <img src="./assets/Conclusion/Conclusion part picture.png" width="800">
+  <img src="./assets/conclusion/Conclusion part picture.png" width="800">
   <br>
   <b>Figure: The future development directions of our game</b>
   <br>
@@ -993,7 +1026,7 @@ In summary, in the scope of a student project, our project **U Help U** shows a 
 
 ## **⚙️ Contribution Statement**
 
-- Provide a table of everyone's contribution, which *may* be used to weight individual grades. We expect that the contribution will be split evenly across team-members in most cases. Please let us know as soon as possible if there are any issues with teamwork as soon as they are apparent and we will do our best to help your team work harmoniously together.
+- Provide a table of everyone's contribution, which _may_ be used to weight individual grades. We expect that the contribution will be split evenly across team-members in most cases. Please let us know as soon as possible if there are any issues with teamwork as soon as they are apparent and we will do our best to help your team work harmoniously together.
 
 ## **⚙️ AI Statement**
 
