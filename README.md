@@ -324,11 +324,11 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 &emsp;&emsp;During the first stage of our game design, the first problem that came to us was which type of games we should choose. Each member of our group did detailed research about the specific game type he or she wanted to design, and finally carried out six ideas(each member with one idea). Then our group arranged a meeting and played all the games that could serve as prototypes for our game. The original ideas include Roguelike, Tower Defense, Simulation, PvP, puzzle-solving, etc. And after several hours of discussion, we finally decided to design a 2D platform puzzle-adventure game.
 
-&emsp;&emsp;However, a distinctive characteristic of our game is an important part that sets it apart from others. While trying various puzzle games, a game called U vs U attracted us, which has the key game mechanics that players need to find ways to escape from their past selves or kill them before their past self reaches the finish line. That is really an amazing mechanic that only needs one player, but needs to think from two different sides. And the concept of two selves existing in different times and spaces is also quite novel. As a result, we finally decided on the final idea of our game: U help U, a 2D platform puzzle-adventure game in which the player can release a clone through an operation called recording. The clone will replay all the movements and operations that were done by the player during recording time, just like the player’s phantom(The principle behind the recording is to capture each key press during the recording time, and let the clone repeat the movement caused by these key presses during replay time). What the player needs to do is to cooperate with the clone to clear each level. In our initial concept, we can design each level with a different style, so that the player can play various kinds of games in our game.
+&emsp;&emsp;However, a distinctive characteristic of our game is an important part that sets it apart from others. While trying various puzzle games, a game called U vs U attracted us, which has the key game mechanics that players need to find ways to escape from their past selves or kill them before their past self reaches the finish line. That is really an amazing mechanic that only needs one player, but needs to think from two different sides. And the concept of two selves existing in different times and spaces is also quite novel. As a result, we finally decided on the final idea of our game: U help U, a 2D platform puzzle-adventure game in which the player can release a clone through an operation called recording. The clone will replay all the movements and operations that were done by the player during recording time, just like the player’s phantom(The principle behind the recording is to capture each key press during the recording time, and let the clone repeat the movement caused by these key presses during replay time, so it is also called capture). What the player needs to do is to cooperate with the phantom to clear each level. In our initial concept, we can design each level with a different style, so that the player can play various kinds of games in our game.
 
 ### **2 User Stories**:
 
-&emsp;&emsp;Based on this initial game idea, we formulated a series of user stories to help us prioritize the tasks. Our user stories are based on the format “As a **, I want to **, so that\_\_”, to consider different requirements from different sides. Here are some crucial user stories on basic game controls, core game mechanics, game interactions, and user interface. Click [here](./week-log/Week04/Requirements-v2.0.md) to view the full user stories, the epics we developed in the early stages, and their completion status.
+&emsp;&emsp;Based on this initial game idea, we formulated a series of user stories to help us prioritize the tasks. Our user stories are based on the format “As a __, I want to __, so that__”, to consider different requirements from different sides. Here are some crucial user stories on basic game controls, core game mechanics, game interactions, and user interface. Click [here](./week-log/Week04/Requirements-v2.0.md) to view the full user stories, the epics we developed in the early stages, and their completion status.
 
 <div align="center">
   <br>
@@ -366,9 +366,9 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 ### **4 Early-Stage Design**:
 
-&emsp;&emsp;During our early design stage, we mainly focused on designing different levels with various gameplay styles, such as roguelike in one level and shooting in another, but all combined with the record and reply mechanism. Because there are still some great ideas and map designs that were carried out by some group members. In this way, players can not only focus on puzzle solving using clones, but also can enjoy other different kinds of game styles in only one game. But with the deepening of research and development, we find that the game as a whole seems a bit disjointed. If each stage uses a different style, it seems that it is hard to find a suitable theme for the whole game. So we changed the development strategy to only focus on puzzle solving with the record system.
+&emsp;&emsp;During our early design stage, we mainly focused on designing different levels with various gameplay styles, such as roguelike in one level and shooting in another, but all combined with the record and reply mechanism. Because there are still some great ideas and map designs that were carried out by some group members. In this way, players can not only focus on puzzle solving using clones, but also can enjoy other different kinds of game styles in only one game. But with the deepening of research and development, we find that the game as a whole seems a bit disjointed. If each stage uses a different style, it seems that it is hard to find a suitable theme for the whole game. So we changed the development strategy to only focus on puzzle solving with the record(capture) system.
 
-&emsp;&emsp;In our first sprint(first demo version), we mainly focused on creating one level with a relatively easy puzzle(two buttons, the player and clone need to press them at the same time) to let players and testers get familiar with the game mechanics and how to cooperate with the record & replay system. For players who are more confident in their gaming skills, we also developed a level where players need to time their use of clone as stepping stones carefully to cross the chasm.
+&emsp;&emsp;In our first sprint(first demo version), we mainly focused on creating one level with a relatively easy puzzle(two buttons, the player and phantom need to press them at the same time) to let players and testers get familiar with the game mechanics and how to cooperate with the record & replay system. For players who are more confident in their gaming skills, we also developed a level where players need to time their use of phantom as stepping stones carefully to cross the chasm.
 
 <div align="center">
   <br>
@@ -387,7 +387,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/requirements/Use-case diagram.png" width="800">
+  <img src="./assets/requirements/use-case diagram v3.png" width="800">
   <br>
   <b>Figure 3: Use-Case Diagram</b>
   <br>
@@ -398,7 +398,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/requirements/use-case diagram table.png" width="800">
+  <img src="./assets/requirements/use-case diagram table v2.png" width="800">
   <br>
   <b>Table 3: Use-Case Diagram Table</b>
   <br>
@@ -411,7 +411,7 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 
 <div align="center">
   <br>
-  <img src="./assets/requirements/FR.png" width="800">
+  <img src="./assets/requirements/FR v2.png" width="800">
   <br>
   <b>Table 4: Functional Requirements for U help U</b>
   <br>
