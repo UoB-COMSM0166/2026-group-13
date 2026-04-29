@@ -87,76 +87,133 @@
 
 **_U Help U_**
 
-_U Help U_ is a 2D side‑scrolling platformer puzzle game built around the concept of **self‑collaboration**. Players control the “Present Self” to record actions, and upon playback, a “Past Self” is generated. This Past Self faithfully reproduces the recorded inputs and physics‑based trajectory, acting as a **solid cooperative unit** that can interact physically with the Present Self—standing on each other, boosting each other, and enabling creative traversal strategies.
-
-Its core challenge lies in predicting and coordinating the interaction between past and present actions, delivering the thematic experience that **“every attempt has value—your past efforts become the foundation for your present success.”**
-
-Each level is a standalone challenge. After completing one, players proceed to the next.
+_U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑collaboration. Players record their actions to generate a “Past Self”—a physics-based entity that faithfully reproduces previous movements. By standing on, boosting, or blocking one another, players turn their past attempts into the foundation for present success.
 
 ### Core Gameplay (How to Play)
 
 #### 1. Basic Controls
 
-- **Movement**: A / D / ← / →
-- **Jump**: W / Space / ↑
-- **Record / Stop**: C
-- **Replay**: R
-- **Interaction**: E
+<div align="center">
+  <img src="./assets/process/key-control.png" width="700" alt="Basic Controls Visualization" style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+  <br>
+  <p><i>Standard Control Scheme for Group 13 Game Project</i></p>
+</div>
 
 #### 2. Three Core Modes (Closed‑Loop System)
 
 #### (1) Exploration Mode
 
-The player controls the Present Self to explore the terrain, observe obstacles, and plan the route that the Past Self must follow.
+The player observes the terrain and plans the strategic route for the Past Self to execute.
 
-- Affected by gravity
+- Focus on environmental analysis
 - No Past Self exists yet
-- Focus on observation and planning
+- Purely for observation and planning
 
 #### (2) Recording Mode
 
-Activated by pressing C. A “Recording” indicator appears, and a 5‑second recording begins. The system records **input commands**, not fixed positions.
+Activated by pressing C. A 5‑second window begins where the system captures **input commands**, not fixed positions.
 
 - Present Self moves freely
-- Players create “useful collaborative trajectories”
-- Press C again or wait for the timer to end
+- Players create "foundational" trajectories
+- Ends via manual stop (C) or timer expiration
 
 #### (3) Collaborative Replay Mode
 
-A Past Self is generated and replays the recorded actions using real‑time physics.
+A Past Self is generated to replay recorded actions. Players must now interact with their past to solve puzzles.
 
 - Present Self remains controllable
-- Past Self follows recorded inputs under gravity
-- Both entities can stand on each other
-- Press R to interrupt and then press C to re‑record
+- Both entities interact through real‑time physics
+- Press R to reset and C to re‑record
 - Past Self disappears when playback ends
 
 #### 3. Physical Rules
 
-- Both selves are affected by gravity
-- Both can stand on floors, platforms, or each other
-- Vertical stacking allowed; horizontal overlap prevented
+- Both selves are fully physics‑driven and affected by gravity
+- Both act as solid platforms for each other
+- Vertical stacking is allowed; horizontal overlap is prevented
 
 ### Game Goals
 
 #### 1. Level Objectives
 
 - **Primary**: Reach the designated endpoint
-- **Advanced**: Complete with the less time
+- **Advanced**: Complete in the shortest time possible
 
 #### 2. Core Experience Goals
 
-- Create the feeling of “collaborating with your past self”
-- Encourage spatial reasoning and forward planning
-- Reinforce the theme that past efforts empower present breakthroughs
+- Empower players through "self‑collaboration"
+- Stimulate spatial reasoning and forward planning
+- Demonstrate how past efforts enable present breakthroughs
 
 ### Core Highlights (Differentiation)
 
 #### Immersive Past–Present Integration
 
-- **Action‑Based Recording**: Playback uses real‑time physics, not scripted positions
-- **Bidirectional Interaction**: Both selves can serve as platforms for each other
-- **Non‑Punitive Design**: No time limits or death penalties
+- **Action‑Based Fidelity**: Playback reacts dynamically to the environment via physics
+- **Bidirectional Interaction**: Both selves serve as functional platforms for one another
+- **Non‑Punitive Design**: Encourages experimentation with no death or time penalties
+
+### 🎮 Recording System Exhibition
+
+<table width="100%">
+<tbody>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/introduction/before-recording.gif" width="800" /><br><br>
+<img src="https://img.shields.io/badge/-1.%20ReadyToCapture-5B3A7D?style=flat-square" /><br><br>
+<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
+• <b>Phase Description:</b> The player observes the level terrain and mechanism distribution. The system is on standby, ready to record position and interaction logic.<br>
+• <b>Timeline Behavior:</b> No timeline is active; the player can move freely.<br>
+• <b>Control Guide:</b> Press <b>C</b> to begin recording.
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/introduction/recording-in-progress.gif" width="800" /><br><br>
+<img src="https://img.shields.io/badge/-2.%20Capturing-5B3A7D?style=flat-square" /><br><br>
+<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
+• <b>Phase Description:</b> The system captures the motion path and interaction in real-time.<br>
+• <b>Timeline Behavior:</b> The operation timeline displays corresponding input records.<br>
+• <b>Control Guide:</b> Press <b>C</b> to end recording early.
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/introduction/after-recording.gif" width="500" /><br><br>
+<img src="https://img.shields.io/badge/-3.%20PhantomStandby-5B3A7D?style=flat-square" /><br><br>
+<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
+• <b>Phase Description:</b> Recording finished. The phantom appears in a transparent state.<br>
+• <b>Timeline Behavior:</b> The recorded trajectory remains on the timeline.<br>
+• <b>Control Guide:</b> Hold <b>R</b> to start the action playback.
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/introduction/replay-in-progress.gif" width="800" /><br><br>
+<img src="https://img.shields.io/badge/-4.%20PhantomAwakens-5B3A7D?style=flat-square" /><br><br>
+<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
+• <b>Phase Description:</b> The phantom repeats all actions recorded.<br>
+• <b>Timeline Behavior:</b> The timeline turns blue and displays real-time playback progress.<br>
+• <b>Control Guide:</b> Press <b>R</b> to end playback early.
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/introduction/after-replay.gif" width="500" /><br><br>
+<img src="https://img.shields.io/badge/-5.%20PhantomStandby-5B3A7D?style=flat-square" /><br><br>
+<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
+• <b>Phase Description:</b> Playback ends. The phantom returns to a transparent state, awaiting instructions.<br>
+• <b>Timeline Behavior:</b> The timeline retains the full record of the last operation.<br>
+• <b>Control Guide:</b> Hold <b>R</b> to replay, or press <b>C</b> to start a new recording (overwriting the current one).
+</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 ### 🎮 Game Entities Exhibition
 
@@ -247,67 +304,6 @@ A Past Self is generated and replays the recorded actions using real‑time phys
 </tbody>
 </table>
 
-### 🎮 Recording System Exhibition
-
-<table width="100%">
-<tbody>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/introduction/before-recording.gif" width="800" /><br><br>
-<img src="https://img.shields.io/badge/-1.%20ReadyToCapture-5B3A7D?style=flat-square" /><br><br>
-<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>Phase Description:</b> The player observes the level terrain and mechanism distribution. The system is on standby, ready to record position and interaction logic.<br>
-• <b>Timeline Behavior:</b> No timeline is active; the player can move freely.<br>
-• <b>Control Guide:</b> Press <b>C</b> to begin recording.
-</p>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/introduction/recording-in-progress.gif" width="800" /><br><br>
-<img src="https://img.shields.io/badge/-2.%20Capturing-5B3A7D?style=flat-square" /><br><br>
-<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>Phase Description:</b> All player operations are being recorded. The system captures the motion path and interaction in real-time.<br>
-• <b>Timeline Behavior:</b> The operation timeline displays corresponding input records.<br>
-• <b>Control Guide:</b> Press <b>C</b> to end recording early.
-</p>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/introduction/after-recording.gif" width="500" /><br><br>
-<img src="https://img.shields.io/badge/-3.%20PhantomStandby-5B3A7D?style=flat-square" /><br><br>
-<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>Phase Description:</b> Recording finished. The phantom appears in a transparent state, ready for playback at any moment.<br>
-• <b>Timeline Behavior:</b> The recorded trajectory remains on the timeline.<br>
-• <b>Control Guide:</b> Hold <b>R</b> to start the action playback.
-</p>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/introduction/replay-in-progress.gif" width="800" /><br><br>
-<img src="https://img.shields.io/badge/-4.%20PhantomAwakens-5B3A7D?style=flat-square" /><br><br>
-<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>Phase Description:</b> The phantom repeats all actions recorded, assisting the player in solving level puzzles.<br>
-• <b>Timeline Behavior:</b> The timeline turns blue and displays real-time playback progress.<br>
-• <b>Control Guide:</b> Press <b>R</b> to end playback early.
-</p>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/introduction/after-replay.gif" width="500" /><br><br>
-<img src="https://img.shields.io/badge/-5.%20PhantomStandby-5B3A7D?style=flat-square" /><br><br>
-<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>Phase Description:</b> Playback ends. The phantom returns to a transparent state, staying at the finish point or awaiting instructions.<br>
-• <b>Timeline Behavior:</b> The timeline retains the full record of the last operation.<br>
-• <b>Control Guide:</b> Hold <b>R</b> to replay, or press <b>C</b> to start a new recording (overwriting the current one).
-</p>
-</td>
-</tr>
-</tbody>
-</table>
 
 ## **⚙️ Requirements**
 
