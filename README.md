@@ -15,7 +15,7 @@
 </div>
 
 <div align="center">
-  <a href="https://angelicaserein.github.io/UhelpU/">
+  <a href="https://uob-comsm0166.github.io/2026-group-13/">
     <img src="./assets/click-to-play.png" width="800">
     <br>
   </a>
@@ -25,16 +25,22 @@
   </a>
   <br>
   -->
-Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy levels – classic puzzles from earlier builds – with 3 achievements to unlock!<br>
-
-<small><em>(If you get stuck on a hard level for more than half an hour, that’s totally normal – don't worry! Check out the guide <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">here</a>!)</em></small>
+<sub><i>Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy levels — classic puzzles from earlier builds to explore!</i></sub>
 <br><br>
+
+<small><em>If you get stuck on a hard level for more than half an hour, that’s totally normal — don't worry!</em></small>
+<br><br>
+
 <a href="https://angelicaserein.github.io/UhelpU/">
-<img src="./assets/video.png" width="800">
-<br>
-<br>
+  <img src="./assets/video.png" width="800">
+  <br>
+  <br>
 </a>
 
+<a href="https://youtu.be/FMFJqeT6FAw">
+  <img src="https://img.shields.io/badge/🎬%20Watch%20Video-Click%20to%20Watch-ff6b9d?style=for-the-badge&labelColor=7b2cbf">
+</a>
+<br>
 </div>
 
 <div align="center">
@@ -1011,32 +1017,6 @@ docs/
 │   └── text/                           ← Story scripts & signboard hint text (EN + ZH)
 │
 └── docs/                               ← Per-system technical documentation (Markdown)
-    ├── README.md                       ← Documentation index
-    ├── achievement-system/             ← Achievement system full documentation
-    ├── game-overview/                  ← Chinese-language game mechanics overview
-    ├── keyboard-navigation/            ← Accessibility keyboard-nav integration guide
-    ├── leaderboard-with-account-sys/   ← Leaderboard, account, guest-login & timer docs
-    │   ├── account-账号部分/
-    │   ├── guest-login/
-    │   ├── leaderboard-firebase/       ← Firebase integration (CN + EN docs)
-    │   └── timer-计时部分/
-    ├── level-design/                   ← How to add entities & import levels
-    ├── map-editor-with-sharing-sys/    ← Map editor core, sharing backend & save guide
-    │   ├── map-editor-core/
-    │   ├── player-map-sharing-backend/
-    │   ├── save-feature-how-to-use/
-    │   └── system-overview/
-    ├── phantom-dialogue-system/        ← NPC dialogue system technical doc
-    ├── record-system/                  ← Record / Replay feature description & Demo 2 notes
-    ├── settings-system/                ← Audio, key-binding, pause window & i18n docs
-    │   ├── audio-keybindings/
-    │   ├── i18n-multilingual-implementation-3-parts/
-    │   └── in-game-pause-window/
-    ├── stacking-physics-system/        ← Box stacking & physics documentation
-    ├── tutorial-system/                ← Tutorial FSM implementation & bug fixes
-    ├── ui-visual-design/               ← Rainbow / visual-effect design notes
-    ├── project-planning/               ← Repo structure improvement plan
-    └── archive/                        ← Superseded / legacy documentation
 ```
 
 <div align="center">
@@ -1056,7 +1036,7 @@ docs/
   - [3.2 Final Solution](#32-final-solution)
 - [4 其他功能](#4-其他功能)
   - [4.1 教程系统](#41-教程系统)
-  - [4.2 难度曲线设置](#42-难度曲线设置)
+  - [4.2 Level Design](#42-level-design)
   - [4.3 幻影对话系统](#43-幻影对话系统)
   - [4.4 设置系统](#44-设置系统)
     - [4.4.1 音量和按键设置](#441-音量和按键设置)
@@ -1175,6 +1155,42 @@ After download:
 - download and play instantly
 - versioning support (v1, v2, v3…)
 
+### **3.3 Level Editing Function Demonstration**
+
+The following pictures show some operations of the editing system, <br>including key operation guide, platform zoom, moving map camera, <br>and the placement and movement of component elements.
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/editor control.png" width="300">
+  <br>
+  <b>Level editing system operation guide</b>
+  <br>
+</div>
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/change platform.gif" width="500">
+  <br>
+  <b>Change and zoom in/out platform</b>
+  <br>
+</div>
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/map view camera.gif" width="500">
+  <br>
+  <b>Movement of the map view camera</b>
+  <br>
+</div>
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/moving and placing component elementsr.gif" width="500">
+  <br>
+  <b>Moving and placing component elements in the level editor</b>
+  <br>
+</div>
+
 ### **4 其他功能**：
 
 #### **4.1 教程系统**：
@@ -1270,9 +1286,109 @@ After download:
 </tbody>
 </table>
 
-#### **4.2 难度曲线设置**：
+#### **4.2 Level Design**：
 
 游戏提供了 Easy 和 Hard 两套难度体系，分别包含独立设计的关卡序列。Easy 难度下的关卡着重引导玩家理解录制与回放机制的基本用法；Hard 难度则在此基础上引入更复杂的时序配合与空间利用要求。关卡的难度曲线经过多轮用户测试与数据分析后反复调整，以确保玩家在学习曲线上获得平滑而有层次感的成长体验。
+
+##### Easy Levels (7 Levels)
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/easy1.png">
+      <br>
+      <b>Level 1</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/easy2.png">
+      <br>
+      <b>Level 2</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/easy3.png">
+      <br>
+      <b>Level 3</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/easy4.png">
+      <br>
+      <b>Level 4</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/easy5.png">
+      <br>
+      <b>Level 5</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/easy6.png">
+      <br>
+      <b>Level 6</b>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+  <img src="assets/implementation/level-design/easy7.png">
+  <br>
+  <b>Level 7</b>
+</div>
+
+##### Hard Levels (4 Levels, 2 Rooms Each)
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard1-1.png">
+      <br>
+      <b>Level 1 — Room 1</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard1-2.png">
+      <br>
+      <b>Level 1 — Room 2</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard2-1.png">
+      <br>
+      <b>Level 2 — Room 1</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard2-2.png">
+      <br>
+      <b>Level 2 — Room 2</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard3-1.png">
+      <br>
+      <b>Level 3 — Room 1</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard3-2.png">
+      <br>
+      <b>Level 3 — Room 2</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard4-1.png">
+      <br>
+      <b>Level 4 — Room 1</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard4-2.png">
+      <br>
+      <b>Level 4 — Room 2</b>
+    </td>
+  </tr>
+</table>
 
 #### **4.3 幻影对话系统**：
 
@@ -1421,7 +1537,6 @@ Player can also check their achievement overview in achievement gallery. In this
   - [1.1 Contextual Onboarding & Bilingual Support](#11-contextual-onboarding--bilingual-support)
   - [1.2 Learning Curve & Scaffolding (Level 0)](#12-learning-curve--scaffolding-level-0)
 - [2 Quantitative](#2-quantitative)
-  - [2.1 Evaluation Findings](#21-evaluation-findings)
 - [3 Description of how code was tested](#3-description-of-how-code-was-tested)
   - [3.1 Manual Testing and Console Logging During Development](#31-manual-testing-and-console-logging-during-development)
   - [3.2 Black-Box Testing Based on Test Checklists](#32-black-box-testing-based-on-test-checklists)
@@ -1444,15 +1559,37 @@ Action Plan: Design and insert a simple "Tutorial Level" prior to the first offi
 
 This addresses "Error prevention" and enhances "User control and freedom", ensuring players are comfortable with the physics and controls before facing actual challenges.
 
-### **2 Quantitative**:
+Below is a gameplay demonstration of the initial tutorial:
 
-#### **2.1 Evaluation Findings**:
+<div align="center">
+  <br>
+  <img src="./assets/evaluation/initial-tutorial.png" width="800">
+  <br>
+  <b>Figure1: Initial tutorial</b>
+  <br>
+  <br>
+</div>
+
+The latest version of the game's tutorial can be found in the [**4.1 教程系统**](#41-教程系统) section.
+
+### **2 Quantitative**:
 
 We conducted a quantitative user evaluation with 27 participants, using a within-subjects design to compare the user experience between Level 1 and Level 2. Participants completed the NASA Task Load Index (TLX) and System Usability Scale (SUS) after playing each level. We then ran a Wilcoxon Signed-Rank Test (with an alpha level of 0.05) to determine if there were significant differences in perceived workload and usability.
 
 - **System Usability Scale (SUS):** The test yielded **W = 84.5** and **p = 0.063**. Since p > 0.05, there is **no significant difference** in usability between the two levels, although a slight downward trend was observed as complexity increased. Both levels maintained scores near or above the industry average of 68 (Level 1 mean: 75.06; Level 2 mean: 65.0). This indicates that the core UI and interaction mechanics remain relatively stable and accessible, even when players are faced with higher task difficulty.
 
 - **NASA Task Load Index (TLX):** The test yielded **W = 43.5** and **p < 0.001**. Since p < 0.05, there is **a significant difference** in perceived workload between the two levels. The absolute mean score increased from 39.71 (Level 1) to 50.20 (Level 2). This significant increase confirms that the difficulty progression was effectively perceived by the participants, successfully raising the cognitive and mental demands of the game as intended for the second level.
+
+Below is a photo of players engaging with our game:
+
+<div align="center">
+  <br>
+  <img src="./assets/evaluation/Others-playing-ourgame.jpg" width="800">
+  <br>
+  <b>Figure2: Other players playing our game</b>
+  <br>
+  <br>
+</div>
 
 ### **3 Description of how code was tested**:
 
