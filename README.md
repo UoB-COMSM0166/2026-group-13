@@ -974,7 +974,7 @@ We implemented a **dual‑layer data architecture**:
 <div align="center">
   <img src="./assets/implementation/leaderboard/leaderboard1.png" width="800">
   <br>
-  <b>Leaderboard system and brieft introduction</b>
+  <b>Leaderboard system and brief introduction</b>
   <br>
   <br>
 </div>
