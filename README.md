@@ -26,8 +26,8 @@
   <br>
   -->
 Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy levels – classic puzzles from earlier builds – with 3 achievements to unlock!<br>
-Playtime depends on your skill – if you're really sharp, maybe an hour to clear them all.<br>
-(If you get stuck on a single hard level for more than half an hour, that’s totally normal – don't worry! Check out the guide <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">here!</a>!)
+
+<small><em>(If you get stuck on a hard level for more than half an hour, that’s totally normal – don't worry! Check out the guide <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">here</a>!)</em></small>
 <br><br>
 <a href="https://angelicaserein.github.io/UhelpU/">
 <img src="./assets/video.png" width="800">
@@ -297,11 +297,10 @@ Playtime depends on your skill – if you're really sharp, maybe an hour to clea
 
 ```
 2026-group-13/
-├── README.md               ← You are here — main project documentation
-├── assets/                 ← All assets used in this README.md
-├── docs/                   ← Game source code and documentation (see Design section 4 for architectural details)
-├── week-log/               ← Weekly lab logs (see Workshop section above for overview)
-└── ...
+├── README.md        ← You are here — main project documentation
+├── assets/          ← Images, GIFs, and diagrams used in this README
+├── docs/            ← Game source code and technical documentation (see Design § 4 for full structure)
+└── week-log/        ← Weekly lab logs (see Workshop section above for overview)
 ```
 
 <br>
@@ -931,9 +930,113 @@ The mechanism system manages reusable level mechanisms, including circuit based 
 
 ### **4 Code Structure**:
 
+The `docs/` directory contains the complete game — the entry point `index.html` loads `main.js`, which bootstraps p5.js and hands control to `AppCoordinator`. Everything is split into four top-level areas:
+
 ```text
-/docs
-├── ...
+docs/
+├── index.html                          ← Game entry point (open in browser to play)
+├── main.js                             ← p5.js sketch init; creates AppCoordinator
+│
+├── css/
+│   ├── style.css                       ← Global game stylesheet (~55 KB)
+│   └── loading-screen/
+│       └── startup-loading.css         ← Startup splash-screen styles
+│
+├── js/                                 ← All game logic (~200 files)
+│   ├── AppCoordinator.js               ← Top-level orchestrator; wires all systems
+│   ├── AssetsManager.js                ← Centralised asset (image / audio) loading
+│   ├── AudioManager.js                 ← Background music & SFX playback
+│   │
+│   ├── event-system/                   ← Publish-subscribe EventBus
+│   ├── switchers/                      ← SwitcherMain — routes update/draw to active page
+│   │
+│   ├── ui/                             ← All rendered interfaces
+│   │   ├── pages/                      ← Full-screen pages (menu, level-choice, settings …)
+│   │   ├── components/                 ← Reusable UI widgets (buttons, overlays, timer HUD …)
+│   │   ├── keyboard/                   ← Keyboard-navigation layer for accessibility
+│   │   └── windows/                    ← Modal windows (pause, result, signboard …)
+│   │
+│   ├── game-runtime/                   ← Core game loop; LevelManager + Room + Checkpoint
+│   │
+│   ├── game-entity-model/              ← Entity class hierarchy
+│   │   ├── base/                       ← GameEntity base class & shared components
+│   │   ├── characters/                 ← Player, Phantom, NPC, Enemy
+│   │   ├── interactables/              ← Box, Door, Button, Spike, Checkpoint, Teleport …
+│   │   ├── terrain/                    ← Ground, Platform, Wall tiles
+│   │   └── prompts/                    ← KeyPrompt, TextPrompt proximity indicators
+│   │
+│   ├── collision-system/               ← Detect → Resolve → Respond pipeline
+│   ├── physics-system/                 ← Velocity/acceleration integrator; gravity
+│   ├── character-control-system/       ← Keyboard-event → validated action → movement
+│   │
+│   ├── record-system/                  ← Record / Replay core mechanic
+│   ├── replayer-voice/                 ← Voice cues played back during replay
+│   │
+│   ├── mechanism-system/               ← Button–Wire–Door and Button–Spike/Platform links
+│   │   ├── demo1/                      ← Demo 1 specific mechanisms
+│   │   └── demo2/                      ← Demo 2 specific mechanisms
+│   │
+│   ├── level-design/                   ← Static level data files
+│   │   ├── demo1/ demo2/               ← Tutorial / legacy demo levels
+│   │   ├── easy/                       ← Easy-difficulty levels (7 levels)
+│   │   ├── hard/                       ← Hard-difficulty levels (4 levels)
+│   │   └── special/                    ← Special levels
+│   │
+│   ├── user-levels/                    ← Map Editor + community sharing system
+│   ├── timer-system/                   ← In-level stopwatch & leaderboard timer
+│   ├── achievement-system/             ← Achievement definitions, unlock logic, toast UI
+│   ├── tutorial-system/                ← FSM-driven onboarding flow (Easy 1)
+│   ├── loading-screen/                 ← Startup asset-loading screen
+│   ├── key-binding-system/             ← Rebindable keyboard controls
+│   ├── i18n/                           ← Bilingual strings (English / Chinese)
+│   ├── sound/                          ← Sound-event helpers
+│   ├── develop-mode/                   ← Debug overlays (disabled in release)
+│   ├── utils/                          ← Shared utility functions
+│   └── addons/
+│       └── p5.sound.min.js             ← p5.js audio library
+│
+├── assets/                             ← All game media
+│   ├── audio/
+│   │   ├── bgm/                        ← Background music (menu, settings, 10 level tracks)
+│   │   └── sxf/                        ← Sound effects (jump, land, interact, death …)
+│   ├── images/
+│   │   ├── bg/                         ← Full-screen level & menu backgrounds
+│   │   ├── player/                     ← Player sprite sheets (8 directions + death)
+│   │   ├── npc/                        ← NPC character sprites
+│   │   ├── tiles/                      ← Terrain & interactable tile sprites
+│   │   ├── idle-action/                ← Idle-yawn animation frames
+│   │   └── achieve/                    ← Achievement icon images
+│   ├── fonts/
+│   │   └── HYPixel11pxU-2.ttf         ← Chinese pixel font
+│   └── text/                           ← Story scripts & signboard hint text (EN + ZH)
+│
+└── docs/                               ← Per-system technical documentation (Markdown)
+    ├── README.md                       ← Documentation index
+    ├── achievement-system/             ← Achievement system full documentation
+    ├── game-overview/                  ← Chinese-language game mechanics overview
+    ├── keyboard-navigation/            ← Accessibility keyboard-nav integration guide
+    ├── leaderboard-with-account-sys/   ← Leaderboard, account, guest-login & timer docs
+    │   ├── account-账号部分/
+    │   ├── guest-login/
+    │   ├── leaderboard-firebase/       ← Firebase integration (CN + EN docs)
+    │   └── timer-计时部分/
+    ├── level-design/                   ← How to add entities & import levels
+    ├── map-editor-with-sharing-sys/    ← Map editor core, sharing backend & save guide
+    │   ├── map-editor-core/
+    │   ├── player-map-sharing-backend/
+    │   ├── save-feature-how-to-use/
+    │   └── system-overview/
+    ├── phantom-dialogue-system/        ← NPC dialogue system technical doc
+    ├── record-system/                  ← Record / Replay feature description & Demo 2 notes
+    ├── settings-system/                ← Audio, key-binding, pause window & i18n docs
+    │   ├── audio-keybindings/
+    │   ├── i18n-multilingual-implementation-3-parts/
+    │   └── in-game-pause-window/
+    ├── stacking-physics-system/        ← Box stacking & physics documentation
+    ├── tutorial-system/                ← Tutorial FSM implementation & bug fixes
+    ├── ui-visual-design/               ← Rainbow / visual-effect design notes
+    ├── project-planning/               ← Repo structure improvement plan
+    └── archive/                        ← Superseded / legacy documentation
 ```
 
 <div align="center">
@@ -1193,7 +1296,7 @@ After download:
 
 #### **4.5 成就系统**：
 
-Our achievement system provides our player additional game goals and motivation. The game features a range of achievements covering various aspects, such as performing specific actions. Achievement data stored persistently in local server, whenever a player meets the trigger conditions, the system displays a notification and updates the progress. This system is decoupled from the core gameplay module and responds to various in-game actions via event listeners, facilitating the future addition of new achievement types. Our game have 10 achievements in total, and 3 of them has been updated so far. The remaining achievements will be updated step by step. The overview of our achievement system can be seen as follows. 
+Our achievement system provides our player additional game goals and motivation. The game features a range of achievements covering various aspects, such as performing specific actions. Achievement data stored persistently in local server, whenever a player meets the trigger conditions, the system displays a notification and updates the progress. This system is decoupled from the core gameplay module and responds to various in-game actions via event listeners, facilitating the future addition of new achievement types. Our game have 10 achievements in total, and 3 of them has been updated so far. The remaining achievements will be updated step by step. The overview of our achievement system can be seen as follows.
 
 <br>
 <div align="center">
@@ -1204,12 +1307,12 @@ Our achievement system provides our player additional game goals and motivation.
   <br>
 </div>
 
-
 <br>
 
 During gameplay, if players meet the conditions for unlocking an achievement, the in-game display is shown as follows:
 <br>
 <br>
+
 <div align="center">
   <img src="./assets/implementation/achievement/unlock achievement wthin level.png" width="400">
   <br>
@@ -1239,8 +1342,6 @@ Player can also check their achievement overview in achievement gallery. In this
 </table>
 
 <br>
-
-
 
 <br>
 <div align="center">

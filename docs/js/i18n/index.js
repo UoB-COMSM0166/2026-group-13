@@ -1,0 +1,508 @@
+// js/i18n/index.js — Internationalization | 国际化
+// Usage: import { i18n, t } from '../i18n/index.js'; | 用法：import { i18n, t } from '../i18n/index.js';
+//        t('key') get text for current language | t('key') 获取当前语言对应的文字
+
+const _dict = {
+  en: {
+    app_title: "U help U",
+
+    // ── Menu ─────────────────────────────────────────────────────────
+    btn_play: "PLAY",
+    btn_settings: "Settings",
+    btn_achieves: "Achieves",
+    menu_subtitle: "----   you help you   ----",
+    menu_nav_hint:
+      "Navigation: WASD or Arrow Keys to move focus, Space/Enter to confirm, Esc to go back",
+    global_nav_hint:
+      "Navigation: WASD / Arrow Keys · Space/Enter Confirm · Esc Back/Pause · You can also use the mouse. In Settings, you can change in-game action keys only; navigation keys stay fixed.",
+
+    // ── Result ───────────────────────────────────────────────────────
+    btn_back_menu: "Back to Menu",
+    btn_restart: "Restart Level",
+    btn_next_level: "Next Level",
+    result_win: "Level Complete!",
+    result_lose: "Game Over",
+    result_press_r: "Press R to Restart",
+    win_press_space_or_enter:
+      "Press Space or Enter to proceed to the next level",
+
+    // ── Setting Window ───────────────────────────────────────────────
+    win_title: "⚙  Settings",
+    win_sound: "🔊 Sound",
+    win_bgm: "BGM",
+    win_sfx: "SFX",
+    win_language: "🌐 Language",
+    win_keybind: "⌨ Controls",
+    win_credits: "📜 Credits",
+    win_credits_content:
+      "Game Design & Development:\nTeam 13\n\nSpecial Thanks:\nBristol University",
+    pause_title: "⏸  Paused",
+    pause_hint: "Game is paused",
+    pause_resume: "▶  Resume",
+    pause_setting: "⚙  Setting",
+    pause_hint_btn: "💡  Hint",
+    pause_restart: "🔄  Restart Level",
+    pause_back_level_choice: "🗺  Back to Level Choice",
+    pause_back_menu: "⏏  Back to Menu",
+    hint_title: "💡  Hint",
+    keybind_reset_title: "Reset to default",
+    keybind_conflict: "The key {KEY} is already bound to {ACTION}",
+    keybind_jump: "Jump",
+    keybind_moveLeft: "Move Left",
+    keybind_moveRight: "Move Right",
+    keybind_interaction: "Interaction",
+    keybind_record: "Record/Stop",
+    keybind_replay: "Replay",
+    keybind_teleportCheckpoint: "Teleport to Checkpoint",
+
+    // ── Record HUD ───────────────────────────────────────────────────
+    rec_title_standby: "Phantom Recorder Standby",
+    rec_title_recording: "Recording: actions being recorded",
+    rec_title_ready: "Record Complete",
+    rec_title_replaying: "Replaying",
+    rec_sub_max: "Press {KEY} to Start Recording | Max Record Duration",
+    rec_sub_press_e_end: "Press {KEY} to end early",
+    rec_sub_press_replay_end: "Press {KEY} to end replay early",
+    rec_sub_ready_prefix:
+      "Press {REPLAY} to replay | {RECORD} to re-record  Recorded",
+    rec_hud_label: "RECORD HUD",
+    rec_blocked_air: "Land first to record!",
+    click_to_close: "Click anywhere to close",
+
+    // ── Demo2 Record UI ──────────────────────────────────────────────
+    rec_demo2_ready_to_record: "Ready to Record",
+    rec_demo2_recording: "Recording...",
+    rec_demo2_recording_sub: "Your actions are being recorded",
+    rec_demo2_ready_to_replay: "Ready to Replay",
+    rec_demo2_replaying: "Replaying...",
+    rec_demo2_press_record_to_start: "Press {KEY} to start recording",
+    rec_demo2_press_record_to_stop: "Press {KEY} again to stop early",
+    rec_demo2_press_replay_to_start: "Press {KEY} to start",
+    rec_demo2_press_record_to_rerecord: "Press {KEY} to re-record",
+    rec_demo2_press_replay_to_exit: "Press {KEY} again to exit early",
+
+    // ── Achievement ─────────────────────────────────────────────────
+    achievement_unlocked: "New Achievement Unlocked!",
+    achiev_title: "Achievements",
+    achiev_locked: "???",
+    achiev_locked_desc: "Complete the required task to unlock this achievement",
+
+    // ── World Select ─────────────────────────────────────────────────
+    world_1: "Demo 2",
+    world_2: "World 2",
+    world_3: "Demo 1",
+    world_easy: "Easy",
+    world_difficult: "Hard",
+    world_leaderboard_title: "Leaderboard",
+    world_leaderboard_button: "Speed-running Leaderboard",
+    world_memorial_title: "Memorial Versions",
+    world_legacy_title: "Iterative Versions",
+    world_legacy_demo1: "Demo 1 (6 Levels)",
+    world_legacy_demo2: "Demo 2 (4 Levels)",
+    world_memorial_earliest: "Earliest version (very buggy early demo)",
+    world_memorial_discarded:
+      "Discarded version (a totally different game idea)",
+    leaderboard_page_title: "Global Leaderboard",
+    leaderboard_top_ten: "TOP 10",
+    leaderboard_all_records: "All Records",
+    leaderboard_loading: "Loading...",
+    leaderboard_you: "YOU",
+    leaderboard_level_prefix: "Level",
+    leaderboard_level_suffix: "",
+    leaderboard_your_rank_prefix: "Your Rank: #",
+    leaderboard_your_rank_suffix: "",
+
+    // ── Name Input / Rename ──────────────────────────────────────────
+    name_input_title: "Enter Your Name",
+    name_input_placeholder: "Player Name",
+    name_input_empty: "Please enter a name",
+    name_input_too_long: "Max 12 characters",
+    name_check_error: "Error checking name",
+    name_duplicate_title: "Duplicate Name",
+    name_duplicate_message:
+      'There are {COUNT} players named "{NAME}".\nAre you sure you want to use this name?',
+    name_duplicate_confirm_btn: "Use it!",
+    name_duplicate_cancel_btn: "Choose Another",
+    btn_confirm: "Confirm",
+    btn_cancel: "Cancel",
+    btn_back: "Back",
+    rename_input_title: "Enter New Name",
+    rename_prompt: "Enter your new player name",
+    rename_error: "Rename failed, please try again",
+    rename_loading: "Renaming...",
+    player_welcome: "Welcome",
+    player_rename_button: "Rename",
+    // ── Account System ───────────────────────────────────────────────
+    identity_title: "Choose your identity",
+    btn_play_as_guest: "Play as Guest",
+    btn_login: "Log In",
+    btn_register: "Register",
+    auth_login_title: "Log In",
+    auth_register_title: "Create Account",
+    auth_email_placeholder: "Email",
+    auth_password_placeholder: "Password",
+    auth_password_hint: "Password must be at least 6 characters.",
+    auth_password_too_short: "Password must be at least 6 characters.",
+    auth_username_placeholder: "Username (max 12 chars)",
+    auth_login_error: "Login failed. Check your email and password.",
+    auth_register_error: "Registration failed. Please try again.",
+    auth_register_error_email_exists:
+      "Registration failed. This email is already registered.",
+    auth_register_error_invalid_email:
+      "Registration failed. Please enter a valid email address.",
+    auth_register_error_weak_password:
+      "Registration failed. Password must be at least 6 characters.",
+    auth_register_error_operation_not_allowed:
+      "Registration failed. Account registration is currently unavailable.",
+    auth_register_error_too_many_attempts:
+      "Registration failed. Too many attempts. Please try again later.",
+    auth_transfer_guest_prompt:
+      'Guest "{NAME}" detected. Transfer guest scores to your account?',
+    auth_transfer_confirm: "Transfer",
+    auth_transfer_skip: "Skip",
+    player_logout_button: "Log Out",
+    player_change_username: "Change Username",
+
+    // ── NPC Default Dialogue ─────────────────────────────────────────
+    npc_default_line1: "Hi there! Nice to meet you!",
+    npc_default_line2: "Good luck on your adventure!",
+    npc_default_exhausted: "I've already told you everything I know.",
+    npc_continue_hint: "[{KEY}] Continue",
+
+    // ── Network Errors ───────────────────────────────────────────────
+    network_error: "Network connection failed, please try again",
+    no_records_yet: "No records yet",
+
+    // ── Leaderboard Stats ─────────────────────────────────────────────
+    current_score: "Current Score:",
+    current_rank: "Current Rank:",
+    best_score: "Best Score:",
+
+    // ── Shared Language Labels ───────────────────────────────────────
+    lang_option_en: "English",
+    lang_option_zh: "Chinese",
+
+    // ── AI Voice / Phantom Chat ──────────────────────────────────────
+    ai_voice_label: "Phantom",
+    ai_voice_default_line: "...(the phantom fell silent)",
+    ai_voice_default_reply: "...I cannot hear you clearly right now.",
+    ai_voice_pending: "Thinking...",
+    ai_voice_export: "Export",
+    ai_voice_input_placeholder: "Say something...",
+    ai_voice_send: "Send",
+    ai_voice_empty_state: "Click the bubble to start talking with the phantom.",
+    ai_voice_export_role_user: "Player",
+    ai_voice_export_role_assistant: "Phantom",
+    ai_voice_export_filename_prefix: "phantom_chat_log",
+    ai_voice_prompt_intro:
+      "Generate one phantom line based on this recording trace.",
+    ai_voice_prompt_level_context: "Level context",
+    ai_voice_prompt_total_duration: "Total recording duration",
+    ai_voice_prompt_total_keydowns: "Total keydown count",
+    ai_voice_prompt_record_count: "Raw event count",
+    ai_voice_prompt_key_summary: "Per-key keydown count",
+    ai_voice_prompt_history:
+      "Recent 5 lines to avoid repeating in meaning and structure",
+    ai_voice_prompt_none_key_summary: "No valid key presses",
+    ai_voice_prompt_none_history: "None",
+    ai_voice_prompt_none_level_context: "No additional level context",
+    ai_voice_prompt_retry:
+      "The previous candidate overlapped with recent history. Generate a clearly different new line in both meaning and structure.",
+    ai_voice_prompt_initial: "Generate a new phantom line.",
+    ai_voice_prompt_output_instruction: "Speak one sentence in English.",
+
+    // ── Map Editor ────────────────────────────────────────────────
+    editor_export_prompt_level_class_name: "Enter level class name:",
+    editor_export_prompt_level_class_default: "LevelX",
+    editor_export_success_copied: "Level code copied to clipboard",
+    editor_upload_prompt_level_title: "Enter level title",
+    editor_upload_prompt_level_title_default: "My Level",
+    editor_upload_success: "Upload successful!",
+    editor_upload_failed_network: "Upload failed, please check your network",
+  },
+
+  zh: {
+    app_title: "U help U",
+
+    // ── Menu ─────────────────────────────────────────────────────────
+    btn_play: "开始",
+    btn_settings: "设置",
+    btn_achieves: "成就",
+    menu_subtitle: "----   能自渡者，方得天助   ----",
+    menu_nav_hint: "导航: WASD/方向键移动焦点, 空格/Enter 确认, Esc 返回",
+    global_nav_hint:
+      "导航：WASD / 方向键 · Space/Enter 确认 · Esc 返回/暂停 · 也可以直接使用鼠标。你可以在设置中修改游戏内操作按键，但导航按键保持固定。",
+
+    // ── Result ───────────────────────────────────────────────────────
+    btn_back_menu: "返回菜单",
+    btn_restart: "重新开始当前关卡",
+    btn_next_level: "下一关",
+    result_win: "~恭喜通关~",
+    result_lose: "游戏结束",
+    result_press_r: "按 R 键重新开始",
+    win_press_space_or_enter: "按空格或回车进入下一关",
+
+    // ── Setting Window ───────────────────────────────────────────────
+    win_title: "⚙  设置",
+    win_sound: "🔊 音效设置",
+    win_bgm: "背景音乐",
+    win_sfx: "音效",
+    win_language: "🌐 语言",
+    win_keybind: "⌨ 按键设置",
+    win_credits: "📜 制作人员",
+    win_credits_content:
+      "游戏设计与开发：\nTeam 13\n\n特别鸣谢：\n布里斯托尔大学",
+    pause_title: "⏸  已暂停",
+    pause_hint: "游戏已暂停",
+    pause_resume: "▶  继续游戏",
+    pause_setting: "⚙  设置",
+    pause_hint_btn: "💡  提示",
+    pause_restart: "🔄  重开当前关卡",
+    pause_back_level_choice: "🗺  返回关卡选择",
+    pause_back_menu: "⏏  返回菜单",
+    hint_title: "💡  提示",
+    keybind_reset_title: "重置为默认",
+    keybind_conflict: "按键 {KEY} 已绑定到 {ACTION}",
+    keybind_jump: "跳跃",
+    keybind_moveLeft: "向左移动",
+    keybind_moveRight: "向右移动",
+    keybind_interaction: "交互",
+    keybind_record: "录制/停止",
+    keybind_replay: "回放",
+    keybind_teleportCheckpoint: "回到存档点",
+
+    // ── Record HUD ───────────────────────────────────────────────────
+    rec_title_standby: "幻影录制器待命",
+    rec_title_recording: "录制中:现在你的动作正在被记录",
+    rec_title_ready: "录制完成",
+    rec_title_replaying: "回放中",
+    rec_sub_max: "按 {KEY} 开始录制 | 最大录制时长",
+    rec_sub_press_e_end: "按 {KEY} 可提前结束录制",
+    rec_sub_press_replay_end: "按 {KEY} 可提前结束回放",
+    rec_sub_ready_prefix: "按 {REPLAY} 回放，按 {RECORD} 重新录制  已录制",
+    rec_hud_label: "录制面板",
+    rec_blocked_air: "落地后才能录制！",
+    click_to_close: "点击任意处关闭",
+
+    // ── Demo2 录制 UI ──────────────────────────────────────────────
+    rec_demo2_ready_to_record: "准备录制",
+    rec_demo2_recording: "录制中...",
+    rec_demo2_recording_sub: "现在你的操作正在被记录",
+    rec_demo2_ready_to_replay: "准备回放",
+    rec_demo2_replaying: "回放中...",
+    rec_demo2_press_record_to_start: "按 {KEY} 开始录制",
+    rec_demo2_press_record_to_stop: "按 {KEY} 提前结束录制",
+    rec_demo2_press_replay_to_start: "按 {KEY} 开始回放",
+    rec_demo2_press_record_to_rerecord: "按 {KEY} 重新录制",
+    rec_demo2_press_replay_to_exit: "按 {KEY} 提前结束回放",
+
+    // ── 成就 ──────────────────────────────────────────────────────────
+    achievement_unlocked: "新的成就已解锁！",
+    achiev_title: "成就",
+    achiev_locked: "???",
+    achiev_locked_desc: "完成指定任务以解锁此成就",
+
+    // ── World Select ─────────────────────────────────────────────────
+    world_1: "Demo 2",
+    world_2: "世界 2",
+    world_3: "初代 Demo",
+    world_easy: "简单",
+    world_difficult: "困难",
+    world_leaderboard_title: "排行榜",
+    world_leaderboard_button: "竞速排行榜",
+    world_memorial_title: "纪念版本",
+    world_legacy_title: "迭代版本",
+    world_legacy_demo1: "演示一（共六关）",
+    world_legacy_demo2: "演示二（共四关）",
+    world_memorial_earliest: "最初代版本（早期演示，漏洞很多）",
+    world_memorial_discarded: "废弃版本（完全不同的游戏创意）",
+    leaderboard_page_title: "全局排行榜",
+    leaderboard_top_ten: "前十名",
+    leaderboard_all_records: "全部记录",
+    leaderboard_loading: "加载中...",
+    leaderboard_you: "你",
+    leaderboard_level_prefix: "第",
+    leaderboard_level_suffix: "关",
+    leaderboard_your_rank_prefix: "你的排名：第",
+    leaderboard_your_rank_suffix: "名",
+
+    // ── 名字输入 / 改名 ──────────────────────────────────────────────
+    name_input_title: "输入你的昵称",
+    name_input_placeholder: "玩家名字",
+    name_input_empty: "请输入名字",
+    name_input_too_long: "名字最多12个字符",
+    name_check_error: "检查名字时发生错误",
+    name_duplicate_title: "名字重复",
+    name_duplicate_message:
+      '前方已有 {COUNT} 个"{NAME}"。\n你确定还要用这个名字吗？',
+    name_duplicate_confirm_btn: "就要用！",
+    name_duplicate_cancel_btn: "换一个",
+    btn_confirm: "确认",
+    btn_cancel: "取消",
+    btn_back: "返回",
+    rename_input_title: "输入新的昵称",
+    rename_prompt: "输入你的新玩家名字",
+    rename_error: "改名失败，请重试",
+    rename_loading: "改名中...",
+    player_welcome: "欢迎",
+    player_rename_button: "改名",
+    // ── 账号系统 ──────────────────────────────────────────────────────
+    identity_title: "选择你的身份",
+    btn_play_as_guest: "以游客身份游玩",
+    btn_login: "登录账号",
+    btn_register: "注册账号",
+    auth_login_title: "登录账号",
+    auth_register_title: "注册账号",
+    auth_email_placeholder: "邮箱",
+    auth_password_placeholder: "密码",
+    auth_password_hint: "密码至少需要 6 位。",
+    auth_password_too_short: "密码至少需要 6 位。",
+    auth_username_placeholder: "用户名（最多12字）",
+    auth_login_error: "登录失败，请检查邮箱和密码。",
+    auth_register_error: "注册失败，请重试。",
+    auth_register_error_email_exists: "注册失败，该邮箱已被注册。",
+    auth_register_error_invalid_email: "注册失败，请输入有效的邮箱地址。",
+    auth_register_error_weak_password: "注册失败，密码至少需要 6 位。",
+    auth_register_error_operation_not_allowed:
+      "注册失败，当前暂时无法注册账号。",
+    auth_register_error_too_many_attempts:
+      "注册失败，尝试次数过多，请稍后再试。",
+    auth_transfer_guest_prompt:
+      '检测到你有游客身份"{NAME}"，是否将游客成绩转移到账号？',
+    auth_transfer_confirm: "转移",
+    auth_transfer_skip: "跳过",
+    player_logout_button: "登出",
+    player_change_username: "改用户名",
+
+    // ── NPC 默认对话 ─────────────────────────────────────────────────
+    npc_default_line1: "你好呀！很高兴认识你！",
+    npc_default_line2: "祝你冒险顺利！",
+    npc_default_exhausted: "我已经把知道的都告诉你了。",
+    npc_continue_hint: "[{KEY}] 继续",
+
+    // ── 网络错误 ─────────────────────────────────────────────────────
+    network_error: "网络连接失败，请重试",
+    no_records_yet: "暂无记录",
+
+    // ── 排行榜统计 ───────────────────────────────────────────────────
+    current_score: "本次成绩：",
+    current_rank: "本次排名：",
+    best_score: "历史最佳：",
+
+    // ── 通用语言标签 ────────────────────────────────────────────────
+    lang_option_en: "英文",
+    lang_option_zh: "中文",
+
+    // ── AI Voice / 幻影对话 ─────────────────────────────────────────
+    ai_voice_label: "幻影",
+    ai_voice_default_line: "……（幻影沉默了）",
+    ai_voice_default_reply: "……我暂时听不清你的声音。",
+    ai_voice_pending: "思考中...",
+    ai_voice_export: "导出",
+    ai_voice_input_placeholder: "输入你想说的话...",
+    ai_voice_send: "发送",
+    ai_voice_empty_state: "点击气泡后，你就能和幻影开始对话。",
+    ai_voice_export_role_user: "玩家",
+    ai_voice_export_role_assistant: "幻影",
+    ai_voice_export_filename_prefix: "幻影对话记录",
+    ai_voice_prompt_intro: "请根据本次录制痕迹生成一句幻影台词。",
+    ai_voice_prompt_level_context: "关卡上下文",
+    ai_voice_prompt_total_duration: "录制总时长",
+    ai_voice_prompt_total_keydowns: "keydown 总次数",
+    ai_voice_prompt_record_count: "原始事件数",
+    ai_voice_prompt_key_summary: "各键按下次数",
+    ai_voice_prompt_history: "最近 5 条台词（避免重复其意义和结构）",
+    ai_voice_prompt_none_key_summary: "无有效按键",
+    ai_voice_prompt_none_history: "无",
+    ai_voice_prompt_none_level_context: "无额外关卡上下文",
+    ai_voice_prompt_retry:
+      "上一条候选与历史重复，请生成一句在意义和结构上都明显不同的新台词。",
+    ai_voice_prompt_initial: "请生成一句新的幻影台词。",
+    ai_voice_prompt_output_instruction: "请只用中文说一句话。",
+
+    // ── 地图编辑器 ────────────────────────────────────────────────
+    editor_export_prompt_level_class_name: "请输入关卡类名：",
+    editor_export_prompt_level_class_default: "LevelX",
+    editor_export_success_copied: "关卡代码已复制到剪贴板",
+    editor_upload_prompt_level_title: "请输入关卡标题",
+    editor_upload_prompt_level_title_default: "我的关卡",
+    editor_upload_success: "上传成功！",
+    editor_upload_failed_network: "上传失败，请检查网络",
+  },
+};
+
+const LANG_STORAGE_KEY = "kinoko_lang";
+
+function _syncDocumentLanguage() {
+  if (typeof document === "undefined") {
+    return;
+  }
+
+  if (document.documentElement) {
+    document.documentElement.lang = _lang === "zh" ? "zh-CN" : "en";
+  }
+
+  document.title = _dict[_lang]?.app_title ?? "U help U";
+
+  const navHint = document.getElementById("global-nav-hint");
+  if (navHint) {
+    navHint.textContent = _dict[_lang]?.global_nav_hint ?? "";
+  }
+}
+
+// 从 localStorage 中恢复语言设置，如果没有则默认使用英文
+function _loadLanguageFromStorage() {
+  const saved = localStorage.getItem(LANG_STORAGE_KEY);
+  return saved && _dict[saved] ? saved : "en";
+}
+
+let _lang = _loadLanguageFromStorage();
+const _listeners = [];
+
+_syncDocumentLanguage();
+
+export const i18n = {
+  /** 切换语言，触发所有已注册的监听器 */
+  setLang(lang) {
+    if (!_dict[lang] || _lang === lang) return;
+    _lang = lang;
+    // 保存到 localStorage
+    localStorage.setItem(LANG_STORAGE_KEY, lang);
+    _syncDocumentLanguage();
+    _listeners.forEach((fn) => fn(lang));
+  },
+
+  getLang() {
+    return _lang;
+  },
+
+  /** 注册语言变化监听器 */
+  onChange(fn) {
+    _listeners.push(fn);
+  },
+
+  /** 注销监听器 */
+  offChange(fn) {
+    const idx = _listeners.indexOf(fn);
+    if (idx !== -1) _listeners.splice(idx, 1);
+  },
+};
+
+/**
+ * 快捷取文字函数：用当前语言取 _dict[lang][key]，
+ * 找不到时回退到英文，再找不到返回 key 本身。
+ */
+export function t(key) {
+  return _dict[_lang]?.[key] ?? _dict["en"]?.[key] ?? key;
+}
+
+/**
+ * 注册额外的翻译条目（供各 demo 模块调用）。
+ * @param {{ [lang: string]: Record<string, string> }} langEntries
+ */
+export function registerTranslations(langEntries) {
+  for (const [lang, entries] of Object.entries(langEntries)) {
+    if (!_dict[lang]) _dict[lang] = {};
+    Object.assign(_dict[lang], entries);
+  }
+}
