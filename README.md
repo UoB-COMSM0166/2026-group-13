@@ -918,16 +918,16 @@ The mechanism system manages reusable level mechanisms, including circuit based 
 - [3 Technical Challenge 2 — Level Editor & Sharing System](#3-technical-challenge-2--level-editor--sharing-system)
   - [3.1 Early Attempts and Problems](#31-early-attempts-and-problems)
   - [3.2 Final Solution](#32-final-solution)
-- [4 其他功能](#4-其他功能)
-  - [4.1 教程系统](#41-教程系统)
-  - [4.2 难度曲线设置](#42-难度曲线设置)
-  - [4.3 幻影对话系统](#43-幻影对话系统)
-  - [4.4 设置系统](#44-设置系统)
-    - [4.4.1 音量和按键设置](#441-音量和按键设置)
-    - [4.4.2 游戏内暂停窗口](#442-游戏内暂停窗口)
-    - [4.4.3 多语言国际化实现](#443-多语言国际化实现)
-  - [4.5 成就系统](#45-成就系统)
-  - [4.6 键盘导航](#46-键盘导航)
+- [4 Other Functions](#4-other-functions)
+  - [4.1 Tutorial System](#41-tutorial-system)
+  - [4.2 Difficulty Curve Setup](#42-difficulty-curve-setup)
+  - [4.3 Phantom Dialogue System](#43-phantom-dialogue-system)
+  - [4.4 Settings System](#44-settings-system)
+    - [4.4.1 Volume and Keybindings](#441-volume-and-keybindings)
+    - [4.4.2 In-game Pause Window](#442-in-game-pause-window)
+    - [4.4.3 Multi-language Internationalization](#443-multi-language-internationalization)
+  - [4.5 Achievement System](#45-achievement-system)
+  - [4.6 Keyboard Navigation](#46-keyboard-navigation)
 
 ### **1 Overall Implementation Approach**：
 
@@ -993,7 +993,7 @@ We implemented a **dual‑layer data architecture**:
 <div align="center">
   <img src="./assets/implementation/leaderboard/leaderboard1.png" width="800">
   <br>
-  <b>Leaderboard system and brief introduction</b>
+  <b>Figure 1: Our leaderboard system and brieft introduction</b>
   <br>
   <br>
 </div>
@@ -1040,18 +1040,18 @@ After download:
 - download and play instantly
 - versioning support (v1, v2, v3…)
 
-### **4 其他功能**：
+### **4 Other Functions**：
 
-#### **4.1 教程系统**：
+#### **4.1 Tutorial System**：
 
-该教程系统基于有限状态机划分多阶段引导流程，分七个教学环节循序渐进带领玩家掌握录制与回放核心玩法。
+This tutorial system is based on a Finite State Machine (FSM) to partition the multi-stage guidance process. It leads players through seven progressive teaching segments to master the core recording and playback mechanics.
 
-- 临时接管全局录制系统，精准管控游戏运行与暂停流程
-- 拦截并独占键盘输入，约束玩家操作行为，按流程分步完成教学指引
-- 实现带镂空高亮的全局遮罩提示界面，同时全程适配多语言 i18n
-- 支持玩家随时按下 ESC 一键跳过教程，兼容流程中断逻辑
-- 处理多阶段切换的状态同步、界面资源自动清理等边界情况
-- 在完整实现新手引导流程的同时，严格保证不破坏游戏原有业务逻辑与各系统模块独立性
+- Temporary Global Recording Control: Takes over the global recording system to precisely manage game execution and pause sequences.
+- Input Interception & Locking: Intercepts and gains exclusive control over keyboard input to constrain player behavior, ensuring instructional guidance is completed step-by-step.
+- Dynamic UI Masking & i18n: Implements a global mask interface with "hollowed-out" highlighting for visual focus, while providing full support for multi-language localization (i18n).
+- Tutorial Skipping: Supports a one-key skip via the ESC key at any time, with full compatibility for process interruption logic.
+- State & Resource Management: Handles state synchronization during multi-stage transitions and ensures the automatic cleanup of UI resources and other boundary conditions.
+- System Decoupling: While fully implementing the onboarding flow, the system strictly ensures that the original business logic and the independence of various modules remain intact.
 
 <table width="100%">
 <tbody>
@@ -1060,9 +1060,9 @@ After download:
 <img src="./assets/implementation/tutorial/start button.png" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-Toturial%20System-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>阶段说明：</b>在Easy Level 1中可以点击nocite board来查看教程。<br>
-• <b>触发逻辑：</b>点击Start Tutorial按钮来开始教程，教程过程中也可以随时按Ecs退出教程<br>
-• <b>目的：</b>让玩家有选择性参与教程，而不是强制性教程<br>
+• <b>Stage Description:</b> In Easy Level 1, players can click the notice board to view the tutorial.<br>
+• <b>Trigger Logic:</b> Click the "Start Tutorial" button to begin; players can press "Esc" at any time to exit the tutorial.<br>
+• <b>Objective:</b> To allow players to participate in the tutorial selectively rather than forcing it upon them.<br>
 </p>
 </td>
 </tr>
@@ -1071,9 +1071,9 @@ After download:
 <img src="./assets/implementation/tutorial/step1.png" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-Step%201-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>阶段说明：</b>教程系统高亮按键录制UI的按键控制部分，并提示玩家按下录制键来捕捉操作<br>
-• <b>触发逻辑：</b>玩家必须要按下录制键才能进行下一步，否则不响应。<br>
-• <b>目的：</b>让玩家学会如何使用录制键。
+• <b>Stage Description:</b> The tutorial highlights the input control section of the recording UI and prompts the player to press the record key to capture operations.<br>
+• <b>Trigger Logic:</b> The player must press the record key to proceed; otherwise, the system will not respond.<br>
+• <b>Objective:</b> To teach the player how to use the record key.
 </p>
 </td>
 </tr>
@@ -1082,9 +1082,9 @@ After download:
 <img src="./assets/implementation/tutorial/step2.png" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-Step%202-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>阶段说明：</b>高亮出按键录制UI的整个部分，并且提示录制时间最多有5秒钟。<br>
-• <b>触发逻辑：</b>在这里玩家只有移动角色才能够进入下一步<br>
-• <b>目的：</b>给予玩家理解时间，强制玩家移动角色，因为如果不移动角色玩家可能无法理解录制指的是录制操作而不是录制屏幕或者位置之类的东西。
+• <b>Stage Description:</b> Highlights the entire recording UI and indicates that the maximum recording time is 5 seconds.<br>
+• <b>Trigger Logic:</b> Players must move their character to enter the next step.<br>
+• <b>Objective:</b> To give players time to process the information and force character movement, ensuring they understand that "recording" refers to input operations rather than just screen recording or position tracking.
 </p>
 </td>
 </tr>
@@ -1093,9 +1093,9 @@ After download:
 <img src="./assets/implementation/tutorial/step3.png" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-Step%203-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>阶段说明：</b>录制进行中的提示，并且告知玩家再次按下捕捉键C可以随时提前终止录制。<br>
-• <b>触发逻辑：</b>玩家只需专心操作，5秒的时间结束后会自动进入下一步。<br>
-• <b>目的：</b>配合进度条中玩家自己按下的左右移动和跳跃按键的标志的实时显示，来帮助玩家理解录制的核心要义。
+• <b>Stage Description:</b> Displays a "recording in progress" prompt and informs the player that pressing the capture key 'C' again can terminate the recording early.<br>
+• <b>Trigger Logic:</b> Players only need to focus on their operations; the system automatically proceeds after the 5-second duration ends.<br>
+• <b>Objective:</b> To help players understand the core essence of recording by displaying real-time movement and jump input icons on the progress bar.
 </p>
 </td>
 </tr>
@@ -1104,9 +1104,9 @@ After download:
 <img src="./assets/implementation/tutorial/step4.png" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-Step%204-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>阶段说明：</b>录制结束后，高亮幻影的出生点区域和录制UI的按键控制区域。<br>
-• <b>触发逻辑：</b>按下回放键才能进入下一步<br>
-• <b>目的：</b>让玩家学会怎么回放自己刚刚录制的幻影操作。
+• <b>Stage Description:</b> After recording, the system highlights the phantom's spawn area and the control section of the recording UI.<br>
+• <b>Trigger Logic:</b> Press the replay key to enter the next step.<br>
+• <b>Objective:</b> To teach players how to replay the phantom actions they just recorded.
 </p>
 </td>
 </tr>
@@ -1115,9 +1115,9 @@ After download:
 <img src="./assets/implementation/tutorial/step5.png" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-Step%205-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>阶段说明：</b>回放中提示玩家幻影可以按照刚刚录制的动作回放一遍。<br>
-• <b>触发逻辑：</b>玩家可以等待回放结束，也可以再次按下回放键来提前终止回放。<br>
-• <b>目的：</b>让玩家自己看见幻影就像过去的自己重现了一样，更好地理解录制系统。
+• <b>Stage Description:</b> During replay, the system informs the player that the phantom will repeat the exact movements just recorded.<br>
+• <b>Trigger Logic:</b> Players can wait for the replay to finish or press the replay key again to terminate it early.<br>
+• <b>Objective:</b> To let players see the phantom as a manifestation of their "past self," fostering a better understanding of the recording system.
 </p>
 </td>
 </tr>
@@ -1126,51 +1126,50 @@ After download:
 <img src="./assets/implementation/tutorial/step6.png" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-Step%206-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>阶段说明：</b>整个教程结束，弹出恭喜字样<br>
-• <b>触发逻辑：</b>提示框显示几秒之后自动消失<br>
-• <b>目的：</b>提示玩家这个录制玩法是我们游戏的核心机制，没有理解它就无法过关。
+• <b>Stage Description:</b> The tutorial concludes with a "Congratulations" message.<br>
+• <b>Trigger Logic:</b> The prompt box disappears automatically after a few seconds.<br>
+• <b>Objective:</b> To emphasize that this recording mechanic is the core gameplay of our game, and understanding it is essential for clearing levels.
 </p>
 </td>
 </tr>
 </tbody>
 </table>
 
-#### **4.2 难度曲线设置**：
+#### **4.2 Difficulty Curve Setup**:
 
-游戏提供了 Easy 和 Hard 两套难度体系，分别包含独立设计的关卡序列。Easy 难度下的关卡着重引导玩家理解录制与回放机制的基本用法；Hard 难度则在此基础上引入更复杂的时序配合与空间利用要求。关卡的难度曲线经过多轮用户测试与数据分析后反复调整，以确保玩家在学习曲线上获得平滑而有层次感的成长体验。
+The game offers two difficulty systems, Easy and Hard, each containing independently designed level sequences. Levels in Easy difficulty focus on guiding players to understand the basics of the recording and replay mechanics. Hard difficulty introduces more complex temporal coordination and spatial utilization requirements. The difficulty curve has been repeatedly adjusted based on multiple rounds of user testing and data analysis to ensure players enjoy a smooth and layered growth experience on the learning curve.
 
-#### **4.3 幻影对话系统**：
+#### **4.3 Phantom Dialogue System**:
 
-幻影对话系统是游戏叙事层面的重要组成部分。NPC 在特定触发条件下会展开对话序列，通过逐行推进的对话气泡呈现内容，并配合动画效果增强沉浸感。系统通过事件总线与游戏主逻辑解耦，支持多段对话的顺序触发与状态管理，在不干扰核心玩法流程的前提下丰富了游戏的叙事体验。
+The Phantom Dialogue System is a vital component of the game's narrative. NPCs initiate dialogue sequences under specific trigger conditions, presenting content through line-by-line dialogue bubbles accompanied by animations to enhance immersion. The system is decoupled from the main game logic via an event bus, supporting sequential triggering and state management of multi-part dialogues, enriching the narrative experience without interrupting core gameplay.
 
-#### **4.4 设置系统**：
+#### **4.4 Settings System**:
 
-设置系统为玩家提供了一套集中管理游戏偏好的入口，涵盖音效配置、按键绑定、界面语言等多个维度，各子系统通过统一的配置接口与渲染逻辑解耦，确保变更即时生效并持久化保存。
+The Settings System provides players with a centralized entry point to manage game preferences, covering audio configuration, keybindings, interface language, and more. Each subsystem is decoupled from rendering logic through a unified configuration interface, ensuring changes take effect immediately and are saved persistently.
 
-##### **4.4.1 音量和按键设置**：
+##### **4.4.1 Volume and Keybindings**:
 
-玩家可在设置页面内独立调节背景音乐与音效的音量，也可对游戏的核心操作按键进行自定义绑定。按键配置支持冲突检测，当新绑定与已有按键重复时会给出提示，防止操作冲突。所有配置项均通过本地存储持久化，重新进入游戏后自动恢复上次的设置状态。
+Players can independently adjust the volume of background music and sound effects on the settings page, as well as customize keybindings for core game operations. The key configuration supports conflict detection, providing prompts when a new binding overlaps with an existing one to prevent operational conflicts. All configurations are persisted via local storage and automatically restored when the game is restarted.
 
-##### **4.4.2 游戏内暂停窗口**：
+##### **4.4.2 In-game Pause Window**:
 
-游戏提供了可在关卡进行中随时呼出的暂停菜单，支持继续游戏、重新开始、返回关卡选择等操作。暂停时游戏逻辑与物理更新完全冻结，所有系统状态保持不变，恢复后可无缝继续。暂停菜单同样支持键盘导航，与全局键盘导航系统统一管理。
+The game provides a pause menu that can be called up at any time during a level, supporting actions such as "Resume," "Restart," and "Back to Level Selection." When paused, game logic and physics updates are completely frozen, maintaining all system states to allow for a seamless continuation upon recovery. The pause menu also supports keyboard navigation, integrated with the global keyboard navigation system.
 
-##### **4.4.3 多语言国际化实现**：
+##### **4.4.3 Multi-language Internationalization**:
 
-游戏实现了中英双语支持，玩家可在设置中自由切换界面语言。国际化系统采用集中式语言包管理方案，所有界面文本、提示信息与对话内容均通过语言键值映射进行统一维护，与渲染逻辑完全解耦。切换语言时，所有 UI 组件将即时刷新为对应语言的文本内容，无需重载页面或关卡，从而为不同语言背景的玩家提供无缝的本地化体验。
+The game implements dual-language support for Chinese and English, allowing players to switch interface languages freely in the settings. The internationalization system utilizes a centralized language pack management solution; all UI text, prompts, and dialogue content are maintained via language key-value mapping, completely decoupled from rendering logic. Upon switching languages, all UI components refresh instantly with the corresponding text without requiring a page or level reload, providing a seamless localization experience for players from different linguistic backgrounds.
 
-#### **4.5 成就系统**：
-Our achievement system provides our player additional game goals and motivation. The game features a range of achievements covering various aspects, such as performing specific actions. Achievement data stored persistently in local server, whenever a player meets the trigger conditions, the system displays a notification and updates the progress. This system is decoupled from the core gameplay module and responds to various in-game actions via event listeners, facilitating the future addition of new achievement types. Our game have 10 achievements in total, and 3 of them has been updated so far. The remaining achievements will be updated step by step. The overview of our achievement system can be seen as follows. 
+#### **4.5 Achievement System**:
+Our achievement system provides our players additional game goals and motivation. The game features a range of achievements covering various aspects, such as performing specific actions. Achievement data is stored persistently in a local server; whenever a player meets the trigger conditions, the system displays a notification and updates the progress. This system is decoupled from the core gameplay module and responds to various in-game actions via event listeners, facilitating the future addition of new achievement types. Our game has 10 achievements in total, and 3 of them have been updated so far. The remaining achievements will be updated step by step. The overview of our achievement system can be seen in Figure 2. 
 
 <br>
 <div align="center">
-  <img src="./assets/implementation/achievement/achievement1.png" width="800">
+  <img src="./assets/implementation/achievement/achievement.png" width="800">
   <br>
-  <b>Achievements Overview</b>
+  <b>Figure 2: Achievements Overview</b>
   <br>
   <br>
 </div>
-
 
 <br>
 
@@ -1178,16 +1177,15 @@ During gameplay, if players meet the conditions for unlocking an achievement, th
 <br>
 <br>
 <div align="center">
-  <img src="./assets/implementation/achievement/unlock achievement wthin level.png" width="400">
+  <img src="./assets/implementation/achievement/unlock achievement wthin level.png" width="800">
   <br>
-  <b>Unlock achievement as you play</b>
+  <b>Figure 4: Unlock achievement as you play</b>
   <br>
   <br>
 </div>
 <br>
 
-Player can also check their achievement overview in achievement gallery. In this page player can see all the achievements. Locked and unlocked achievementa are displayed in different ways. Asuming achievement description and condtions for achieve unlocked achievements can also be viewed here.
-
+Players can also check their achievement overview in the achievement gallery. In this page, players can see all the achievements. Locked and unlocked achievements are displayed in different ways. Achievement descriptions and conditions for unlocked achievements can also be viewed here.
 <br>
 
 <table>
@@ -1195,37 +1193,35 @@ Player can also check their achievement overview in achievement gallery. In this
     <td align="center" width="50%">
       <img src="./assets/implementation/achievement/locked achievement.png" width="360">
       <br>
-      <b>locked Achievement</b>
+      <b>Figure 3a: Locked Achievement</b>
     </td>
     <td align="center" width="50%">
       <img src="./assets/implementation/achievement/unlocked achievement.png" width="360">
       <br>
-      <b>Unlocked Achievement</b>
+      <b>Figure 3b: Unlocked Achievement</b>
     </td>
   </tr>
 </table>
 
 <br>
 
-
-
 <br>
 <div align="center">
   <img src="./assets/implementation/achievement/achievements gallery.png" width="800">
   <br>
-  <b>Achievements Gallery</b>
+  <b>Figure 4: Achievements Gallery</b>
   <br>
   <br>
 </div>
 
 
-#### **4.6 Keyboard Navigation**：
+#### **4.6 Keyboard Navigation**:
 
-我们实现了完整的键盘导航功能，游戏内主菜单、关卡选择页面和暂停菜单交互界面同时兼容鼠标与键盘两种操控方式，以适配不同玩家的操作习惯。
+We have implemented comprehensive keyboard navigation functionality. The in-game main menu, level selection page, and pause menu interface are compatible with both mouse and keyboard controls to accommodate different player habits.
 
-- 支持方向键与 WASD 按键进行按钮焦点切换；
-- 界面默认不显示按钮选中白框，仅使用键盘导航时才出现高亮提示，切换为鼠标操作时白框会立即消失；
-- 按下空格或回车键可确认选中选项，按下 ESC 键能够退出当前菜单并返回上一级界面。
+- Supports arrow keys and WASD for button focus switching;
+- By default, the interface does not show a white selection box; the highlight prompt only appears during keyboard navigation and disappears immediately when switching to mouse operation;
+- Press "Space" or "Enter" to confirm the selected option, and press "ESC" to exit the current menu and return to the previous interface.
 
 <table width="100%">
 <tbody>
@@ -1286,7 +1282,6 @@ Player can also check their achievement overview in achievement gallery. In this
   - [1.1 Contextual Onboarding & Bilingual Support](#11-contextual-onboarding--bilingual-support)
   - [1.2 Learning Curve & Scaffolding (Level 0)](#12-learning-curve--scaffolding-level-0)
 - [2 Quantitative](#2-quantitative)
-  - [2.1 Evaluation Findings](#21-evaluation-findings)
 - [3 Description of how code was tested](#3-description-of-how-code-was-tested)
   - [3.1 Manual Testing and Console Logging During Development](#31-manual-testing-and-console-logging-during-development)
   - [3.2 Black-Box Testing Based on Test Checklists](#32-black-box-testing-based-on-test-checklists)
@@ -1301,7 +1296,7 @@ Action Plan: Implement bilingual (English and Chinese) proximity-based tooltips.
 
 This aligns with Nielsen's "Recognition rather than recall". By providing contextual instructions exactly when and where they are needed, we significantly reduce the players' cognitive memory load.
 
-#### **1.2 Learning Curve & Scaffolding (Level 0)**:
+#### **1.2 Learning Curve & Scaffolding**:
 
 Issue: Transitioning directly into Level 1 introduces too many mechanics at once, causing a steep learning curve for new players.
 
@@ -1309,10 +1304,21 @@ Action Plan: Design and insert a simple "Tutorial Level" prior to the first offi
 
 This addresses "Error prevention" and enhances "User control and freedom", ensuring players are comfortable with the physics and controls before facing actual challenges.
 
+Below is a gameplay demonstration of the initial tutorial:
+
+<div align="center">
+  <br>
+  <img src="./assets/evaluation/initial-tutorial.png" width="800">
+  <br>
+  <b>Figure1: Initial turorial demonstration</b>
+  <br>
+  <br>
+</div>
+
+The latest version of the game's tutorial can be found in the [**4.1 Tutorial System**](#41-tutorial-system) section.
+
 
 ### **2 Quantitative**:
-
-#### **2.1 Evaluation Findings**:
 
 We conducted a quantitative user evaluation with 27 participants, using a within-subjects design to compare the user experience between Level 1 and Level 2. Participants completed the NASA Task Load Index (TLX) and System Usability Scale (SUS) after playing each level. We then ran a Wilcoxon Signed-Rank Test (with an alpha level of 0.05) to determine if there were significant differences in perceived workload and usability.
 
@@ -1320,6 +1326,16 @@ We conducted a quantitative user evaluation with 27 participants, using a within
 
 - **NASA Task Load Index (TLX):** The test yielded **W = 43.5** and **p < 0.001**. Since p < 0.05, there is **a significant difference** in perceived workload between the two levels. The absolute mean score increased from 39.71 (Level 1) to 50.20 (Level 2). This significant increase confirms that the difficulty progression was effectively perceived by the participants, successfully raising the cognitive and mental demands of the game as intended for the second level.
 
+Below is a photo of players engaging with our game:
+
+<div align="center">
+  <br>
+  <img src="./assets/evaluation/Others-playing-ourgame.png" width="800">
+  <br>
+  <b>Figure1: Initial turorial demonstration</b>
+  <br>
+  <br>
+</div>
 
 ### **3 Description of how code was tested**:
 
