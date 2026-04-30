@@ -1143,11 +1143,8 @@ After download:
 - upload to server
 - browse community maps
 - download and play instantly
-- versioning support (v1, v2, v3…)
 
 ### **3.3 Level Editing Function Demonstration**
-
-The following pictures show some operations of the editing system, <br>including key operation guide, platform zoom, moving map camera, <br>and the placement and movement of component elements.
 
 <br>
 <div align="center">
@@ -1178,6 +1175,38 @@ The following pictures show some operations of the editing system, <br>including
   <img src="./assets/implementation/level-editor/moving and placing component elementsr.gif" width="500">
   <br>
   <b>Moving and placing component elements in the level editor</b>
+  <br>
+</div>
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/upload part.png" width="500">
+  <br>
+  <b>You can upload your own level to the map plaza by the 'upload' button</b>
+  <br>
+</div>
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/save part.png" width="500">
+  <br>
+  <b>By 'save' button, relevent code will be automatically copied, you can paste it directly</b>
+  <br>
+</div>
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/use room button to transition.png" width="500">
+  <br>
+  <b>Adjust the total number of rooms (game screens) using the Room +/- buttons <br>The camera transitions to the next room automatically as the player moves</b>
+  <br>
+</div>
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/change the protagonist's initial position.png" width="500">
+  <br>
+  <b>The system allows for the dynamic adjustment of the protagonist's initial position at any time</b>
   <br>
 </div>
 
