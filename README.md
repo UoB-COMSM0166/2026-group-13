@@ -222,17 +222,17 @@
     </tr>
     <tr>
       <td align="center"><b>Week 03</b><br><b><a href="./week-log/Week03/ReadMe.md">README</a></b></td>
-      <td align="center">—</td>
-      <td>Paper prototypes of two games and the final game idea.</td>
+      <td align="center"><img src="./week-log/Week03/img/main.jpg" width="260"></td>
+      <td><a href="README.md">Paper prototypes</a> of two games and the final game idea.</td>
     </tr>
     <tr>
       <td align="center"><b>Week 04</b><br><b><a href="./week-log/Week04/README.md">README</a></b></td>
-      <td align="center">—</td>
+      <td align="center"><img src="./week-log/Week04/Img/Stakeholders.png"</td>
       <td>Defined user stories and functional/non-functional requirements.</td>
     </tr>
     <tr>
       <td align="center"><b>Week 05</b><br><b><a href="./week-log/Week05/ReadMe.md">README</a></b></td>
-      <td align="center">—</td>
+      <td align="center"><img src="./week-log/Week05/img/game-entity.png"></td>
       <td>Designed architecture diagrams and implemented core systems.</td>
     </tr>
     <tr>
