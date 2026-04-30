@@ -1149,6 +1149,42 @@ After download:
 - download and play instantly
 - versioning support (v1, v2, v3…)
 
+### **3.3 Level Editing Function Demonstration**
+
+The following pictures show some operations of the editing system, <br>including key operation guide, platform zoom, moving map camera, <br>and the placement and movement of component elements.
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/editor control.png" width="300">
+  <br>
+  <b>Level editing system operation guide</b>
+  <br>
+</div>
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/change platform.gif" width="500">
+  <br>
+  <b>Change and zoom in/out platform</b>
+  <br>
+</div>
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/map view camera.gif" width="500">
+  <br>
+  <b>Movement of the map view camera</b>
+  <br>
+</div>
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/moving and placing component elementsr.gif" width="500">
+  <br>
+  <b>Moving and placing component elements in the level editor</b>
+  <br>
+</div>
+
 ### **4 其他功能**：
 
 #### **4.1 教程系统**：
