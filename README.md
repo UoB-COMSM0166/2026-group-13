@@ -15,7 +15,7 @@
 </div>
 
 <div align="center">
-  <a href="https://angelicaserein.github.io/UhelpU/">
+  <a href="https://uob-comsm0166.github.io/2026-group-13/">
     <img src="./assets/click-to-play.png" width="800">
     <br>
   </a>
@@ -25,17 +25,22 @@
   </a>
   <br>
   -->
-  <sub><i>Currently features 7 Easy levels, 4 Hard levels, 1 Special level, and 10 legacy levels to explore!<br>Average playtime depends on your brain — if you're incredibly smart, maybe an hour to clear them all!</i></sub>
-  <br><br>
-  <a href="https://angelicaserein.github.io/UhelpU/">
-    <img src="./assets/video.png" width="800">
-    <br>
-    <br>
-  </a>
-  <a href="https://youtu.be/FMFJqeT6FAw">
-    <img src="https://img.shields.io/badge/🎬%20Watch%20Video-Click%20to%20Watch-ff6b9d?style=for-the-badge&labelColor=7b2d8b" alt="🎬 Watch Video">
-  </a>
+<sub><i>Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy levels — classic puzzles from earlier builds to explore!</i></sub>
+<br><br>
+
+<small><em>If you get stuck on a hard level for more than half an hour, that’s totally normal — don't worry!</em></small>
+<br><br>
+
+<a href="https://angelicaserein.github.io/UhelpU/">
+  <img src="./assets/video.png" width="800">
   <br>
+  <br>
+</a>
+
+<a href="https://youtu.be/FMFJqeT6FAw">
+  <img src="https://img.shields.io/badge/🎬%20Watch%20Video-Click%20to%20Watch-ff6b9d?style=for-the-badge&labelColor=7b2cbf">
+</a>
+<br>
 </div>
 
 <div align="center">
@@ -54,9 +59,9 @@
     <a href="#acknowledgements">❤️ Acknowledgements</a>
   </b>
   <br><br>
-  <a href="#-project-report">
-    <img src="https://img.shields.io/badge/📑%20Project%20Report-Click%20to%20Read-ff6b9d?style=for-the-badge&labelColor=7b2d8b" alt="📑 Project Report">
-  </a>
+  <span>👉👉👉</span>
+  <a href="#-project-report" style="text-decoration: none;"><img src="https://img.shields.io/badge/CLICK%20HERE%20TO%20READ%20PROJECT%20REPORT-ff6b9d?style=for-the-badge" alt="CLICK HERE TO READ PROJECT REPORT"></a>
+  <span>👈👈👈</span>
   <br><br>
 </div>
 
@@ -115,7 +120,9 @@
     <img src="./assets/website/itch.png" width="700">
   </a>
   <br><br>
-  <a href="https://itch.io/search?q=Uhelp" style="display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 6px 12px;"><b>Find us on itch.io</b></a>
+  <a href="https://itch.io/search?q=Uhelp">
+    <img src="https://img.shields.io/badge/Find%20us%20on%20itch.io-ffd6e7?style=for-the-badge&logo=itchdotio&logoColor=white&labelColor=ff8fb1" alt="Find us on itch.io">
+  </a>
   <br><br>
 </div>
 
@@ -128,7 +135,9 @@
     <img src="./assets/website/walkthrough-preview.png" width="700">
   </a>
   <br><br>
-  <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/" style="display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 6px 12px;"><b>Watch Walkthroughs</b></a>
+  <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">
+    <img src="https://img.shields.io/badge/Watch%20Walkthroughs-ffd6e7?style=for-the-badge&logo=youtube&logoColor=white&labelColor=ff8fb1" alt="Watch Walkthroughs">
+  </a>
   <br><br>
 </div>
 
@@ -140,7 +149,9 @@
     <img src="./assets/website/phantom-chat-preview.png" width="700">
   </a>
   <br><br>
-  <a href="https://moosry.github.io/UhlepU-blackbox-test/phantom-chat.html" style="display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 6px 12px;"><b>Open Phantom Chat</b></a>
+  <a href="https://moosry.github.io/UhlepU-blackbox-test/phantom-chat.html">
+    <img src="https://img.shields.io/badge/Open%20Phantom%20Chat-ffd6e7?style=for-the-badge&logo=ghost&logoColor=white&labelColor=ff8fb1" alt="Open Phantom Chat">
+  </a>
   <br><br>
 </div>
 
@@ -155,11 +166,13 @@
 <div align="center">
   <img src="./assets/Group_Picture01.png" width="600">
   <br><br>
-  <p style="font-size: 1.08em; font-weight: 700; margin: 0; display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 8px 14px;">
-    <a href="https://yyyjava.github.io/test-process-part/Team-roles.html" target="_blank">✨ Click to view Team Roles</a>
-    <span style="color: #ff6b9d;">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
-    <a href="https://angelica-serein.notion.site/Kanban-Board-8a0b2f38a2aa8322998a818eef1d7607?source=copy_link" target="_blank">📋 Click to view Kanban Board</a>
-  </p>
+  <a href="https://yyyjava.github.io/test-process-part/Team-roles.html" target="_blank">
+    <img src="https://img.shields.io/badge/%E2%9C%A8%20Click%20to%20view%20Team%20Roles-ffd6e7?style=for-the-badge&labelColor=ff8fb1" alt="Click to view Team Roles">
+  </a>
+  &nbsp;
+  <a href="https://angelica-serein.notion.site/Kanban-Board-8a0b2f38a2aa8322998a818eef1d7607?source=copy_link" target="_blank">
+    <img src="https://img.shields.io/badge/%F0%9F%93%8B%20Click%20to%20view%20Kanban%20Board-ffd6e7?style=for-the-badge&labelColor=ff8fb1" alt="Click to view Kanban Board">
+  </a>
   <br>
   <br>
 </div>
@@ -224,17 +237,17 @@
     </tr>
     <tr>
       <td align="center"><b>Week 03</b><br><b><a href="./week-log/Week03/ReadMe.md">README</a></b></td>
-      <td align="center">—</td>
-      <td>Paper prototypes of two games and the final game idea.</td>
+      <td align="center"><img src="./week-log/Week03/img/main.jpg" width="260"></td>
+      <td><a href="README.md">Paper prototypes</a> of two games and the final game idea.</td>
     </tr>
     <tr>
       <td align="center"><b>Week 04</b><br><b><a href="./week-log/Week04/README.md">README</a></b></td>
-      <td align="center">—</td>
+      <td align="center"><img src="./week-log/Week04/Img/Stakeholders.png"</td>
       <td>Defined user stories and functional/non-functional requirements.</td>
     </tr>
     <tr>
       <td align="center"><b>Week 05</b><br><b><a href="./week-log/Week05/ReadMe.md">README</a></b></td>
-      <td align="center">—</td>
+      <td align="center"><img src="./week-log/Week05/img/game-entity.png"></td>
       <td>Designed architecture diagrams and implemented core systems.</td>
     </tr>
     <tr>
@@ -286,6 +299,22 @@
   <img src="./assets/divider.png" width="800">
 </div>
 
+<h1 align="center"><b>📁 Repository Structure</b></h1>
+
+```
+2026-group-13/
+├── README.md        ← You are here — main project documentation
+├── assets/          ← Images, GIFs, and diagrams used in this README
+├── docs/            ← Game source code and technical documentation (see Design § 4 for full structure)
+└── week-log/        ← Weekly lab logs (see Workshop section above for overview)
+```
+
+<br>
+
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
+
 <h1 align="center"><b>📑 Project Report</b></h1>
 
 ## **🗂️ Table of Contents**
@@ -308,6 +337,7 @@
 ## **⚙️ Introduction**
 
 ### **Overview**:
+
 - [1 **_U Help U_ brief introduction**](#1-u-help-u-brief-introduction)
 - [2 Core Gameplay (How to Play)](#2-core-gameplay-how-to-play)
   - [2.1 Basic Controls](#21-basic-controls)
@@ -662,6 +692,7 @@ We attended each lab and testing marathon, gathering advice and feedback from di
 - [3 Mechanism Systems](#3-mechanism-systems)
   - [3.1 Record System](#31-record-system)
   - [3.2 Environmental Mechanisms](#32-environmental-mechanisms)
+- [4 Code Structure](#4-code-structure)
 
 ### **1 Top Level Architecture**:
 
@@ -903,6 +934,91 @@ The state machine defines the full lifecycle of the recording system—from Read
 
 The mechanism system manages reusable level mechanisms, including circuit based door unlocking and controllable moving platforms. Diagram V shows the class structure of the mechanism system: ButtonPlatformLinkSystem and WireIndicatorSystem handle different linkage logics.
 
+### **4 Code Structure**:
+
+The `docs/` directory contains the complete game — the entry point `index.html` loads `main.js`, which bootstraps p5.js and hands control to `AppCoordinator`. Everything is split into four top-level areas:
+
+```text
+docs/
+├── index.html                          ← Game entry point (open in browser to play)
+├── main.js                             ← p5.js sketch init; creates AppCoordinator
+│
+├── css/
+│   ├── style.css                       ← Global game stylesheet (~55 KB)
+│   └── loading-screen/
+│       └── startup-loading.css         ← Startup splash-screen styles
+│
+├── js/                                 ← All game logic (~200 files)
+│   ├── AppCoordinator.js               ← Top-level orchestrator; wires all systems
+│   ├── AssetsManager.js                ← Centralised asset (image / audio) loading
+│   ├── AudioManager.js                 ← Background music & SFX playback
+│   │
+│   ├── event-system/                   ← Publish-subscribe EventBus
+│   ├── switchers/                      ← SwitcherMain — routes update/draw to active page
+│   │
+│   ├── ui/                             ← All rendered interfaces
+│   │   ├── pages/                      ← Full-screen pages (menu, level-choice, settings …)
+│   │   ├── components/                 ← Reusable UI widgets (buttons, overlays, timer HUD …)
+│   │   ├── keyboard/                   ← Keyboard-navigation layer for accessibility
+│   │   └── windows/                    ← Modal windows (pause, result, signboard …)
+│   │
+│   ├── game-runtime/                   ← Core game loop; LevelManager + Room + Checkpoint
+│   │
+│   ├── game-entity-model/              ← Entity class hierarchy
+│   │   ├── base/                       ← GameEntity base class & shared components
+│   │   ├── characters/                 ← Player, Phantom, NPC, Enemy
+│   │   ├── interactables/              ← Box, Door, Button, Spike, Checkpoint, Teleport …
+│   │   ├── terrain/                    ← Ground, Platform, Wall tiles
+│   │   └── prompts/                    ← KeyPrompt, TextPrompt proximity indicators
+│   │
+│   ├── collision-system/               ← Detect → Resolve → Respond pipeline
+│   ├── physics-system/                 ← Velocity/acceleration integrator; gravity
+│   ├── character-control-system/       ← Keyboard-event → validated action → movement
+│   │
+│   ├── record-system/                  ← Record / Replay core mechanic
+│   ├── replayer-voice/                 ← Voice cues played back during replay
+│   │
+│   ├── mechanism-system/               ← Button–Wire–Door and Button–Spike/Platform links
+│   │   ├── demo1/                      ← Demo 1 specific mechanisms
+│   │   └── demo2/                      ← Demo 2 specific mechanisms
+│   │
+│   ├── level-design/                   ← Static level data files
+│   │   ├── demo1/ demo2/               ← Tutorial / legacy demo levels
+│   │   ├── easy/                       ← Easy-difficulty levels (7 levels)
+│   │   ├── hard/                       ← Hard-difficulty levels (4 levels)
+│   │   └── special/                    ← Special levels
+│   │
+│   ├── user-levels/                    ← Map Editor + community sharing system
+│   ├── timer-system/                   ← In-level stopwatch & leaderboard timer
+│   ├── achievement-system/             ← Achievement definitions, unlock logic, toast UI
+│   ├── tutorial-system/                ← FSM-driven onboarding flow (Easy 1)
+│   ├── loading-screen/                 ← Startup asset-loading screen
+│   ├── key-binding-system/             ← Rebindable keyboard controls
+│   ├── i18n/                           ← Bilingual strings (English / Chinese)
+│   ├── sound/                          ← Sound-event helpers
+│   ├── develop-mode/                   ← Debug overlays (disabled in release)
+│   ├── utils/                          ← Shared utility functions
+│   └── addons/
+│       └── p5.sound.min.js             ← p5.js audio library
+│
+├── assets/                             ← All game media
+│   ├── audio/
+│   │   ├── bgm/                        ← Background music (menu, settings, 10 level tracks)
+│   │   └── sxf/                        ← Sound effects (jump, land, interact, death …)
+│   ├── images/
+│   │   ├── bg/                         ← Full-screen level & menu backgrounds
+│   │   ├── player/                     ← Player sprite sheets (8 directions + death)
+│   │   ├── npc/                        ← NPC character sprites
+│   │   ├── tiles/                      ← Terrain & interactable tile sprites
+│   │   ├── idle-action/                ← Idle-yawn animation frames
+│   │   └── achieve/                    ← Achievement icon images
+│   ├── fonts/
+│   │   └── HYPixel11pxU-2.ttf         ← Chinese pixel font
+│   └── text/                           ← Story scripts & signboard hint text (EN + ZH)
+│
+└── docs/                               ← Per-system technical documentation (Markdown)
+```
+
 <div align="center">
   <img src="./assets/divider.png" width="800">
 </div>
@@ -920,7 +1036,7 @@ The mechanism system manages reusable level mechanisms, including circuit based 
   - [3.2 Final Solution](#32-final-solution)
 - [4 其他功能](#4-其他功能)
   - [4.1 教程系统](#41-教程系统)
-  - [4.2 难度曲线设置](#42-难度曲线设置)
+  - [4.2 Level Design](#42-level-design)
   - [4.3 幻影对话系统](#43-幻影对话系统)
   - [4.4 设置系统](#44-设置系统)
     - [4.4.1 音量和按键设置](#441-音量和按键设置)
@@ -987,7 +1103,7 @@ We implemented a **dual‑layer data architecture**:
   - uploads score after each level
   - sorts by completion time
   - highlights the current player
-  <br>
+    <br>
 
 <br>
 <div align="center">
@@ -997,7 +1113,6 @@ We implemented a **dual‑layer data architecture**:
   <br>
   <br>
 </div>
-
 
 ### **3 Technical Challenge 2 — Level Editor & Sharing System**：
 
@@ -1039,6 +1154,42 @@ After download:
 - browse community maps
 - download and play instantly
 - versioning support (v1, v2, v3…)
+
+### **3.3 Level Editing Function Demonstration**
+
+The following pictures show some operations of the editing system, <br>including key operation guide, platform zoom, moving map camera, <br>and the placement and movement of component elements.
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/editor control.png" width="300">
+  <br>
+  <b>Level editing system operation guide</b>
+  <br>
+</div>
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/change platform.gif" width="500">
+  <br>
+  <b>Change and zoom in/out platform</b>
+  <br>
+</div>
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/map view camera.gif" width="500">
+  <br>
+  <b>Movement of the map view camera</b>
+  <br>
+</div>
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/level-editor/moving and placing component elementsr.gif" width="500">
+  <br>
+  <b>Moving and placing component elements in the level editor</b>
+  <br>
+</div>
 
 ### **4 其他功能**：
 
@@ -1135,9 +1286,109 @@ After download:
 </tbody>
 </table>
 
-#### **4.2 难度曲线设置**：
+#### **4.2 Level Design**：
 
 游戏提供了 Easy 和 Hard 两套难度体系，分别包含独立设计的关卡序列。Easy 难度下的关卡着重引导玩家理解录制与回放机制的基本用法；Hard 难度则在此基础上引入更复杂的时序配合与空间利用要求。关卡的难度曲线经过多轮用户测试与数据分析后反复调整，以确保玩家在学习曲线上获得平滑而有层次感的成长体验。
+
+##### Easy Levels (7 Levels)
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/easy1.png">
+      <br>
+      <b>Level 1</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/easy2.png">
+      <br>
+      <b>Level 2</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/easy3.png">
+      <br>
+      <b>Level 3</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/easy4.png">
+      <br>
+      <b>Level 4</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/easy5.png">
+      <br>
+      <b>Level 5</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/easy6.png">
+      <br>
+      <b>Level 6</b>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+  <img src="assets/implementation/level-design/easy7.png">
+  <br>
+  <b>Level 7</b>
+</div>
+
+##### Hard Levels (4 Levels, 2 Rooms Each)
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard1-1.png">
+      <br>
+      <b>Level 1 — Room 1</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard1-2.png">
+      <br>
+      <b>Level 1 — Room 2</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard2-1.png">
+      <br>
+      <b>Level 2 — Room 1</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard2-2.png">
+      <br>
+      <b>Level 2 — Room 2</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard3-1.png">
+      <br>
+      <b>Level 3 — Room 1</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard3-2.png">
+      <br>
+      <b>Level 3 — Room 2</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard4-1.png">
+      <br>
+      <b>Level 4 — Room 1</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/implementation/level-design/hard4-2.png">
+      <br>
+      <b>Level 4 — Room 2</b>
+    </td>
+  </tr>
+</table>
 
 #### **4.3 幻影对话系统**：
 
@@ -1160,7 +1411,8 @@ After download:
 游戏实现了中英双语支持，玩家可在设置中自由切换界面语言。国际化系统采用集中式语言包管理方案，所有界面文本、提示信息与对话内容均通过语言键值映射进行统一维护，与渲染逻辑完全解耦。切换语言时，所有 UI 组件将即时刷新为对应语言的文本内容，无需重载页面或关卡，从而为不同语言背景的玩家提供无缝的本地化体验。
 
 #### **4.5 成就系统**：
-Our achievement system provides our player additional game goals and motivation. The game features a range of achievements covering various aspects, such as performing specific actions. Achievement data stored persistently in local server, whenever a player meets the trigger conditions, the system displays a notification and updates the progress. This system is decoupled from the core gameplay module and responds to various in-game actions via event listeners, facilitating the future addition of new achievement types. Our game have 10 achievements in total, and 3 of them has been updated so far. The remaining achievements will be updated step by step. The overview of our achievement system can be seen as follows. 
+
+Our achievement system provides our player additional game goals and motivation. The game features a range of achievements covering various aspects, such as performing specific actions. Achievement data stored persistently in local server, whenever a player meets the trigger conditions, the system displays a notification and updates the progress. This system is decoupled from the core gameplay module and responds to various in-game actions via event listeners, facilitating the future addition of new achievement types. Our game have 10 achievements in total, and 3 of them has been updated so far. The remaining achievements will be updated step by step. The overview of our achievement system can be seen as follows.
 
 <br>
 <div align="center">
@@ -1171,12 +1423,12 @@ Our achievement system provides our player additional game goals and motivation.
   <br>
 </div>
 
-
 <br>
 
 During gameplay, if players meet the conditions for unlocking an achievement, the in-game display is shown as follows:
 <br>
 <br>
+
 <div align="center">
   <img src="./assets/implementation/achievement/unlock achievement wthin level.png" width="400">
   <br>
@@ -1207,8 +1459,6 @@ Player can also check their achievement overview in achievement gallery. In this
 
 <br>
 
-
-
 <br>
 <div align="center">
   <img src="./assets/implementation/achievement/achievements gallery.png" width="800">
@@ -1218,7 +1468,6 @@ Player can also check their achievement overview in achievement gallery. In this
   <br>
 </div>
 
-
 #### **4.6 Keyboard Navigation**：
 
 我们实现了完整的键盘导航功能，游戏内主菜单、关卡选择页面和暂停菜单交互界面同时兼容鼠标与键盘两种操控方式，以适配不同玩家的操作习惯。
@@ -1227,52 +1476,54 @@ Player can also check their achievement overview in achievement gallery. In this
 - 界面默认不显示按钮选中白框，仅使用键盘导航时才出现高亮提示，切换为鼠标操作时白框会立即消失；
 - 按下空格或回车键可确认选中选项，按下 ESC 键能够退出当前菜单并返回上一级界面。
 
-<table width="100%">
-<tbody>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/0.png" width="600" /><br><br>
-<b>Menu page: default state</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/1.png" width="600" /><br><br>
-<b>Menu page: mouse hover</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/2.png" width="600" /><br><br>
-<b>Menu page: keyboard selection</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/3.png" width="600" /><br><br>
-<b>World selection page: mouse hover</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/4.png" width="600" /><br><br>
-<b>World selection page: keyboard selection</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/5.png" width="600" /><br><br>
-<b>Paused menu page: mouse hover on 'Setting'</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/6.png" width="600" /><br><br>
-<b>Paused menu page: keyboard selection on 'Setting'</b>
-</td>
-</tr>
-</tbody>
-</table>
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/0.png" width="330" />
+  <br><br>
+  <b>Menu page: default state</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/1.png" width="330" />
+  <br><br>
+  <b>Menu page: mouse hover</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/2.png" width="330" />
+  <br><br>
+  <b>Menu page: keyboard selection</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/3.png" width="330" />
+  <br><br>
+  <b>World selection page: mouse hover</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/4.png" width="330" />
+  <br><br>
+  <b>World selection page: keyboard selection</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/5.png" width="330" />
+  <br><br>
+  <b>Paused menu page: mouse hover on 'Setting'</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/6.png" width="330" />
+  <br><br>
+  <b>Paused menu page: keyboard selection on 'Setting'</b>
+  <br><br>
+</div>
 
 <div align="center">
   <img src="./assets/divider.png" width="800">
@@ -1309,7 +1560,6 @@ Action Plan: Design and insert a simple "Tutorial Level" prior to the first offi
 
 This addresses "Error prevention" and enhances "User control and freedom", ensuring players are comfortable with the physics and controls before facing actual challenges.
 
-
 ### **2 Quantitative**:
 
 #### **2.1 Evaluation Findings**:
@@ -1319,7 +1569,6 @@ We conducted a quantitative user evaluation with 27 participants, using a within
 - **System Usability Scale (SUS):** The test yielded **W = 84.5** and **p = 0.063**. Since p > 0.05, there is **no significant difference** in usability between the two levels, although a slight downward trend was observed as complexity increased. Both levels maintained scores near or above the industry average of 68 (Level 1 mean: 75.06; Level 2 mean: 65.0). This indicates that the core UI and interaction mechanics remain relatively stable and accessible, even when players are faced with higher task difficulty.
 
 - **NASA Task Load Index (TLX):** The test yielded **W = 43.5** and **p < 0.001**. Since p < 0.05, there is **a significant difference** in perceived workload between the two levels. The absolute mean score increased from 39.71 (Level 1) to 50.20 (Level 2). This significant increase confirms that the difficulty progression was effectively perceived by the participants, successfully raising the cognitive and mental demands of the game as intended for the second level.
-
 
 ### **3 Description of how code was tested**:
 
@@ -1613,13 +1862,17 @@ Overall, our project successfully achieved its core creative objective: transfor
 
 ## **⚙️ AI Statement**
 
-During the development of this project, the game ideas(main game topic, concept and the mechanism, puzzles in each level) and the main underlying code architecture were totally designed by our team members. AI was only used to help us generate some duplicate code, translate some text content, and adjust the interface style.
+AI was only used for assistance purposes. The core game mechanics, level design, logical reasoning, code debugging, feature integration and final implementation were all carried out and verified by the team members.
 
-Firstly, we used AI to assist us in completing some CSS formatting and slightly adjusting the layout. The advice about the size and format of the image was also obtained from AI tools. However, we did not copy directly from it, we manually selected, adjusted and replaced based on the actual in-game visuals and project requirements.
+AI was used in the following aspects:
 
-Secondly, we also used AI to reduce the workload caused by large amounts of repetitive logic in code development. For instance, in areas such as level structure, entity creation, event listening, configuration snippets and sections with a high degree of repetitive logic, AI was used to generate a first draft based on our existing code pattern. In this way, we could focus more on designing each unique level instead of writing similar level code over and over again. And the core game mechanics, level design, logical reasoning, code debugging, feature integration and final implementation were all carried out and verified by the team members.
+- Repetitive code & draft generation - we used AI to reduce the workload caused by large amounts of repetitive logic in code development. For instance, in areas such as level structure, entity creation, event listening, configuration snippets and sections with a high degree of repetitive logic, AI was used to generate a first draft based on our existing code pattern. In this way, we could focus more on designing each unique level instead of writing similar level code over and over again. And the core game mechanics, level design, logical reasoning, code debugging, feature integration and final implementation were all carried out and verified by the team members.
 
-And for the bilingual system of our game, part of the in-game text, prompts are generated by AI based our first draft. Since this project is to show our ability of software development, the artistic style of our game is mainly generated by AI (Because we don’t have any team members who are particularly good at art :D).
+- Suggestions on CSS style and layout - We manually selected, modified, and applied these suggestions.
+
+- Translation - AI helped translate in-game text, UI prompts, code comments, and technical documentation. We reviewed and refined translations for accuracy.
+
+- Art style - the artistic style of our game is totally generated by AI (Because we don’t have any team members who are particularly good at art :D).
 
 <div align="center">
   <img src="./assets/divider.png" width="800">
