@@ -1025,6 +1025,7 @@ docs/
 - [3 Technical Challenge 2 — Level Editor & Sharing System](#3-technical-challenge-2--level-editor--sharing-system)
   - [3.1 Early Attempts and Problems](#31-early-attempts-and-problems)
   - [3.2 Final Solution](#32-final-solution)
+  - [3.3 Level Editing Function Demonstration](#33-level-editing-function-demonstration)
 - [4 Other Functions](#4-other-functions)
   - [4.1 Tutorial System](#41-tutorial-system)
   - [4.2 Level Design](#42-level-design)
@@ -1197,7 +1198,7 @@ After download:
 - browse community maps
 - download and play instantly
 
-### **3.3 Level Editing Function Demonstration**
+### **3.3 Level Editing Function Demonstration:**
 
 <br>
 <div align="center">
