@@ -1,0 +1,8 @@
+FACILITY ZERO
+WEEKLY SCHEDULE & SUPPLY NOTICE
+---
+You notice a bulletin board here.
+Written below are the experiment schedule, this week's ration allocation, and other information.
+As you look, a chip-like object falls from behind the notice paper.
+---
+Tap this interface to turn the page!

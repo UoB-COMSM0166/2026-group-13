@@ -26,8 +26,8 @@
   <br>
   -->
 Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy levels – classic puzzles from earlier builds – with 3 achievements to unlock!<br>
-Playtime depends on your skill – if you're really sharp, maybe an hour to clear them all.<br>
-(If you get stuck on a single hard level for more than half an hour, that’s totally normal – don't worry! Check out the guide <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">here!</a>!)
+
+<small><em>(If you get stuck on a single hard level for more than half an hour, that’s totally normal – don't worry! Check out the guide <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">here</a>!)</em></small>
 <br><br>
 <a href="https://angelicaserein.github.io/UhelpU/">
 <img src="./assets/video.png" width="800">
