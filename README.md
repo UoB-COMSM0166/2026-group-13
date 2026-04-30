@@ -8,7 +8,8 @@
 <b><i>Your only teammate is yourself!</i></b>
 </p>
 
-<h3 align="center"><b>This is an amazing and $\color{hotpink}{\textbf{challenging}}$ original 2D platform puzzle game!</b></h3>
+### **This is an amazing and $\color{hotpink}{\textbf{challenging}}$ original 2D platform puzzle game!**
+
 <p align="center"><sub><i>Inspired by U vs U, while all gameplay and core mechanics are originally designed and completely different!</i></sub></p>
 
 <div align="center">
