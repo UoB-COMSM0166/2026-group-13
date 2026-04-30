@@ -1193,14 +1193,60 @@ After download:
 
 #### **4.5 成就系统**：
 
-Our achievement system provides our player additional game goals and motivation. The game features a range of achievements covering various aspects, such as performing specific actions. Achievement data stored persistently in local server, whenever a player meets the trigger conditions, the system displays a notification and updates the progress. This system is decoupled from the core gameplay module and responds to various in-game actions via event listeners, facilitating the future addition of new achievement types. Our game have 10 achievements in total, and 3 of them has been updated so far. The remaining achievements will be updated step by step. The overview of our achievement system can be seen as follows.
+Our achievement system provides our player additional game goals and motivation. The game features a range of achievements covering various aspects, such as performing specific actions. Achievement data stored persistently in local server, whenever a player meets the trigger conditions, the system displays a notification and updates the progress. This system is decoupled from the core gameplay module and responds to various in-game actions via event listeners, facilitating the future addition of new achievement types. Our game have 10 achievements in total, and 3 of them has been updated so far. The remaining achievements will be updated step by step. The overview of our achievement system can be seen as follows. 
 
 <br>
-
 <div align="center">
   <img src="./assets/implementation/achievement/achievement1.png" width="800">
   <br>
-  <b>Figure 2: Our achievement system and brief introduction</b>
+  <b>Achievements Overview</b>
+  <br>
+  <br>
+</div>
+
+
+<br>
+
+During gameplay, if players meet the conditions for unlocking an achievement, the in-game display is shown as follows:
+<br>
+<br>
+<div align="center">
+  <img src="./assets/implementation/achievement/unlock achievement wthin level.png" width="400">
+  <br>
+  <b>Unlock achievement as you play</b>
+  <br>
+  <br>
+</div>
+<br>
+
+Player can also check their achievement overview in achievement gallery. In this page player can see all the achievements. Locked and unlocked achievementa are displayed in different ways. Asuming achievement description and condtions for achieve unlocked achievements can also be viewed here.
+
+<br>
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./assets/implementation/achievement/locked achievement.png" width="360">
+      <br>
+      <b>locked Achievement</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="./assets/implementation/achievement/unlocked achievement.png" width="360">
+      <br>
+      <b>Unlocked Achievement</b>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/achievement/achievements gallery.png" width="800">
+  <br>
+  <b>Achievements Gallery</b>
   <br>
   <br>
 </div>
