@@ -1,4 +1,3 @@
-# Week 10 Task
 
 # "U Help U" System Function Black-Box Testing Report
 
