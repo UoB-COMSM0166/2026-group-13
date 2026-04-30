@@ -1,5 +1,13 @@
 # Game Idea 1: U help U
 
+## Photo
+
+_Photo of the hand-drawn U help U gameplay and level interaction sketch._
+
+<p align="center">
+	<img src="img/uhelpu.png" alt="U help U concept photo" width="500">
+</p>
+
 ## Game Overview
 
 This is a side‑scrolling level-based platformer where the player can record their actions and let a past version of themselves replay those actions. The core fun comes from cooperating with your past selves to solve puzzles and overcome obstacles.
@@ -25,7 +33,7 @@ Players must strategically use these past selves to complete each level.
 
 - Or performs a double jump using a past self in mid‑air
 
-*Why it’s fun:* Players must plan where their past self should stand.
+_Why it’s fun:_ Players must plan where their past self should stand.
 
 ### 2. Button Mechanisms
 
@@ -35,7 +43,7 @@ Players must strategically use these past selves to complete each level.
 
 - The current player passes through safely
 
-*Why it’s fun:* Players must record a precise “button‑holding” action.
+_Why it’s fun:_ Players must record a precise “button‑holding” action.
 
 ### 3. Cooperative Enemy Clearing
 
@@ -47,7 +55,7 @@ Players must strategically use these past selves to complete each level.
 
 - clear the entire map through coordinated timing
 
-*Why it’s fun:* Players must plan timing, positioning, and cooperation between present and past selves.
+_Why it’s fun:_ Players must plan timing, positioning, and cooperation between present and past selves.
 
 ### 4. Pushing Boxes Together
 
@@ -57,7 +65,7 @@ Players must strategically use these past selves to complete each level.
 
 - Cooperation is required to move the box
 
-*Why it’s fun:* Players must synchronize actions between present and past selves.
+_Why it’s fun:_ Players must synchronize actions between present and past selves.
 
 ### 5. Movable Gift Box Start Point
 
@@ -71,7 +79,7 @@ By repositioning the gift box, players can:
 
 - create more creative and strategic solutions
 
-*Why it’s fun:* This mechanic gives players more control and freedom, turning the placement of the start point into part of the puzzle itself.
+_Why it’s fun:_ This mechanic gives players more control and freedom, turning the placement of the start point into part of the puzzle itself.
 
 ### 6. Loot Containers & Between‑Level Shop
 
@@ -107,7 +115,7 @@ The mirrored space beneath the floor is defined as an **Inverted World**. To add
 
 ## Level Design Philosophy: One Mechanic per Level
 
-Although the game includes multiple mechanics (such as pushing boxes, luring enemies, stepping on past selves, or holding buttons), ***each level focuses on only one mechanic at a time***, which:
+Although the game includes multiple mechanics (such as pushing boxes, luring enemies, stepping on past selves, or holding buttons), **_each level focuses on only one mechanic at a time_**, which:
 
 - reduces difficulty
 

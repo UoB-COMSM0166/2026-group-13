@@ -1,4 +1,4 @@
-<h1 align="center"><b>🎮️ U Help U 🎮️</b></h1>
+﻿<h1 align="center"><b>🎮️ U Help U 🎮️</b></h1>
 
 <p align="center">
 <b><i>Two selves. One timeline —</i></b>
@@ -64,6 +64,87 @@
     <td>hz25681@bristol.ac.uk</td>
     <td>role</td>
   </tr>
+</table>
+
+<br>
+
+<h1 align="center"><b>Workshop</b></h1>
+
+<table align="center" width="100%">
+  <thead>
+    <tr>
+      <th align="center" width="10%">Link</th>
+      <th align="center" width="62%">Image</th>
+      <th align="center" width="28%">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><b>Week 01</b><br><b><a href="./week-log/Week01/README.md">README</a></b></td>
+      <td align="center"><img src="./assets/workshop/week01.png" width="260"/></td>
+      <td>Game Research - Analysis of over 50 games. <a href="https://angelica-serein.notion.site/Reference-Games-Everyone-d83b2f38a2aa8273b95f01f7046d4f93?source=copy_link">Reference Games</a></td>
+    </tr>
+    <tr>
+      <td align="center"><b>Week 02</b><br><b><a href="./week-log/Week02/ReadMe.md">README</a></b></td>
+      <td align="center"><img src="./assets/workshop/week02.png" width="260"/></td>
+      <td><a href="https://moosry.github.io/p5.js-Paint-App/">Drawing App</a> and Two game ideas.</td>
+    </tr>
+    <tr>
+      <td align="center"><b>Week 03</b><br><b><a href="./week-log/Week03/ReadMe.md">README</a></b></td>
+      <td align="center">—</td>
+      <td>Paper prototypes of two games and the final game idea.</td>
+    </tr>
+    <tr>
+      <td align="center"><b>Week 04</b><br><b><a href="./week-log/Week04/README.md">README</a></b></td>
+      <td align="center">—</td>
+      <td>Defined user stories and functional/non-functional requirements.</td>
+    </tr>
+    <tr>
+      <td align="center"><b>Week 05</b><br><b><a href="./week-log/Week05/ReadMe.md">README</a></b></td>
+      <td align="center">—</td>
+      <td>Designed architecture diagrams and implemented core systems.</td>
+    </tr>
+    <tr>
+      <td align="center"><b>Week 06</b><br><b><a href="./week-log/Week06/ReadMe.md">README</a></b></td>
+      <td align="center"><img src="./assets/workshop/week06.png" width="260"/></td>
+      <td>Released the first playable <a href="https://lsironman789.github.io/Demo1-copy/Demo1/">Demo 0</a> with core mechanics.</td>
+    </tr>
+    <tr>
+      <td align="center"><b>Week 07</b><br><b><a href="./week-log/Week07/ReadMe.md">README</a></b></td>
+      <td align="center"><img src="./assets/workshop/week07.png" width="260"/></td>
+      <td>Added two difficulty levels and iterated levels based on user evaluation.</td>
+    </tr>
+    <tr>
+      <td align="center"><b>Week 08</b><br><b><a href="./week-log/Week08/ReadMe.md">README</a></b></td>
+      <td align="center">—</td>
+      <td>Ran user tests and analyzed SUS/NASA-TLX results.</td>
+    </tr>
+    <tr>
+      <td align="center"><b>Week 09</b><br><b><a href="./week-log/Week09/README.md">README</a></b></td>
+      <td align="center">—</td>
+      <td>Merged key code and updated levels from evaluation findings.</td>
+    </tr>
+    <tr>
+      <td align="center"><b>Week 10-12</b><br><b><a href="./week-log/Week10-12/README.md">README</a></b></td>
+      <td align="center"><img src="./assets/workshop/week10-12.png" width="260"/></td>
+      <td>Refined Demo 1 and Demo 2 levels and mechanics (also playable in the current build!).</td>
+    </tr>
+    <tr>
+      <td align="center"><b>Week 13</b><br><b><a href="./week-log/Week13/README.md">README</a></b></td>
+      <td align="center">—</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td align="center"><b>Week 14</b><br><b><a href="./week-log/Week14/README.md">README</a></b></td>
+      <td align="center">—</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td align="center"><b>Week 15</b><br><b><a href="./week-log/Week15/README.md">README</a></b></td>
+      <td align="center"><img src="./assets/workshop/week15.png" width="260"/></td>
+      <td>Prepared flowcharts and presentation script for the final demo showcase.</td>
+    </tr>
+  </tbody>
 </table>
 
 <br>
@@ -297,7 +378,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 
 ### **2 User Stories**:
 
-&emsp;&emsp;Based on this initial game idea, we formulated a series of user stories to help us prioritize the tasks. Our user stories are based on the format “As a __, I want to __, so that__”, to consider different requirements from different sides. Here are some crucial user stories on basic game controls, core game mechanics, game interactions, and user interface. Click [here](./week-log/Week04/Requirements-v2.0.md) to view the full user stories, the epics we developed in the early stages, and their completion status.
+&emsp;&emsp;Based on this initial game idea, we formulated a series of user stories to help us prioritize the tasks. Our user stories are based on the format “As a **, I want to **, so that\_\_”, to consider different requirements from different sides. Here are some crucial user stories on basic game controls, core game mechanics, game interactions, and user interface. Click [here](./week-log/Week04/Requirements-v2.0.md) to view the full user stories, the epics we developed in the early stages, and their completion status.
 
 <div align="center">
   <br>
@@ -862,7 +943,6 @@ After download:
   <br>
 </div>
 
-
 ### **3 Excellently Executions During The Process**:
 
 - **Continuous Version Iteration:**  
@@ -938,7 +1018,7 @@ However, we should be honest that our current accessibility support remains limi
 
 ### **3 Technical**
 
-From technical, the game is built upon a modular framework composed of multiple independent systems, including scene /level management, an event system, collision handling, character control, recording functionality, achievement system, etc. This structure allows us to separate different responsibilities, reducing the risk of _"a change in one place affecting the whole system"_. 
+From technical, the game is built upon a modular framework composed of multiple independent systems, including scene /level management, an event system, collision handling, character control, recording functionality, achievement system, etc. This structure allows us to separate different responsibilities, reducing the risk of _"a change in one place affecting the whole system"_.
 
 For example, during frame updates driven by `draw`, collision, control, physics, and level management are broken down into relatively clear modules, allowing mechanisms like switches, doors, traps, and characters to interact through a more transparent messaging mechanism rather than relying on tightly coupled, hard-coded connections. Furthermore, our current system limits the collection of player information; the game can be played without requiring players to input data involving personal privacy.
 
