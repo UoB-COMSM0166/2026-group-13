@@ -25,23 +25,13 @@
   </a>
   <br>
   -->
-<sub><i>Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy levels — classic puzzles from earlier builds to explore!</i></sub>
-<br><br>
+Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy levels – classic puzzles from earlier builds – with 3 achievements to unlock!<br>
 
-<small><em>If you get stuck on a hard level for more than half an hour, that’s totally normal — don't worry!</em></small>
+<small><em>(If you get stuck on a hard level for more than half an hour, that’s totally normal – don't worry! Check out the guide <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">here</a>!)</em></small>
 <br><br>
-
 <a href="https://angelicaserein.github.io/UhelpU/">
-  <img src="./assets/video.png" width="800">
-  <br>
-  <br>
+<img src="./assets/video.png" width="800">
 </a>
-
-<a href="https://youtu.be/FMFJqeT6FAw">
-  <img src="https://img.shields.io/badge/🎬%20Watch%20Video-Click%20to%20Watch-ff6b9d?style=for-the-badge&labelColor=7b2cbf">
-</a>
-<br>
-</div>
 
 <div align="center">
   <br>
@@ -238,7 +228,7 @@
     <tr>
       <td align="center"><b>Week 03</b><br><b><a href="./week-log/Week03/ReadMe.md">README</a></b></td>
       <td align="center"><img src="./week-log/Week03/img/main.jpg" width="260"></td>
-      <td><a href="README.md">Paper prototypes</a> of two games and the final game idea.</td>
+      <td><a href="https://www.youtube.com/watch?v=_yQCPuap90A">Paper prototypes</a> of two games and the final game idea.</td>
     </tr>
     <tr>
       <td align="center"><b>Week 04</b><br><b><a href="./week-log/Week04/README.md">README</a></b></td>
@@ -262,13 +252,13 @@
     </tr>
     <tr>
       <td align="center"><b>Week 08</b><br><b><a href="./week-log/Week08/ReadMe.md">README</a></b></td>
-      <td align="center">—</td>
-      <td>Ran user tests and analyzed SUS/NASA-TLX results.</td>
+      <td align="center"><img src="./week-log/Week08/img/form.png"</td>
+      <td>Ran user tests and analyzed SUS/NASA-TLX results.Click to view our <a href="https://forms.office.com/pages/responsepage.aspx?id=MH_ksn3NTkql2rGM8aQVG4RtspcNgnhDofSkAmqDse5UNVlMME9CT0VZS0FWNjRKSzg0RDRSNDVZQy4u&route=shorturl">form</a></td>
     </tr>
     <tr>
       <td align="center"><b>Week 09</b><br><b><a href="./week-log/Week09/README.md">README</a></b></td>
-      <td align="center">—</td>
-      <td>Merged key code and updated levels from evaluation findings.</td>
+      <td align="center"><img src="./week-log/Week09/img/demo.png"></td>
+      <td>Merged key code and updated levels from evaluation findings. Finish our demo1 and demo2.</td>
     </tr>
     <tr>
       <td align="center"><b>Week 10-12</b><br><b><a href="./week-log/Week10-12/README.md">README</a></b></td>
@@ -277,13 +267,13 @@
     </tr>
     <tr>
       <td align="center"><b>Week 13</b><br><b><a href="./week-log/Week13/README.md">README</a></b></td>
-      <td align="center">—</td>
-      <td></td>
+      <td align="center"><img src="./week-log/Week13/img/video 1.png"></td>
+      <td>Finalise the game’s final version and begin vedio making. See our final video <a href="https://www.youtube.com/watch?v=FMFJqeT6FAw">here</a></td>
     </tr>
     <tr>
       <td align="center"><b>Week 14</b><br><b><a href="./week-log/Week14/README.md">README</a></b></td>
-      <td align="center">—</td>
-      <td></td>
+      <td align="center"><img src="./week-log/Week14/img/Class Exercise Example.png"></td>
+      <td>Improve our report and add sustainability and AI statement part, continue making our video.</td>
     </tr>
     <tr>
       <td align="center"><b>Week 15</b><br><b><a href="./week-log/Week15/README.md">README</a></b></td>
@@ -1566,7 +1556,6 @@ Player can also check their achievement overview in achievement gallery. In this
   - [1.1 Contextual Onboarding & Bilingual Support](#11-contextual-onboarding--bilingual-support)
   - [1.2 Learning Curve & Scaffolding (Level 0)](#12-learning-curve--scaffolding-level-0)
 - [2 Quantitative](#2-quantitative)
-  - [2.1 Evaluation Findings](#21-evaluation-findings)
 - [3 Description of how code was tested](#3-description-of-how-code-was-tested)
   - [3.1 Manual Testing and Console Logging During Development](#31-manual-testing-and-console-logging-during-development)
   - [3.2 Black-Box Testing Based on Test Checklists](#32-black-box-testing-based-on-test-checklists)
@@ -1589,15 +1578,37 @@ Action Plan: Design and insert a simple "Tutorial Level" prior to the first offi
 
 This addresses "Error prevention" and enhances "User control and freedom", ensuring players are comfortable with the physics and controls before facing actual challenges.
 
-### **2 Quantitative**:
+Below is a gameplay demonstration of the initial tutorial:
 
-#### **2.1 Evaluation Findings**:
+<div align="center">
+  <br>
+  <img src="./assets/evaluation/initial-tutorial.png" width="800">
+  <br>
+  <b>Figure1: Initial tutorial</b>
+  <br>
+  <br>
+</div>
+
+The latest version of the game's tutorial can be found in the [**4.1 教程系统**](#41-教程系统) section.
+
+### **2 Quantitative**:
 
 We conducted a quantitative user evaluation with 27 participants, using a within-subjects design to compare the user experience between Level 1 and Level 2. Participants completed the NASA Task Load Index (TLX) and System Usability Scale (SUS) after playing each level. We then ran a Wilcoxon Signed-Rank Test (with an alpha level of 0.05) to determine if there were significant differences in perceived workload and usability.
 
 - **System Usability Scale (SUS):** The test yielded **W = 84.5** and **p = 0.063**. Since p > 0.05, there is **no significant difference** in usability between the two levels, although a slight downward trend was observed as complexity increased. Both levels maintained scores near or above the industry average of 68 (Level 1 mean: 75.06; Level 2 mean: 65.0). This indicates that the core UI and interaction mechanics remain relatively stable and accessible, even when players are faced with higher task difficulty.
 
 - **NASA Task Load Index (TLX):** The test yielded **W = 43.5** and **p < 0.001**. Since p < 0.05, there is **a significant difference** in perceived workload between the two levels. The absolute mean score increased from 39.71 (Level 1) to 50.20 (Level 2). This significant increase confirms that the difficulty progression was effectively perceived by the participants, successfully raising the cognitive and mental demands of the game as intended for the second level.
+
+Below is a photo of players engaging with our game:
+
+<div align="center">
+  <br>
+  <img src="./assets/evaluation/Others-playing-ourgame.jpg" width="800">
+  <br>
+  <b>Figure2: Other players playing our game</b>
+  <br>
+  <br>
+</div>
 
 ### **3 Description of how code was tested**:
 
