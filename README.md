@@ -143,7 +143,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tr>
 <tr>
 <td align="center" style="padding: 20px;">
-<img src="./assets/introduction/recording-in-progress.gif" width="800" /><br><br>
+<img src="./assets/introduction/recording-in-progress.gif" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-2.%20Capturing-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
 • <b>Phase Description:</b> The system captures the motion path and interaction in real-time.<br>
@@ -154,7 +154,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tr>
 <tr>
 <td align="center" style="padding: 20px;">
-<img src="./assets/introduction/after-recording.gif" width="500" /><br><br>
+<img src="./assets/introduction/after-recording.gif" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-3.%20PhantomStandby-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
 • <b>Phase Description:</b> Recording finished. The phantom appears in a transparent state.<br>
@@ -176,7 +176,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tr>
 <tr>
 <td align="center" style="padding: 20px;">
-<img src="./assets/introduction/after-replay.gif" width="500" /><br><br>
+<img src="./assets/introduction/after-replay.gif" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-5.%20PhantomStandby-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
 • <b>Phase Description:</b> Playback ends. The phantom returns to a transparent state, awaiting instructions.<br>
