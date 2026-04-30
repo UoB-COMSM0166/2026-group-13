@@ -44,7 +44,15 @@
   <br>
   <img src="./assets/gameplay/gameplay4.png" width="700">
   <br>
-  <b>Figure 4: The itch.io gaming page</b>
+  <b>Figure 4: Level Editor - Create, upload, share, and play in map plaza</b>
+  <br>
+</div>
+
+<div align="center">
+  <br>
+  <img src="./assets/gameplay/gameplay5.png" width="700">
+  <br>
+  <b>Figure 5: The itch.io gaming page</b>
   <br>
 </div>
 
