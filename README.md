@@ -16,8 +16,38 @@
 
 <h1 align="center"><b>📽️ Gameplay Preview</b></h1>
 
-<br>
-<br>
+<div align="center">
+  <br>
+  <img src="./assets/gameplay/gameplay1.png" width="600">
+  <br>
+  <b>Figure 1: Featured level preview - Easy 1</b>
+  <br>
+</div>
+
+<div align="center">
+  <br>
+  <img src="./assets/gameplay/gameplay2.png" width="600">
+  <br>
+  <b>Figure 2: Featured level preview - Easy 4 · Hard 3</b>
+  <br>
+</div>
+
+<div align="center">
+  <br>
+  <img src="./assets/gameplay/gameplay3.png" width="600">
+  <br>
+  <b>Figure 3: Featured level preview - Special 1</b>
+  <br>
+</div>
+
+<div align="center">
+  <br>
+  <img src="./assets/gameplay/gameplay4.png" width="600">
+  <br>
+  <b>Figure 4: The itch.io gaming page</b>
+  <br>
+</div>
+
 <br>
 
 <h1 align="center"><b>👥 Team Members</b></h1>
