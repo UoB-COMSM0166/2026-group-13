@@ -25,13 +25,16 @@
   </a>
   <br>
   -->
-  <sub><i>Currently features 7 Easy levels, 4 Hard levels, 1 Special level, and 10 legacy levels to explore!<br>Average playtime depends on your brain — if you're incredibly smart, maybe an hour to clear them all!</i></sub>
-  <br><br>
-  <a href="https://angelicaserein.github.io/UhelpU/">
-    <img src="./assets/video.png" width="800">
-    <br>
-    <br>
-  </a>
+Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy levels – classic puzzles from earlier builds – with 3 achievements to unlock!<br>
+Playtime depends on your skill – if you're really sharp, maybe an hour to clear them all.<br>
+(If you get stuck on a single hard level for more than half an hour, that’s totally normal – don't worry! Check out the guide <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">here!</a>!)
+<br><br>
+<a href="https://angelicaserein.github.io/UhelpU/">
+<img src="./assets/video.png" width="800">
+<br>
+<br>
+</a>
+
 </div>
 
 <div align="center">
@@ -51,9 +54,7 @@
   </b>
   <br><br>
   <span>👉👉👉</span>
-  <a href="#-project-report">
-    <img src="https://img.shields.io/badge/CLICK%20HERE%20TO%20READ%20PROJECT%20REPORT-ff6b9d?style=for-the-badge" alt="CLICK HERE TO READ PROJECT REPORT">
-  </a>
+  <a href="#-project-report" style="text-decoration: none;"><img src="https://img.shields.io/badge/CLICK%20HERE%20TO%20READ%20PROJECT%20REPORT-ff6b9d?style=for-the-badge" alt="CLICK HERE TO READ PROJECT REPORT"></a>
   <span>👈👈👈</span>
   <br><br>
 </div>
@@ -285,6 +286,23 @@
     </tr>
   </tbody>
 </table>
+
+<br>
+
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
+
+<h1 align="center"><b>📁 Repository Structure</b></h1>
+
+```
+2026-group-13/
+├── README.md               ← You are here — main project documentation
+├── assets/                 ← All assets used in this README.md
+├── docs/                   ← Game source code and documentation (see Design section 4 for architectural details)
+├── week-log/               ← Weekly lab logs (see Workshop section above for overview)
+└── ...
+```
 
 <br>
 
@@ -651,6 +669,7 @@ We attended each lab and testing marathon, gathering advice and feedback from di
 - [3 Mechanism Systems](#3-mechanism-systems)
   - [3.1 Record System](#31-record-system)
   - [3.2 Environmental Mechanisms](#32-environmental-mechanisms)
+- [4 Code Structure](#4-code-structure)
 
 ### **1 Top Level Architecture**:
 
@@ -891,6 +910,13 @@ The state machine defines the full lifecycle of the recording system—from Read
 </div>
 
 The mechanism system manages reusable level mechanisms, including circuit based door unlocking and controllable moving platforms. Diagram V shows the class structure of the mechanism system: ButtonPlatformLinkSystem and WireIndicatorSystem handle different linkage logics.
+
+### **4 Code Structure**:
+
+```text
+/docs
+├── ...
+```
 
 <div align="center">
   <img src="./assets/divider.png" width="800">
@@ -1169,49 +1195,49 @@ After download:
 - 按下空格或回车键可确认选中选项，按下 ESC 键能够退出当前菜单并返回上一级界面。
 
 <div align="center">
-  <img src="./assets/implementation/keyboard-navigation/0.png" width="600" />
+  <img src="./assets/implementation/keyboard-navigation/0.png" width="330" />
   <br><br>
   <b>Menu page: default state</b>
   <br><br>
 </div>
 
 <div align="center">
-  <img src="./assets/implementation/keyboard-navigation/1.png" width="600" />
+  <img src="./assets/implementation/keyboard-navigation/1.png" width="330" />
   <br><br>
   <b>Menu page: mouse hover</b>
   <br><br>
 </div>
 
 <div align="center">
-  <img src="./assets/implementation/keyboard-navigation/2.png" width="600" />
+  <img src="./assets/implementation/keyboard-navigation/2.png" width="330" />
   <br><br>
   <b>Menu page: keyboard selection</b>
   <br><br>
 </div>
 
 <div align="center">
-  <img src="./assets/implementation/keyboard-navigation/3.png" width="600" />
+  <img src="./assets/implementation/keyboard-navigation/3.png" width="330" />
   <br><br>
   <b>World selection page: mouse hover</b>
   <br><br>
 </div>
 
 <div align="center">
-  <img src="./assets/implementation/keyboard-navigation/4.png" width="600" />
+  <img src="./assets/implementation/keyboard-navigation/4.png" width="330" />
   <br><br>
   <b>World selection page: keyboard selection</b>
   <br><br>
 </div>
 
 <div align="center">
-  <img src="./assets/implementation/keyboard-navigation/5.png" width="600" />
+  <img src="./assets/implementation/keyboard-navigation/5.png" width="330" />
   <br><br>
   <b>Paused menu page: mouse hover on 'Setting'</b>
   <br><br>
 </div>
 
 <div align="center">
-  <img src="./assets/implementation/keyboard-navigation/6.png" width="600" />
+  <img src="./assets/implementation/keyboard-navigation/6.png" width="330" />
   <br><br>
   <b>Paused menu page: keyboard selection on 'Setting'</b>
   <br><br>
@@ -1568,13 +1594,17 @@ Overall, our project successfully achieved its core creative objective: transfor
 
 ## **⚙️ AI Statement**
 
-During the development of this project, the game ideas(main game topic, concept and the mechanism, puzzles in each level) and the main underlying code architecture were totally designed by our team members. AI was only used to help us generate some duplicate code, translate some text content, and adjust the interface style.
+AI was only used for assistance purposes. The core game mechanics, level design, logical reasoning, code debugging, feature integration and final implementation were all carried out and verified by the team members.
 
-Firstly, we used AI to assist us in completing some CSS formatting and slightly adjusting the layout. The advice about the size and format of the image was also obtained from AI tools. However, we did not copy directly from it, we manually selected, adjusted and replaced based on the actual in-game visuals and project requirements.
+AI was used in the following aspects:
 
-Secondly, we also used AI to reduce the workload caused by large amounts of repetitive logic in code development. For instance, in areas such as level structure, entity creation, event listening, configuration snippets and sections with a high degree of repetitive logic, AI was used to generate a first draft based on our existing code pattern. In this way, we could focus more on designing each unique level instead of writing similar level code over and over again. And the core game mechanics, level design, logical reasoning, code debugging, feature integration and final implementation were all carried out and verified by the team members.
+- Repetitive code & draft generation - we used AI to reduce the workload caused by large amounts of repetitive logic in code development. For instance, in areas such as level structure, entity creation, event listening, configuration snippets and sections with a high degree of repetitive logic, AI was used to generate a first draft based on our existing code pattern. In this way, we could focus more on designing each unique level instead of writing similar level code over and over again. And the core game mechanics, level design, logical reasoning, code debugging, feature integration and final implementation were all carried out and verified by the team members.
 
-And for the bilingual system of our game, part of the in-game text, prompts are generated by AI based our first draft. Since this project is to show our ability of software development, the artistic style of our game is mainly generated by AI (Because we don’t have any team members who are particularly good at art :D).
+- Suggestions on CSS style and layout - We manually selected, modified, and applied these suggestions.
+
+- Translation - AI helped translate in-game text, UI prompts, code comments, and technical documentation. We reviewed and refined translations for accuracy.
+
+- Art style - the artistic style of our game is totally generated by AI (Because we don’t have any team members who are particularly good at art :D).
 
 <div align="center">
   <img src="./assets/divider.png" width="800">
