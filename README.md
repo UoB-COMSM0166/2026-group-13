@@ -36,7 +36,7 @@
   <br>
   <img src="./assets/gameplay/gameplay3.png" width="700">
   <br>
-  <b>Figure 3: Featured Phantom Dialogue System - Special 1</b>
+  <b>Figure 3: Future Phantom Dialogue System - Special 1</b>
   <br>
 </div>
 
