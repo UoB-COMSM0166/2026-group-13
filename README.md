@@ -16,8 +16,38 @@
 
 <h1 align="center"><b>📽️ Gameplay Preview</b></h1>
 
-<br>
-<br>
+<div align="center">
+  <br>
+  <img src="./assets/gameplay/gameplay1.png" width="700">
+  <br>
+  <b>Figure 1: Featured level preview - Easy 1</b>
+  <br>
+</div>
+
+<div align="center">
+  <br>
+  <img src="./assets/gameplay/gameplay2.png" width="700">
+  <br>
+  <b>Figure 2: Featured level preview - Easy 4 · Hard 3</b>
+  <br>
+</div>
+
+<div align="center">
+  <br>
+  <img src="./assets/gameplay/gameplay3.png" width="700">
+  <br>
+  <b>Figure 3: Future Phantom Dialogue System - Special 1</b>
+  <br>
+</div>
+
+<div align="center">
+  <br>
+  <img src="./assets/gameplay/gameplay4.png" width="700">
+  <br>
+  <b>Figure 4: The itch.io gaming page</b>
+  <br>
+</div>
+
 <br>
 
 <h1 align="center"><b>👥 Team Members</b></h1>
@@ -1131,7 +1161,44 @@ In summary, in the scope of a student project, our project **U Help U** shows a 
 
 ## **⚙️ Contribution Statement**
 
-- Provide a table of everyone's contribution, which _may_ be used to weight individual grades. We expect that the contribution will be split evenly across team-members in most cases. Please let us know as soon as possible if there are any issues with teamwork as soon as they are apparent and we will do our best to help your team work harmoniously together.
+<div align="center">
+  <table width="60%">
+    <thead>
+      <tr>
+        <th align="center">Contributor</th>
+        <th align="center">Contribution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center">Zhiqing Zhang</td>
+        <td align="center">1.2</td>
+      </tr>
+      <tr>
+        <td align="center">Wenlei Miao</td>
+        <td align="center">1</td>
+      </tr>
+      <tr>
+        <td align="center">Xuelin Ma</td>
+        <td align="center">0.95</td>
+      </tr>
+      <tr>
+        <td align="center">Jingran Zhang</td>
+        <td align="center">0.95</td>
+      </tr>
+      <tr>
+        <td align="center">Yiyuan Yao</td>
+        <td align="center">0.95</td>
+      </tr>
+      <tr>
+        <td align="center">Siqi Xu</td>
+        <td align="center">0.95</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><i>Team contributions for the Project.</i></p>
+</div>
+
 
 ## **⚙️ AI Statement**
 
