@@ -73,61 +73,76 @@
 <table align="center" width="100%">
   <thead>
     <tr>
-      <th width="10%">Link</th>
-      <th width="62%">Image</th>
-      <th width="28%">Description</th>
+      <th align="center" width="10%">Link</th>
+      <th align="center" width="62%">Image</th>
+      <th align="center" width="28%">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td align="center"><b><a href="./week-log/Week01/README.md">Week 01</a></b></td>
+      <td align="center"><b>Week 01</b><br><b><a href="./week-log/Week01/README.md">README</a></b></td>
       <td align="center"><img src="./assets/workshop/week01.png" width="260"/></td>
       <td>Game Research - Analysis of over 50 games. <a href="https://angelica-serein.notion.site/Reference-Games-Everyone-d83b2f38a2aa8273b95f01f7046d4f93?source=copy_link">Reference Games</a></td>
     </tr>
     <tr>
-      <td align="center"><b><a href="./week-log/Week02/ReadMe.md">Week 02</a></b></td>
+      <td align="center"><b>Week 02</b><br><b><a href="./week-log/Week02/ReadMe.md">README</a></b></td>
       <td align="center"><img src="./assets/workshop/week02.png" width="260"/></td>
       <td><a href="https://moosry.github.io/p5.js-Paint-App/">Drawing App</a> and Two game ideas.</td>
     </tr>
     <tr>
-      <td align="center"><b><a href="./week-log/Week03/ReadMe.md">Week 03</a></b></td>
+      <td align="center"><b>Week 03</b><br><b><a href="./week-log/Week03/ReadMe.md">README</a></b></td>
       <td align="center">—</td>
-      <td>Built paper prototypes and finalized the record-replay concept.</td>
+      <td>Paper prototypes of two games and the final game idea.</td>
     </tr>
     <tr>
-      <td align="center"><b><a href="./week-log/Week04/Requirements-v2.0.md">Week 04</a></b></td>
+      <td align="center"><b>Week 04</b><br><b><a href="./week-log/Week04/README.md">README</a></b></td>
       <td align="center">—</td>
       <td>Defined user stories and functional/non-functional requirements.</td>
     </tr>
     <tr>
-      <td align="center"><b><a href="./week-log/Week05/ReadMe.md">Week 05</a></b></td>
+      <td align="center"><b>Week 05</b><br><b><a href="./week-log/Week05/ReadMe.md">README</a></b></td>
       <td align="center">—</td>
       <td>Designed architecture diagrams and implemented core systems.</td>
     </tr>
     <tr>
-      <td align="center"><b><a href="./week-log/Week06/ReadMe.md">Week 06</a></b></td>
-      <td align="center">—</td>
-      <td>Released the first playable demo with core mechanics.</td>
+      <td align="center"><b>Week 06</b><br><b><a href="./week-log/Week06/ReadMe.md">README</a></b></td>
+      <td align="center"><img src="./assets/workshop/week06.png" width="260"/></td>
+      <td>Released the first playable <a href="https://lsironman789.github.io/Demo1-copy/Demo1/">Demo 0</a> with core mechanics.</td>
     </tr>
     <tr>
-      <td align="center"><b><a href="./week-log/Week07/ReadMe.md">Week 07</a></b></td>
-      <td align="center">—</td>
-      <td>Iterated demo versions and refined gameplay, terrain, and UI.</td>
+      <td align="center"><b>Week 07</b><br><b><a href="./week-log/Week07/ReadMe.md">README</a></b></td>
+      <td align="center"><img src="./assets/workshop/week07.png" width="260"/></td>
+      <td>Added two difficulty levels and iterated levels based on user evaluation.</td>
     </tr>
     <tr>
-      <td align="center"><b><a href="./week-log/Week08/ReadMe.md">Week 08</a></b></td>
+      <td align="center"><b>Week 08</b><br><b><a href="./week-log/Week08/ReadMe.md">README</a></b></td>
       <td align="center">—</td>
       <td>Ran user tests and analyzed SUS/NASA-TLX results.</td>
     </tr>
     <tr>
-      <td align="center"><b><a href="./week-log/Week09/Evaluation.md">Week 09</a></b></td>
+      <td align="center"><b>Week 09</b><br><b><a href="./week-log/Week09/README.md">README</a></b></td>
       <td align="center">—</td>
       <td>Merged key code and updated levels from evaluation findings.</td>
     </tr>
     <tr>
-      <td align="center"><b><a href="./week-log/Week10/README.md">Week 10</a></b></td>
+      <td align="center"><b>Week 10-12</b><br><b><a href="./week-log/Week10-12/README.md">README</a></b></td>
+      <td align="center"><img src="./assets/workshop/week10-12.png" width="260"/></td>
+      <td>Refined Demo 1 and Demo 2 levels and mechanics (also playable in the current build!).</td>
+    </tr>
+    <tr>
+      <td align="center"><b>Week 13</b><br><b><a href="./week-log/Week13/README.md">README</a></b></td>
       <td align="center">—</td>
-      <td>Performed black-box testing on core mechanics.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td align="center"><b>Week 14</b><br><b><a href="./week-log/Week14/README.md">README</a></b></td>
+      <td align="center">—</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td align="center"><b>Week 15</b><br><b><a href="./week-log/Week15/README.md">README</a></b></td>
+      <td align="center"><img src="./assets/workshop/week15.png" width="260"/></td>
+      <td>Prepared flowcharts and presentation script for the final demo showcase.</td>
     </tr>
   </tbody>
 </table>
