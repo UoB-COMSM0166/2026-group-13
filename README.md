@@ -1369,6 +1369,7 @@ And for the bilingual system of our game, part of the in-game text, prompts are 
   <br>
   <h3>🥰 Thanks to All Game Testers</h3>
   <p><i>SINCERE THANKS to all the playtesters who provided valuable feedback and suggestions to improve the game:</i></p>
+  
   <br>
   <p>Zhiqing Zhang 张芷晴</p>
   <p align="center">────────</p>
@@ -1438,6 +1439,7 @@ And for the bilingual system of our game, part of the in-game text, prompts are 
   <p align="center">────────</p>
   <p>Every anonymous online playtester</p>
   <br>
+  <hr>
   <h3>✨ Special Thanks</h3>
   <p><i>Most importantly, special thanks to the six of us — the team behind <b>U Help U</b>:</i></p>
   <p><b>Zhiqing Zhang 张芷晴</b></p>
