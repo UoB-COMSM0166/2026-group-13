@@ -1,4 +1,4 @@
-<h1 align="center"><b>🎮️ U Help U 🎮️</b></h1>
+﻿<h1 align="center"><b>🎮️ U Help U 🎮️</b></h1>
 
 <p align="center">
 <b><i>Two selves. One timeline —</i></b>
@@ -8,9 +8,11 @@
 <b><i>Your only teammate is yourself!</i></b>
 </p>
 
-### **This is an amazing and $\color{hotpink}{\textbf{challenging}}$ original 2D platform puzzle game!**
+<div align="center">
 
-<p align="center"><sub><i>Inspired by U vs U, while all gameplay and core mechanics are originally designed and completely different!</i></sub></p>
+### $\color{mediumpurple}{\textbf{An }}$ $\color{hotpink}{\textbf{original}}$ $\color{mediumpurple}{\textbf{,}}$ $\color{hotpink}{\textbf{challenging}}$ $\color{mediumpurple}{\textbf{2D puzzle-platformer — and it's }}$ $\color{hotpink}{\textbf{amazing}}$ $\color{mediumpurple}{\textbf{!}}$
+
+</div>
 
 <div align="center">
   <a href="https://angelicaserein.github.io/UhelpU/">
@@ -18,14 +20,20 @@
     <br>
     <br>
   </a>
-  <sub>👉 <a href="https://angelicaserein.github.io/UhelpU/">Click picture or here to play!</a></sub>
+  <a href="https://angelicaserein.github.io/UhelpU/">
+    <img src="https://img.shields.io/badge/🎮%20Play%20Now-Click%20to%20Play-ff6b9d?style=for-the-badge&labelColor=7b2d8b" alt="🎮 Play Now">
+  </a>
+  <br>
+  <sub><i>Currently features 7 Easy levels, 4 Hard levels, 1 Special level, and 10 legacy levels to explore!<br>Average playtime depends on your brain — if you're incredibly smart, maybe an hour to clear them all!</i></sub>
   <br><br>
   <a href="https://angelicaserein.github.io/UhelpU/">
     <img src="./assets/video.png" width="800">
     <br>
     <br>
   </a>
-  <sub>👉 <a href="https://angelicaserein.github.io/UhelpU/">Click picture or here to watch video!</a></sub>
+  <a href="https://angelicaserein.github.io/UhelpU/">
+    <img src="https://img.shields.io/badge/🎬%20Watch%20Video-Click%20to%20Watch-ff6b9d?style=for-the-badge&labelColor=7b2d8b" alt="🎬 Watch Video">
+  </a>
   <br>
 </div>
 
@@ -41,9 +49,13 @@
     &nbsp;&nbsp;·&nbsp;&nbsp;
     <a href="#️-workshop">🗓️ Workshop</a>
     &nbsp;&nbsp;·&nbsp;&nbsp;
-    <a href="#-project-report">📑 Project Report</a>
+    <a href="#-acknowledgements">❤️ Acknowledgements</a>
     &nbsp;
   </b>
+  <br><br>
+  <a href="#-project-report">
+    <img src="https://img.shields.io/badge/📑%20Project%20Report-Click%20to%20Read-ff6b9d?style=for-the-badge&labelColor=7b2d8b" alt="📑 Project Report">
+  </a>
   <br><br>
 </div>
 
@@ -57,7 +69,7 @@
   <br>
   <img src="./assets/gameplay/gameplay1.png" width="700">
   <br>
-  <b>Figure 1: Featured level preview - Easy 1</b>
+  <b>Game guide preview - Easy level 1 with tutorial system</b>
   <br>
 </div>
 
@@ -65,7 +77,7 @@
   <br>
   <img src="./assets/gameplay/gameplay2.png" width="700">
   <br>
-  <b>Figure 2: Featured level preview - Easy 4 · Hard 3</b>
+  <b>Featured level preview - Easy 4 'Illusions' & Hard 3 'Symbiosis'</b>
   <br>
 </div>
 
@@ -73,7 +85,7 @@
   <br>
   <img src="./assets/gameplay/gameplay3.png" width="700">
   <br>
-  <b>Figure 3: Future Phantom Dialogue System - Special 1</b>
+  <b>The first special level is now available - More coming soon!</b>
   <br>
 </div>
 
@@ -81,7 +93,7 @@
   <br>
   <img src="./assets/gameplay/gameplay4.png" width="700">
   <br>
-  <b>Figure 4: The itch.io gaming page</b>
+  <b>Can’t get enough? Let's try the Map Editor and create your own levels!</b>
   <br>
 </div>
 
@@ -95,25 +107,39 @@
 
 <div align="center">
   <br>
-  <h3>👻 Phantom Chat System</h3>
-  <p><i>The official Phantom Chat System companion tool for U Help U.<br>Chat with your phantom past self — just like in the game!</i></p>
-  <a href="https://moosry.github.io/UhlepU-blackbox-test/phantom-chat.html">
-    <img src="./assets/website/phantom-chat-preview.png" width="700">
+  <h3>🎮 Available on itch.io</h3>
+  <p><i>itch.io is an open and popular marketplace for independent digital creators with a focus on indie video games.</i></p>
+  <p><i>More platforms coming soon!</i></p>
+  <a href="https://itch.io/search?q=Uhelp">
+    <img src="./assets/website/itch.png" width="700">
   </a>
   <br><br>
-  <a href="https://moosry.github.io/UhlepU-blackbox-test/phantom-chat.html"><b>→ Open Phantom Chat</b></a>
+  <a href="https://itch.io/search?q=Uhelp"><b>→ Find us on itch.io</b></a>
   <br><br>
 </div>
 
 <div align="center">
   <br>
-  <h3>📖 Official Walkthrough Guide</h3>
-  <p><i>Hard levels got you stuck? We recorded full walkthrough videos for every Hard Level.<br>Watch, learn, and level up together!</i></p>
+  <h3>🗝️Official Walkthrough Guide</h3>
+  <p><i>We have more than one solutions in each level, so we recommand you to play it by yourself first!</i></p>
+  <p><i>More solutions walkthrough videos are coming soon...</i></p>
   <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">
     <img src="./assets/website/walkthrough-preview.png" width="700">
   </a>
   <br><br>
   <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/"><b>→ Watch Walkthroughs</b></a>
+  <br><br>
+</div>
+
+<div align="center">
+  <br>
+  <h3>👻 Phantom Chat System</h3>
+  <p><i>The Phantom Chat System for U Help U.<br>Chat with your phantom past self — just like in the game!</i></p>
+  <a href="https://moosry.github.io/UhlepU-blackbox-test/phantom-chat.html">
+    <img src="./assets/website/phantom-chat-preview.png" width="700">
+  </a>
+  <br><br>
+  <a href="https://moosry.github.io/UhlepU-blackbox-test/phantom-chat.html"><b>→ Open Phantom Chat</b></a>
   <br><br>
 </div>
 
@@ -127,6 +153,10 @@
 
 <div align="center">
   <img src="./assets/Group_Picture01.png" width="600">
+  <br><br>
+  <a href="https://yyyjava.github.io/test-process-part/Team-roles.html">
+    <img src="https://img.shields.io/badge/👥%20Team%20Roles-Click%20to%20View-ff6b9d?style=for-the-badge&labelColor=7b2d8b" alt="👥 Team Roles">
+  </a>
   <br>
   <br>
 </div>
@@ -135,37 +165,30 @@
   <tr>
     <th>Name</th>
     <th>Email</th>
-    <th>Role</th>
   </tr>
   <tr>
     <td>Zhiqing Zhang</td>
     <td>ek25873@bristol.ac.uk</td>
-    <td>role</td>
   </tr>
   <tr>
     <td>Siqi Xu</td>
     <td>lv25773@bristol.ac.uk</td>
-    <td>role</td>
   </tr>
   <tr>
     <td>Xuelin Ma</td>
     <td>pw25500@bristol.ac.uk</td>
-    <td>role</td>
   </tr>
   <tr>
     <td>Yiyuan Yao</td>
     <td>jg25755@bristol.ac.uk</td>
-    <td>role</td>
   </tr>
   <tr>
     <td>Jingran Zhang</td>
     <td>sx25997@bristol.ac.uk</td>
-    <td>role</td>
   </tr>
   <tr>
     <td>Wenlei Miao</td>
     <td>hz25681@bristol.ac.uk</td>
-    <td>role</td>
   </tr>
 </table>
 
@@ -490,13 +513,13 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 
 ### **1 Ideation process**:
 
-&emsp;&emsp;During the first stage of our game design, the first problem that came to us was which type of games we should choose. Each member of our group did detailed research about the specific game type he or she wanted to design, and finally carried out six ideas(each member with one idea). Then our group arranged a meeting and played all the games that could serve as prototypes for our game. The original ideas include Roguelike, Tower Defense, Simulation, PvP, puzzle-solving, etc. And after several hours of discussion, we finally decided to design a 2D platform puzzle-adventure game.
+During the first stage of our game design, the first problem that came to us was which type of games we should choose. Each member of our group did detailed research about the specific game type he or she wanted to design, and finally carried out six ideas(each member with one idea). Then our group arranged a meeting and played all the games that could serve as prototypes for our game. The original ideas include Roguelike, Tower Defense, Simulation, PvP, puzzle-solving, etc. And after several hours of discussion, we finally decided to design a 2D platform puzzle-adventure game.
 
-&emsp;&emsp;However, a distinctive characteristic of our game is an important part that sets it apart from others. While trying various puzzle games, a game called U vs U attracted us, which has the key game mechanics that players need to find ways to escape from their past selves or kill them before their past self reaches the finish line. That is really an amazing mechanic that only needs one player, but needs to think from two different sides. And the concept of two selves existing in different times and spaces is also quite novel. As a result, we finally decided on the final idea of our game: U help U, a 2D platform puzzle-adventure game in which the player can release a clone through an operation called recording. The clone will replay all the movements and operations that were done by the player during recording time, just like the player’s phantom(The principle behind the recording is to capture each key press during the recording time, and let the clone repeat the movement caused by these key presses during replay time, so it is also called capture). What the player needs to do is to cooperate with the phantom to clear each level. In our initial concept, we can design each level with a different style, so that the player can play various kinds of games in our game.
+However, a distinctive characteristic of our game is an important part that sets it apart from others. While trying various puzzle games, a game called U vs U attracted us, which has the key game mechanics that players need to find ways to escape from their past selves or kill them before their past self reaches the finish line. That is really an amazing mechanic that only needs one player, but needs to think from two different sides. And the concept of two selves existing in different times and spaces is also quite novel. As a result, we finally decided on the final idea of our game: U help U, a 2D platform puzzle-adventure game in which the player can release a clone through an operation called recording. The clone will replay all the movements and operations that were done by the player during recording time, just like the player’s phantom(The principle behind the recording is to capture each key press during the recording time, and let the clone repeat the movement caused by these key presses during replay time, so it is also called capture). What the player needs to do is to cooperate with the phantom to clear each level. In our initial concept, we can design each level with a different style, so that the player can play various kinds of games in our game.
 
 ### **2 User Stories**:
 
-&emsp;&emsp;Based on this initial game idea, we formulated a series of user stories to help us prioritize the tasks. Our user stories are based on the format “As a **, I want to **, so that\_\_”, to consider different requirements from different sides. Here are some crucial user stories on basic game controls, core game mechanics, game interactions, and user interface. Click [here](./week-log/Week04/Requirements-v2.0.md) to view the full user stories, the epics we developed in the early stages, and their completion status.
+Based on this initial game idea, we formulated a series of user stories to help us prioritize the tasks. Our user stories are based on the format “As a **, I want to **, so that\_\_”, to consider different requirements from different sides. Here are some crucial user stories on basic game controls, core game mechanics, game interactions, and user interface. Click [here](./week-log/Week04/Requirements-v2.0.md) to view the full user stories, the epics we developed in the early stages, and their completion status.
 
 <div align="center">
   <br>
@@ -507,8 +530,9 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;In addition to player-centred user stories, we also considered requirements from the perspectives of designers and developers. This helped us ensure that the game would not only be enjoyable for players, but also practical to extend, balance, and maintain during development.
-&emsp;&emsp;Overall, these user stories provided a structured way to translate our initial game concept into a clearer set of development goals. They helped us identify the most important gameplay expectations from different perspectives, prioritise key tasks during development, and ensure that both player experience and project maintainability were taken into account. They also served as a bridge between the early design idea and the more detailed functional and non-functional requirements defined later in the project.
+In addition to player-centred user stories, we also considered requirements from the perspectives of designers and developers. This helped us ensure that the game would not only be enjoyable for players, but also practical to extend, balance, and maintain during development.
+
+Overall, these user stories provided a structured way to translate our initial game concept into a clearer set of development goals. They helped us identify the most important gameplay expectations from different perspectives, prioritise key tasks during development, and ensure that both player experience and project maintainability were taken into account. They also served as a bridge between the early design idea and the more detailed functional and non-functional requirements defined later in the project.
 
 ### **3 Onion Model**:
 
@@ -521,7 +545,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;The stakeholder onion model was also used to identify the main groups involved in or affected by the game, and to clarify their different roles and levels of influence throughout our project.
+The stakeholder onion model was also used to identify the main groups involved in or affected by the game, and to clarify their different roles and levels of influence throughout our project.
 
 <div align="center">
   <br>
@@ -534,9 +558,9 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 
 ### **4 Early-Stage Design**:
 
-&emsp;&emsp;During our early design stage, we mainly focused on designing different levels with various gameplay styles, such as roguelike in one level and shooting in another, but all combined with the record and reply mechanism. Because there are still some great ideas and map designs that were carried out by some group members. In this way, players can not only focus on puzzle solving using clones, but also can enjoy other different kinds of game styles in only one game. But with the deepening of research and development, we find that the game as a whole seems a bit disjointed. If each stage uses a different style, it seems that it is hard to find a suitable theme for the whole game. So we changed the development strategy to only focus on puzzle solving with the record(capture) system.
+During our early design stage, we mainly focused on designing different levels with various gameplay styles, such as roguelike in one level and shooting in another, but all combined with the record and reply mechanism. Because there are still some great ideas and map designs that were carried out by some group members. In this way, players can not only focus on puzzle solving using clones, but also can enjoy other different kinds of game styles in only one game. But with the deepening of research and development, we find that the game as a whole seems a bit disjointed. If each stage uses a different style, it seems that it is hard to find a suitable theme for the whole game. So we changed the development strategy to only focus on puzzle solving with the record(capture) system.
 
-&emsp;&emsp;In our first sprint(first demo version), we mainly focused on creating one level with a relatively easy puzzle(two buttons, the player and phantom need to press them at the same time) to let players and testers get familiar with the game mechanics and how to cooperate with the record & replay system. For players who are more confident in their gaming skills, we also developed a level where players need to time their use of phantom as stepping stones carefully to cross the chasm.
+In our first sprint(first demo version), we mainly focused on creating one level with a relatively easy puzzle(two buttons, the player and phantom need to press them at the same time) to let players and testers get familiar with the game mechanics and how to cooperate with the record & replay system. For players who are more confident in their gaming skills, we also developed a level where players need to time their use of phantom as stepping stones carefully to cross the chasm.
 
 <div align="center">
   <br>
@@ -562,7 +586,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;Above is our use-case diagram and the following table summarizes the main purpose and design value of it:
+Above is our use-case diagram and the following table summarizes the main purpose and design value of it:
 
 <div align="center">
   <br>
@@ -575,7 +599,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 
 ### **6 Requirements Definition**：
 
-&emsp;&emsp;We attended each lab and testing marathon, gathering advice and feedback from different testers and players. After weekly meetings and bug fixing, our finalized functional and non-functional requirements are as follows:
+We attended each lab and testing marathon, gathering advice and feedback from different testers and players. After weekly meetings and bug fixing, our finalized functional and non-functional requirements are as follows:
 
 <div align="center">
   <br>
@@ -630,7 +654,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;This class diagram illustrates four core classes in the game and their collaboration: AppCoordinator, EventBus, SwitcherMain, and LevelManager, which are responsible for overall orchestration, event dispatching, page switching, and level management respectively.
+This class diagram illustrates four core classes in the game and their collaboration: AppCoordinator, EventBus, SwitcherMain, and LevelManager, which are responsible for overall orchestration, event dispatching, page switching, and level management respectively.
 
 <div align="center">
   <br>
@@ -641,7 +665,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;The sequence diagram shows the initialization order of these four core classes during game startup.
+The sequence diagram shows the initialization order of these four core classes during game startup.
 
 #### **1.1 Event System**:
 
@@ -700,7 +724,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 
 </div>
 
-&emsp;&emsp;The event system adopts a publish–subscribe model to centrally manage the dispatching of game events.
+The event system adopts a publish–subscribe model to centrally manage the dispatching of game events.
 
 #### **1.2 Level Manager**:
 
@@ -713,7 +737,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;The LevelManager handles orchestration, Level executes level logic, CheckpointSystem manages respawn points, and Room represents spatial partitions within a level.
+The LevelManager handles orchestration, Level executes level logic, CheckpointSystem manages respawn points, and Room represents spatial partitions within a level.
 
 #### **1.3 Page Switcher**:
 
@@ -726,7 +750,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;The Switcher is responsible for switching between static UI pages and level pages, and forwarding update and draw calls to the currently active page.
+The Switcher is responsible for switching between static UI pages and level pages, and forwarding update and draw calls to the currently active page.
 
 ### **2 Core Runtime Loop of Level Execution**:
 
@@ -739,7 +763,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;The sequence diagram illustrates the execution order of the game’s main loop: each frame calls update() to refresh system states, followed by draw() to render the interface.
+The sequence diagram illustrates the execution order of the game’s main loop: each frame calls update() to refresh system states, followed by draw() to render the interface.
 
 #### **2.1 Game Entity System**:
 
@@ -752,7 +776,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;The Game Entity System defines all in game entities, providing unified data structures, shared behaviors, and consistent interfaces for characters, platforms, and interactive elements. The GameEntity base class provides fundamental attributes, while derived classes may include additional components such as collision and control components.
+The Game Entity System defines all in game entities, providing unified data structures, shared behaviors, and consistent interfaces for characters, platforms, and interactive elements. The GameEntity base class provides fundamental attributes, while derived classes may include additional components such as collision and control components.
 
 #### **2.2 Collision System**:
 
@@ -765,7 +789,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;The collision system implements a complete pipeline of collision detection → collision resolution → collision response, ensuring correct physical interactions, trigger events, and blocking behavior between entities.
+The collision system implements a complete pipeline of collision detection → collision resolution → collision response, ensuring correct physical interactions, trigger events, and blocking behavior between entities.
 
 - CollideSystem orchestrates the entire collision process.
 - CollisionDetector determines whether two entities collide.
@@ -783,7 +807,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;The character control system processes native browser keyboard events, interprets player intent, validates whether the intent can be executed, and maps validated actions to updates of velocity and acceleration in the character’s movement component.
+The character control system processes native browser keyboard events, interprets player intent, validates whether the intent can be executed, and maps validated actions to updates of velocity and acceleration in the character’s movement component.
 
 #### **2.4 Physics System**:
 
@@ -796,7 +820,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;The physics system updates entity positions by applying velocity and acceleration.
+The physics system updates entity positions by applying velocity and acceleration.
 
 #### **2.5 UI System**:
 
@@ -809,7 +833,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;The UI module manages all interface rendering and interaction logic, including static pages, level pages, UI components, and transition effects.
+The UI module manages all interface rendering and interaction logic, including static pages, level pages, UI components, and transition effects.
 
 ### **3 Mechanism Systems**:
 
@@ -824,7 +848,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;The recording system is the core mechanic of the game. It manages recording states, captures player actions, and replays them. RecordSystem serves as the central component, combining RecordUI for interface rendering and relying on Clip to store recorded data.
+The recording system is the core mechanic of the game. It manages recording states, captures player actions, and replays them. RecordSystem serves as the central component, combining RecordUI for interface rendering and relying on Clip to store recorded data.
 
 <div align="center">
   <br>
@@ -835,7 +859,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;The state machine defines the full lifecycle of the recording system—from Ready to Record, to Recording, to Ready to Replay, and finally Replaying. It ensures that the recording and replay processes are controllable, resettable, and free from state conflicts through explicit states, input events, and action logic.
+The state machine defines the full lifecycle of the recording system—from Ready to Record, to Recording, to Ready to Replay, and finally Replaying. It ensures that the recording and replay processes are controllable, resettable, and free from state conflicts through explicit states, input events, and action logic.
 
 #### **3.2 Environmental Mechanisms**:
 
@@ -857,7 +881,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <br>
 </div>
 
-&emsp;&emsp;The mechanism system manages reusable level mechanisms, including circuit based door unlocking and controllable moving platforms. Diagram V shows the class structure of the mechanism system: ButtonPlatformLinkSystem and WireIndicatorSystem handle different linkage logics.
+The mechanism system manages reusable level mechanisms, including circuit based door unlocking and controllable moving platforms. Diagram V shows the class structure of the mechanism system: ButtonPlatformLinkSystem and WireIndicatorSystem handle different linkage logics.
 
 <div align="center">
   <img src="./assets/divider.png" width="800">
@@ -877,11 +901,11 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 
 ### **1 Overall Implementation Approach**：
 
-&emsp;&emsp;_U Help U_ is implemented using the p5.js library and follows an object‑oriented, modular architecture.  
+_U Help U_ is implemented using the p5.js library and follows an object‑oriented, modular architecture.  
 The game loop runs in a fixed update–draw cycle, coordinating physics updates, collision detection, UI rendering, and level logic.  
 Core systems such as the LevelManager, UI system, Record System, Leaderboard System, and Level Editor communicate through well‑defined interfaces.
 
-&emsp;&emsp;During development, we encountered two major technical challenges:
+During development, we encountered two major technical challenges:
 
 - implementing a robust leaderboard system that supports guest/registered accounts, name conflict resolution, and data migration;
 - designing a fully functional level editor with upload/download sharing and safe serialization.
@@ -936,7 +960,7 @@ We implemented a **dual‑layer data architecture**:
 
 ### **3.1 Early Attempts and Problems**：
 
-&emsp;&emsp;Our first attempt stored the entire level object directly.  
+Our first attempt stored the entire level object directly.  
 This caused:
 
 - circular references in JSON
@@ -948,7 +972,7 @@ This caused:
 
 #### **Custom Serialization Format**：
 
-&emsp;&emsp;We designed a clean, safe JSON structure:
+We designed a clean, safe JSON structure:
 
 - tile grid
 - entity list
@@ -996,33 +1020,33 @@ After download:
 
 #### **1.1 Contextual Onboarding & Bilingual Support**:
 
-&emsp;&emsp;Issue: Players require clearer, real-time guidance on game controls and mechanics. Static instructions are insufficient.
+Issue: Players require clearer, real-time guidance on game controls and mechanics. Static instructions are insufficient.
 
-&emsp;&emsp;Action Plan: Implement bilingual (English and Chinese) proximity-based tooltips. Following the TA's recommendation, UI prompts (e.g., "Press [E] to interact" / "按 [E] 互动") will dynamically appear when the player's character approaches specific interactive elements, such as buttons or traps.
+Action Plan: Implement bilingual (English and Chinese) proximity-based tooltips. Following the TA's recommendation, UI prompts (e.g., "Press [E] to interact" / "按 [E] 互动") will dynamically appear when the player's character approaches specific interactive elements, such as buttons or traps.
 
-&emsp;&emsp;This aligns with Nielsen's "Recognition rather than recall". By providing contextual instructions exactly when and where they are needed, we significantly reduce the players' cognitive memory load.
+This aligns with Nielsen's "Recognition rather than recall". By providing contextual instructions exactly when and where they are needed, we significantly reduce the players' cognitive memory load.
 
 #### **1.2 Learning Curve & Scaffolding (Level 0)**:
 
-&emsp;&emsp;Issue: Transitioning directly into Level 1 introduces too many mechanics at once, causing a steep learning curve for new players.
+Issue: Transitioning directly into Level 1 introduces too many mechanics at once, causing a steep learning curve for new players.
 
-&emsp;&emsp;Action Plan: Design and insert a simple "Tutorial Level" (Level 0) prior to the first official stage. This safe, low-stakes environment will allow players to practice basic movements and test the core mechanics without the threat of failing. It doesn't need to be too complex; it should mainly introduce the game's controls to new players.
+Action Plan: Design and insert a simple "Tutorial Level" (Level 0) prior to the first official stage. This safe, low-stakes environment will allow players to practice basic movements and test the core mechanics without the threat of failing. It doesn't need to be too complex; it should mainly introduce the game's controls to new players.
 
-&emsp;&emsp;This addresses "Error prevention" and enhances "User control and freedom", ensuring players are comfortable with the physics and controls before facing actual challenges.
+This addresses "Error prevention" and enhances "User control and freedom", ensuring players are comfortable with the physics and controls before facing actual challenges.
 
 #### **1.3 Narrative Context & Conceptual Mapping**:
 
-&emsp;&emsp;Issue: The core gameplay loop (the time-clone mechanic) feels abstract without a narrative foundation.
+Issue: The core gameplay loop (the time-clone mechanic) feels abstract without a narrative foundation.
 
-&emsp;&emsp;Action Plan: Introduce a brief narrative sequence or story screen at the start of the game. This will establish the world's lore, explaining the concept of manipulating time and cooperating with one's "past self" and "present self" to solve puzzles.
+Action Plan: Introduce a brief narrative sequence or story screen at the start of the game. This will establish the world's lore, explaining the concept of manipulating time and cooperating with one's "past self" and "present self" to solve puzzles.
 
-&emsp;&emsp;This improves the "Match between system and the real world". Providing a narrative metaphor (co-op with a past self) makes the complex time-manipulation mechanic more intuitive and mentally accessible for the player.
+This improves the "Match between system and the real world". Providing a narrative metaphor (co-op with a past self) makes the complex time-manipulation mechanic more intuitive and mentally accessible for the player.
 
 ### **2 Quantitative**:
 
 #### **2.1 Evaluation Findings**:
 
-&emsp;&emsp;We conducted a quantitative user evaluation with 10 participants, using a within-subjects design to compare the user experience between Level 1 and Level 2. Participants completed the NASA Task Load Index (TLX) and System Usability Scale (SUS) after playing each level. We then ran a Wilcoxon Signed-Rank Test (with an alpha level of 0.05) to determine if there were significant differences in perceived workload and usability.
+We conducted a quantitative user evaluation with 10 participants, using a within-subjects design to compare the user experience between Level 1 and Level 2. Participants completed the NASA Task Load Index (TLX) and System Usability Scale (SUS) after playing each level. We then ran a Wilcoxon Signed-Rank Test (with an alpha level of 0.05) to determine if there were significant differences in perceived workload and usability.
 
 - **System Usability Scale (SUS):** The test yielded **W = 21.0** and **p = 0.857**. Since p > 0.05, there is **no significant difference** in usability between the two levels. Both levels scored well above the industry average of 68 (Level 1 mean: 71.5; Level 2 mean: 73.25). This is a positive outcome, indicating that our core UI and control mechanics remain stable, intuitive, and easy to use regardless of the difficulty progression.
 
@@ -1030,15 +1054,15 @@ After download:
 
 #### **2.2 Reconsidered Technical Challenges**:
 
-&emsp;&emsp;Based on the quantitative evaluation results and the core mechanics of our time-clone puzzle platformer, we have reconsidered our primary technical challenges for the ongoing development:
+Based on the quantitative evaluation results and the core mechanics of our time-clone puzzle platformer, we have reconsidered our primary technical challenges for the ongoing development:
 
 ### **3 Description of how code was tested**:
 
 #### **3.1 Manual Testing and Console Logging During Development**:
 
-&emsp;&emsp;在整个开发过程中，我们采用了边写边测的即时手动测试方式，配合浏览器控制台的 `console.log` 进行辅助验证。每实现一个功能模块，就立刻在浏览器中手动操作，观察实际行为是否符合预期，从而在问题尚未扩散之前及时发现并修复。
+在整个开发过程中，我们采用了边写边测的即时手动测试方式，配合浏览器控制台的 `console.log` 进行辅助验证。每实现一个功能模块，就立刻在浏览器中手动操作，观察实际行为是否符合预期，从而在问题尚未扩散之前及时发现并修复。
 
-&emsp;&emsp;我们在代码关键节点插入 `console.log`，实时追踪各模块的运行状态，包括数据的读写、图片与页面模块的加载、键盘导航与按键绑定、教程流程的触发、计时器的启动，以及玩家与幻影的碰撞检测等。
+我们在代码关键节点插入 `console.log`，实时追踪各模块的运行状态，包括数据的读写、图片与页面模块的加载、键盘导航与按键绑定、教程流程的触发、计时器的启动，以及玩家与幻影的碰撞检测等。
 
 <div align="center">
   <br>
@@ -1051,7 +1075,7 @@ After download:
 
 #### **3.2 Black-Box Testing Based on Test Checklists**:
 
-&emsp;&emsp;我们按照课程介绍的黑盒测试方法，针对各功能模块设计了结构化测试清单，从用户视角出发，只关注输入与可观察到的输出结果。每份清单的测试用例分为三类：正常流程、边界情况、潜在问题，并以可交互、增减测试项以及可导出分享的 HTML 文档实现，便于逐项勾选与进度追踪。
+我们按照课程介绍的黑盒测试方法，针对各功能模块设计了结构化测试清单，从用户视角出发，只关注输入与可观察到的输出结果。每份清单的测试用例分为三类：正常流程、边界情况、潜在问题，并以可交互、增减测试项以及可导出分享的 HTML 文档实现，便于逐项勾选与进度追踪。
 
 <div align="center">
   <br>
@@ -1125,7 +1149,7 @@ After download:
     <img src="./assets/process/team-roles.png" width="600" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
   </a>
   <br>
-  <p><i>Click the image above to view our interactive team dossier.</i></p>
+  <p><i><a href="https://yyyjava.github.io/test-process-part/Team-roles.html" target="_blank">Click the image above to view our interactive team dossier, or here.</a></i></p>
   <br>
 </div>
 
@@ -1188,7 +1212,7 @@ After download:
 
 <br>
 
-&emsp;&emsp;We evaluate our game across three dimensions: **_Environmental_**, **_Social_**, and **_Technical_**, while treating **_Ethics_** and **_Accessibility_** as cross-cutting concerns. They are related to whether players can access and engage with the game effectively, the core mechanics are communicated in a clear and equitable manner, and whether the project can be responsibly developed and sustained in the future.
+We evaluate our game across three dimensions: **_Environmental_**, **_Social_**, and **_Technical_**, while treating **_Ethics_** and **_Accessibility_** as cross-cutting concerns. They are related to whether players can access and engage with the game effectively, the core mechanics are communicated in a clear and equitable manner, and whether the project can be responsibly developed and sustained in the future.
 
 ### **1 Environmental**
 
@@ -1239,7 +1263,7 @@ In summary, in the scope of a student project, our project **U Help U** shows a 
 
 <br>
 
-&emsp;&emsp;Our project: **U Help U**, successfully transforms an abstract idea into a coherent and playable game. Instead of relying on combat, the game requires players to record the actions of their "present self" and then cooperate with their "past self" to complete levels. The core challenge is one of planning, observation, and spatial reasoning rather than reflex alone.
+Our project: **U Help U**, successfully transforms an abstract idea into a coherent and playable game. Instead of relying on combat, the game requires players to record the actions of their "present self" and then cooperate with their "past self" to complete levels. The core challenge is one of planning, observation, and spatial reasoning rather than reflex alone.
 
 ### **1 Lessons**:
 
@@ -1251,15 +1275,15 @@ In summary, in the scope of a student project, our project **U Help U** shows a 
 
 ### **2 Challenges**:
 
-&emsp;&emsp;For technical, it can be summarized as jumping behavior, stacked interactions, box collisions, record-system state management, and level balancing. In game architecture, for example, the inheritance hierarchy of the entity tree is difficult to perfect in a single pass. To solve this, we adopt “generality” as the key criterion for determining ownership.
+For technical, it can be summarized as jumping behavior, stacked interactions, box collisions, record-system state management, and level balancing. In game architecture, for example, the inheritance hierarchy of the entity tree is difficult to perfect in a single pass. To solve this, we adopt “generality” as the key criterion for determining ownership.
 
-&emsp;&emsp;Another is teamwork. We initially encountered issues with unclear interface definitions. We then collaboratively refined the shared interfaces, explicitly identifying the key data that needed to be accessed by other systems (position/velocity), as well as the methods that should be exposed for external use (including state updates and input handling).
+Another is teamwork. We initially encountered issues with unclear interface definitions. We then collaboratively refined the shared interfaces, explicitly identifying the key data that needed to be accessed by other systems (position/velocity), as well as the methods that should be exposed for external use (including state updates and input handling).
 
-&emsp;&emsp;From design, a key was ensuring that the “record and replay” mechanic did not merely remain novel but was also genuinely intuitive and easy to understand. Thus, we developed a coherent narrative framework supported by in-game signposts, research logs, and guided instructions, helping players recognize that clones should be treated as collaborators.
+From design, a key was ensuring that the “record and replay” mechanic did not merely remain novel but was also genuinely intuitive and easy to understand. Thus, we developed a coherent narrative framework supported by in-game signposts, research logs, and guided instructions, helping players recognize that clones should be treated as collaborators.
 
 ### **3 Future**:
 
-&emsp;&emsp;Looking ahead, if we have the chance to develop a larger next version, the project offers many promising directions, such as multi-phase recording, custom level creation, hidden challenge routes, and community-based competition. Building on this foundation, additional features could include in-game shops, cosmetic rewards, pets, AI-guided NPCs, and level sharing systems. The sequel could further develop the game’s worldbuilding. Through elements like signposts, archival records, NPC dialogue, and memory fragments, the concept of “collaborating with your past self” can evolve from a gameplay mechanic into a more emotionally resonant narrative experience.
+Looking ahead, if we have the chance to develop a larger next version, the project offers many promising directions, such as multi-phase recording, custom level creation, hidden challenge routes, and community-based competition. Building on this foundation, additional features could include in-game shops, cosmetic rewards, pets, AI-guided NPCs, and level sharing systems. The sequel could further develop the game’s worldbuilding. Through elements like signposts, archival records, NPC dialogue, and memory fragments, the concept of “collaborating with your past self” can evolve from a gameplay mechanic into a more emotionally resonant narrative experience.
 
 <div align="center">
   <br>
@@ -1270,7 +1294,7 @@ In summary, in the scope of a student project, our project **U Help U** shows a 
 </div>
 <br>
 
-&emsp;&emsp;Overall, our project successfully achieved its core creative objective: transforming repetition into something meaningful. Previous attempts are not discarded because of failure but become practical resources for driving progress. Yes, what truly drives progress is never a single perfect attempt, but rather continuous repetition, revisions, iteration, and the value accumulated from all past efforts.
+Overall, our project successfully achieved its core creative objective: transforming repetition into something meaningful. Previous attempts are not discarded because of failure but become practical resources for driving progress. Yes, what truly drives progress is never a single perfect attempt, but rather continuous repetition, revisions, iteration, and the value accumulated from all past efforts.
 
 <div align="center">
   <img src="./assets/divider.png" width="800">
@@ -1324,10 +1348,101 @@ In summary, in the scope of a student project, our project **U Help U** shows a 
 
 ## **⚙️ AI Statement**
 
-&emsp;&emsp;During the development of this project, the game ideas(main game topic, concept and the mechanism, puzzles in each level) and the main underlying code architecture were totally designed by our team members. AI was only used to help us generate some duplicate code, translate some text content, and adjust the interface style.
+During the development of this project, the game ideas(main game topic, concept and the mechanism, puzzles in each level) and the main underlying code architecture were totally designed by our team members. AI was only used to help us generate some duplicate code, translate some text content, and adjust the interface style.
 
-&emsp;&emsp;Firstly, we used AI to assist us in completing some CSS formatting and slightly adjusting the layout. The advice about the size and format of the image was also obtained from AI tools. However, we did not copy directly from it, we manually selected, adjusted and replaced based on the actual in-game visuals and project requirements.
+Firstly, we used AI to assist us in completing some CSS formatting and slightly adjusting the layout. The advice about the size and format of the image was also obtained from AI tools. However, we did not copy directly from it, we manually selected, adjusted and replaced based on the actual in-game visuals and project requirements.
 
-&emsp;&emsp;Secondly, we also used AI to reduce the workload caused by large amounts of repetitive logic in code development. For instance, in areas such as level structure, entity creation, event listening, configuration snippets and sections with a high degree of repetitive logic, AI was used to generate a first draft based on our existing code pattern. In this way, we could focus more on designing each unique level instead of writing similar level code over and over again. And the core game mechanics, level design, logical reasoning, code debugging, feature integration and final implementation were all carried out and verified by the team members.
+Secondly, we also used AI to reduce the workload caused by large amounts of repetitive logic in code development. For instance, in areas such as level structure, entity creation, event listening, configuration snippets and sections with a high degree of repetitive logic, AI was used to generate a first draft based on our existing code pattern. In this way, we could focus more on designing each unique level instead of writing similar level code over and over again. And the core game mechanics, level design, logical reasoning, code debugging, feature integration and final implementation were all carried out and verified by the team members.
 
-&emsp;&emsp;And for the bilingual system of our game, part of the in-game text, prompts are generated by AI based our first draft. Since this project is to show our ability of software development, the artistic style of our game is mainly generated by AI (Because we don’t have any team members who are particularly good at art :D).
+And for the bilingual system of our game, part of the in-game text, prompts are generated by AI based our first draft. Since this project is to show our ability of software development, the artistic style of our game is mainly generated by AI (Because we don’t have any team members who are particularly good at art :D).
+
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
+
+<h1 align="center"><b>❤️ Acknowledgements</b></h1>
+
+<div align="center">
+  <br>
+  <h3>🥰 Thanks to All Game Testers</h3>
+  <p><i>SINCERE THANKS to all the playtesters who provided valuable feedback and suggestions to improve the game:</i></p>
+  <br>
+  <table width="40%">
+    <tbody>
+      <tr><td align="center">Zhiqing Zhang 张芷晴</td></tr>
+      <tr><td align="center">Yiyuan Yao 姚亦远</td></tr>
+      <tr><td align="center">Wenlei Miao 苗文蕾</td></tr>
+      <tr><td align="center">Xuelin Ma 马雪琳</td></tr>
+      <tr><td align="center">Siqi Xu 徐思齐</td></tr>
+      <tr><td align="center">Jingran Zhang 张婧然</td></tr>
+      <tr><td align="center">Everyone who tested our game in the Workshop on Tuesday</td></tr>
+      <tr><td align="center">Everyone who tested our game in the Testathon</td></tr>
+      <tr><td align="center">Every course lecturer and TA who supported our course and workshop and tested our game demo</td></tr>
+      <tr><td align="center">高云飞</td></tr>
+      <tr><td align="center">sjx</td></tr>
+      <tr><td align="center">三字人 Y</td></tr>
+      <tr><td align="center">雪梨来咯</td></tr>
+      <tr><td align="center">Arupin</td></tr>
+      <tr><td align="center">张子睿</td></tr>
+      <tr><td align="center">Robin Huang</td></tr>
+      <tr><td align="center">7</td></tr>
+      <tr><td align="center">yyy 好友</td></tr>
+      <tr><td align="center">饼干</td></tr>
+      <tr><td align="center">Wanlan Qiu</td></tr>
+      <tr><td align="center">Yuanyuan</td></tr>
+      <tr><td align="center">Junqi</td></tr>
+      <tr><td align="center">Yiran</td></tr>
+      <tr><td align="center">Rish</td></tr>
+      <tr><td align="center">Helen</td></tr>
+      <tr><td align="center">Prapulla</td></tr>
+      <tr><td align="center">lftc</td></tr>
+      <tr><td align="center">XY</td></tr>
+      <tr><td align="center">Maran</td></tr>
+      <tr><td align="center">Huayang</td></tr>
+      <tr><td align="center">Zhi</td></tr>
+      <tr><td align="center">Wanru</td></tr>
+      <tr><td align="center">Every friend who wished to remain anonymous</td></tr>
+      <tr><td align="center">Every anonymous online playtester</td></tr>
+    </tbody>
+  </table>
+  <br>
+  <h3>✨ Special Thanks</h3>
+  <p><i>Most importantly, special thanks to the six of us — the team behind <b>U Help U</b>:</i></p>
+  <table width="60%">
+    <tbody>
+      <tr><td align="center">Zhiqing Zhang 张芷晴</td></tr>
+      <tr><td align="center">Yiyuan Yao 姚亦远</td></tr>
+      <tr><td align="center">Wenlei Miao 苗文蕾</td></tr>
+      <tr><td align="center">Xuelin Ma 马雪琳</td></tr>
+      <tr><td align="center">Siqi Xu 徐思齐</td></tr>
+      <tr><td align="center">Jingran Zhang 张婧然</td></tr>
+    </tbody>
+  </table>
+  <br>
+  <p><i>We are also deeply grateful to the following individuals, whose support made a real difference:</i></p>
+  <table width="80%">
+    <tbody>
+      <tr>
+        <td align="center"><b>Pete</b></td>
+        <td align="center">Who played through every level of our Demo V1 and gave invaluable feedback that helped shape the final game.</td>
+      </tr>
+      <tr>
+        <td align="center"><b>Yunfei</b></td>
+        <td align="center">A team member's undergraduate supervisor who offered countless suggestions and words of encouragement from the very start of the project all the way through to the end.</td>
+      </tr>
+      <tr>
+        <td align="center"><b>An anonymous Chinese friend</b></td>
+        <td align="center">Despite severe regional network restrictions causing extremely long loading times, they persisted through a version with missing textures and numerous bugs to give us honest feedback.</td>
+      </tr>
+      <tr>
+        <td align="center"><b>A game industry professional</b></td>
+        <td align="center">A seasoned game professional with over 6 years of game development experience — who took the time to play our game and offered high praise. Their recognition gave the whole team a tremendous boost of confidence.</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+</div>
+
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
