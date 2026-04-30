@@ -1211,7 +1211,7 @@ After download:
   <br>
 </div>
 
-### **4 其他功能**：
+### **4 Other Functions**：
 
 #### **4.1 Tutorial System**：
 
