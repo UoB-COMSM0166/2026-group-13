@@ -308,21 +308,21 @@
 ## **⚙️ Introduction**
 
 ### **Overview**:
-- [**_U Help U_ brief introduction**](#u-help-u-brief-introduction)
-- [Core Gameplay (How to Play)](#core-gameplay-how-to-play)
-  - [1. Basic Controls](#1-basic-controls)
-  - [2. Physical Rules](#2-physical-rules)
-- [Game Goals](#game-goals)
-  - [1. Level Objectives](#1-level-objectives)
-  - [2. Core Experience Goals](#2-core-experience-goals)
-- [Core Highlights (Differentiation)](#core-highlights-differentiation)
-- [🎮 Recording System Exhibition](#-recording-system-exhibition)
-- [🎮 Game Entities Exhibition](#-game-entities-exhibition)
-  - [1. Character](#1-character)
-  - [2. Interactables](#2-interactables)
-  - [3. Prompts](#3-prompts)
-  - [4. Systems](#4-systems)
-  - [5. Terrain](#5-terrain)
+- [1 **_U Help U_ brief introduction**](#1-u-help-u-brief-introduction)
+- [2 Core Gameplay (How to Play)](#2-core-gameplay-how-to-play)
+  - [2.1 Basic Controls](#21-basic-controls)
+  - [2.2 Physical Rules](#22-physical-rules)
+- [3 Game Goals](#3-game-goals)
+  - [3.1 Level Objectives](#31-level-objectives)
+  - [3.2 Core Experience Goals](#32-core-experience-goals)
+- [4 Core Highlights (Differentiation)](#4-core-highlights-differentiation)
+- [5 🎮 Recording System Exhibition](#5-recording-system-exhibition)
+- [6 🎮 Game Entities Exhibition](#6-game-entities-exhibition)
+  - [6.1 Character](#61-character)
+  - [6.2 Interactables](#62-interactables)
+  - [6.3 Prompts](#63-prompts)
+  - [6.4 Systems](#64-systems)
+  - [6.5 Terrain](#65-terrain)
 
 ### **1 _U Help U_ brief introduction**:
 
@@ -359,7 +359,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 
 ### **4 Core Highlights (Differentiation)**:
 
-#### **4.1Immersive Past–Present Integration**:
+#### **4.1 Immersive Past–Present Integration**:
 
 - **Action‑Based Fidelity**: Playback reacts dynamically to the environment via physics
 - **Bidirectional Interaction**: Both selves serve as functional platforms for one another
