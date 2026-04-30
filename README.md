@@ -32,7 +32,7 @@
     <br>
     <br>
   </a>
-  <a href="https://angelicaserein.github.io/UhelpU/">
+  <a href="https://youtu.be/hCJJSpW0RH0">
     <img src="https://img.shields.io/badge/🎬%20Watch%20Video-Click%20to%20Watch-ff6b9d?style=for-the-badge&labelColor=7b2d8b" alt="🎬 Watch Video">
   </a>
   <br>
