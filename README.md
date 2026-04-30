@@ -50,7 +50,7 @@
     &nbsp;
     <a href="#️-workshop">🗓️ Workshop</a>
     &nbsp;&nbsp;·&nbsp;&nbsp;
-    <a href="#-acknowledgements">❤️ Acknowledgements</a>
+    <a href="#acknowledgements">❤️ Acknowledgements</a>
     &nbsp;
   </b>
   <br><br>
@@ -1361,6 +1361,8 @@ And for the bilingual system of our game, part of the in-game text, prompts are 
   <img src="./assets/divider.png" width="800">
 </div>
 
+<a id="acknowledgements"></a>
+
 <h1 align="center"><b>❤️ Acknowledgements</b></h1>
 
 <div align="center">
@@ -1369,94 +1371,94 @@ And for the bilingual system of our game, part of the in-game text, prompts are 
   <p><i>SINCERE THANKS to all the playtesters who provided valuable feedback and suggestions to improve the game:</i></p>
   <br>
   <p>Zhiqing Zhang 张芷晴</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Yiyuan Yao 姚亦远</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Wenlei Miao 苗文蕾</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Xuelin Ma 马雪琳</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Siqi Xu 徐思齐</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Jingran Zhang 张婧然</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Everyone who tested our game in the Workshop on Tuesday</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Everyone who tested our game in the Testathon</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Every course lecturer and TA who supported our course and workshop and tested our game demo</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>高云飞</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>sjx</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>三字人 Y</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>雪梨来咯</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Arupin</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>张子睿</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Robin Huang</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>7</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>yyy 好友</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>饼干</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Wanlan Qiu</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Yuanyuan</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Junqi</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Yiran</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Rish</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Helen</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Prapulla</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>lftc</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>XY</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Maran</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Huayang</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Zhi</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Wanru</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Every friend who wished to remain anonymous</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p>Every anonymous online playtester</p>
   <br>
   <h3>✨ Special Thanks</h3>
   <p><i>Most importantly, special thanks to the six of us — the team behind <b>U Help U</b>:</i></p>
   <p><b>Zhiqing Zhang 张芷晴</b></p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p><b>Yiyuan Yao 姚亦远</b></p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p><b>Wenlei Miao 苗文蕾</b></p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p><b>Xuelin Ma 马雪琳</b></p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p><b>Siqi Xu 徐思齐</b></p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p align="center">────────</p>
   <p><b>Jingran Zhang 张婧然</b></p>
   <br>
   <p><i>We are also deeply grateful to the following individuals, whose support made a real difference:</i></p>
   <p><b>Pete</b><br>Who played through every level of our Demo V1 and gave invaluable feedback that helped shape the final game.</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 10px auto;"></div>
+  <p align="center">────────</p>
   <p><b>Yunfei</b><br>A team member's undergraduate supervisor who offered countless suggestions and words of encouragement from the very start of the project all the way through to the end.</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 10px auto;"></div>
+  <p align="center">────────</p>
   <p><b>An anonymous Chinese friend</b><br>Despite severe regional network restrictions causing extremely long loading times, they persisted through a version with missing textures and numerous bugs to give us honest feedback.</p>
-  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 10px auto;"></div>
+  <p align="center">────────</p>
   <p><b>A game industry professional</b><br>A seasoned game professional with over 6 years of game development experience — who took the time to play our game and offered high praise. Their recognition gave the whole team a tremendous boost of confidence.</p>
   <br>
 </div>
