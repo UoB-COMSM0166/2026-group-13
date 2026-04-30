@@ -1160,13 +1160,59 @@ After download:
 游戏实现了中英双语支持，玩家可在设置中自由切换界面语言。国际化系统采用集中式语言包管理方案，所有界面文本、提示信息与对话内容均通过语言键值映射进行统一维护，与渲染逻辑完全解耦。切换语言时，所有 UI 组件将即时刷新为对应语言的文本内容，无需重载页面或关卡，从而为不同语言背景的玩家提供无缝的本地化体验。
 
 #### **4.5 成就系统**：
+Our achievement system provides our player additional game goalas and motivation. The game features a range of achievements covering various aspects, such as performing specific actions. Achievement data stored persistently in local server, whenever a player meets the trigger conditions, the system displays a notification and updates the progress. This system is decoupled from the core gameplay module and responds to various in-game actions via event listeners, facilitating the future addition of new achievement types. Our game have 10 achievements in total, and 3 of them has been updated so far. The remaining achievements will be updated step by step. The overview of our achievement system can be seen from Figure 2. 
 
-成就系统为玩家提供了额外的游戏目标与激励机制。游戏内置了多项成就，涵盖通关特定关卡、在规定时间内完成挑战、达成特定操作等不同维度。成就数据通过本地存储持久化保存，玩家每次满足触发条件时系统会弹出提示并更新进度。该系统与核心玩法模块解耦，通过事件监听的方式响应各类游戏行为，便于后续扩展新的成就类型。
 <br>
 <div align="center">
   <img src="./assets/implementation/achievement/achievement.png" width="800">
   <br>
-  <b>Figure 2: Our achievement system and brief introduction</b>
+  <b>Figure 2: Achievements Overview</b>
+  <br>
+  <br>
+</div>
+
+
+<br>
+
+During gameplay, if players meet the conditions for unlocking an achievement, the in-game display is shown as follows:
+<br>
+<br>
+<div align="center">
+  <img src="./assets/implementation/achievement/unlock achievement wthin level.png" width="800">
+  <br>
+  <b>Figure 4: Unlock achievement as you play</b>
+  <br>
+  <br>
+</div>
+<br>
+
+Player can also check their achievement overview in achievement gallery. In this page player can see all the achievements. Locked and unlocked achievementa are displayed in different ways. Asuming achievement description and condtions for achieve unlocked achievements can also be viewed here.
+<br>
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="./assets/implementation/achievement/locked achievement.png" width="360">
+      <br>
+      <b>Figure 3a: locked Achievement</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="./assets/implementation/achievement/unlocked achievement.png" width="360">
+      <br>
+      <b>Figure 3b: Unlocked Achievement</b>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/achievement/achievements gallery.png" width="800">
+  <br>
+  <b>Figure 4: Achievements Gallery</b>
   <br>
   <br>
 </div>
