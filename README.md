@@ -40,18 +40,17 @@
 <div align="center">
   <br>
   <b>
-    &nbsp;
     <a href="#️-gameplay-preview">📽️ Gameplay Preview</a>
     &nbsp;&nbsp;·&nbsp;&nbsp;
     <a href="#-related-websites">🔗 Related Websites</a>
     &nbsp;&nbsp;·&nbsp;&nbsp;
     <a href="#-team-members">👥 Team Members</a>
     <br>
-    &nbsp;
+    <a href="https://angelica-serein.notion.site/Kanban-Board-8a0b2f38a2aa8322998a818eef1d7607?source=copy_link" target="_blank">📋 Kanban Board</a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
     <a href="#️-workshop">🗓️ Workshop</a>
     &nbsp;&nbsp;·&nbsp;&nbsp;
     <a href="#acknowledgements">❤️ Acknowledgements</a>
-    &nbsp;
   </b>
   <br><br>
   <a href="#-project-report">
@@ -115,7 +114,7 @@
     <img src="./assets/website/itch.png" width="700">
   </a>
   <br><br>
-  <a href="https://itch.io/search?q=Uhelp"><b>→ Find us on itch.io</b></a>
+  <a href="https://itch.io/search?q=Uhelp" style="display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 6px 12px;"><b>Find us on itch.io</b></a>
   <br><br>
 </div>
 
@@ -128,7 +127,7 @@
     <img src="./assets/website/walkthrough-preview.png" width="700">
   </a>
   <br><br>
-  <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/"><b>→ Watch Walkthroughs</b></a>
+  <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/" style="display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 6px 12px;"><b>Watch Walkthroughs</b></a>
   <br><br>
 </div>
 
@@ -140,7 +139,7 @@
     <img src="./assets/website/phantom-chat-preview.png" width="700">
   </a>
   <br><br>
-  <a href="https://moosry.github.io/UhlepU-blackbox-test/phantom-chat.html"><b>→ Open Phantom Chat</b></a>
+  <a href="https://moosry.github.io/UhlepU-blackbox-test/phantom-chat.html" style="display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 6px 12px;"><b>Open Phantom Chat</b></a>
   <br><br>
 </div>
 
@@ -155,9 +154,11 @@
 <div align="center">
   <img src="./assets/Group_Picture01.png" width="600">
   <br><br>
-  <a href="https://yyyjava.github.io/test-process-part/Team-roles.html">
-    <img src="https://img.shields.io/badge/👥%20Team%20Roles-Click%20to%20View-ff6b9d?style=for-the-badge&labelColor=7b2d8b" alt="👥 Team Roles">
-  </a>
+  <p style="font-size: 1.08em; font-weight: 700; margin: 0; display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 8px 14px;">
+    <a href="https://yyyjava.github.io/test-process-part/Team-roles.html" target="_blank">✨ Click to view Team Roles</a>
+    <span style="color: #ff6b9d;">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+    <a href="https://angelica-serein.notion.site/Kanban-Board-8a0b2f38a2aa8322998a818eef1d7607?source=copy_link" target="_blank">📋 Click to view Kanban Board</a>
+  </p>
   <br>
   <br>
 </div>
@@ -1133,9 +1134,60 @@ After download:
 
 成就系统为玩家提供了额外的游戏目标与激励机制。游戏内置了多项成就，涵盖通关特定关卡、在规定时间内完成挑战、达成特定操作等不同维度。成就数据通过本地存储持久化保存，玩家每次满足触发条件时系统会弹出提示并更新进度。该系统与核心玩法模块解耦，通过事件监听的方式响应各类游戏行为，便于后续扩展新的成就类型。
 
-#### **4.6 键盘导航**：
+#### **4.6 Keyboard Navigation**：
 
-键盘导航功能使玩家能够完全通过键盘操作游戏的各级菜单与界面，无需依赖鼠标。在关卡选择、暂停菜单、设置页面等场景中，玩家可使用方向键或 Tab 键在各选项间切换，并通过回车键确认操作。该功能有效提升了游戏的可访问性，同时也兼顾了偏好纯键盘操作的玩家群体的使用习惯。
+我们实现了完整的键盘导航功能，游戏内主菜单、关卡选择页面和暂停菜单交互界面同时兼容鼠标与键盘两种操控方式，以适配不同玩家的操作习惯。
+
+- 支持方向键与 WASD 按键进行按钮焦点切换；
+- 界面默认不显示按钮选中白框，仅使用键盘导航时才出现高亮提示，切换为鼠标操作时白框会立即消失；
+- 按下空格或回车键可确认选中选项，按下 ESC 键能够退出当前菜单并返回上一级界面。
+
+<table width="100%">
+<tbody>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/implementation/keyboard-navigation/0.png" width="600" /><br><br>
+<b>Menu page: default state</b>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/implementation/keyboard-navigation/1.png" width="600" /><br><br>
+<b>Menu page: mouse hover</b>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/implementation/keyboard-navigation/2.png" width="600" /><br><br>
+<b>Menu page: keyboard selection</b>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/implementation/keyboard-navigation/3.png" width="600" /><br><br>
+<b>World selection page: mouse hover</b>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/implementation/keyboard-navigation/4.png" width="600" /><br><br>
+<b>World selection page: keyboard selection</b>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/implementation/keyboard-navigation/5.png" width="600" /><br><br>
+<b>Paused menu page: mouse hover on 'Setting'</b>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/implementation/keyboard-navigation/6.png" width="600" /><br><br>
+<b>Paused menu page: keyboard selection on 'Setting'</b>
+</td>
+</tr>
+</tbody>
+</table>
 
 <div align="center">
   <img src="./assets/divider.png" width="800">
