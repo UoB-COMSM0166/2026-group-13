@@ -324,13 +324,13 @@
   - [4. Systems](#4-systems)
   - [5. Terrain](#5-terrain)
 
-**_U Help U_ brief introduction**
+### **1 _U Help U_ brief introduction**:
 
 _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑collaboration. Players record their actions to generate a “Past Self”—a physics-based entity that faithfully reproduces previous movements. By standing on, boosting, or blocking one another, players turn their past attempts into the foundation for present success.
 
-### Core Gameplay (How to Play)
+### **2 Core Gameplay (How to Play)**:
 
-#### 1. Basic Controls
+#### **2.1 Basic Controls**:
 
 <div align="center">
   <img src="./assets/process/key-control.png" width="700" alt="Basic Controls Visualization" style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
@@ -338,34 +338,34 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <p><i>Standard Key Controls</i></p>
 </div>
 
-#### 2. Physical Rules
+#### **2.2 Physical Rules**:
 
 - Both selves are fully physics‑driven and affected by gravity
 - Both act as solid platforms for each other
 - Vertical stacking is allowed; horizontal overlap is prevented
 
-### Game Goals
+### **3 Game Goals**:
 
-#### 1. Level Objectives
+#### **3.1 Level Objectives**:
 
 - **Primary**: Reach the designated endpoint
 - **Advanced**: Complete in the shortest time possible
 
-#### 2. Core Experience Goals
+#### **3.2 Core Experience Goals**:
 
 - Empower players through "self‑collaboration"
 - Stimulate spatial reasoning and forward planning
 - Demonstrate how past efforts enable present breakthroughs
 
-### Core Highlights (Differentiation)
+### **4 Core Highlights (Differentiation)**:
 
-#### Immersive Past–Present Integration
+#### **4.1Immersive Past–Present Integration**:
 
 - **Action‑Based Fidelity**: Playback reacts dynamically to the environment via physics
 - **Bidirectional Interaction**: Both selves serve as functional platforms for one another
 - **Non‑Punitive Design**: Encourages experimentation with no death or time penalties
 
-### 🎮 Recording System Exhibition
+### **5 🎮 Recording System Exhibition**:
 
 <table width="100%">
 <tbody>
@@ -427,9 +427,9 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tbody>
 </table>
 
-### 🎮 Game Entities Exhibition
+### **6 🎮 Game Entities Exhibition**:
 
-#### 1. Character
+#### **6.1 Character**:
 
 <table width="100%">
 <thead>
@@ -449,7 +449,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tbody>
 </table>
 
-#### 2. Interactables
+#### **6.2 Interactables**:
 
 <table width="100%">
 <thead>
@@ -470,7 +470,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tbody>
 </table>
 
-#### 3. Prompts
+#### **6.3 Prompts**:
 
 <table width="100%">
 <thead>
@@ -483,7 +483,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tbody>
 </table>
 
-#### 4. Systems
+#### **6.4 Systems**:
 
 <table width="100%">
 <thead>
@@ -503,7 +503,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tbody>
 </table>
 
-#### 5. Terrain
+#### **6.5 Terrain**:
 
 <table width="100%">
 <thead>
