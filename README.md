@@ -96,37 +96,10 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 <div align="center">
   <img src="./assets/process/key-control.png" width="700" alt="Basic Controls Visualization" style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
   <br>
-  <p><i>Standard Control Scheme for Group 13 Game Project</i></p>
+  <p><i>Standard Key Controls</i></p>
 </div>
 
-#### 2. Three Core Modes (Closed‑Loop System)
-
-#### (1) Exploration Mode
-
-The player observes the terrain and plans the strategic route for the Past Self to execute.
-
-- Focus on environmental analysis
-- No Past Self exists yet
-- Purely for observation and planning
-
-#### (2) Recording Mode
-
-Activated by pressing C. A 5‑second window begins where the system captures **input commands**, not fixed positions.
-
-- Present Self moves freely
-- Players create "foundational" trajectories
-- Ends via manual stop (C) or timer expiration
-
-#### (3) Collaborative Replay Mode
-
-A Past Self is generated to replay recorded actions. Players must now interact with their past to solve puzzles.
-
-- Present Self remains controllable
-- Both entities interact through real‑time physics
-- Press R to reset and C to re‑record
-- Past Self disappears when playback ends
-
-#### 3. Physical Rules
+#### 2. Physical Rules
 
 - Both selves are fully physics‑driven and affected by gravity
 - Both act as solid platforms for each other
