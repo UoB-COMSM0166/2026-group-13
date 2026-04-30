@@ -968,6 +968,17 @@ We implemented a **dual‑layer data architecture**:
   - uploads score after each level
   - sorts by completion time
   - highlights the current player
+  <br>
+
+<br>
+<div align="center">
+  <img src="./assets/implementation/leaderboard/leaderboard1.png" width="800">
+  <br>
+  <b>Figure 1: Our leaderboard system and brieft introduction</b>
+  <br>
+  <br>
+</div>
+
 
 ### **3 Technical Challenge 2 — Level Editor & Sharing System**：
 
@@ -1132,6 +1143,15 @@ After download:
 #### **4.5 成就系统**：
 
 成就系统为玩家提供了额外的游戏目标与激励机制。游戏内置了多项成就，涵盖通关特定关卡、在规定时间内完成挑战、达成特定操作等不同维度。成就数据通过本地存储持久化保存，玩家每次满足触发条件时系统会弹出提示并更新进度。该系统与核心玩法模块解耦，通过事件监听的方式响应各类游戏行为，便于后续扩展新的成就类型。
+<br>
+<div align="center">
+  <img src="./assets/implementation/achievement/achievement.png" width="800">
+  <br>
+  <b>Figure 2: Our achievement system and brief introduction</b>
+  <br>
+  <br>
+</div>
+
 
 #### **4.6 键盘导航**：
 
