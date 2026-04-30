@@ -25,16 +25,22 @@
   </a>
   <br>
   -->
-Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy levels – classic puzzles from earlier builds – with 3 achievements to unlock!<br>
-
-<small><em>(If you get stuck on a hard level for more than half an hour, that’s totally normal – don't worry! Check out the guide <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">here</a>!)</em></small>
+<sub><i>Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy levels — classic puzzles from earlier builds to explore!</i></sub>
 <br><br>
+
+<small><em>If you get stuck on a hard level for more than half an hour, that’s totally normal — don't worry!</em></small>
+<br><br>
+
 <a href="https://angelicaserein.github.io/UhelpU/">
-<img src="./assets/video.png" width="800">
-<br>
-<br>
+  <img src="./assets/video.png" width="800">
+  <br>
+  <br>
 </a>
 
+<a href="https://youtu.be/FMFJqeT6FAw">
+  <img src="https://img.shields.io/badge/🎬%20Watch%20Video-Click%20to%20Watch-ff6b9d?style=for-the-badge&labelColor=7b2cbf">
+</a>
+<br>
 </div>
 
 <div align="center">
