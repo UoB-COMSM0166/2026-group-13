@@ -358,7 +358,6 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tbody>
 </table>
 
-
 ## **⚙️ Requirements**
 
 ### **Overview**:
@@ -858,6 +857,9 @@ After download:
 - [2 Quantitative](#2-quantitative)
   - [2.1 Evaluation Findings](#21-evaluation-findings)
   - [2.2 Reconsidered Technical Challenges](#22-reconsidered-technical-challenges)
+- [3 Description of how code was tested](#3-description-of-how-code-was-tested)
+  - [3.1 Manual Testing and Console Logging During Development](#31-manual-testing-and-console-logging-during-development)
+  - [3.2 Black-Box Testing Based on Test Checklists](#32-black-box-testing-based-on-test-checklists)
 
 ### **1 Qualitative**:
 
@@ -898,6 +900,55 @@ After download:
 #### **2.2 Reconsidered Technical Challenges**:
 
 &emsp;&emsp;Based on the quantitative evaluation results and the core mechanics of our time-clone puzzle platformer, we have reconsidered our primary technical challenges for the ongoing development:
+
+### **3 Description of how code was tested**:
+
+#### **3.1 Manual Testing and Console Logging During Development**:
+
+&emsp;&emsp;在整个开发过程中，我们采用了边写边测的即时手动测试方式，配合浏览器控制台的 `console.log` 进行辅助验证。每实现一个功能模块，就立刻在浏览器中手动操作，观察实际行为是否符合预期，从而在问题尚未扩散之前及时发现并修复。
+
+&emsp;&emsp;我们在代码关键节点插入 `console.log`，实时追踪各模块的运行状态，包括数据的读写、图片与页面模块的加载、键盘导航与按键绑定、教程流程的触发、计时器的启动，以及玩家与幻影的碰撞检测等。
+
+<div align="center">
+  <br>
+  <img src="./assets/test/Console log example.png" width="800">
+  <br>
+  <b>Figure: 一小部分控制台日志截图</b>
+  <br>
+  <br>
+</div>
+
+#### **3.2 Black-Box Testing Based on Test Checklists**:
+
+&emsp;&emsp;基于测试清单的黑盒测试。
+
+&emsp;&emsp;我们按照课程介绍的黑盒测试方法，针对各功能模块设计了结构化测试清单，从用户视角出发，只关注输入与可观察到的输出结果。每份清单的测试用例分为三类：正常流程、边界情况、潜在问题，并以可交互的 HTML 文档实现，便于逐项勾选与进度追踪。以下为测试清单截图：
+
+<div align="center">
+  <br>
+  <img src="./assets/test/Checklist example.png" width="800">
+  <br>
+  <b>Figure: Local player system的部分测试</b>
+  <br>
+  <br>
+</div>
+
+各个测试清单的链接：
+
+- [Account System Test Checklist](https://moosry.github.io/UhlepU-blackbox-test/Account_System_Test_Checklist.html)
+- [Game Flow Test Checklist](https://moosry.github.io/UhlepU-blackbox-test/Game_Flow_Test_Checklist.html)
+- [Local Player System Test Checklist](https://moosry.github.io/UhlepU-blackbox-test/Local_Player_System_Test_Checklist.html)
+- [Tutorial System Test Checklist](https://moosry.github.io/UhlepU-blackbox-test/Tutorial_System_Test_Checklist.html)
+- [Phantom Collision Test Checklist](https://moosry.github.io/UhlepU-blackbox-test/Phantom_Collision_Test_Checklist.html)
+
+<div align="center">
+  <br>
+  <img src="./assets/test/test feedback.png" width="800">
+  <br>
+  <b>Figure: 部分测试员的反馈</b>
+  <br>
+  <br>
+</div>
 
 ## **⚙️ Process**
 
