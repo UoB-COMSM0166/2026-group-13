@@ -231,17 +231,17 @@ Playtime depends on your skill – if you're really sharp, maybe an hour to clea
     </tr>
     <tr>
       <td align="center"><b>Week 03</b><br><b><a href="./week-log/Week03/ReadMe.md">README</a></b></td>
-      <td align="center">—</td>
-      <td>Paper prototypes of two games and the final game idea.</td>
+      <td align="center"><img src="./week-log/Week03/img/main.jpg" width="260"></td>
+      <td><a href="README.md">Paper prototypes</a> of two games and the final game idea.</td>
     </tr>
     <tr>
       <td align="center"><b>Week 04</b><br><b><a href="./week-log/Week04/README.md">README</a></b></td>
-      <td align="center">—</td>
+      <td align="center"><img src="./week-log/Week04/Img/Stakeholders.png"</td>
       <td>Defined user stories and functional/non-functional requirements.</td>
     </tr>
     <tr>
       <td align="center"><b>Week 05</b><br><b><a href="./week-log/Week05/ReadMe.md">README</a></b></td>
-      <td align="center">—</td>
+      <td align="center"><img src="./week-log/Week05/img/game-entity.png"></td>
       <td>Designed architecture diagrams and implemented core systems.</td>
     </tr>
     <tr>
@@ -331,13 +331,31 @@ Playtime depends on your skill – if you're really sharp, maybe an hour to clea
 
 ## **⚙️ Introduction**
 
-**_U Help U_**
+### **Overview**:
+
+- [1 **_U Help U_ brief introduction**](#1-u-help-u-brief-introduction)
+- [2 Core Gameplay (How to Play)](#2-core-gameplay-how-to-play)
+  - [2.1 Basic Controls](#21-basic-controls)
+  - [2.2 Physical Rules](#22-physical-rules)
+- [3 Game Goals](#3-game-goals)
+  - [3.1 Level Objectives](#31-level-objectives)
+  - [3.2 Core Experience Goals](#32-core-experience-goals)
+- [4 Core Highlights (Differentiation)](#4-core-highlights-differentiation)
+- [5 🎮 Recording System Exhibition](#5-recording-system-exhibition)
+- [6 🎮 Game Entities Exhibition](#6-game-entities-exhibition)
+  - [6.1 Character](#61-character)
+  - [6.2 Interactables](#62-interactables)
+  - [6.3 Prompts](#63-prompts)
+  - [6.4 Systems](#64-systems)
+  - [6.5 Terrain](#65-terrain)
+
+### **1 _U Help U_ brief introduction**:
 
 _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑collaboration. Players record their actions to generate a “Past Self”—a physics-based entity that faithfully reproduces previous movements. By standing on, boosting, or blocking one another, players turn their past attempts into the foundation for present success.
 
-### Core Gameplay (How to Play)
+### **2 Core Gameplay (How to Play)**:
 
-#### 1. Basic Controls
+#### **2.1 Basic Controls**:
 
 <div align="center">
   <img src="./assets/process/key-control.png" width="700" alt="Basic Controls Visualization" style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
@@ -345,34 +363,34 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <p><i>Standard Key Controls</i></p>
 </div>
 
-#### 2. Physical Rules
+#### **2.2 Physical Rules**:
 
 - Both selves are fully physics‑driven and affected by gravity
 - Both act as solid platforms for each other
 - Vertical stacking is allowed; horizontal overlap is prevented
 
-### Game Goals
+### **3 Game Goals**:
 
-#### 1. Level Objectives
+#### **3.1 Level Objectives**:
 
 - **Primary**: Reach the designated endpoint
 - **Advanced**: Complete in the shortest time possible
 
-#### 2. Core Experience Goals
+#### **3.2 Core Experience Goals**:
 
 - Empower players through "self‑collaboration"
 - Stimulate spatial reasoning and forward planning
 - Demonstrate how past efforts enable present breakthroughs
 
-### Core Highlights (Differentiation)
+### **4 Core Highlights (Differentiation)**:
 
-#### Immersive Past–Present Integration
+#### **4.1 Immersive Past–Present Integration**:
 
 - **Action‑Based Fidelity**: Playback reacts dynamically to the environment via physics
 - **Bidirectional Interaction**: Both selves serve as functional platforms for one another
 - **Non‑Punitive Design**: Encourages experimentation with no death or time penalties
 
-### 🎮 Recording System Exhibition
+### **5 🎮 Recording System Exhibition**:
 
 <table width="100%">
 <tbody>
@@ -434,9 +452,9 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tbody>
 </table>
 
-### 🎮 Game Entities Exhibition
+### **6 🎮 Game Entities Exhibition**:
 
-#### 1. Character
+#### **6.1 Character**:
 
 <table width="100%">
 <thead>
@@ -456,7 +474,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tbody>
 </table>
 
-#### 2. Interactables
+#### **6.2 Interactables**:
 
 <table width="100%">
 <thead>
@@ -477,7 +495,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tbody>
 </table>
 
-#### 3. Prompts
+#### **6.3 Prompts**:
 
 <table width="100%">
 <thead>
@@ -490,7 +508,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tbody>
 </table>
 
-#### 4. Systems
+#### **6.4 Systems**:
 
 <table width="100%">
 <thead>
@@ -510,7 +528,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tbody>
 </table>
 
-#### 5. Terrain
+#### **6.5 Terrain**:
 
 <table width="100%">
 <thead>
@@ -1008,7 +1026,7 @@ We implemented a **dual‑layer data architecture**:
 <div align="center">
   <img src="./assets/implementation/leaderboard/leaderboard1.png" width="800">
   <br>
-  <b>Figure 1: Our leaderboard system and brieft introduction</b>
+  <b>Leaderboard system and brief introduction</b>
   <br>
   <br>
 </div>
@@ -1175,11 +1193,12 @@ After download:
 
 #### **4.5 成就系统**：
 
-成就系统为玩家提供了额外的游戏目标与激励机制。游戏内置了多项成就，涵盖通关特定关卡、在规定时间内完成挑战、达成特定操作等不同维度。成就数据通过本地存储持久化保存，玩家每次满足触发条件时系统会弹出提示并更新进度。该系统与核心玩法模块解耦，通过事件监听的方式响应各类游戏行为，便于后续扩展新的成就类型。
+Our achievement system provides our player additional game goals and motivation. The game features a range of achievements covering various aspects, such as performing specific actions. Achievement data stored persistently in local server, whenever a player meets the trigger conditions, the system displays a notification and updates the progress. This system is decoupled from the core gameplay module and responds to various in-game actions via event listeners, facilitating the future addition of new achievement types. Our game have 10 achievements in total, and 3 of them has been updated so far. The remaining achievements will be updated step by step. The overview of our achievement system can be seen as follows.
+
 <br>
 
 <div align="center">
-  <img src="./assets/implementation/achievement/achievement.png" width="800">
+  <img src="./assets/implementation/achievement/achievement1.png" width="800">
   <br>
   <b>Figure 2: Our achievement system and brief introduction</b>
   <br>
@@ -1254,10 +1273,8 @@ After download:
 - [1 Qualitative](#1-qualitative)
   - [1.1 Contextual Onboarding & Bilingual Support](#11-contextual-onboarding--bilingual-support)
   - [1.2 Learning Curve & Scaffolding (Level 0)](#12-learning-curve--scaffolding-level-0)
-  - [1.3 Narrative Context & Conceptual Mapping](#13-narrative-context--conceptual-mapping)
 - [2 Quantitative](#2-quantitative)
   - [2.1 Evaluation Findings](#21-evaluation-findings)
-  - [2.2 Reconsidered Technical Challenges](#22-reconsidered-technical-challenges)
 - [3 Description of how code was tested](#3-description-of-how-code-was-tested)
   - [3.1 Manual Testing and Console Logging During Development](#31-manual-testing-and-console-logging-during-development)
   - [3.2 Black-Box Testing Based on Test Checklists](#32-black-box-testing-based-on-test-checklists)
@@ -1276,31 +1293,19 @@ This aligns with Nielsen's "Recognition rather than recall". By providing contex
 
 Issue: Transitioning directly into Level 1 introduces too many mechanics at once, causing a steep learning curve for new players.
 
-Action Plan: Design and insert a simple "Tutorial Level" (Level 0) prior to the first official stage. This safe, low-stakes environment will allow players to practice basic movements and test the core mechanics without the threat of failing. It doesn't need to be too complex; it should mainly introduce the game's controls to new players.
+Action Plan: Design and insert a simple "Tutorial Level" prior to the first official stage. This safe, low-stakes environment will allow players to practice basic movements and test the core mechanics without the threat of failing. It doesn't need to be too complex; it should mainly introduce the game's controls to new players.
 
 This addresses "Error prevention" and enhances "User control and freedom", ensuring players are comfortable with the physics and controls before facing actual challenges.
-
-#### **1.3 Narrative Context & Conceptual Mapping**:
-
-Issue: The core gameplay loop (the time-clone mechanic) feels abstract without a narrative foundation.
-
-Action Plan: Introduce a brief narrative sequence or story screen at the start of the game. This will establish the world's lore, explaining the concept of manipulating time and cooperating with one's "past self" and "present self" to solve puzzles.
-
-This improves the "Match between system and the real world". Providing a narrative metaphor (co-op with a past self) makes the complex time-manipulation mechanic more intuitive and mentally accessible for the player.
 
 ### **2 Quantitative**:
 
 #### **2.1 Evaluation Findings**:
 
-We conducted a quantitative user evaluation with 10 participants, using a within-subjects design to compare the user experience between Level 1 and Level 2. Participants completed the NASA Task Load Index (TLX) and System Usability Scale (SUS) after playing each level. We then ran a Wilcoxon Signed-Rank Test (with an alpha level of 0.05) to determine if there were significant differences in perceived workload and usability.
+We conducted a quantitative user evaluation with 27 participants, using a within-subjects design to compare the user experience between Level 1 and Level 2. Participants completed the NASA Task Load Index (TLX) and System Usability Scale (SUS) after playing each level. We then ran a Wilcoxon Signed-Rank Test (with an alpha level of 0.05) to determine if there were significant differences in perceived workload and usability.
 
-- **System Usability Scale (SUS):** The test yielded **W = 21.0** and **p = 0.857**. Since p > 0.05, there is **no significant difference** in usability between the two levels. Both levels scored well above the industry average of 68 (Level 1 mean: 71.5; Level 2 mean: 73.25). This is a positive outcome, indicating that our core UI and control mechanics remain stable, intuitive, and easy to use regardless of the difficulty progression.
+- **System Usability Scale (SUS):** The test yielded **W = 84.5** and **p = 0.063**. Since p > 0.05, there is **no significant difference** in usability between the two levels, although a slight downward trend was observed as complexity increased. Both levels maintained scores near or above the industry average of 68 (Level 1 mean: 75.06; Level 2 mean: 65.0). This indicates that the core UI and interaction mechanics remain relatively stable and accessible, even when players are faced with higher task difficulty.
 
-- **NASA Task Load Index (TLX):** The test yielded **W = 10.0** and **p = 0.138**. Since p > 0.05, there is **no significant difference** in perceived workload between the two levels. Although the absolute mean score increased from 37.93 (Level 1) to 46.67 (Level 2), the lack of statistical significance suggests a strong "learning effect." Players mastered the mechanics in the first level, which counteracted the static difficulty increase in the second level.
-
-#### **2.2 Reconsidered Technical Challenges**:
-
-Based on the quantitative evaluation results and the core mechanics of our time-clone puzzle platformer, we have reconsidered our primary technical challenges for the ongoing development:
+- **NASA Task Load Index (TLX):** The test yielded **W = 43.5** and **p < 0.001**. Since p < 0.05, there is **a significant difference** in perceived workload between the two levels. The absolute mean score increased from 39.71 (Level 1) to 50.20 (Level 2). This significant increase confirms that the difficulty progression was effectively perceived by the participants, successfully raising the cognitive and mental demands of the game as intended for the second level.
 
 ### **3 Description of how code was tested**:
 
