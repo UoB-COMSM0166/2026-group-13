@@ -1,0 +1,2577 @@
+/*default style*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #1a1a2e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  min-height: 100vh;
+}
+
+#global-nav-hint {
+  max-width: min(1366px, calc(100vw - 20px));
+  padding: 6px 12px;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+}
+
+#global-nav-hint > div + div {
+  margin-top: 2px;
+}
+
+.world-memorial-panel {
+  z-index: 20;
+  width: 340px;
+  max-width: calc(100vw - 32px);
+  padding: 8px;
+  border-radius: 10px;
+  border: 2px solid rgba(245, 220, 255, 0.7);
+  background: rgba(23, 13, 41, 0.82);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.world-memorial-title {
+  margin: 0 0 6px 0;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 13px;
+  color: #f5dcff;
+  letter-spacing: 0.03em;
+}
+
+.world-memorial-link {
+  display: block;
+  margin-bottom: 6px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  border: 1px solid rgba(228, 191, 255, 0.45);
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(98, 62, 136, 0.55);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.world-memorial-link:hover {
+  background: rgba(128, 83, 173, 0.92);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.world-memorial-link:active {
+  transform: translateY(0);
+}
+
+.world-memorial-link:last-child {
+  margin-bottom: 0;
+}
+
+.world-memorial-link-button {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+}
+
+.leaderboard-page {
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: hidden;
+}
+
+.leaderboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 2px solid rgba(245, 220, 255, 0.72);
+  background: rgba(23, 13, 41, 0.84);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.34);
+}
+
+.leaderboard-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.leaderboard-page-title {
+  color: #fff1ff;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.04em;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
+}
+
+.leaderboard-page-subtitle {
+  color: rgba(236, 214, 255, 0.82);
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.leaderboard-tabs {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.leaderboard-tab-button {
+  min-width: 116px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 2px solid rgba(122, 63, 140, 0.78);
+  background: rgba(84, 50, 114, 0.66);
+  color: #fff3fd;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(120, 50, 160, 0.18);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.leaderboard-tab-button:hover {
+  transform: translateY(-1px);
+  background: rgba(112, 71, 150, 0.86);
+  box-shadow: 0 0 18px rgba(160, 80, 200, 0.34);
+}
+
+.leaderboard-tab-button.leaderboard-tab-active {
+  background: linear-gradient(
+    90deg,
+    rgba(176, 113, 219, 0.96),
+    rgba(110, 73, 186, 0.94)
+  );
+  border-color: rgba(248, 210, 255, 0.95);
+  box-shadow:
+    0 0 0 1px rgba(255, 246, 255, 0.35),
+    0 0 18px rgba(200, 123, 255, 0.42);
+}
+
+.leaderboard-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 248px;
+  gap: 14px;
+  justify-content: center;
+  align-content: center;
+  flex: 1;
+  min-height: 0;
+}
+
+.leaderboard-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 248px;
+  min-height: 248px;
+  max-height: 248px;
+  border-radius: 14px;
+  border: 2px solid rgba(215, 185, 255, 0.7);
+  background: linear-gradient(
+    180deg,
+    rgba(45, 24, 66, 0.94),
+    rgba(26, 13, 43, 0.96)
+  );
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34);
+  overflow: hidden;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+}
+
+.leaderboard-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(230, 210, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.leaderboard-card-title {
+  color: #fff7ff;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.leaderboard-card-badge {
+  color: rgba(255, 223, 173, 0.9);
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+.leaderboard-card-body {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  padding: 8px 10px 8px;
+}
+
+.leaderboard-card-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.leaderboard-card-body::-webkit-scrollbar-thumb {
+  background: rgba(158, 116, 206, 0.6);
+  border-radius: 999px;
+}
+
+.leaderboard-entry-row {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 6px;
+  border-radius: 8px;
+  color: #efe9ff;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 12px;
+}
+
+.leaderboard-entry-row + .leaderboard-entry-row {
+  margin-top: 4px;
+}
+
+.leaderboard-entry-current {
+  background: rgba(255, 208, 107, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(255, 224, 130, 0.22);
+}
+
+.leaderboard-entry-rank {
+  color: #dfc3ff;
+}
+
+.leaderboard-entry-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  color: #fff;
+}
+
+.leaderboard-name-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.leaderboard-entry-time {
+  color: rgba(255, 243, 214, 0.92);
+  white-space: nowrap;
+}
+
+.leaderboard-crown {
+  flex: 0 0 auto;
+}
+
+.leaderboard-you-tag {
+  color: #ffd56a;
+  white-space: nowrap;
+}
+
+.leaderboard-empty,
+.leaderboard-error {
+  padding: 18px 10px;
+  color: rgba(238, 229, 255, 0.82);
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.leaderboard-error {
+  color: rgba(255, 168, 168, 0.92);
+}
+
+.leaderboard-card-footer {
+  flex: 0 0 auto;
+  min-height: 32px;
+  padding: 8px 12px 10px;
+  border-top: 1px solid rgba(230, 210, 255, 0.12);
+  background: rgba(255, 220, 120, 0.06);
+  color: #ffd56a;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 12px;
+}
+
+.leaderboard-skeleton-row {
+  position: relative;
+  height: 22px;
+  margin-top: 6px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(121, 88, 155, 0.2);
+}
+
+.leaderboard-skeleton-row::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0)
+  );
+  animation: leaderboard-shimmer 1.2s linear infinite;
+}
+
+@keyframes leaderboard-shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* 玩家名字面板（欢迎信息 + 改名按钮） */
+.player-name-panel {
+  z-index: 20;
+  position: absolute;
+  top: 30px;
+  left: 140px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 2px solid rgba(245, 220, 255, 0.7);
+  background: rgba(23, 13, 41, 0.82);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+}
+
+.player-name-text {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+}
+
+.player-name-text-label {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.player-name-text-name {
+  display: flex;
+  gap: 0;
+}
+
+.player-rename-button {
+  padding: 8px 16px;
+  background: rgba(220, 180, 220, 0.75);
+  border: 2px solid #4a1a6b;
+  border-radius: 6px;
+  color: #21043b;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  box-shadow: 0 0 0 2px #000000;
+}
+
+.player-rename-button:hover {
+  background: rgba(240, 200, 240, 0.95);
+  box-shadow:
+    0 0 0 2px #ffffff,
+    0 4px 12px rgba(53, 0, 51, 0.4);
+  transform: translateY(-2px);
+}
+
+.player-rename-button:active {
+  transform: translateY(0);
+}
+
+/* 改名对话框 */
+.rename-dialog-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 10000 !important;
+}
+
+.rename-dialog {
+  background: rgba(26, 0, 51, 0.95);
+  border: 2px solid rgba(245, 220, 255, 0.8);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  max-width: 420px;
+  box-shadow:
+    0 12px 48px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(120, 50, 160, 0.5);
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  color: #f0e0ff;
+}
+
+.rename-dialog > div:first-child {
+  color: #feca57;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.rename-dialog input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 2px solid rgba(120, 50, 160, 0.5);
+  border-radius: 6px;
+  background: rgba(50, 30, 70, 0.8);
+  color: #fff;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+}
+
+.rename-dialog input:focus {
+  outline: none;
+  border-color: #feca57;
+  box-shadow: 0 0 12px rgba(254, 202, 87, 0.3);
+}
+
+.rename-dialog button {
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  border: 2px solid;
+}
+
+.rename-dialog button:first-of-type {
+  background: rgba(220, 180, 220, 0.8);
+  color: #21043b;
+  border-color: #4a1a6b;
+  box-shadow: 0 0 0 2px #000000;
+  margin-right: 15px;
+}
+
+.rename-dialog button:first-of-type:hover {
+  background: rgba(240, 200, 240, 0.95);
+  box-shadow:
+    0 0 0 2px #ffffff,
+    0 4px 12px rgba(53, 0, 51, 0.4);
+  transform: translateY(-2px);
+}
+
+.rename-dialog button:last-of-type {
+  background: rgba(70, 50, 100, 0.8);
+  color: #f0e0ff;
+  border-color: rgba(245, 220, 255, 0.7);
+  box-shadow: 0 0 0 2px #000000;
+}
+
+.rename-dialog button:last-of-type:hover {
+  background: rgba(100, 70, 140, 0.95);
+  box-shadow:
+    0 0 0 2px #feca57,
+    0 4px 12px rgba(254, 202, 87, 0.2);
+  transform: translateY(-2px);
+}
+
+/* 改名 Loading 对话框 */
+.rename-loading-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 10000 !important;
+}
+
+.rename-loading-text {
+  color: #feca57;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#game-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+canvas {
+  display: block;
+}
+/*font*/
+@font-face {
+  font-family: "PixelFont";
+  src: url("../assets/fonts/HYPixel11pxU-2.ttf");
+}
+/*main panel*/
+#main {
+  position: absolute;
+  background-image: url("../assets/images/bg/menu.png");
+  background-size: contain;
+  width: 960px;
+  height: 540px;
+}
+
+/*.min-btn {
+    background-color: transparent;
+    border: none;
+    font-family: "PixelFont", sans-serif;
+    font-weight: 700;
+    color: #410341;
+    cursor: pointer;
+
+}
+.min-btn:hover {
+    background-color: rgba(255,255,255,0.2);
+    color: #800080;
+}*/
+
+#main-btn-levelSelect {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 31px;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  font-size: 30px;
+}
+/* #min-btn-setting {
+    position: absolute;
+    left: 341px;
+    bottom: 40px;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    font-size: 13px;
+}
+
+#min-btn-achieves {
+    position: absolute;
+    right: 341px;
+    bottom: 40px;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    font-size: 13px;
+} */
+/*setting panel*/
+/* #setting-panel {
+    position: absolute;
+    background-image: url("../assets/images/bg/settings.png");
+    background-size: contain;
+    width: 960px;
+    height: 540px;
+}
+
+#setting-btn-back {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/*achieves panel*/
+/* #achieves-panel {
+    position: absolute;
+    background-image: url("../assets/images/bg/achieve.png");
+    background-size: contain;
+    width: 960px;
+    height: 540px;
+}
+#achieves-btn-back {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+} */
+/*level select panel*/
+#levelSelect {
+  position: absolute;
+  background-image: url("../assets/images/bg/level_choice.png");
+  background-size: contain;
+  width: 960px;
+  height: 540px;
+}
+#levelSelect-btn-back {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#levelSelect-btn-level1 {
+  position: absolute;
+  left: 119px;
+  top: 236px;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+}
+#levelSelect-btn-level2 {
+  position: absolute;
+  left: 288px;
+  top: 236px;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+}
+/*level1*/
+#level1 {
+  position: absolute;
+  width: 960px;
+  height: 540px;
+}
+#inLevel1UI {
+  position: absolute;
+  z-index: 10px;
+  width: 960px;
+  height: 540px;
+}
+#level1-btn-back {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/*level2*/
+#level2 {
+  position: absolute;
+  width: 960px;
+  height: 540px;
+}
+#inLevel2UI {
+  position: absolute;
+  z-index: 10px;
+  width: 960px;
+  height: 540px;
+}
+#level2-btn-back {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/*level1 result*/
+#level1Result {
+  position: absolute;
+  background-image: url("../assets/images/bg/level_choice.png");
+  background-size: contain;
+  width: 960px;
+  height: 540px;
+}
+#level1Result-btn-back {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/*level2 result*/
+#level2Result {
+  position: absolute;
+  background-image: url("../assets/images/bg/level_choice.png");
+  background-size: contain;
+  width: 960px;
+  height: 540px;
+}
+#level2Result-btn-back {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ========== 以下为合并的 UI 样式 ========== */
+
+/* 通用按钮格式 */
+.my-button {
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  width: 100px;
+  height: 60px;
+  border-radius: 10%;
+  font-size: 26px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(101, 78, 119, 0.2);
+  color: white;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+.my-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-subtitle {
+  position: absolute;
+  transform: translateX(-50%);
+  color: #ffffff;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 30px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* 开始按钮 */
+.start-button {
+  color: #0d010b;
+  font-weight: bold;
+  -webkit-text-stroke: 1px #0d010b;
+  border: 3px solid #4c1745;
+  border-radius: 50%;
+  font-size: 42px;
+  background-color: rgba(101, 78, 119, 0.8);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-2px);
+  transition:
+    background-color 0.8s,
+    border-color 1s;
+  transition:
+    color 0.5s,
+    -webkit-text-stroke 0.5s;
+}
+.start-button:hover {
+  color: #fff3fd;
+  font-weight: bold;
+  -webkit-text-stroke: 1px #ffeafc;
+  background-color: rgba(191, 157, 212, 0.3);
+  border-width: 3px;
+}
+
+/* 设置按钮 */
+.settings-button {
+  color: #0d010b;
+  font-weight: bold;
+  -webkit-text-stroke: 1px #0d010b;
+  border: 3px solid #4c1745;
+  border-radius: 50%;
+  font-size: 16px;
+  background-color: rgba(101, 78, 119, 0.8);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.8s,
+    border-color 1s;
+  transition:
+    color 0.5s,
+    -webkit-text-stroke 0.5s;
+}
+.settings-button:hover {
+  color: #fff3fd;
+  font-weight: bold;
+  -webkit-text-stroke: 0.2px #ffeafc;
+  background-color: rgba(191, 157, 212, 0.3);
+  border-width: 3px;
+}
+
+/* achieves按钮 */
+.achieves-button {
+  color: #0d010b;
+  font-weight: bold;
+  -webkit-text-stroke: 1px #0d010b;
+  border: 3px solid #4c1745;
+  border-radius: 50%;
+  font-size: 16px;
+  background-color: rgba(101, 78, 119, 0.8);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.8s,
+    border-color 1s;
+  transition:
+    color 0.5s,
+    -webkit-text-stroke 0.5s;
+}
+.achieves-button:hover {
+  color: #fff3fd;
+  font-weight: bold;
+  -webkit-text-stroke: 0.2px #ffeafc;
+  background-color: rgba(191, 157, 212, 0.3);
+  border-width: 3px;
+}
+
+/* hint按钮（呼吸灯） */
+.hint-button {
+  border-radius: 5%;
+  border: 3px solid #39073a;
+  background-color: rgba(191, 157, 212, 0.1);
+  color: #fff3fd;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-weight: bold;
+  -webkit-text-stroke: 0.2px #ffeafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  animation: breathe 2s ease-in-out infinite;
+}
+@keyframes breathe {
+  0% {
+    background-color: rgba(191, 157, 212, 0.1);
+    opacity: 0.7;
+    -webkit-text-stroke: 0.2px #ffeafc;
+  }
+  50% {
+    background-color: rgba(191, 157, 212, 0.8);
+    opacity: 0.9;
+    -webkit-text-stroke: 0.5px #fff3fd;
+  }
+  100% {
+    background-color: rgba(51, 11, 76, 0.1);
+    opacity: 0.7;
+    -webkit-text-stroke: 0.3px #ffeafc;
+  }
+}
+.hint-button:hover {
+  animation: breathe 1s ease-in-out infinite;
+}
+
+/* back按钮 */
+.back-button {
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #21043b;
+  border-radius: 8px;
+  background: rgba(220, 180, 220, 0.75);
+  border: 3px solid #4a1a6b;
+  box-shadow: 0 0 0 2.5px #000000;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+.back-button:hover {
+  box-shadow:
+    0 0 0 2.5px #ffffff,
+    0 6px 16px rgba(53, 0, 51, 0.4);
+  transform: translateY(-3px);
+}
+
+.leaderboard-back-button {
+  z-index: 30;
+  background: rgba(243, 218, 255, 0.85);
+  border-color: #5f2b82;
+  box-shadow:
+    0 0 0 2.5px #000000,
+    0 8px 18px rgba(17, 6, 27, 0.35);
+}
+
+/* 胜利结算页按钮 */
+.win-action-button {
+  width: 180px;
+  height: 46px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  color: #fff3fd;
+  -webkit-text-stroke: 0.3px #ffeafc;
+  background: linear-gradient(
+    90deg,
+    rgba(101, 78, 119, 0.75),
+    rgba(70, 40, 100, 0.75)
+  );
+  border: 2px solid #7a3f8c;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(120, 50, 160, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  transition:
+    background 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s,
+    opacity 0.3s;
+}
+.win-action-button:hover {
+  opacity: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(140, 100, 170, 0.9),
+    rgba(100, 60, 140, 0.9)
+  );
+  border-color: #a060d0;
+  box-shadow: 0 0 18px rgba(160, 80, 200, 0.5);
+}
+
+/* notebook按钮（翻转卡片） */
+.notebook-button {
+  perspective: 600px;
+  cursor: pointer;
+  position: absolute;
+  width: 200px;
+  height: 250px;
+}
+.notebook-button .flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.notebook-button:hover .flipper {
+  transform: rotateY(180deg);
+}
+.notebook-button .front,
+.notebook-button .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 50px;
+  color: #fff3fd;
+  background-color: rgba(101, 78, 119, 0.6);
+  border: 2px solid #4c1745;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.notebook-button .back {
+  transform: rotateY(180deg);
+}
+
+/* hint notebook按钮（仅点击翻页） */
+.hint-notebook-button {
+  perspective: 600px;
+  cursor: pointer;
+  position: absolute;
+  width: 400px;
+  height: 420px;
+}
+.hint-notebook-button .flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.hint-notebook-button.is-flipped .flipper {
+  transform: rotateY(180deg);
+}
+.hint-notebook-button .front,
+.hint-notebook-button .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 30px;
+  color: #fff3fd;
+  background-color: rgba(101, 78, 119, 0.6);
+  border: 2px solid #4c1745;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.hint-notebook-button .back {
+  transform: rotateY(180deg);
+}
+
+.hint-notebook-button.scene-hint-notebook {
+  width: 520px;
+  height: 380px;
+  z-index: 1100;
+}
+
+.hint-notebook-button.scene-hint-notebook .front,
+.hint-notebook-button.scene-hint-notebook .back {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: pre-line;
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 24px 20px;
+  text-align: center;
+  overflow-y: auto;
+}
+
+/* ── Structured content layout ── */
+.scene-hint-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e8d0ff;
+  text-align: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(160, 100, 210, 0.4);
+  width: 100%;
+}
+
+.scene-hint-body {
+  flex: 1;
+  font-size: 15px;
+  color: #ddd0ee;
+  text-align: center;
+  width: 100%;
+  white-space: pre-line;
+}
+
+.scene-hint-footer {
+  font-size: 14px;
+  color: #c8a0ff;
+  text-align: center;
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(160, 100, 210, 0.3);
+  width: 100%;
+  animation: hintFooterGlow 1.6s ease-in-out infinite;
+}
+
+@keyframes hintFooterGlow {
+  0%,
+  100% {
+    opacity: 0.5;
+    text-shadow: 0 0 4px rgba(200, 160, 255, 0.3);
+  }
+  50% {
+    opacity: 1;
+    text-shadow:
+      0 0 12px rgba(200, 160, 255, 0.9),
+      0 0 24px rgba(160, 100, 240, 0.5);
+  }
+}
+
+.hint-notebook-button .hint-face-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.hint-notebook-button .hint-face-image {
+  width: 100%;
+  max-height: 58%;
+  object-fit: contain;
+  display: block;
+}
+
+.hint-notebook-button .hint-face-text {
+  width: 100%;
+  text-align: center;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  line-height: 1.25;
+  white-space: normal;
+}
+
+/* 背面"安装模块"按钮 */
+.hint-back-module-btn {
+  position: absolute !important;
+  bottom: 60px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 120px !important;
+  height: 44px !important;
+  background: linear-gradient(
+    90deg,
+    rgba(100, 50, 140, 0.8),
+    rgba(70, 30, 100, 0.8)
+  ) !important;
+  border: 2px solid #a060d0 !important;
+  border-radius: 8px !important;
+  color: #f0e0ff !important;
+  font-family: "HYPixel11", "PixelFont", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  padding: 0 !important;
+}
+
+.hint-back-module-btn:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(130, 80, 170, 0.9),
+    rgba(100, 60, 130, 0.9)
+  ) !important;
+  border-color: #d090ff !important;
+  box-shadow: 0 0 12px rgba(160, 80, 200, 0.6) !important;
+}
+
+.hint-back-module-btn:active {
+  transform: translateX(-50%) scale(0.95) !important;
+}
+
+/* level1 场景木牌 */
+.signboard-button {
+  border: none;
+  border-radius: 4px;
+  background: url("../assets/images/tiles/signboard.png") center / cover
+    no-repeat;
+  background-color: transparent;
+  box-shadow: none;
+  transform: none;
+  padding: 0;
+  transition: filter 0.16s ease;
+  cursor: pointer;
+}
+
+.signboard-button.signboard-button-in-range {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.95));
+}
+
+/* ========== 悬浮窗 (Floating Window) ========== */
+
+.window-base {
+  position: absolute;
+  background: rgba(14, 7, 22, 0.93);
+  border: 2px solid #7a3f8c;
+  border-radius: 10px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.65),
+    0 0 22px rgba(120, 50, 160, 0.35);
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  color: #f0e0ff;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.window-setting-top {
+  z-index: 2147483647;
+}
+
+body.game-paused .window-pause-top {
+  z-index: 2147483646 !important;
+}
+
+body.game-paused .window-setting-top,
+body.game-paused .window-hint-top {
+  z-index: 2147483647 !important;
+}
+
+body.game-paused .hint-notebook-button.scene-hint-notebook {
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+/* 标题栏 */
+.window-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: linear-gradient(
+    90deg,
+    rgba(90, 40, 120, 0.95),
+    rgba(50, 15, 75, 0.95)
+  );
+  border-bottom: 1px solid rgba(140, 70, 180, 0.5);
+  cursor: grab;
+  user-select: none;
+}
+.window-titlebar:active {
+  cursor: grabbing;
+}
+
+.window-title-text {
+  font-size: 15px;
+  font-weight: bold;
+  color: #e0c0ff;
+  pointer-events: none;
+}
+
+/* 关闭按钮 */
+.window-close-btn {
+  background: transparent;
+  border: 1px solid rgba(150, 80, 180, 0.6);
+  border-radius: 4px;
+  color: #c080e0;
+  font-size: 13px;
+  line-height: 1;
+  padding: 2px 7px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+.window-close-btn:hover {
+  background-color: rgba(180, 50, 50, 0.65);
+  color: #fff;
+  border-color: #c05050;
+}
+
+/* 内容区 */
+.window-content {
+  padding: 14px 16px 16px;
+  min-height: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* 分区标题 */
+.window-section-title {
+  font-size: 13px;
+  color: #b880e8;
+  margin: 6px 0 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(120, 60, 160, 0.4);
+}
+
+/* 滑块行 */
+.window-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.window-label {
+  font-size: 12px;
+  color: #d0a8f0;
+  min-width: 36px;
+}
+
+.window-slider {
+  flex: 1;
+  height: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  accent-color: #a060d0;
+  background: rgba(90, 50, 120, 0.5);
+  outline: none;
+  border: none;
+}
+
+.window-slider-value {
+  font-size: 12px;
+  color: #a880c8;
+  min-width: 32px;
+  text-align: right;
+}
+
+/* 语言选择行 */
+.window-lang-row {
+  margin-top: 4px;
+}
+
+.window-select {
+  width: 100%;
+  padding: 5px 10px;
+  background: rgba(30, 12, 50, 0.85);
+  border: 1px solid rgba(130, 70, 170, 0.7);
+  border-radius: 6px;
+  color: #e0c0ff;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+.window-select:hover,
+.window-select:focus {
+  border-color: #b060d0;
+  background: rgba(55, 25, 85, 0.9);
+}
+
+/* 按键绑定行 */
+.window-keybind-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+/* 按键绑定标签 */
+.window-keybind-row .window-label {
+  min-width: 80px;
+  flex: 0 0 auto;
+}
+
+/* 主键 + alias chip 的容器 */
+.window-keybind-key-group {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 按键显示按钮 */
+.window-keybind-btn {
+  min-width: 44px;
+  flex: 0 0 auto;
+  padding: 6px 12px;
+  height: 28px;
+  background: rgba(30, 12, 50, 0.85);
+  border: 1px solid rgba(130, 70, 170, 0.7);
+  border-radius: 6px;
+  color: #d0a8f0;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.window-keybind-btn:hover {
+  border-color: #b060d0;
+  background: rgba(55, 25, 85, 0.9);
+}
+
+/* 监听中的按键按钮 */
+.window-keybind-btn-listening {
+  background: rgba(120, 60, 160, 0.7) !important;
+  border-color: #8060d0 !important;
+  box-shadow: 0 0 12px rgba(160, 80, 220, 0.6) !important;
+  animation: pulse-keybind 0.6s ease-in-out infinite;
+}
+
+@keyframes pulse-keybind {
+  0%,
+  100% {
+    box-shadow: 0 0 12px rgba(160, 80, 220, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(160, 80, 220, 0.9);
+  }
+}
+
+/* 固定别名按键 chip（只读） */
+.window-keybind-alias {
+  flex: 0 0 auto;
+  padding: 2px 5px;
+  height: 22px;
+  background: rgba(30, 15, 50, 0.5);
+  border: 1px solid rgba(100, 60, 130, 0.35);
+  border-radius: 4px;
+  color: #7050a0;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* 按键重置按钮 */
+.window-keybind-reset {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  background: rgba(80, 40, 100, 0.7);
+  border: 1px solid rgba(120, 80, 160, 0.6);
+  border-radius: 4px;
+  color: #b080d8;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+  outline: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+  flex: 0 0 auto;
+}
+
+.window-keybind-reset:hover {
+  background-color: rgba(160, 80, 140, 0.8);
+  color: #d0b0ff;
+  border-color: #a080d0;
+}
+
+/* ── 暂停按钮（游戏中右上角 ⏸） */
+.pause-button {
+  font-size: 16px;
+  border-radius: 50%;
+  background: rgba(55, 20, 85, 0.45);
+  border: 1.5px solid rgba(255, 236, 169, 0.35);
+  color: rgba(255, 248, 223, 0.75);
+  backdrop-filter: blur(4px);
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+.pause-button:hover {
+  background: rgba(75, 30, 115, 0.6);
+  border-color: rgba(255, 236, 165, 0.7);
+  color: #fff1c0;
+}
+
+/* ── 暂停窗口内部按钮 */
+.pause-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border: 1px solid rgba(140, 70, 180, 0.6);
+  border-radius: 7px;
+  background: rgba(30, 12, 50, 0.85);
+  color: #e0c0ff;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+  box-sizing: border-box;
+}
+.pause-btn:last-child {
+  margin-bottom: 0;
+}
+.pause-btn:hover {
+  background: rgba(90, 40, 120, 0.75);
+  border-color: #b060d0;
+}
+.pause-btn-resume {
+  border-color: rgba(80, 160, 100, 0.7);
+  color: #a8f0c0;
+}
+.pause-btn-resume:hover {
+  background: rgba(30, 80, 45, 0.75);
+  border-color: #50c070;
+  color: #d0ffd8;
+}
+
+.pause-btn-setting {
+  border-color: rgba(100, 130, 200, 0.75);
+  color: #bcd2ff;
+}
+
+.pause-btn-setting:hover {
+  background: rgba(35, 55, 105, 0.78);
+  border-color: #6f93f0;
+  color: #dbe6ff;
+}
+
+.pause-btn-hint {
+  border-color: rgba(210, 170, 90, 0.8);
+  color: #ffe7a8;
+}
+
+.pause-btn-hint:hover {
+  background: rgba(120, 90, 28, 0.78);
+  border-color: #efc666;
+  color: #fff4cc;
+}
+
+.pause-btn-level-choice {
+  border-color: rgba(84, 162, 156, 0.8);
+  color: #b7f1e8;
+}
+
+.pause-btn-level-choice:hover {
+  background: rgba(28, 102, 96, 0.78);
+  border-color: #66d1c6;
+  color: #d8fff9;
+}
+
+.window-hint-text {
+  color: #f2e5ff;
+  line-height: 1.65;
+  font-size: 13px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ========== Setting Sidebar Floating Window ========== */
+
+.window-sidebar-base {
+  position: absolute;
+  background: rgba(20, 16, 34, 0.85);
+  border: 2px solid rgba(182, 155, 220, 0.55);
+  border-radius: 18px;
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.42),
+    0 0 30px rgba(170, 150, 215, 0.18);
+  backdrop-filter: blur(8px);
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  color: #f6efff;
+  overflow: hidden;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px 14px;
+  background: linear-gradient(
+    90deg,
+    rgba(114, 89, 166, 0.42),
+    rgba(44, 32, 73, 0.3)
+  );
+  border-bottom: 1px solid rgba(204, 190, 230, 0.2);
+}
+
+.window-sidebar-title {
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: #f6efff;
+}
+
+.window-sidebar-close-btn {
+  background: transparent;
+  border: 1px solid rgba(150, 80, 180, 0.6);
+  border-radius: 4px;
+  color: #c080e0;
+  font-size: 13px;
+  line-height: 1;
+  padding: 2px 7px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.window-sidebar-close-btn:hover {
+  background-color: rgba(180, 50, 50, 0.65);
+  color: #fff;
+  border-color: #c05050;
+}
+
+.window-sidebar-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 26px;
+  min-height: 0;
+  padding: 24px 32px 28px;
+}
+
+.window-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 20px;
+  border-right: 1px solid rgba(214, 204, 232, 0.16);
+}
+
+.window-sidebar-tab {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  background: rgba(30, 12, 50, 0.85);
+  border: 1px solid rgba(130, 70, 170, 0.7);
+  border-radius: 8px;
+  color: #e0c0ff;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.window-sidebar-tab:hover {
+  background: rgba(55, 25, 85, 0.9);
+  border-color: #b060d0;
+}
+
+.window-sidebar-tab.active {
+  background: linear-gradient(
+    135deg,
+    rgba(190, 172, 227, 0.24),
+    rgba(110, 76, 168, 0.34)
+  );
+  border-color: rgba(230, 220, 255, 0.48);
+  color: #fff7ff;
+}
+
+.window-sidebar-panels {
+  min-width: 0;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.window-sidebar-panel {
+  display: none;
+}
+
+.window-sidebar-panel.active {
+  display: block;
+}
+
+.window-setting-sidebar .window-section-title {
+  font-size: 18px;
+  color: #f0e5ff;
+  margin: 10px 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(214, 204, 232, 0.18);
+}
+
+.window-credits-text {
+  color: #e0d4f0;
+  font-size: 14px;
+  line-height: 2;
+  white-space: pre-wrap;
+  padding: 10px 5px;
+}
+
+.window-setting-sidebar .window-slider-row {
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.window-setting-sidebar .window-label {
+  font-size: 16px;
+  min-width: 120px;
+  color: #f1e7ff;
+}
+
+.window-setting-sidebar .window-slider {
+  height: 8px;
+}
+
+.window-setting-sidebar .window-slider-value {
+  min-width: 56px;
+  font-size: 15px;
+  color: #f0e1ff;
+}
+
+.window-setting-sidebar .window-lang-row {
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
+.window-setting-sidebar .window-select {
+  padding: 12px 16px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.window-setting-sidebar .window-keybind-row {
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.window-setting-sidebar .window-keybind-row .window-label {
+  min-width: 140px;
+}
+
+.window-setting-sidebar .window-keybind-btn {
+  height: 40px;
+  padding: 8px 14px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.window-setting-sidebar .window-keybind-reset {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.window-setting-sidebar .window-keybind-alias {
+  height: 32px;
+  padding: 4px 8px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+
+/* ========== 木牌内容弹窗 (Signboard Content) ========== */
+
+.signboard-content-overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
+}
+
+.signboard-content-box {
+  position: relative;
+  display: inline-block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.signboard-content-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.signboard-content-title {
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 55px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+
+.signboard-content-body {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 40px;
+  color: #f0e0ff;
+  text-align: center;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.signboard-content-footer {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  width: 90%;
+  transform: translateX(-50%);
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 40px;
+  color: #e6eab6;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  animation: signboard-breathe 2s ease-in-out infinite;
+}
+
+@keyframes signboard-breathe {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.signboard-content-button {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 30px;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 32px;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+  z-index: 9999;
+}
+
+.signboard-content-button:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateX(-50%) scale(1.05);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.signboard-content-button:active {
+  transform: translateX(-50%) scale(0.95);
+}
+
+.signboard-tutorial-btn {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 40px;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(200, 150, 220, 0.85);
+  border: 2px solid #d4a5e8;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.5),
+    inset 0 1px 3px rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease;
+  z-index: 9999;
+}
+
+.signboard-tutorial-btn:hover {
+  background: rgba(220, 170, 240, 0.95);
+  border-color: #e8c5ff;
+  box-shadow:
+    0 6px 25px rgba(212, 165, 232, 0.7),
+    inset 0 1px 3px rgba(255, 255, 255, 0.5);
+  transform: translateX(-50%) scale(1.05);
+}
+
+.signboard-tutorial-btn:active {
+  transform: translateX(-50%) scale(0.95);
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== 提示框浮窗 (Window Prompt) ========== */
+
+.window-prompt-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.window-prompt-container {
+  background: rgba(14, 7, 22, 0.93);
+  border: 2px solid #7a3f8c;
+  border-radius: 15px;
+  box-shadow:
+    0 12px 48px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(120, 50, 160, 0.5);
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  color: #f0e0ff;
+  max-width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  backdrop-filter: blur(10px);
+  cursor: default;
+  pointer-events: auto;
+}
+
+.window-prompt-content {
+  color: #f2e5ff;
+  line-height: 1.8;
+  word-break: break-word;
+  white-space: pre-wrap;
+  text-align: center;
+  flex: 1;
+}
+
+.window-prompt-tips {
+  color: #b8a0d0;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.rainbow-wave {
+  display: inline-block;
+  font-weight: bold;
+  animation:
+    rainbow-color 3s linear infinite,
+    wave 2.4s ease-in-out infinite;
+}
+
+.rainbow-wave:nth-child(1) {
+  animation-delay: 0s, 0s;
+}
+.rainbow-wave:nth-child(2) {
+  animation-delay: 0s, 0.15s;
+}
+.rainbow-wave:nth-child(3) {
+  animation-delay: 0s, 0.3s;
+}
+.rainbow-wave:nth-child(4) {
+  animation-delay: 0s, 0.45s;
+}
+.rainbow-wave:nth-child(5) {
+  animation-delay: 0s, 0.6s;
+}
+.rainbow-wave:nth-child(6) {
+  animation-delay: 0s, 0.75s;
+}
+.rainbow-wave:nth-child(7) {
+  animation-delay: 0s, 0.9s;
+}
+.rainbow-wave:nth-child(8) {
+  animation-delay: 0s, 1.05s;
+}
+.rainbow-wave:nth-child(9) {
+  animation-delay: 0s, 1.2s;
+}
+.rainbow-wave:nth-child(10) {
+  animation-delay: 0s, 1.35s;
+}
+.rainbow-wave:nth-child(11) {
+  animation-delay: 0s, 1.5s;
+}
+.rainbow-wave:nth-child(12) {
+  animation-delay: 0s, 1.65s;
+}
+
+@keyframes rainbow-color {
+  0% {
+    color: #ff4e50;
+  }
+  16% {
+    color: #ff9f43;
+  }
+  33% {
+    color: #feca57;
+  }
+  50% {
+    color: #48dbfb;
+  }
+  66% {
+    color: #a29bfe;
+  }
+  83% {
+    color: #fd79a8;
+  }
+  100% {
+    color: #ff4e50;
+  }
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+/* ═══ World Select Page ═══════════════════════════════════════════════ */
+.world-button {
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff3fd;
+  -webkit-text-stroke: 1px rgba(255, 236, 252, 0.6);
+  border: 3px solid rgba(76, 23, 69, 0.8);
+  border-radius: 18px;
+  background: rgba(60, 30, 90, 0.65);
+  backdrop-filter: blur(6px);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.25s ease,
+    box-shadow 0.4s ease;
+  box-shadow: 0 4px 20px rgba(80, 20, 120, 0.3);
+}
+.world-button:hover {
+  background: rgba(120, 60, 160, 0.55);
+  border-color: rgba(255, 236, 165, 0.7);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(140, 60, 200, 0.45);
+}
+.world-button-1 {
+  text-shadow: 0 0 12px rgba(130, 200, 255, 0.6);
+}
+.world-button-1:hover {
+  border-color: rgba(130, 200, 255, 0.8);
+  box-shadow: 0 8px 30px rgba(130, 200, 255, 0.35);
+}
+.world-button-2 {
+  text-shadow: 0 0 12px rgba(180, 130, 255, 0.6);
+}
+.world-button-2:hover {
+  border-color: rgba(180, 130, 255, 0.8);
+  box-shadow: 0 8px 30px rgba(180, 130, 255, 0.35);
+}
+.world-button-3 {
+  text-shadow: 0 0 12px rgba(255, 180, 130, 0.6);
+}
+.world-button-3:hover {
+  border-color: rgba(255, 180, 130, 0.8);
+  box-shadow: 0 8px 30px rgba(255, 180, 130, 0.35);
+}
+
+.world-mode-button {
+  font-size: 38px;
+  letter-spacing: 0.04em;
+}
+
+/* ── Achievement Toast ──────────────────────────────────────────── */
+.achievement-toast-anchor {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10001;
+}
+
+.achievement-toast-band {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 0 60px;
+  /* 白色半透明光带 + 两侧渐变，模拟关卡标题风格 */
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 18%,
+    rgba(255, 255, 255, 0.42) 40%,
+    rgba(255, 255, 255, 0.42) 60%,
+    rgba(255, 255, 255, 0.35) 82%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  white-space: nowrap;
+  opacity: 0;
+  transition:
+    opacity 0.5s cubic-bezier(0.33, 1, 0.68, 1),
+    transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.achievement-toast-band-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.achievement-toast-label {
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-weight: bold;
+  font-size: clamp(16px, 1.8vw, 24px);
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+  letter-spacing: 2px;
+}
+
+/* ── Achievement Page ───────────────────────────────────────────── */
+.achiev-tooltip {
+  position: absolute;
+  background: rgba(14, 7, 22, 0.95);
+  border: 1.5px solid #7a3f8c;
+  border-radius: 8px;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.6),
+    0 0 15px rgba(120, 50, 160, 0.3);
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  padding: 10px 16px;
+  min-width: 160px;
+  max-width: 240px;
+  z-index: 10000;
+  pointer-events: none;
+  white-space: normal;
+}
+
+.achiev-tooltip-below {
+  transform: translateX(-50%);
+}
+
+.achiev-tooltip-above {
+  transform: translate(-50%, -100%);
+}
+
+.achiev-tooltip-title {
+  color: #e0c0ff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  border-bottom: 1px solid rgba(120, 60, 160, 0.4);
+  padding-bottom: 5px;
+}
+
+.achiev-tooltip-desc {
+  color: #b8a0d0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ========== Language Choice Page ========== */
+
+/* ── 面板外层定位容器 ── */
+.language-panel {
+  position: absolute;
+  width: 38%;
+  height: 60%;
+  top: 26%;
+  cursor: pointer;
+  z-index: 100;
+  user-select: none;
+  image-rendering: pixelated;
+  transition:
+    filter 0.14s ease,
+    transform 0.14s ease;
+}
+
+.lang-panel-left {
+  left: 8%;
+}
+.lang-panel-right {
+  right: 8%;
+}
+
+.language-panel:hover {
+  filter: brightness(1.12) saturate(1.08);
+  transform: scale(1.018);
+}
+
+/* ── 内框：像素风硬边 + 双层描边 ── */
+.lang-frame-inner {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  border: 8px solid #6b4a7a;
+  box-shadow:
+    inset 0 0 0 2px #8a6a99,
+    /* 内高光描边 */ inset 0 0 0 4px #2a1433; /* 内阴影描边 */
+
+  background: linear-gradient(
+    180deg,
+    rgba(232, 216, 240, 0.72) 0%,
+    rgba(212, 190, 224, 0.68) 50%,
+    rgba(138, 106, 153, 0.65) 100%
+  );
+}
+
+/* ── 雾化渐变层 ── */
+.lang-fog {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(232, 216, 240, 0.18),
+      transparent 55%
+    ),
+    radial-gradient(circle at 50% 75%, rgba(42, 20, 51, 0.06), transparent 60%);
+}
+
+/* ── 大字 ── */
+.lang-panel-text {
+  position: relative;
+  z-index: 5;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 110px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  text-align: center;
+  color: #2a1433;
+  text-shadow:
+    0 2px 0 rgba(232, 216, 240, 0.5),
+    3px 5px 12px rgba(42, 20, 51, 0.4);
+  image-rendering: pixelated;
+}
+
+/* ── 提示小字 ── */
+.lang-panel-hint {
+  position: relative;
+  z-index: 5;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 24px;
+  margin-top: 1.8em;
+  text-align: center;
+  letter-spacing: 0.07em;
+  color: #ffffff;
+  text-shadow:
+    0 0 8px rgba(42, 20, 51, 0.9),
+    0 2px 0 rgba(42, 20, 51, 0.8),
+    0 4px 12px rgba(0, 0, 0, 0.7);
+  image-rendering: pixelated;
+}
+
+/* ── 底部提示条 ── */
+@keyframes lang-hint-breathe {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.lang-hint-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 13px 0 15px;
+  background: rgba(0, 0, 0, 0.52);
+  text-align: center;
+  z-index: 150;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.lang-hint-text {
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 17px;
+  color: #ffffff;
+  letter-spacing: 0.07em;
+  line-height: 1.7;
+  animation: lang-hint-breathe 2.8s ease-in-out infinite;
+  image-rendering: pixelated;
+}
+
+/* ========== Win Demo2 提示条 ========== */
+.win-hint-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 0 18px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  z-index: 150;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.win-hint-text {
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffde99;
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+  animation: win-hint-breathe 2.2s ease-in-out infinite;
+  image-rendering: pixelated;
+  text-shadow: 0 0 8px rgba(255, 222, 153, 0.5);
+}
+
+@keyframes win-hint-breathe {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ========== 键盘导航焦点样式 ========== */
+
+/* 通用键盘焦点高亮 */
+.kb-focused {
+  outline: 2px solid #fff7fd !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 12px rgba(167, 151, 181, 0.6) !important;
+}
+
+/* 暂停窗口按钮焦点 */
+.pause-btn.kb-focused {
+  background: rgba(120, 70, 160, 0.95) !important;
+  border-color: #420942 !important;
+  box-shadow: 0 0 16px rgba(41, 0, 48, 0.8) !important;
+}
+
+/* 鼠标悬停效果 */
+.my-button.mouse-hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 禁用按钮样式 */
+.my-button.disabled,
+.my-button[disabled],
+.pause-btn.disabled,
+.pause-btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: #888;
+}
+
+/* ========== 教学系统样式 (tutorial-system) ========== */
+
+/* 黑幕层 */
+.tutorial-overlay {
+  background: transparent;
+  pointer-events: none;
+}
+
+/* 提示框 */
+.tutorial-prompt {
+  background: rgba(30, 20, 50, 0.95);
+  border: 2px solid #a085db;
+  border-radius: 10px;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 18px;
+  color: #e0d5ff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  line-height: 1.6;
+  background-image: linear-gradient(
+    135deg,
+    rgba(30, 20, 50, 0.95) 0%,
+    rgba(50, 30, 80, 0.9) 100%
+  );
+}
+
+/* 醒目提示框（PHASE 3, 5） */
+.tutorial-prompt-highlight {
+  background: rgba(255, 100, 130, 0.1);
+  border: 2px solid #ff6482 !important;
+  box-shadow:
+    0 0 20px rgba(255, 100, 130, 0.4),
+    0 4px 20px rgba(0, 0, 0, 0.6);
+  color: #ffb3cc;
+}
+
+/* 高亮效果 */
+.tutorial-highlight {
+  box-shadow: 0 0 30px rgba(200, 150, 255, 1) inset !important;
+  border: 2px solid #e8c5ff !important;
+}
+
+/* 标签 */
+.tutorial-label {
+  background: rgba(50, 30, 80, 0.95);
+  border: 1px solid #c9a5ff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 14px;
+  color: #f0e5ff;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* ========== Name Input Page ========== */
+.name-input-container {
+  background: rgba(20, 10, 40, 0.95);
+  border: 3px solid rgba(200, 150, 255, 0.6);
+  border-radius: 12px;
+  padding: 50px 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  max-width: 420px;
+  z-index: 200;
+}
+
+.name-input-title {
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: #e0b0ff;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.name-input-field {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 18px;
+  border: 2px solid rgba(200, 150, 255, 0.5);
+  border-radius: 6px;
+  background: rgba(50, 30, 80, 0.8);
+  color: #ffffff;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.name-input-field:focus {
+  outline: none;
+  border-color: #d4a5ff;
+  box-shadow: 0 0 12px rgba(200, 150, 255, 0.4);
+  background: rgba(60, 40, 100, 0.9);
+}
+
+.name-input-field::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.auth-form-helper-text {
+  width: 100%;
+  margin: 0 auto 18px auto;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.72);
+  text-align: left;
+}
+
+.auth-form-error-text {
+  width: 100%;
+  margin: 0 auto 16px auto;
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #ff8f8f;
+  text-align: left;
+}
+
+.name-input-confirm-button,
+.name-input-back-button {
+  font-family: "HYPixel11", "PixelFont", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  margin: 8px;
+  border: 2px solid rgba(200, 150, 255, 0.6);
+  border-radius: 6px;
+  background: rgba(100, 70, 150, 0.8);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.05em;
+}
+
+.name-input-confirm-button:hover {
+  background: rgba(130, 100, 180, 1);
+  border-color: #d4a5ff;
+  box-shadow: 0 4px 12px rgba(200, 150, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.name-input-confirm-button:active {
+  transform: translateY(0);
+}
+
+.name-input-back-button {
+  background: rgba(80, 60, 120, 0.6);
+  border-color: rgba(200, 150, 255, 0.4);
+}
+
+.name-input-back-button:hover {
+  background: rgba(100, 80, 140, 0.9);
+  border-color: rgba(200, 150, 255, 0.6);
+}
