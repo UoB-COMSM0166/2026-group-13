@@ -238,7 +238,7 @@
     <tr>
       <td align="center"><b>Week 03</b><br><b><a href="./week-log/Week03/ReadMe.md">README</a></b></td>
       <td align="center"><img src="./week-log/Week03/img/main.jpg" width="260"></td>
-      <td><a href="README.md">Paper prototypes</a> of two games and the final game idea.</td>
+      <td><a href="https://www.youtube.com/watch?v=_yQCPuap90A">Paper prototypes</a> of two games and the final game idea.</td>
     </tr>
     <tr>
       <td align="center"><b>Week 04</b><br><b><a href="./week-log/Week04/README.md">README</a></b></td>
@@ -262,13 +262,13 @@
     </tr>
     <tr>
       <td align="center"><b>Week 08</b><br><b><a href="./week-log/Week08/ReadMe.md">README</a></b></td>
-      <td align="center">—</td>
-      <td>Ran user tests and analyzed SUS/NASA-TLX results.</td>
+      <td align="center"><img src="./week-log/Week08/img/form.png"</td>
+      <td>Ran user tests and analyzed SUS/NASA-TLX results.Click to view our <a href="https://forms.office.com/pages/responsepage.aspx?id=MH_ksn3NTkql2rGM8aQVG4RtspcNgnhDofSkAmqDse5UNVlMME9CT0VZS0FWNjRKSzg0RDRSNDVZQy4u&route=shorturl">form</a></td>
     </tr>
     <tr>
       <td align="center"><b>Week 09</b><br><b><a href="./week-log/Week09/README.md">README</a></b></td>
-      <td align="center">—</td>
-      <td>Merged key code and updated levels from evaluation findings.</td>
+      <td align="center"><img src="./week-log/Week09/img/demo.png"></td>
+      <td>Merged key code and updated levels from evaluation findings. Finish our demo1 and demo2.</td>
     </tr>
     <tr>
       <td align="center"><b>Week 10-12</b><br><b><a href="./week-log/Week10-12/README.md">README</a></b></td>
@@ -277,13 +277,13 @@
     </tr>
     <tr>
       <td align="center"><b>Week 13</b><br><b><a href="./week-log/Week13/README.md">README</a></b></td>
-      <td align="center">—</td>
-      <td></td>
+      <td align="center"><img src="./week-log/Week13/img/video 1.png"></td>
+      <td>Finalise the game’s final version and begin vedio making. See our final video <a href="https://www.youtube.com/watch?v=FMFJqeT6FAw">here</a></td>
     </tr>
     <tr>
       <td align="center"><b>Week 14</b><br><b><a href="./week-log/Week14/README.md">README</a></b></td>
-      <td align="center">—</td>
-      <td></td>
+      <td align="center"><img src="./week-log/Week14/img/Class Exercise Example.png"></td>
+      <td>Improve our report and add sustainability and AI statement part, continue making our video.</td>
     </tr>
     <tr>
       <td align="center"><b>Week 15</b><br><b><a href="./week-log/Week15/README.md">README</a></b></td>
