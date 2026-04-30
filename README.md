@@ -205,7 +205,7 @@
   <thead>
     <tr>
       <th align="center" width="20%">Link</th>
-      <th align="center" width="40%">Image</th>
+      <th align="center" width="40%">Overview chart</th>
       <th align="center" width="40%">Description</th>
     </tr>
   </thead>
@@ -899,6 +899,16 @@ The mechanism system manages reusable level mechanisms, including circuit based 
 - [3 Technical Challenge 2 — Level Editor & Sharing System](#3-technical-challenge-2--level-editor--sharing-system)
   - [3.1 Early Attempts and Problems](#31-early-attempts-and-problems)
   - [3.2 Final Solution](#32-final-solution)
+- [4 其他功能](#4-其他功能)
+  - [4.1 教程系统](#41-教程系统)
+  - [4.2 难度曲线设置](#42-难度曲线设置)
+  - [4.3 幻影对话系统](#43-幻影对话系统)
+  - [4.4 设置系统](#44-设置系统)
+    - [4.4.1 音量和按键设置](#441-音量和按键设置)
+    - [4.4.2 游戏内暂停窗口](#442-游戏内暂停窗口)
+    - [4.4.3 多语言国际化实现](#443-多语言国际化实现)
+  - [4.5 成就系统](#45-成就系统)
+  - [4.6 键盘导航](#46-键盘导航)
 
 ### **1 Overall Implementation Approach**：
 
@@ -910,6 +920,8 @@ During development, we encountered two major technical challenges:
 
 - implementing a robust leaderboard system that supports guest/registered accounts, name conflict resolution, and data migration;
 - designing a fully functional level editor with upload/download sharing and safe serialization.
+
+We also implemented multiple supplementary features.
 
 ### **2 Technical Challenge 1 — Leaderboard System**：
 
@@ -997,6 +1009,133 @@ After download:
 - browse community maps
 - download and play instantly
 - versioning support (v1, v2, v3…)
+
+### **4 其他功能**：
+
+#### **4.1 教程系统**：
+
+该教程系统基于有限状态机划分多阶段引导流程，分七个教学环节循序渐进带领玩家掌握录制与回放核心玩法。
+
+- 临时接管全局录制系统，精准管控游戏运行与暂停流程
+- 拦截并独占键盘输入，约束玩家操作行为，按流程分步完成教学指引
+- 实现带镂空高亮的全局遮罩提示界面，同时全程适配多语言 i18n
+- 支持玩家随时按下 ESC 一键跳过教程，兼容流程中断逻辑
+- 处理多阶段切换的状态同步、界面资源自动清理等边界情况
+- 在完整实现新手引导流程的同时，严格保证不破坏游戏原有业务逻辑与各系统模块独立性
+
+<table width="100%">
+<tbody>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/implementation/tutorial/start button.png" width="600" /><br><br>
+<img src="https://img.shields.io/badge/-Toturial%20System-5B3A7D?style=flat-square" /><br><br>
+<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
+• <b>阶段说明：</b>在Easy Level 1中可以点击nocite board来查看教程。<br>
+• <b>触发逻辑：</b>点击Start Tutorial按钮来开始教程，教程过程中也可以随时按Ecs退出教程<br>
+• <b>目的：</b>让玩家有选择性参与教程，而不是强制性教程<br>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/implementation/tutorial/step1.png" width="600" /><br><br>
+<img src="https://img.shields.io/badge/-Step%201-5B3A7D?style=flat-square" /><br><br>
+<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
+• <b>阶段说明：</b>教程系统高亮按键录制UI的按键控制部分，并提示玩家按下录制键来捕捉操作<br>
+• <b>触发逻辑：</b>玩家必须要按下录制键才能进行下一步，否则不响应。<br>
+• <b>目的：</b>让玩家学会如何使用录制键。
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/implementation/tutorial/step2.png" width="600" /><br><br>
+<img src="https://img.shields.io/badge/-Step%202-5B3A7D?style=flat-square" /><br><br>
+<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
+• <b>阶段说明：</b>高亮出按键录制UI的整个部分，并且提示录制时间最多有5秒钟。<br>
+• <b>触发逻辑：</b>在这里玩家只有移动角色才能够进入下一步<br>
+• <b>目的：</b>给予玩家理解时间，强制玩家移动角色，因为如果不移动角色玩家可能无法理解录制指的是录制操作而不是录制屏幕或者位置之类的东西。
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/implementation/tutorial/step3.png" width="600" /><br><br>
+<img src="https://img.shields.io/badge/-Step%203-5B3A7D?style=flat-square" /><br><br>
+<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
+• <b>阶段说明：</b>录制进行中的提示，并且告知玩家再次按下捕捉键C可以随时提前终止录制。<br>
+• <b>触发逻辑：</b>玩家只需专心操作，5秒的时间结束后会自动进入下一步。<br>
+• <b>目的：</b>配合进度条中玩家自己按下的左右移动和跳跃按键的标志的实时显示，来帮助玩家理解录制的核心要义。
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/implementation/tutorial/step4.png" width="600" /><br><br>
+<img src="https://img.shields.io/badge/-Step%204-5B3A7D?style=flat-square" /><br><br>
+<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
+• <b>阶段说明：</b>录制结束后，高亮幻影的出生点区域和录制UI的按键控制区域。<br>
+• <b>触发逻辑：</b>按下回放键才能进入下一步<br>
+• <b>目的：</b>让玩家学会怎么回放自己刚刚录制的幻影操作。
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/implementation/tutorial/step5.png" width="600" /><br><br>
+<img src="https://img.shields.io/badge/-Step%205-5B3A7D?style=flat-square" /><br><br>
+<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
+• <b>阶段说明：</b>回放中提示玩家幻影可以按照刚刚录制的动作回放一遍。<br>
+• <b>触发逻辑：</b>玩家可以等待回放结束，也可以再次按下回放键来提前终止回放。<br>
+• <b>目的：</b>让玩家自己看见幻影就像过去的自己重现了一样，更好地理解录制系统。
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 20px;">
+<img src="./assets/implementation/tutorial/step6.png" width="600" /><br><br>
+<img src="https://img.shields.io/badge/-Step%206-5B3A7D?style=flat-square" /><br><br>
+<p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
+• <b>阶段说明：</b>整个教程结束，弹出恭喜字样<br>
+• <b>触发逻辑：</b>提示框显示几秒之后自动消失<br>
+• <b>目的：</b>提示玩家这个录制玩法是我们游戏的核心机制，没有理解它就无法过关。
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+#### **4.2 难度曲线设置**：
+
+游戏提供了 Easy 和 Hard 两套难度体系，分别包含独立设计的关卡序列。Easy 难度下的关卡着重引导玩家理解录制与回放机制的基本用法；Hard 难度则在此基础上引入更复杂的时序配合与空间利用要求。关卡的难度曲线经过多轮用户测试与数据分析后反复调整，以确保玩家在学习曲线上获得平滑而有层次感的成长体验。
+
+#### **4.3 幻影对话系统**：
+
+幻影对话系统是游戏叙事层面的重要组成部分。NPC 在特定触发条件下会展开对话序列，通过逐行推进的对话气泡呈现内容，并配合动画效果增强沉浸感。系统通过事件总线与游戏主逻辑解耦，支持多段对话的顺序触发与状态管理，在不干扰核心玩法流程的前提下丰富了游戏的叙事体验。
+
+#### **4.4 设置系统**：
+
+设置系统为玩家提供了一套集中管理游戏偏好的入口，涵盖音效配置、按键绑定、界面语言等多个维度，各子系统通过统一的配置接口与渲染逻辑解耦，确保变更即时生效并持久化保存。
+
+##### **4.4.1 音量和按键设置**：
+
+玩家可在设置页面内独立调节背景音乐与音效的音量，也可对游戏的核心操作按键进行自定义绑定。按键配置支持冲突检测，当新绑定与已有按键重复时会给出提示，防止操作冲突。所有配置项均通过本地存储持久化，重新进入游戏后自动恢复上次的设置状态。
+
+##### **4.4.2 游戏内暂停窗口**：
+
+游戏提供了可在关卡进行中随时呼出的暂停菜单，支持继续游戏、重新开始、返回关卡选择等操作。暂停时游戏逻辑与物理更新完全冻结，所有系统状态保持不变，恢复后可无缝继续。暂停菜单同样支持键盘导航，与全局键盘导航系统统一管理。
+
+##### **4.4.3 多语言国际化实现**：
+
+游戏实现了中英双语支持，玩家可在设置中自由切换界面语言。国际化系统采用集中式语言包管理方案，所有界面文本、提示信息与对话内容均通过语言键值映射进行统一维护，与渲染逻辑完全解耦。切换语言时，所有 UI 组件将即时刷新为对应语言的文本内容，无需重载页面或关卡，从而为不同语言背景的玩家提供无缝的本地化体验。
+
+#### **4.5 成就系统**：
+
+成就系统为玩家提供了额外的游戏目标与激励机制。游戏内置了多项成就，涵盖通关特定关卡、在规定时间内完成挑战、达成特定操作等不同维度。成就数据通过本地存储持久化保存，玩家每次满足触发条件时系统会弹出提示并更新进度。该系统与核心玩法模块解耦，通过事件监听的方式响应各类游戏行为，便于后续扩展新的成就类型。
+
+#### **4.6 键盘导航**：
+
+键盘导航功能使玩家能够完全通过键盘操作游戏的各级菜单与界面，无需依赖鼠标。在关卡选择、暂停菜单、设置页面等场景中，玩家可使用方向键或 Tab 键在各选项间切换，并通过回车键确认操作。该功能有效提升了游戏的可访问性，同时也兼顾了偏好纯键盘操作的玩家群体的使用习惯。
 
 <div align="center">
   <img src="./assets/divider.png" width="800">
