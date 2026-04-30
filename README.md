@@ -307,7 +307,24 @@
 
 ## **⚙️ Introduction**
 
-**_U Help U_**
+### **Overview**:
+- [**_U Help U_ brief introduction**](#u-help-u-brief-introduction)
+- [Core Gameplay (How to Play)](#core-gameplay-how-to-play)
+  - [1. Basic Controls](#1-basic-controls)
+  - [2. Physical Rules](#2-physical-rules)
+- [Game Goals](#game-goals)
+  - [1. Level Objectives](#1-level-objectives)
+  - [2. Core Experience Goals](#2-core-experience-goals)
+- [Core Highlights (Differentiation)](#core-highlights-differentiation)
+- [🎮 Recording System Exhibition](#-recording-system-exhibition)
+- [🎮 Game Entities Exhibition](#-game-entities-exhibition)
+  - [1. Character](#1-character)
+  - [2. Interactables](#2-interactables)
+  - [3. Prompts](#3-prompts)
+  - [4. Systems](#4-systems)
+  - [5. Terrain](#5-terrain)
+
+**_U Help U_ brief introduction**
 
 _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑collaboration. Players record their actions to generate a “Past Self”—a physics-based entity that faithfully reproduces previous movements. By standing on, boosting, or blocking one another, players turn their past attempts into the foundation for present success.
 
@@ -1221,10 +1238,8 @@ After download:
 - [1 Qualitative](#1-qualitative)
   - [1.1 Contextual Onboarding & Bilingual Support](#11-contextual-onboarding--bilingual-support)
   - [1.2 Learning Curve & Scaffolding (Level 0)](#12-learning-curve--scaffolding-level-0)
-  - [1.3 Narrative Context & Conceptual Mapping](#13-narrative-context--conceptual-mapping)
 - [2 Quantitative](#2-quantitative)
   - [2.1 Evaluation Findings](#21-evaluation-findings)
-  - [2.2 Reconsidered Technical Challenges](#22-reconsidered-technical-challenges)
 - [3 Description of how code was tested](#3-description-of-how-code-was-tested)
   - [3.1 Manual Testing and Console Logging During Development](#31-manual-testing-and-console-logging-during-development)
   - [3.2 Black-Box Testing Based on Test Checklists](#32-black-box-testing-based-on-test-checklists)
@@ -1243,31 +1258,21 @@ This aligns with Nielsen's "Recognition rather than recall". By providing contex
 
 Issue: Transitioning directly into Level 1 introduces too many mechanics at once, causing a steep learning curve for new players.
 
-Action Plan: Design and insert a simple "Tutorial Level" (Level 0) prior to the first official stage. This safe, low-stakes environment will allow players to practice basic movements and test the core mechanics without the threat of failing. It doesn't need to be too complex; it should mainly introduce the game's controls to new players.
+Action Plan: Design and insert a simple "Tutorial Level" prior to the first official stage. This safe, low-stakes environment will allow players to practice basic movements and test the core mechanics without the threat of failing. It doesn't need to be too complex; it should mainly introduce the game's controls to new players.
 
 This addresses "Error prevention" and enhances "User control and freedom", ensuring players are comfortable with the physics and controls before facing actual challenges.
 
-#### **1.3 Narrative Context & Conceptual Mapping**:
-
-Issue: The core gameplay loop (the time-clone mechanic) feels abstract without a narrative foundation.
-
-Action Plan: Introduce a brief narrative sequence or story screen at the start of the game. This will establish the world's lore, explaining the concept of manipulating time and cooperating with one's "past self" and "present self" to solve puzzles.
-
-This improves the "Match between system and the real world". Providing a narrative metaphor (co-op with a past self) makes the complex time-manipulation mechanic more intuitive and mentally accessible for the player.
 
 ### **2 Quantitative**:
 
 #### **2.1 Evaluation Findings**:
 
-We conducted a quantitative user evaluation with 10 participants, using a within-subjects design to compare the user experience between Level 1 and Level 2. Participants completed the NASA Task Load Index (TLX) and System Usability Scale (SUS) after playing each level. We then ran a Wilcoxon Signed-Rank Test (with an alpha level of 0.05) to determine if there were significant differences in perceived workload and usability.
+We conducted a quantitative user evaluation with 27 participants, using a within-subjects design to compare the user experience between Level 1 and Level 2. Participants completed the NASA Task Load Index (TLX) and System Usability Scale (SUS) after playing each level. We then ran a Wilcoxon Signed-Rank Test (with an alpha level of 0.05) to determine if there were significant differences in perceived workload and usability.
 
-- **System Usability Scale (SUS):** The test yielded **W = 21.0** and **p = 0.857**. Since p > 0.05, there is **no significant difference** in usability between the two levels. Both levels scored well above the industry average of 68 (Level 1 mean: 71.5; Level 2 mean: 73.25). This is a positive outcome, indicating that our core UI and control mechanics remain stable, intuitive, and easy to use regardless of the difficulty progression.
+- **System Usability Scale (SUS):** The test yielded **W = 84.5** and **p = 0.063**. Since p > 0.05, there is **no significant difference** in usability between the two levels, although a slight downward trend was observed as complexity increased. Both levels maintained scores near or above the industry average of 68 (Level 1 mean: 75.06; Level 2 mean: 65.0). This indicates that the core UI and interaction mechanics remain relatively stable and accessible, even when players are faced with higher task difficulty.
 
-- **NASA Task Load Index (TLX):** The test yielded **W = 10.0** and **p = 0.138**. Since p > 0.05, there is **no significant difference** in perceived workload between the two levels. Although the absolute mean score increased from 37.93 (Level 1) to 46.67 (Level 2), the lack of statistical significance suggests a strong "learning effect." Players mastered the mechanics in the first level, which counteracted the static difficulty increase in the second level.
+- **NASA Task Load Index (TLX):** The test yielded **W = 43.5** and **p < 0.001**. Since p < 0.05, there is **a significant difference** in perceived workload between the two levels. The absolute mean score increased from 39.71 (Level 1) to 50.20 (Level 2). This significant increase confirms that the difficulty progression was effectively perceived by the participants, successfully raising the cognitive and mental demands of the game as intended for the second level.
 
-#### **2.2 Reconsidered Technical Challenges**:
-
-Based on the quantitative evaluation results and the core mechanics of our time-clone puzzle platformer, we have reconsidered our primary technical challenges for the ongoing development:
 
 ### **3 Description of how code was tested**:
 
