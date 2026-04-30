@@ -1465,22 +1465,78 @@ The game features two distinct difficulty modes, each with its own level sequenc
 #### **4.3 Phantom Dialogue System**：
 
 The Phantom Dialogue System is a key narrative component. NPCs trigger dialogue sequences through progressive speech bubbles with animations to enhance immersion. Decoupled from the core logic via an Event Bus, the system manages multi-stage triggers and states, enriching the narrative without interrupting gameplay.
+<table>
+  <tr>
+    <td align="center" width="60%">
+      <img src="assets/implementation/phantom-dialogue-system/phantom-dialogue-entry.png">
+      <br>
+      <b>Phantom Dialogue Prompt</b>
+    </td>
+    <td align="center" width="40%">
+      <img src="assets/implementation/phantom-dialogue-system/phantom-dialogue-example.png">
+      <br>
+      <b>Phantom Chat Window</b>
+    </td>
+  </tr>
+</table>
 
 #### **4.4 Settings System**：
 
 This centralized hub manages player preferences including audio, keybindings, and language. Subsystems use a unified configuration interface decoupled from rendering logic, ensuring changes are instantaneous and persistent.
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/implementation/settings-system/settings-volumn.png">
+      <br>
+      <b>Settings Main Panel</b>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/implementation/settings-system/in-game-settings.png">
+      <br>
+      <b>In‑Game Settings</b>
+    </td>
+  </tr>
+</table>
 
 ##### **4.4.1 Audio & Keybindings**：
 
 Players can independently adjust BGM and SFX volumes or customize keybindings. The system includes conflict detection to prevent overlapping inputs. All settings are saved locally and restored automatically upon restart.
+<div align="center">
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/implementation/audio-and-keybindings/bgm-and-sfx.png">
+      <br>
+      <b>Audio Settings Panel</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/implementation/audio-and-keybindings/keybinding.png">
+      <br>
+      <b>Keybinding Settings Panel</b>
+    </td>
+  </tr>
+</table>
+</div>
 
 ##### **4.4.2 In-Game Pause Menu**：
 
 The pause menu allows players to resume, restart, or return to level selection. Upon activation, game logic and physics updates are frozen, maintaining state for a seamless resume. It is fully integrated with the global keyboard navigation system.
+<div align="center">
+  <img src="assets/implementation/in-game-pause-menu/in-game-pause.png">
+  <br>
+  <b>In-Game Pause Menu</b>
+</div>
 
 ##### **4.4.3 Internationalization**：
 
 The game supports English and Chinese, switchable via settings. Using a centralized language pack (key-value mapping), all text is decoupled from the UI. Language switches trigger real-time refreshes without reloading levels, providing a seamless localized experience.
+<div align="center">
+  <img src="assets/implementation/internationalization/language-switch.png">
+  <br>
+  <b>Language Settings Panel</b>
+</div>
 
 #### **4.5 Achievement System**：
 
