@@ -16,14 +16,15 @@
 
 <div align="center">
   <a href="https://angelicaserein.github.io/UhelpU/">
-    <img src="./assets/game-entry.png" width="800">
-    <br>
+    <img src="./assets/click-to-play.png" width="800">
     <br>
   </a>
+  <!--
   <a href="https://angelicaserein.github.io/UhelpU/">
     <img src="https://img.shields.io/badge/🎮%20Play%20Now-Click%20to%20Play-ff6b9d?style=for-the-badge&labelColor=7b2d8b" alt="🎮 Play Now">
   </a>
   <br>
+  -->
   <sub><i>Currently features 7 Easy levels, 4 Hard levels, 1 Special level, and 10 legacy levels to explore!<br>Average playtime depends on your brain — if you're incredibly smart, maybe an hour to clear them all!</i></sub>
   <br><br>
   <a href="https://angelicaserein.github.io/UhelpU/">
