@@ -46,7 +46,8 @@
     <a href="#-related-websites">🔗 Related Websites</a>
     &nbsp;&nbsp;·&nbsp;&nbsp;
     <a href="#-team-members">👥 Team Members</a>
-    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <br>
+    &nbsp;
     <a href="#️-workshop">🗓️ Workshop</a>
     &nbsp;&nbsp;·&nbsp;&nbsp;
     <a href="#-acknowledgements">❤️ Acknowledgements</a>
@@ -203,9 +204,9 @@
 <table align="center" width="100%">
   <thead>
     <tr>
-      <th align="center" width="10%">Link</th>
-      <th align="center" width="62%">Image</th>
-      <th align="center" width="28%">Description</th>
+      <th align="center" width="20%">Link</th>
+      <th align="center" width="40%">Image</th>
+      <th align="center" width="40%">Description</th>
     </tr>
   </thead>
   <tbody>
@@ -1367,79 +1368,96 @@ And for the bilingual system of our game, part of the in-game text, prompts are 
   <h3>🥰 Thanks to All Game Testers</h3>
   <p><i>SINCERE THANKS to all the playtesters who provided valuable feedback and suggestions to improve the game:</i></p>
   <br>
-  <table width="40%">
-    <tbody>
-      <tr><td align="center">Zhiqing Zhang 张芷晴</td></tr>
-      <tr><td align="center">Yiyuan Yao 姚亦远</td></tr>
-      <tr><td align="center">Wenlei Miao 苗文蕾</td></tr>
-      <tr><td align="center">Xuelin Ma 马雪琳</td></tr>
-      <tr><td align="center">Siqi Xu 徐思齐</td></tr>
-      <tr><td align="center">Jingran Zhang 张婧然</td></tr>
-      <tr><td align="center">Everyone who tested our game in the Workshop on Tuesday</td></tr>
-      <tr><td align="center">Everyone who tested our game in the Testathon</td></tr>
-      <tr><td align="center">Every course lecturer and TA who supported our course and workshop and tested our game demo</td></tr>
-      <tr><td align="center">高云飞</td></tr>
-      <tr><td align="center">sjx</td></tr>
-      <tr><td align="center">三字人 Y</td></tr>
-      <tr><td align="center">雪梨来咯</td></tr>
-      <tr><td align="center">Arupin</td></tr>
-      <tr><td align="center">张子睿</td></tr>
-      <tr><td align="center">Robin Huang</td></tr>
-      <tr><td align="center">7</td></tr>
-      <tr><td align="center">yyy 好友</td></tr>
-      <tr><td align="center">饼干</td></tr>
-      <tr><td align="center">Wanlan Qiu</td></tr>
-      <tr><td align="center">Yuanyuan</td></tr>
-      <tr><td align="center">Junqi</td></tr>
-      <tr><td align="center">Yiran</td></tr>
-      <tr><td align="center">Rish</td></tr>
-      <tr><td align="center">Helen</td></tr>
-      <tr><td align="center">Prapulla</td></tr>
-      <tr><td align="center">lftc</td></tr>
-      <tr><td align="center">XY</td></tr>
-      <tr><td align="center">Maran</td></tr>
-      <tr><td align="center">Huayang</td></tr>
-      <tr><td align="center">Zhi</td></tr>
-      <tr><td align="center">Wanru</td></tr>
-      <tr><td align="center">Every friend who wished to remain anonymous</td></tr>
-      <tr><td align="center">Every anonymous online playtester</td></tr>
-    </tbody>
-  </table>
+  <p>Zhiqing Zhang 张芷晴</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Yiyuan Yao 姚亦远</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Wenlei Miao 苗文蕾</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Xuelin Ma 马雪琳</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Siqi Xu 徐思齐</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Jingran Zhang 张婧然</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Everyone who tested our game in the Workshop on Tuesday</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Everyone who tested our game in the Testathon</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Every course lecturer and TA who supported our course and workshop and tested our game demo</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>高云飞</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>sjx</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>三字人 Y</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>雪梨来咯</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Arupin</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>张子睿</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Robin Huang</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>7</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>yyy 好友</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>饼干</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Wanlan Qiu</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Yuanyuan</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Junqi</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Yiran</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Rish</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Helen</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Prapulla</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>lftc</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>XY</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Maran</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Huayang</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Zhi</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Wanru</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Every friend who wished to remain anonymous</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p>Every anonymous online playtester</p>
   <br>
   <h3>✨ Special Thanks</h3>
   <p><i>Most importantly, special thanks to the six of us — the team behind <b>U Help U</b>:</i></p>
-  <table width="60%">
-    <tbody>
-      <tr><td align="center">Zhiqing Zhang 张芷晴</td></tr>
-      <tr><td align="center">Yiyuan Yao 姚亦远</td></tr>
-      <tr><td align="center">Wenlei Miao 苗文蕾</td></tr>
-      <tr><td align="center">Xuelin Ma 马雪琳</td></tr>
-      <tr><td align="center">Siqi Xu 徐思齐</td></tr>
-      <tr><td align="center">Jingran Zhang 张婧然</td></tr>
-    </tbody>
-  </table>
+  <p><b>Zhiqing Zhang 张芷晴</b></p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p><b>Yiyuan Yao 姚亦远</b></p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p><b>Wenlei Miao 苗文蕾</b></p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p><b>Xuelin Ma 马雪琳</b></p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p><b>Siqi Xu 徐思齐</b></p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 8px auto;"></div>
+  <p><b>Jingran Zhang 张婧然</b></p>
   <br>
   <p><i>We are also deeply grateful to the following individuals, whose support made a real difference:</i></p>
-  <table width="80%">
-    <tbody>
-      <tr>
-        <td align="center"><b>Pete</b></td>
-        <td align="center">Who played through every level of our Demo V1 and gave invaluable feedback that helped shape the final game.</td>
-      </tr>
-      <tr>
-        <td align="center"><b>Yunfei</b></td>
-        <td align="center">A team member's undergraduate supervisor who offered countless suggestions and words of encouragement from the very start of the project all the way through to the end.</td>
-      </tr>
-      <tr>
-        <td align="center"><b>An anonymous Chinese friend</b></td>
-        <td align="center">Despite severe regional network restrictions causing extremely long loading times, they persisted through a version with missing textures and numerous bugs to give us honest feedback.</td>
-      </tr>
-      <tr>
-        <td align="center"><b>A game industry professional</b></td>
-        <td align="center">A seasoned game professional with over 6 years of game development experience — who took the time to play our game and offered high praise. Their recognition gave the whole team a tremendous boost of confidence.</td>
-      </tr>
-    </tbody>
-  </table>
+  <p><b>Pete</b><br>Who played through every level of our Demo V1 and gave invaluable feedback that helped shape the final game.</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 10px auto;"></div>
+  <p><b>Yunfei</b><br>A team member's undergraduate supervisor who offered countless suggestions and words of encouragement from the very start of the project all the way through to the end.</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 10px auto;"></div>
+  <p><b>An anonymous Chinese friend</b><br>Despite severe regional network restrictions causing extremely long loading times, they persisted through a version with missing textures and numerous bugs to give us honest feedback.</p>
+  <div style="width: 120px; border-top: 1px solid #c7c7c7; margin: 10px auto;"></div>
+  <p><b>A game industry professional</b><br>A seasoned game professional with over 6 years of game development experience — who took the time to play our game and offered high praise. Their recognition gave the whole team a tremendous boost of confidence.</p>
   <br>
 </div>
 
