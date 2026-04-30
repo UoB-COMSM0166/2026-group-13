@@ -32,10 +32,6 @@
     <br>
     <br>
   </a>
-  <a href="https://angelicaserein.github.io/UhelpU/">
-    <img src="https://img.shields.io/badge/🎬%20Watch%20Video-Click%20to%20Watch-ff6b9d?style=for-the-badge&labelColor=7b2d8b" alt="🎬 Watch Video">
-  </a>
-  <br>
 </div>
 
 <div align="center">
@@ -54,9 +50,11 @@
     <a href="#acknowledgements">❤️ Acknowledgements</a>
   </b>
   <br><br>
+  <span>👉👉👉</span>
   <a href="#-project-report">
-    <img src="https://img.shields.io/badge/📑%20Project%20Report-Click%20to%20Read-ff6b9d?style=for-the-badge&labelColor=7b2d8b" alt="📑 Project Report">
+    <img src="https://img.shields.io/badge/CLICK%20HERE%20TO%20READ%20PROJECT%20REPORT-ff6b9d?style=for-the-badge" alt="CLICK HERE TO READ PROJECT REPORT">
   </a>
+  <span>👈👈👈</span>
   <br><br>
 </div>
 
@@ -115,7 +113,9 @@
     <img src="./assets/website/itch.png" width="700">
   </a>
   <br><br>
-  <a href="https://itch.io/search?q=Uhelp" style="display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 6px 12px;"><b>Find us on itch.io</b></a>
+  <a href="https://itch.io/search?q=Uhelp">
+    <img src="https://img.shields.io/badge/Find%20us%20on%20itch.io-ffd6e7?style=for-the-badge&logo=itchdotio&logoColor=white&labelColor=ff8fb1" alt="Find us on itch.io">
+  </a>
   <br><br>
 </div>
 
@@ -128,7 +128,9 @@
     <img src="./assets/website/walkthrough-preview.png" width="700">
   </a>
   <br><br>
-  <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/" style="display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 6px 12px;"><b>Watch Walkthroughs</b></a>
+  <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">
+    <img src="https://img.shields.io/badge/Watch%20Walkthroughs-ffd6e7?style=for-the-badge&logo=youtube&logoColor=white&labelColor=ff8fb1" alt="Watch Walkthroughs">
+  </a>
   <br><br>
 </div>
 
@@ -140,7 +142,9 @@
     <img src="./assets/website/phantom-chat-preview.png" width="700">
   </a>
   <br><br>
-  <a href="https://moosry.github.io/UhlepU-blackbox-test/phantom-chat.html" style="display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 6px 12px;"><b>Open Phantom Chat</b></a>
+  <a href="https://moosry.github.io/UhlepU-blackbox-test/phantom-chat.html">
+    <img src="https://img.shields.io/badge/Open%20Phantom%20Chat-ffd6e7?style=for-the-badge&logo=ghost&logoColor=white&labelColor=ff8fb1" alt="Open Phantom Chat">
+  </a>
   <br><br>
 </div>
 
@@ -155,11 +159,13 @@
 <div align="center">
   <img src="./assets/Group_Picture01.png" width="600">
   <br><br>
-  <p style="font-size: 1.08em; font-weight: 700; margin: 0; display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 8px 14px;">
-    <a href="https://yyyjava.github.io/test-process-part/Team-roles.html" target="_blank">✨ Click to view Team Roles</a>
-    <span style="color: #ff6b9d;">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
-    <a href="https://angelica-serein.notion.site/Kanban-Board-8a0b2f38a2aa8322998a818eef1d7607?source=copy_link" target="_blank">📋 Click to view Kanban Board</a>
-  </p>
+  <a href="https://yyyjava.github.io/test-process-part/Team-roles.html" target="_blank">
+    <img src="https://img.shields.io/badge/%E2%9C%A8%20Click%20to%20view%20Team%20Roles-ffd6e7?style=for-the-badge&labelColor=ff8fb1" alt="Click to view Team Roles">
+  </a>
+  &nbsp;
+  <a href="https://angelica-serein.notion.site/Kanban-Board-8a0b2f38a2aa8322998a818eef1d7607?source=copy_link" target="_blank">
+    <img src="https://img.shields.io/badge/%F0%9F%93%8B%20Click%20to%20view%20Kanban%20Board-ffd6e7?style=for-the-badge&labelColor=ff8fb1" alt="Click to view Kanban Board">
+  </a>
   <br>
   <br>
 </div>
@@ -970,7 +976,7 @@ We implemented a **dual‑layer data architecture**:
   - uploads score after each level
   - sorts by completion time
   - highlights the current player
-  <br>
+    <br>
 
 <br>
 <div align="center">
@@ -980,7 +986,6 @@ We implemented a **dual‑layer data architecture**:
   <br>
   <br>
 </div>
-
 
 ### **3 Technical Challenge 2 — Level Editor & Sharing System**：
 
@@ -1146,6 +1151,7 @@ After download:
 
 成就系统为玩家提供了额外的游戏目标与激励机制。游戏内置了多项成就，涵盖通关特定关卡、在规定时间内完成挑战、达成特定操作等不同维度。成就数据通过本地存储持久化保存，玩家每次满足触发条件时系统会弹出提示并更新进度。该系统与核心玩法模块解耦，通过事件监听的方式响应各类游戏行为，便于后续扩展新的成就类型。
 <br>
+
 <div align="center">
   <img src="./assets/implementation/achievement/achievement.png" width="800">
   <br>
@@ -1153,7 +1159,6 @@ After download:
   <br>
   <br>
 </div>
-
 
 #### **4.6 Keyboard Navigation**：
 
@@ -1163,52 +1168,54 @@ After download:
 - 界面默认不显示按钮选中白框，仅使用键盘导航时才出现高亮提示，切换为鼠标操作时白框会立即消失；
 - 按下空格或回车键可确认选中选项，按下 ESC 键能够退出当前菜单并返回上一级界面。
 
-<table width="100%">
-<tbody>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/0.png" width="600" /><br><br>
-<b>Menu page: default state</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/1.png" width="600" /><br><br>
-<b>Menu page: mouse hover</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/2.png" width="600" /><br><br>
-<b>Menu page: keyboard selection</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/3.png" width="600" /><br><br>
-<b>World selection page: mouse hover</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/4.png" width="600" /><br><br>
-<b>World selection page: keyboard selection</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/5.png" width="600" /><br><br>
-<b>Paused menu page: mouse hover on 'Setting'</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/6.png" width="600" /><br><br>
-<b>Paused menu page: keyboard selection on 'Setting'</b>
-</td>
-</tr>
-</tbody>
-</table>
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/0.png" width="600" />
+  <br><br>
+  <b>Menu page: default state</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/1.png" width="600" />
+  <br><br>
+  <b>Menu page: mouse hover</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/2.png" width="600" />
+  <br><br>
+  <b>Menu page: keyboard selection</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/3.png" width="600" />
+  <br><br>
+  <b>World selection page: mouse hover</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/4.png" width="600" />
+  <br><br>
+  <b>World selection page: keyboard selection</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/5.png" width="600" />
+  <br><br>
+  <b>Paused menu page: mouse hover on 'Setting'</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/6.png" width="600" />
+  <br><br>
+  <b>Paused menu page: keyboard selection on 'Setting'</b>
+  <br><br>
+</div>
 
 <div align="center">
   <img src="./assets/divider.png" width="800">
