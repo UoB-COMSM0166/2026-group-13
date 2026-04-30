@@ -1179,9 +1179,6 @@ After download:
   <br>
 </div>
 
-<<<<<<< HEAD
-### **4 Other Functions**：
-=======
 <br>
 <div align="center">
   <img src="./assets/implementation/level-editor/upload part.png" width="500">
@@ -1215,7 +1212,6 @@ After download:
 </div>
 
 ### **4 其他功能**：
->>>>>>> 2075d942db6bfb47ce0332032b6ec2e2af1a57a3
 
 #### **4.1 Tutorial System**：
 
