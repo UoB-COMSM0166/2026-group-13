@@ -1105,6 +1105,58 @@ We implemented a **dual‑layer data architecture**:
   <br>
 </div>
 
+- **Powerful Account System**
+  - Brief introduction
+<br>
+<div align="center">
+  <img src="./assets/implementation/accountsystem/accountsystem1.png" width="800">
+  <br>
+  <b>Account system brief introduction</b>
+  <br>
+  <br>
+</div>
+
+  - Identity Selection Screen  and naming rules
+<br>
+<div align="center">
+  <img src="./assets/implementation/accountsystem/accountsystem2.png" width="800">
+  <br>
+  <b>Identity Selection Screen in the game</b>
+  <br>
+  <br>
+</div>
+
+  - Specific implementation
+<br>
+<div align="center">
+  <img src="./assets/implementation/accountsystem/accountsystem3.png" width="800">
+  <br>
+  <b>Specific implementation</b>
+  <br>
+  <br>
+</div>
+
+  - Duplicate name detection flow
+<br>
+<div align="center">
+  <img src="./assets/implementation/accountsystem/accountsystem4.png" width="800">
+  <br>
+  <b>Duplicate name detection flow</b>
+  <br>
+  <br>
+</div>
+
+  - Ethics & Sustanability 
+<br>
+<div align="center">
+  <img src="./assets/implementation/accountsystem/accountsystem5.png" width="800">
+  <br>
+  <b>Ethics & Sustanability</b>
+  <br>
+  <br>
+</div>
+
+
 ### **3 Technical Challenge 2 — Level Editor & Sharing System**：
 
 ### **3.1 Early Attempts and Problems**：
@@ -1432,7 +1484,7 @@ The game supports English and Chinese, switchable via settings. Using a centrali
 
 #### **4.5 Achievement System**：
 
-Our achievement system provides our player additional game goals and motivation. The game features a range of achievements covering various aspects, such as performing specific actions. Achievement data stored persistently in local server, whenever a player meets the trigger conditions, the system displays a notification and updates the progress. This system is decoupled from the core gameplay module and responds to various in-game actions via event listeners, facilitating the future addition of new achievement types. Our game have 10 achievements in total, and 3 of them has been updated so far. The remaining achievements will be updated step by step. The overview of our achievement system can be seen as follows.
+The game features a range of achievements covering various aspects, such as performing specific actions. Achievement data stored persistently in local server, whenever a player meets the trigger conditions, the system displays a notification and updates the progress. This system is decoupled from the core gameplay module and responds to various in-game actions via event listeners, facilitating the future addition of new achievement types. The overview of our achievement system can be seen as follows.
 
 <br>
 <div align="center">
