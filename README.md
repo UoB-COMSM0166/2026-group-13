@@ -32,6 +32,7 @@ Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy lev
 <a href="https://angelicaserein.github.io/UhelpU/">
 <img src="./assets/video.png" width="800">
 </a>
+</div>
 
 <div align="center">
   <br>
@@ -232,7 +233,7 @@ Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy lev
     </tr>
     <tr>
       <td align="center"><b>Week 04</b><br><b><a href="./week-log/Week04/README.md">README</a></b></td>
-      <td align="center"><img src="./week-log/Week04/Img/Stakeholders.png"</td>
+      <td align="center"><img src="./week-log/Week04/Img/Stakeholders.png"></td>
       <td>Defined user stories and functional/non-functional requirements.</td>
     </tr>
     <tr>
@@ -252,7 +253,7 @@ Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy lev
     </tr>
     <tr>
       <td align="center"><b>Week 08</b><br><b><a href="./week-log/Week08/ReadMe.md">README</a></b></td>
-      <td align="center"><img src="./week-log/Week08/img/form.png"</td>
+      <td align="center"><img src="./week-log/Week08/img/form.png"></td>
       <td>Ran user tests and analyzed SUS/NASA-TLX results.Click to view our <a href="https://forms.office.com/pages/responsepage.aspx?id=MH_ksn3NTkql2rGM8aQVG4RtspcNgnhDofSkAmqDse5UNVlMME9CT0VZS0FWNjRKSzg0RDRSNDVZQy4u&route=shorturl">form</a></td>
     </tr>
     <tr>
