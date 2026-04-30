@@ -25,17 +25,16 @@
   </a>
   <br>
   -->
-  <sub><i>Currently features 7 Easy levels, 4 Hard levels, 1 Special level, and 10 legacy levels to explore!<br>Average playtime depends on your brain — if you're incredibly smart, maybe an hour to clear them all!</i></sub>
-  <br><br>
-  <a href="https://angelicaserein.github.io/UhelpU/">
-    <img src="./assets/video.png" width="800">
-    <br>
-    <br>
-  </a>
-  <a href="https://youtu.be/hCJJSpW0RH0">
-    <img src="https://img.shields.io/badge/🎬%20Watch%20Video-Click%20to%20Watch-ff6b9d?style=for-the-badge&labelColor=7b2d8b" alt="🎬 Watch Video">
-  </a>
-  <br>
+Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy levels – classic puzzles from earlier builds – with 3 achievements to unlock!<br>
+Playtime depends on your skill – if you're really sharp, maybe an hour to clear them all.<br>
+(If you get stuck on a single hard level for more than half an hour, that’s totally normal – don't worry! Check out the guide <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">here!</a>!)
+<br><br>
+<a href="https://angelicaserein.github.io/UhelpU/">
+<img src="./assets/video.png" width="800">
+<br>
+<br>
+</a>
+
 </div>
 
 <div align="center">
@@ -54,9 +53,9 @@
     <a href="#acknowledgements">❤️ Acknowledgements</a>
   </b>
   <br><br>
-  <a href="#-project-report">
-    <img src="https://img.shields.io/badge/📑%20Project%20Report-Click%20to%20Read-ff6b9d?style=for-the-badge&labelColor=7b2d8b" alt="📑 Project Report">
-  </a>
+  <span>👉👉👉</span>
+  <a href="#-project-report" style="text-decoration: none;"><img src="https://img.shields.io/badge/CLICK%20HERE%20TO%20READ%20PROJECT%20REPORT-ff6b9d?style=for-the-badge" alt="CLICK HERE TO READ PROJECT REPORT"></a>
+  <span>👈👈👈</span>
   <br><br>
 </div>
 
@@ -115,7 +114,9 @@
     <img src="./assets/website/itch.png" width="700">
   </a>
   <br><br>
-  <a href="https://itch.io/search?q=Uhelp" style="display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 6px 12px;"><b>Find us on itch.io</b></a>
+  <a href="https://itch.io/search?q=Uhelp">
+    <img src="https://img.shields.io/badge/Find%20us%20on%20itch.io-ffd6e7?style=for-the-badge&logo=itchdotio&logoColor=white&labelColor=ff8fb1" alt="Find us on itch.io">
+  </a>
   <br><br>
 </div>
 
@@ -128,7 +129,9 @@
     <img src="./assets/website/walkthrough-preview.png" width="700">
   </a>
   <br><br>
-  <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/" style="display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 6px 12px;"><b>Watch Walkthroughs</b></a>
+  <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">
+    <img src="https://img.shields.io/badge/Watch%20Walkthroughs-ffd6e7?style=for-the-badge&logo=youtube&logoColor=white&labelColor=ff8fb1" alt="Watch Walkthroughs">
+  </a>
   <br><br>
 </div>
 
@@ -140,7 +143,9 @@
     <img src="./assets/website/phantom-chat-preview.png" width="700">
   </a>
   <br><br>
-  <a href="https://moosry.github.io/UhlepU-blackbox-test/phantom-chat.html" style="display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 6px 12px;"><b>Open Phantom Chat</b></a>
+  <a href="https://moosry.github.io/UhlepU-blackbox-test/phantom-chat.html">
+    <img src="https://img.shields.io/badge/Open%20Phantom%20Chat-ffd6e7?style=for-the-badge&logo=ghost&logoColor=white&labelColor=ff8fb1" alt="Open Phantom Chat">
+  </a>
   <br><br>
 </div>
 
@@ -155,11 +160,13 @@
 <div align="center">
   <img src="./assets/Group_Picture01.png" width="600">
   <br><br>
-  <p style="font-size: 1.08em; font-weight: 700; margin: 0; display: inline-block; background: #ffe8f1; border: 1px solid #ffc2d6; border-radius: 999px; padding: 8px 14px;">
-    <a href="https://yyyjava.github.io/test-process-part/Team-roles.html" target="_blank">✨ Click to view Team Roles</a>
-    <span style="color: #ff6b9d;">&nbsp;&nbsp;·&nbsp;&nbsp;</span>
-    <a href="https://angelica-serein.notion.site/Kanban-Board-8a0b2f38a2aa8322998a818eef1d7607?source=copy_link" target="_blank">📋 Click to view Kanban Board</a>
-  </p>
+  <a href="https://yyyjava.github.io/test-process-part/Team-roles.html" target="_blank">
+    <img src="https://img.shields.io/badge/%E2%9C%A8%20Click%20to%20view%20Team%20Roles-ffd6e7?style=for-the-badge&labelColor=ff8fb1" alt="Click to view Team Roles">
+  </a>
+  &nbsp;
+  <a href="https://angelica-serein.notion.site/Kanban-Board-8a0b2f38a2aa8322998a818eef1d7607?source=copy_link" target="_blank">
+    <img src="https://img.shields.io/badge/%F0%9F%93%8B%20Click%20to%20view%20Kanban%20Board-ffd6e7?style=for-the-badge&labelColor=ff8fb1" alt="Click to view Kanban Board">
+  </a>
   <br>
   <br>
 </div>
@@ -286,6 +293,23 @@
   <img src="./assets/divider.png" width="800">
 </div>
 
+<h1 align="center"><b>📁 Repository Structure</b></h1>
+
+```
+2026-group-13/
+├── README.md               ← You are here — main project documentation
+├── assets/                 ← All assets used in this README.md
+├── docs/                   ← Game source code and documentation (see Design section 4 for architectural details)
+├── week-log/               ← Weekly lab logs (see Workshop section above for overview)
+└── ...
+```
+
+<br>
+
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
+
 <h1 align="center"><b>📑 Project Report</b></h1>
 
 ## **🗂️ Table of Contents**
@@ -308,6 +332,7 @@
 ## **⚙️ Introduction**
 
 ### **Overview**:
+
 - [1 **_U Help U_ brief introduction**](#1-u-help-u-brief-introduction)
 - [2 Core Gameplay (How to Play)](#2-core-gameplay-how-to-play)
   - [2.1 Basic Controls](#21-basic-controls)
@@ -662,6 +687,7 @@ We attended each lab and testing marathon, gathering advice and feedback from di
 - [3 Mechanism Systems](#3-mechanism-systems)
   - [3.1 Record System](#31-record-system)
   - [3.2 Environmental Mechanisms](#32-environmental-mechanisms)
+- [4 Code Structure](#4-code-structure)
 
 ### **1 Top Level Architecture**:
 
@@ -903,6 +929,13 @@ The state machine defines the full lifecycle of the recording system—from Read
 
 The mechanism system manages reusable level mechanisms, including circuit based door unlocking and controllable moving platforms. Diagram V shows the class structure of the mechanism system: ButtonPlatformLinkSystem and WireIndicatorSystem handle different linkage logics.
 
+### **4 Code Structure**:
+
+```text
+/docs
+├── ...
+```
+
 <div align="center">
   <img src="./assets/divider.png" width="800">
 </div>
@@ -987,7 +1020,7 @@ We implemented a **dual‑layer data architecture**:
   - uploads score after each level
   - sorts by completion time
   - highlights the current player
-  <br>
+    <br>
 
 <br>
 <div align="center">
@@ -997,7 +1030,6 @@ We implemented a **dual‑layer data architecture**:
   <br>
   <br>
 </div>
-
 
 ### **3 Technical Challenge 2 — Level Editor & Sharing System**：
 
@@ -1160,64 +1192,18 @@ After download:
 游戏实现了中英双语支持，玩家可在设置中自由切换界面语言。国际化系统采用集中式语言包管理方案，所有界面文本、提示信息与对话内容均通过语言键值映射进行统一维护，与渲染逻辑完全解耦。切换语言时，所有 UI 组件将即时刷新为对应语言的文本内容，无需重载页面或关卡，从而为不同语言背景的玩家提供无缝的本地化体验。
 
 #### **4.5 成就系统**：
-Our achievement system provides our player additional game goals and motivation. The game features a range of achievements covering various aspects, such as performing specific actions. Achievement data stored persistently in local server, whenever a player meets the trigger conditions, the system displays a notification and updates the progress. This system is decoupled from the core gameplay module and responds to various in-game actions via event listeners, facilitating the future addition of new achievement types. Our game have 10 achievements in total, and 3 of them has been updated so far. The remaining achievements will be updated step by step. The overview of our achievement system can be seen as follows. 
+
+Our achievement system provides our player additional game goals and motivation. The game features a range of achievements covering various aspects, such as performing specific actions. Achievement data stored persistently in local server, whenever a player meets the trigger conditions, the system displays a notification and updates the progress. This system is decoupled from the core gameplay module and responds to various in-game actions via event listeners, facilitating the future addition of new achievement types. Our game have 10 achievements in total, and 3 of them has been updated so far. The remaining achievements will be updated step by step. The overview of our achievement system can be seen as follows.
 
 <br>
+
 <div align="center">
   <img src="./assets/implementation/achievement/achievement1.png" width="800">
   <br>
-  <b>Achievements Overview</b>
+  <b>Figure 2: Our achievement system and brief introduction</b>
   <br>
   <br>
 </div>
-
-
-<br>
-
-During gameplay, if players meet the conditions for unlocking an achievement, the in-game display is shown as follows:
-<br>
-<br>
-<div align="center">
-  <img src="./assets/implementation/achievement/unlock achievement wthin level.png" width="400">
-  <br>
-  <b>Unlock achievement as you play</b>
-  <br>
-  <br>
-</div>
-<br>
-
-Player can also check their achievement overview in achievement gallery. In this page player can see all the achievements. Locked and unlocked achievementa are displayed in different ways. Asuming achievement description and condtions for achieve unlocked achievements can also be viewed here.
-
-<br>
-
-<table>
-  <tr>
-    <td align="center" width="50%">
-      <img src="./assets/implementation/achievement/locked achievement.png" width="360">
-      <br>
-      <b>locked Achievement</b>
-    </td>
-    <td align="center" width="50%">
-      <img src="./assets/implementation/achievement/unlocked achievement.png" width="360">
-      <br>
-      <b>Unlocked Achievement</b>
-    </td>
-  </tr>
-</table>
-
-<br>
-
-
-
-<br>
-<div align="center">
-  <img src="./assets/implementation/achievement/achievements gallery.png" width="800">
-  <br>
-  <b>Achievements Gallery</b>
-  <br>
-  <br>
-</div>
-
 
 #### **4.6 Keyboard Navigation**：
 
@@ -1227,52 +1213,54 @@ Player can also check their achievement overview in achievement gallery. In this
 - 界面默认不显示按钮选中白框，仅使用键盘导航时才出现高亮提示，切换为鼠标操作时白框会立即消失；
 - 按下空格或回车键可确认选中选项，按下 ESC 键能够退出当前菜单并返回上一级界面。
 
-<table width="100%">
-<tbody>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/0.png" width="600" /><br><br>
-<b>Menu page: default state</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/1.png" width="600" /><br><br>
-<b>Menu page: mouse hover</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/2.png" width="600" /><br><br>
-<b>Menu page: keyboard selection</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/3.png" width="600" /><br><br>
-<b>World selection page: mouse hover</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/4.png" width="600" /><br><br>
-<b>World selection page: keyboard selection</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/5.png" width="600" /><br><br>
-<b>Paused menu page: mouse hover on 'Setting'</b>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 20px;">
-<img src="./assets/implementation/keyboard-navigation/6.png" width="600" /><br><br>
-<b>Paused menu page: keyboard selection on 'Setting'</b>
-</td>
-</tr>
-</tbody>
-</table>
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/0.png" width="330" />
+  <br><br>
+  <b>Menu page: default state</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/1.png" width="330" />
+  <br><br>
+  <b>Menu page: mouse hover</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/2.png" width="330" />
+  <br><br>
+  <b>Menu page: keyboard selection</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/3.png" width="330" />
+  <br><br>
+  <b>World selection page: mouse hover</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/4.png" width="330" />
+  <br><br>
+  <b>World selection page: keyboard selection</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/5.png" width="330" />
+  <br><br>
+  <b>Paused menu page: mouse hover on 'Setting'</b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/implementation/keyboard-navigation/6.png" width="330" />
+  <br><br>
+  <b>Paused menu page: keyboard selection on 'Setting'</b>
+  <br><br>
+</div>
 
 <div align="center">
   <img src="./assets/divider.png" width="800">
@@ -1309,7 +1297,6 @@ Action Plan: Design and insert a simple "Tutorial Level" prior to the first offi
 
 This addresses "Error prevention" and enhances "User control and freedom", ensuring players are comfortable with the physics and controls before facing actual challenges.
 
-
 ### **2 Quantitative**:
 
 #### **2.1 Evaluation Findings**:
@@ -1319,7 +1306,6 @@ We conducted a quantitative user evaluation with 27 participants, using a within
 - **System Usability Scale (SUS):** The test yielded **W = 84.5** and **p = 0.063**. Since p > 0.05, there is **no significant difference** in usability between the two levels, although a slight downward trend was observed as complexity increased. Both levels maintained scores near or above the industry average of 68 (Level 1 mean: 75.06; Level 2 mean: 65.0). This indicates that the core UI and interaction mechanics remain relatively stable and accessible, even when players are faced with higher task difficulty.
 
 - **NASA Task Load Index (TLX):** The test yielded **W = 43.5** and **p < 0.001**. Since p < 0.05, there is **a significant difference** in perceived workload between the two levels. The absolute mean score increased from 39.71 (Level 1) to 50.20 (Level 2). This significant increase confirms that the difficulty progression was effectively perceived by the participants, successfully raising the cognitive and mental demands of the game as intended for the second level.
-
 
 ### **3 Description of how code was tested**:
 
@@ -1613,13 +1599,17 @@ Overall, our project successfully achieved its core creative objective: transfor
 
 ## **⚙️ AI Statement**
 
-During the development of this project, the game ideas(main game topic, concept and the mechanism, puzzles in each level) and the main underlying code architecture were totally designed by our team members. AI was only used to help us generate some duplicate code, translate some text content, and adjust the interface style.
+AI was only used for assistance purposes. The core game mechanics, level design, logical reasoning, code debugging, feature integration and final implementation were all carried out and verified by the team members.
 
-Firstly, we used AI to assist us in completing some CSS formatting and slightly adjusting the layout. The advice about the size and format of the image was also obtained from AI tools. However, we did not copy directly from it, we manually selected, adjusted and replaced based on the actual in-game visuals and project requirements.
+AI was used in the following aspects:
 
-Secondly, we also used AI to reduce the workload caused by large amounts of repetitive logic in code development. For instance, in areas such as level structure, entity creation, event listening, configuration snippets and sections with a high degree of repetitive logic, AI was used to generate a first draft based on our existing code pattern. In this way, we could focus more on designing each unique level instead of writing similar level code over and over again. And the core game mechanics, level design, logical reasoning, code debugging, feature integration and final implementation were all carried out and verified by the team members.
+- Repetitive code & draft generation - we used AI to reduce the workload caused by large amounts of repetitive logic in code development. For instance, in areas such as level structure, entity creation, event listening, configuration snippets and sections with a high degree of repetitive logic, AI was used to generate a first draft based on our existing code pattern. In this way, we could focus more on designing each unique level instead of writing similar level code over and over again. And the core game mechanics, level design, logical reasoning, code debugging, feature integration and final implementation were all carried out and verified by the team members.
 
-And for the bilingual system of our game, part of the in-game text, prompts are generated by AI based our first draft. Since this project is to show our ability of software development, the artistic style of our game is mainly generated by AI (Because we don’t have any team members who are particularly good at art :D).
+- Suggestions on CSS style and layout - We manually selected, modified, and applied these suggestions.
+
+- Translation - AI helped translate in-game text, UI prompts, code comments, and technical documentation. We reviewed and refined translations for accuracy.
+
+- Art style - the artistic style of our game is totally generated by AI (Because we don’t have any team members who are particularly good at art :D).
 
 <div align="center">
   <img src="./assets/divider.png" width="800">
