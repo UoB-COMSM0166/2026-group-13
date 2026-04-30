@@ -1,10 +1,15 @@
-﻿<h1 align="center"><b>🎮️ U Help U 🎮️</b></h1>
+<h1 align="center"><b>🎮️ U Help U 🎮️</b></h1>
 
 <p align="center">
 <b><i>Two selves. One timeline —</i></b>
 <br>
-<b><i>Record. Replay. Cooperate. Escape . . .</i></b>
+<b><i>Record to capture action... Replay to cooperate...</i></b>
+<br>
+<b><i>Your only teammate is yourself!</i></b>
 </p>
+
+<h3 align="center"><b>This is an amazing and $\color{hotpink}{\textbf{challenging}}$ original 2D platform puzzle game!</b></h3>
+<p align="center"><sub><i>Inspired by U vs U, while all gameplay and core mechanics are originally designed and completely different!</i></sub></p>
 
 <div align="center">
   <a href="https://angelicaserein.github.io/UhelpU/">
@@ -12,6 +17,37 @@
     <br>
     <br>
   </a>
+  <sub>👉 <a href="https://angelicaserein.github.io/UhelpU/">Click picture or here to play!</a></sub>
+  <br><br>
+  <a href="https://angelicaserein.github.io/UhelpU/">
+    <img src="./assets/video.png" width="800">
+    <br>
+    <br>
+  </a>
+  <sub>👉 <a href="https://angelicaserein.github.io/UhelpU/">Click picture or here to watch video!</a></sub>
+  <br>
+</div>
+
+<div align="center">
+  <br>
+  <b>
+    &nbsp;
+    <a href="#️-gameplay-preview">📽️ Gameplay Preview</a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="#-related-websites">🔗 Related Websites</a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="#-team-members">👥 Team Members</a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="#️-workshop">🗓️ Workshop</a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="#-project-report">📑 Project Report</a>
+    &nbsp;
+  </b>
+  <br><br>
+</div>
+
+<div align="center">
+  <img src="./assets/divider.png" width="800">
 </div>
 
 <h1 align="center"><b>📽️ Gameplay Preview</b></h1>
@@ -49,6 +85,42 @@
 </div>
 
 <br>
+
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
+
+<h1 align="center"><b>🔗 Related Websites</b></h1>
+
+<div align="center">
+  <br>
+  <h3>👻 Phantom Chat System</h3>
+  <p><i>The official Phantom Chat System companion tool for U Help U.<br>Chat with your phantom past self — just like in the game!</i></p>
+  <a href="https://moosry.github.io/UhlepU-blackbox-test/phantom-chat.html">
+    <img src="./assets/website/phantom-chat-preview.png" width="700">
+  </a>
+  <br><br>
+  <a href="https://moosry.github.io/UhlepU-blackbox-test/phantom-chat.html"><b>→ Open Phantom Chat</b></a>
+  <br><br>
+</div>
+
+<div align="center">
+  <br>
+  <h3>📖 Official Walkthrough Guide</h3>
+  <p><i>Hard levels got you stuck? We recorded full walkthrough videos for every Hard Level.<br>Watch, learn, and level up together!</i></p>
+  <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">
+    <img src="./assets/website/walkthrough-preview.png" width="700">
+  </a>
+  <br><br>
+  <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/"><b>→ Watch Walkthroughs</b></a>
+  <br><br>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
 
 <h1 align="center"><b>👥 Team Members</b></h1>
 
@@ -98,7 +170,11 @@
 
 <br>
 
-<h1 align="center"><b>Workshop</b></h1>
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
+
+<h1 align="center"><b>🗓️ Workshop</b></h1>
 
 <table align="center" width="100%">
   <thead>
@@ -179,6 +255,10 @@
 
 <br>
 
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
+
 <h1 align="center"><b>📑 Project Report</b></h1>
 
 ## **🗂️ Table of Contents**
@@ -193,6 +273,10 @@
 - [Conclusion](#-conclusion)
 - [Contribution Statement](#-contribution-statement)
 - [AI Statement](#-ai-statement)
+
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
 
 ## **⚙️ Introduction**
 
@@ -388,6 +472,10 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tbody>
 </table>
 
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
+
 ## **⚙️ Requirements**
 
 ### **Overview**:
@@ -504,6 +592,10 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <b>Table 5: Non-Functional Requirements for U help U</b>
   <br>
   <br>
+</div>
+
+<div align="center">
+  <img src="./assets/divider.png" width="800">
 </div>
 
 ## **⚙️ Design**
@@ -766,6 +858,10 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 
 &emsp;&emsp;The mechanism system manages reusable level mechanisms, including circuit based door unlocking and controllable moving platforms. Diagram V shows the class structure of the mechanism system: ButtonPlatformLinkSystem and WireIndicatorSystem handle different linkage logics.
 
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
+
 ## **⚙️ Implementation**
 
 ### **Overview**:
@@ -876,6 +972,10 @@ After download:
 - download and play instantly
 - versioning support (v1, v2, v3…)
 
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
+
 ## **⚙️ Evaluation**
 
 ### **Overview**:
@@ -950,9 +1050,7 @@ After download:
 
 #### **3.2 Black-Box Testing Based on Test Checklists**:
 
-&emsp;&emsp;基于测试清单的黑盒测试。
-
-&emsp;&emsp;我们按照课程介绍的黑盒测试方法，针对各功能模块设计了结构化测试清单，从用户视角出发，只关注输入与可观察到的输出结果。每份清单的测试用例分为三类：正常流程、边界情况、潜在问题，并以可交互的 HTML 文档实现，便于逐项勾选与进度追踪。以下为测试清单截图：
+&emsp;&emsp;我们按照课程介绍的黑盒测试方法，针对各功能模块设计了结构化测试清单，从用户视角出发，只关注输入与可观察到的输出结果。每份清单的测试用例分为三类：正常流程、边界情况、潜在问题，并以可交互、增减测试项以及可导出分享的 HTML 文档实现，便于逐项勾选与进度追踪。
 
 <div align="center">
   <br>
@@ -975,9 +1073,15 @@ After download:
   <br>
   <img src="./assets/test/test feedback.png" width="800">
   <br>
-  <b>Figure: 部分测试员的反馈</b>
+  <b>Figure: 测试过程中的反馈</b>
   <br>
   <br>
+</div>
+
+在测试清单中我们测试了380条左右的清单，最终通过率大于95%。
+
+<div align="center">
+  <img src="./assets/divider.png" width="800">
 </div>
 
 ## **⚙️ Process**
@@ -1069,6 +1173,10 @@ After download:
 
 (placeholder)
 
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
+
 ## **⚙️ Sustainability, ethics and accessibility**
 
 ### **Overview**:
@@ -1116,6 +1224,10 @@ The impact of technical design extends beyond whether the game simply functions;
 
 In summary, in the scope of a student project, our project **U Help U** shows a substantial engagement with issues of sustainability, ethics, and accessibility. While some aspects have not yet been fully realized for the game, sustainability is inherently embedded into the project itself: our backlog, planning, and iterations. We will pay careful attention to each line of code, provide meaningful support to diverse players, and make a deliberate commitment to enabling future development in a responsible manner.
 
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
+
 ## **⚙️ Conclusion**
 
 ### **Overview**:
@@ -1159,6 +1271,10 @@ In summary, in the scope of a student project, our project **U Help U** shows a 
 
 &emsp;&emsp;Overall, our project successfully achieved its core creative objective: transforming repetition into something meaningful. Previous attempts are not discarded because of failure but become practical resources for driving progress. Yes, what truly drives progress is never a single perfect attempt, but rather continuous repetition, revisions, iteration, and the value accumulated from all past efforts.
 
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
+
 ## **⚙️ Contribution Statement**
 
 <div align="center">
@@ -1199,6 +1315,11 @@ In summary, in the scope of a student project, our project **U Help U** shows a 
   <p><i>Team contributions for the Project.</i></p>
 </div>
 
+<p align="center"><sub><i>All members completed their assigned work. Zhiqing and Wenlei made greater contributions as they took the initiative to do extra work beyond the required scope.</i></sub></p>
+
+<div align="center">
+  <img src="./assets/divider.png" width="800">
+</div>
 
 ## **⚙️ AI Statement**
 
