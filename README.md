@@ -1025,16 +1025,16 @@ docs/
 - [3 Technical Challenge 2 — Level Editor & Sharing System](#3-technical-challenge-2--level-editor--sharing-system)
   - [3.1 Early Attempts and Problems](#31-early-attempts-and-problems)
   - [3.2 Final Solution](#32-final-solution)
-- [4 其他功能](#4-其他功能)
-  - [4.1 教程系统](#41-教程系统)
+- [4 Other Functions](#4-other-functions)
+  - [4.1 Tutorial System](#41-tutorial-system)
   - [4.2 Level Design](#42-level-design)
-  - [4.3 幻影对话系统](#43-幻影对话系统)
-  - [4.4 设置系统](#44-设置系统)
-    - [4.4.1 音量和按键设置](#441-音量和按键设置)
-    - [4.4.2 游戏内暂停窗口](#442-游戏内暂停窗口)
-    - [4.4.3 多语言国际化实现](#443-多语言国际化实现)
-  - [4.5 成就系统](#45-成就系统)
-  - [4.6 键盘导航](#46-键盘导航)
+  - [4.3 Phantom Dialogue System](#43-phantom-dialogue-system)
+  - [4.4 Settings System](#44-settings-system)
+    - [4.4.1 Audio & Keybindings](#441-audio-&-keybindings)
+    - [4.4.2 In-Game Pause Menu](#442-in-game-pause-menu)
+    - [4.4.3 Internationalization](#443-internationalization)
+  - [4.5 Achievement System](#45-achievement-system)
+  - [4.6 Keyboard Navigation](#46-keyboard-navigation)
 
 ### **1 Overall Implementation Approach**：
 
@@ -1213,16 +1213,16 @@ After download:
 
 ### **4 其他功能**：
 
-#### **4.1 教程系统**：
+#### **4.1 Tutorial System**：
 
-该教程系统基于有限状态机划分多阶段引导流程，分七个教学环节循序渐进带领玩家掌握录制与回放核心玩法。
+The tutorial system is built on a Finite State Machine that divides the guidance flow into multiple stages. It leads players through seven sequential levels, ensuring a steady progression toward mastering the core recording and playback gameplay.
 
-- 临时接管全局录制系统，精准管控游戏运行与暂停流程
-- 拦截并独占键盘输入，约束玩家操作行为，按流程分步完成教学指引
-- 实现带镂空高亮的全局遮罩提示界面，同时全程适配多语言 i18n
-- 支持玩家随时按下 ESC 一键跳过教程，兼容流程中断逻辑
-- 处理多阶段切换的状态同步、界面资源自动清理等边界情况
-- 在完整实现新手引导流程的同时，严格保证不破坏游戏原有业务逻辑与各系统模块独立性
+- Global Recording Control: Temporarily takes over the global recording system to precisely manage game execution and pause states
+- Input Interception: Intercepts and gains exclusive control over keyboard input to restrict player actions, ensuring tutorial steps are completed in the correct sequence
+- UI & Localization: Features a global mask with "hole-punch" (cutout) highlighting for guidance prompts, with full i18n support for multi-language compatibility
+- Skip & Interruption Logic: Supports a one-key "Skip Tutorial" via the ESC key, with built-in logic to handle clean process interruptions
+- State & Resource Management: Manages state synchronization during phase transitions and ensures automatic cleanup of UI resources and boundary conditions
+- System Integrity: Fully implements the onboarding flow while strictly maintaining the independence of original game modules and ensuring no interference with core business logic
 
 <table width="100%">
 <tbody>
@@ -1231,9 +1231,9 @@ After download:
 <img src="./assets/implementation/tutorial/start button.png" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-Toturial%20System-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>阶段说明：</b>在Easy Level 1中可以点击nocite board来查看教程。<br>
-• <b>触发逻辑：</b>点击Start Tutorial按钮来开始教程，教程过程中也可以随时按Ecs退出教程<br>
-• <b>目的：</b>让玩家有选择性参与教程，而不是强制性教程<br>
+• <b>Phase Description：</b>In Easy Level 1, players can interact with the Notice Board to view the tutorial.<br>
+• <b>Trigger Logic：</b>Players click the "Start Tutorial" button to initiate the sequence; the tutorial can be exited at any time by pressing the ESC key.<br>
+• <b>Objective：</b>Allowing players to engage with the tutorial selectively rather than through a forced sequence.<br>
 </p>
 </td>
 </tr>
@@ -1242,9 +1242,9 @@ After download:
 <img src="./assets/implementation/tutorial/step1.png" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-Step%201-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>阶段说明：</b>教程系统高亮按键录制UI的按键控制部分，并提示玩家按下录制键来捕捉操作<br>
-• <b>触发逻辑：</b>玩家必须要按下录制键才能进行下一步，否则不响应。<br>
-• <b>目的：</b>让玩家学会如何使用录制键。
+• <b>Phase Description：</b>The tutorial system highlights the Key Control section of the recording UI and prompts the player to press the Record key to capture input.<br>
+• <b>Trigger Logic：</b>The sequence remains locked until the Record key is pressed; all other inputs are ignored/unresponsive to ensure the specific action is performed.<br>
+• <b>Objective：</b>To familiarize players with the Recording mechanic.
 </p>
 </td>
 </tr>
@@ -1253,9 +1253,9 @@ After download:
 <img src="./assets/implementation/tutorial/step2.png" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-Step%202-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>阶段说明：</b>高亮出按键录制UI的整个部分，并且提示录制时间最多有5秒钟。<br>
-• <b>触发逻辑：</b>在这里玩家只有移动角色才能够进入下一步<br>
-• <b>目的：</b>给予玩家理解时间，强制玩家移动角色，因为如果不移动角色玩家可能无法理解录制指的是录制操作而不是录制屏幕或者位置之类的东西。
+• <b>Phase Description：</b>The tutorial highlights the entire Recording UI and displays a notification that the maximum recording duration is 5s.<br>
+• <b>Trigger Logic：</b>The system advances to the next step only upon player movement.<br>
+• <b>Objective：</b>To provide a cognitive buffer for the player and enforce character movement. This ensures players understand that the system captures active inputs/actions rather than just screen footage or static positioning.
 </p>
 </td>
 </tr>
@@ -1264,9 +1264,9 @@ After download:
 <img src="./assets/implementation/tutorial/step3.png" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-Step%203-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>阶段说明：</b>录制进行中的提示，并且告知玩家再次按下捕捉键C可以随时提前终止录制。<br>
-• <b>触发逻辑：</b>玩家只需专心操作，5秒的时间结束后会自动进入下一步。<br>
-• <b>目的：</b>配合进度条中玩家自己按下的左右移动和跳跃按键的标志的实时显示，来帮助玩家理解录制的核心要义。
+• <b>Phase Description：</b>Displays an active recording prompt and informs the player that they can press the Capture Key (C) at any time to quit the recording early.<br>
+• <b>Trigger Logic：</b>The player focuses on performing actions; the tutorial automatically proceeds once the 5-second timer expires.<br>
+• <b>Objective：</b>To help players grasp the core concept of recording by synchronizing their real-time inputs (Left/Right movement, Jumping) with the corresponding icons appearing on the progress bar.
 </p>
 </td>
 </tr>
@@ -1275,9 +1275,9 @@ After download:
 <img src="./assets/implementation/tutorial/step4.png" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-Step%204-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>阶段说明：</b>录制结束后，高亮幻影的出生点区域和录制UI的按键控制区域。<br>
-• <b>触发逻辑：</b>按下回放键才能进入下一步<br>
-• <b>目的：</b>让玩家学会怎么回放自己刚刚录制的幻影操作。
+• <b>Phase Description：</b>After recording, the system highlights the Phantom spawn area and the Key Control section of the recording UI.<br>
+• <b>Trigger Logic：</b>Progression is locked until the Playback key is pressed.<br>
+• <b>Objective：</b>To teach players how to replay the Phantom actions they have just recorded.
 </p>
 </td>
 </tr>
@@ -1286,9 +1286,9 @@ After download:
 <img src="./assets/implementation/tutorial/step5.png" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-Step%205-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>阶段说明：</b>回放中提示玩家幻影可以按照刚刚录制的动作回放一遍。<br>
-• <b>触发逻辑：</b>玩家可以等待回放结束，也可以再次按下回放键来提前终止回放。<br>
-• <b>目的：</b>让玩家自己看见幻影就像过去的自己重现了一样，更好地理解录制系统。
+• <b>Phase Description：</b>During playback, the system informs the player that the Phantom will precisely replicate the sequence of actions just recorded.<br>
+• <b>Trigger Logic：</b>The player can either wait for the playback to conclude naturally or press the Playback key again to terminate it early.<br>
+• <b>Objective：</b>Allowing players to observe the Phantom acting as a "replay of their past self," reinforcing a deeper conceptual understanding of the recording system.
 </p>
 </td>
 </tr>
@@ -1297,9 +1297,9 @@ After download:
 <img src="./assets/implementation/tutorial/step6.png" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-Step%206-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
-• <b>阶段说明：</b>整个教程结束，弹出恭喜字样<br>
-• <b>触发逻辑：</b>提示框显示几秒之后自动消失<br>
-• <b>目的：</b>提示玩家这个录制玩法是我们游戏的核心机制，没有理解它就无法过关。
+• <b>Phase Description：</b>The tutorial ends, and a "Congratulations" notification shows up.<br>
+• <b>Trigger Logic：</b>The prompt remains visible for a few seconds before automatically dismissing.<br>
+• <b>Objective：</b>Emphasizing that understanding Recording it is essential for progression.
 </p>
 </td>
 </tr>
@@ -1308,7 +1308,7 @@ After download:
 
 #### **4.2 Level Design**：
 
-游戏提供了 Easy 和 Hard 两套难度体系，分别包含独立设计的关卡序列。Easy 难度下的关卡着重引导玩家理解录制与回放机制的基本用法；Hard 难度则在此基础上引入更复杂的时序配合与空间利用要求。关卡的难度曲线经过多轮用户测试与数据分析后反复调整，以确保玩家在学习曲线上获得平滑而有层次感的成长体验。
+The game features two distinct difficulty modes, each with its own level sequence. Easy Mode introduces the fundamentals of recording and playback, while Hard Mode layers in complex timing and spatial challenges. This difficulty curve has been data-tuned through user testing to ensure a smooth, rewarding learning experience.
 
 ##### Easy Levels (7 Levels)
 
@@ -1410,27 +1410,27 @@ After download:
   </tr>
 </table>
 
-#### **4.3 幻影对话系统**：
+#### **4.3 Phantom Dialogue System**：
 
-幻影对话系统是游戏叙事层面的重要组成部分。NPC 在特定触发条件下会展开对话序列，通过逐行推进的对话气泡呈现内容，并配合动画效果增强沉浸感。系统通过事件总线与游戏主逻辑解耦，支持多段对话的顺序触发与状态管理，在不干扰核心玩法流程的前提下丰富了游戏的叙事体验。
+The Phantom Dialogue System is a key narrative component. NPCs trigger dialogue sequences through progressive speech bubbles with animations to enhance immersion. Decoupled from the core logic via an Event Bus, the system manages multi-stage triggers and states, enriching the narrative without interrupting gameplay.
 
-#### **4.4 设置系统**：
+#### **4.4 Settings System**：
 
-设置系统为玩家提供了一套集中管理游戏偏好的入口，涵盖音效配置、按键绑定、界面语言等多个维度，各子系统通过统一的配置接口与渲染逻辑解耦，确保变更即时生效并持久化保存。
+This centralized hub manages player preferences including audio, keybindings, and language. Subsystems use a unified configuration interface decoupled from rendering logic, ensuring changes are instantaneous and persistent.
 
-##### **4.4.1 音量和按键设置**：
+##### **4.4.1 Audio & Keybindings**：
 
-玩家可在设置页面内独立调节背景音乐与音效的音量，也可对游戏的核心操作按键进行自定义绑定。按键配置支持冲突检测，当新绑定与已有按键重复时会给出提示，防止操作冲突。所有配置项均通过本地存储持久化，重新进入游戏后自动恢复上次的设置状态。
+Players can independently adjust BGM and SFX volumes or customize keybindings. The system includes conflict detection to prevent overlapping inputs. All settings are saved locally and restored automatically upon restart.
 
-##### **4.4.2 游戏内暂停窗口**：
+##### **4.4.2 In-Game Pause Menu**：
 
-游戏提供了可在关卡进行中随时呼出的暂停菜单，支持继续游戏、重新开始、返回关卡选择等操作。暂停时游戏逻辑与物理更新完全冻结，所有系统状态保持不变，恢复后可无缝继续。暂停菜单同样支持键盘导航，与全局键盘导航系统统一管理。
+The pause menu allows players to resume, restart, or return to level selection. Upon activation, game logic and physics updates are frozen, maintaining state for a seamless resume. It is fully integrated with the global keyboard navigation system.
 
-##### **4.4.3 多语言国际化实现**：
+##### **4.4.3 Internationalization**：
 
-游戏实现了中英双语支持，玩家可在设置中自由切换界面语言。国际化系统采用集中式语言包管理方案，所有界面文本、提示信息与对话内容均通过语言键值映射进行统一维护，与渲染逻辑完全解耦。切换语言时，所有 UI 组件将即时刷新为对应语言的文本内容，无需重载页面或关卡，从而为不同语言背景的玩家提供无缝的本地化体验。
+The game supports English and Chinese, switchable via settings. Using a centralized language pack (key-value mapping), all text is decoupled from the UI. Language switches trigger real-time refreshes without reloading levels, providing a seamless localized experience.
 
-#### **4.5 成就系统**：
+#### **4.5 Achievement System**：
 
 Our achievement system provides our player additional game goals and motivation. The game features a range of achievements covering various aspects, such as performing specific actions. Achievement data stored persistently in local server, whenever a player meets the trigger conditions, the system displays a notification and updates the progress. This system is decoupled from the core gameplay module and responds to various in-game actions via event listeners, facilitating the future addition of new achievement types. Our game have 10 achievements in total, and 3 of them has been updated so far. The remaining achievements will be updated step by step. The overview of our achievement system can be seen as follows.
 
@@ -1490,11 +1490,11 @@ Player can also check their achievement overview in achievement gallery. In this
 
 #### **4.6 Keyboard Navigation**：
 
-我们实现了完整的键盘导航功能，游戏内主菜单、关卡选择页面和暂停菜单交互界面同时兼容鼠标与键盘两种操控方式，以适配不同玩家的操作习惯。
+We implemented full keyboard navigation. The main menu, level selection, and pause interface are compatible with both mouse and keyboard inputs, accommodating diverse player preferences.
 
-- 支持方向键与 WASD 按键进行按钮焦点切换；
-- 界面默认不显示按钮选中白框，仅使用键盘导航时才出现高亮提示，切换为鼠标操作时白框会立即消失；
-- 按下空格或回车键可确认选中选项，按下 ESC 键能够退出当前菜单并返回上一级界面。
+- Supports focus navigation via Arrow keys and WASD
+- The selection highlight (white border) is hidden by default; it appears only during keyboard navigation and disappears immediately when switching to mouse input
+- Space or Enter confirms the selection, while ESC exits the current menu or returns to the previous screen
 
 <div align="center">
   <img src="./assets/implementation/keyboard-navigation/0.png" width="330" />
