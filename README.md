@@ -314,22 +314,22 @@ Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy lev
 
 ## **🗂️ Table of Contents**
 
-- [Introduction](#️-introduction)
-- [Requirements](#️-requirements)
-- [Design](#️-design)
-- [Implementation](#️-implementation)
-- [Evaluation](#️-evaluation)
-- [Process](#-process)
-- [Sustainability, ethics and accessibility](#-sustainability-ethics-and-accessibility)
-- [Conclusion](#-conclusion)
-- [Contribution Statement](#-contribution-statement)
-- [AI Statement](#-ai-statement)
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [Design](#design)
+- [Implementation](#implementation)
+- [Evaluation](#evaluation)
+- [Process](#process)
+- [Sustainability, ethics and accessibility](#sustainability-ethics-and-accessibility)
+- [Conclusion](#conclusion)
+- [Contribution Statement](#contribution-statement)
+- [AI Statement](#ai-statement)
 
 <div align="center">
   <img src="./assets/divider.png" width="800">
 </div>
 
-## **⚙️ Introduction**
+## **Introduction**
 
 ### **Overview**:
 
@@ -341,8 +341,8 @@ Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy lev
   - [3.1 Level Objectives](#31-level-objectives)
   - [3.2 Core Experience Goals](#32-core-experience-goals)
 - [4 Core Highlights (Differentiation)](#4-core-highlights-differentiation)
-- [5 🎮 Recording System Exhibition](#5-recording-system-exhibition)
-- [6 🎮 Game Entities Exhibition](#6-game-entities-exhibition)
+- [5 Recording System Exhibition](#5-recording-system-exhibition)
+- [6 Game Entities Exhibition](#6-game-entities-exhibition)
   - [6.1 Character](#61-character)
   - [6.2 Interactables](#62-interactables)
   - [6.3 Prompts](#63-prompts)
@@ -390,7 +390,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 - **Bidirectional Interaction**: Both selves serve as functional platforms for one another
 - **Non‑Punitive Design**: Encourages experimentation with no death or time penalties
 
-### **5 🎮 Recording System Exhibition**:
+### **5 Recording System Exhibition**:
 
 <table width="100%">
 <tbody>
@@ -429,7 +429,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tr>
 <tr>
 <td align="center" style="padding: 20px;">
-<img src="./assets/introduction/replay-in-progress.gif" width="800" /><br><br>
+<img src="./assets/introduction/replay-in-progress-new.gif" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-4.%20PhantomAwakens-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
 • <b>Phase Description:</b> The phantom repeats all actions recorded.<br>
@@ -452,7 +452,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 </tbody>
 </table>
 
-### **6 🎮 Game Entities Exhibition**:
+### **6 Game Entities Exhibition**:
 
 #### **6.1 Character**:
 
@@ -545,14 +545,14 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
   <img src="./assets/divider.png" width="800">
 </div>
 
-## **⚙️ Requirements**
+## **Requirements**
 
 ### **Overview**:
 
 - [1 Ideation process](#1-ideation-process)
 - [2 User Stories](#2-user-stories)
 - [3 Onion Model](#3-onion-model)
-- [4 Early-Stage Design](#4-early-state-design)
+- [4 Early-Stage Design](#4-early-stage-design)
 - [5 Use-Case Diagram](#5-use-case-diagram)
 - [6 Requirements Definition](#6-requirements-definition)
 
@@ -668,7 +668,7 @@ We attended each lab and testing marathon, gathering advice and feedback from di
   <img src="./assets/divider.png" width="800">
 </div>
 
-## **⚙️ Design**
+## **Design**
 
 ### **Overview**:
 
@@ -1018,7 +1018,7 @@ docs/
   <img src="./assets/divider.png" width="800">
 </div>
 
-## **⚙️ Implementation**
+## **Implementation**
 
 ### **Overview**:
 
@@ -1662,7 +1662,7 @@ We implemented full keyboard navigation. The main menu, level selection, and pau
   <img src="./assets/divider.png" width="800">
 </div>
 
-## **⚙️ Evaluation**
+## **Evaluation**
 
 ### **Overview**:
 
@@ -1777,7 +1777,7 @@ In the testing checklists, we tested around 380 items in total, with a final pas
   <img src="./assets/divider.png" width="800">
 </div>
 
-## **⚙️ Process**
+## **Process**
 
 ### **Overview**:
 
@@ -1867,7 +1867,7 @@ In the testing checklists, we tested around 380 items in total, with a final pas
   <img src="./assets/divider.png" width="800">
 </div>
 
-## **⚙️ Sustainability, ethics and accessibility**
+## **Sustainability, ethics and accessibility**
 
 ### **Overview**:
 
@@ -1918,7 +1918,7 @@ In summary, in the scope of a student project, our project **U Help U** shows a 
   <img src="./assets/divider.png" width="800">
 </div>
 
-## **⚙️ Conclusion**
+## **Conclusion**
 
 ### **Overview**:
 
@@ -1965,7 +1965,7 @@ Overall, our project successfully achieved its core creative objective: transfor
   <img src="./assets/divider.png" width="800">
 </div>
 
-## **⚙️ Contribution Statement**
+## **Contribution Statement**
 
 <div align="center">
   <table width="60%">
@@ -2011,7 +2011,7 @@ Overall, our project successfully achieved its core creative objective: transfor
   <img src="./assets/divider.png" width="800">
 </div>
 
-## **⚙️ AI Statement**
+## **AI Statement**
 
 AI was only used for assistance purposes. The core game mechanics, level design, logical reasoning, code debugging, feature integration and final implementation were all carried out and verified by the team members.
 
