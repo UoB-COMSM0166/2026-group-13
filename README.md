@@ -35,6 +35,12 @@ Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy lev
 </div>
 
 <div align="center">
+  <a href="https://youtu.be/FMFJqeT6FAw">
+    <img src="./assets/trailer-cover.png" alt="Click to watch Group 13 video" width="800">
+  </a>
+</div>
+
+<div align="center">
   <br>
   <b>
     <a href="#️-gameplay-preview">📽️ Gameplay Preview</a>
