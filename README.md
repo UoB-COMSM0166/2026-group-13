@@ -30,6 +30,7 @@ Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy lev
 <small><em>(If you get stuck on a hard level for more than half an hour, that’s totally normal – don't worry! Check out the guide <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">here</a>!)</em></small>
 <br><br>
 
+</div>
 
 <div align="center">
   <a href="https://youtu.be/FMFJqeT6FAw">
