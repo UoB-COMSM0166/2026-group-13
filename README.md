@@ -1787,7 +1787,6 @@ Below is a photo of players engaging with our game:
 - [2 Role Allocations and Distributions](#2-role-allocations-and-distributions)
 - [3 Excellently Executions During The Process](#3-excellently-executions-during-the-process)
 - [4 Challenges Encountered and Adjustments](#4-challenges-encountered-and-adjustments)
-- [5 Others’ thoughts](#5-others-thoughts)
 
 ### **1 The Tools and The Specific Cooperation Methods We Used**:
 
@@ -1864,9 +1863,7 @@ Below is a photo of players engaging with our game:
   Meetings involving all six members often became unfocused, and the involvement of non-relevant participants led to inefficient use of human resources and slower decision-making.  
   **Adjustment:** A hybrid approach combining full-team and small-group meetings was adopted. Full-team meetings were held weekly to align on overall direction, while specific issues were addressed in smaller meetings of 2–3 members as needed.
 
-### **5 Others’ thoughts**:
 
-(placeholder)
 
 <div align="center">
   <img src="./assets/divider.png" width="800">
