@@ -1703,7 +1703,7 @@ Below is a gameplay demonstration of the initial tutorial:
   <br>
 </div>
 
-The latest version of the game's tutorial can be found in the [**4.1 教程系统**](#41-教程系统) section.
+The latest version of the game's tutorial can be found in the [**4.1 Tutorial System**](#41-tutorial-system) section.
 
 ### **2 Quantitative**:
 
@@ -1728,33 +1728,33 @@ Below is a photo of players engaging with our game:
 
 #### **3.1 Manual Testing and Console Logging During Development**:
 
-在整个开发过程中，我们采用了边写边测的即时手动测试方式，配合浏览器控制台的 `console.log` 进行辅助验证。每实现一个功能模块，就立刻在浏览器中手动操作，观察实际行为是否符合预期，从而在问题尚未扩散之前及时发现并修复。
+Throughout the development process, we adopted an immediate manual testing approach, testing features as we implemented them and using the browser console with `console.log` for additional verification. Whenever a new functional module was completed, we immediately operated it manually in the browser and checked whether its actual behaviour matched our expectations, allowing us to identify and fix problems before they spread further through the system.
 
-我们在代码关键节点插入 `console.log`，实时追踪各模块的运行状态，包括数据的读写、图片与页面模块的加载、键盘导航与按键绑定、教程流程的触发、计时器的启动，以及玩家与幻影的碰撞检测等。
+We also inserted `console.log` statements at key points in the code to track the runtime state of different modules in real time, including data reading and writing, the loading of images and page modules, keyboard navigation and key bindings, the triggering of tutorial flows, the starting of timers, collision detection between the player and the clone, etc.
 
 <div align="center">
   <br>
   <img src="./assets/test/Console log example.png" width="800">
   <br>
-  <b>Figure: 一小部分控制台日志截图</b>
+  <b>Figure: A small sample of console log screenshots</b>
   <br>
   <br>
 </div>
 
 #### **3.2 Black-Box Testing Based on Test Checklists**:
 
-我们按照课程介绍的黑盒测试方法，针对各功能模块设计了结构化测试清单，从用户视角出发，只关注输入与可观察到的输出结果。每份清单的测试用例分为三类：正常流程、边界情况、潜在问题，并以可交互、增减测试项以及可导出分享的 HTML 文档实现，便于逐项勾选与进度追踪。
+Following the black-box testing approach introduced in the course, we designed structured testing checklists for each functional module. From the user’s perspective, only focused on inputs and observable outputs. The test cases in each checklist were divided into three categories: normal flows, boundary cases, and potential issues. Each checklist was implemented as an interactive HTML document that supports adding and removing test items as well as exporting and sharing, making it easier to tick off items one by one and track progress.
 
 <div align="center">
   <br>
   <img src="./assets/test/Checklist example.png" width="800">
   <br>
-  <b>Figure: Local player system的部分测试</b>
+  <b>Figure: Partial testing of the local player system</b>
   <br>
   <br>
 </div>
 
-各个测试清单的链接：
+Links to the individual testing checklists:
 
 - [Account System Test Checklist](https://moosry.github.io/UhlepU-blackbox-test/Account_System_Test_Checklist.html)
 - [Game Flow Test Checklist](https://moosry.github.io/UhlepU-blackbox-test/Game_Flow_Test_Checklist.html)
@@ -1766,12 +1766,12 @@ Below is a photo of players engaging with our game:
   <br>
   <img src="./assets/test/test feedback.png" width="800">
   <br>
-  <b>Figure: 测试过程中的反馈</b>
+  <b>Figure: Feedback gathered during testing</b>
   <br>
   <br>
 </div>
 
-在测试清单中我们测试了380条左右的清单，最终通过率大于95%。
+In the testing checklists, we tested around 380 items in total, with a final pass rate of over 95%.
 
 <div align="center">
   <img src="./assets/divider.png" width="800">
