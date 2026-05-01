@@ -396,7 +396,7 @@ _U Help U_ is a 2D side‑scrolling platformer puzzle game built around self‑c
 <tbody>
 <tr>
 <td align="center" style="padding: 20px;">
-<img src="./assets/introduction/before-recording.png" width="800" /><br><br>
+<img src="./assets/introduction/before-recording.png" width="600" /><br><br>
 <img src="https://img.shields.io/badge/-1.%20ReadyToCapture-5B3A7D?style=flat-square" /><br><br>
 <p align="left" style="display: inline-block; text-align: left; max-width: 750px;">
 • <b>Phase Description:</b> The player observes the level terrain and mechanism distribution. The system is on standby, ready to record position and interaction logic.<br>
