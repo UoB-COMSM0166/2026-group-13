@@ -126,11 +126,11 @@ Currently features 12 core levels (7 Easy, 4 Hard, 1 Special) plus 10 Legacy lev
   <h3>🗝️Official Walkthrough Guide</h3>
   <p><i>We have more than one solutions in each level, so we recommand you to play it by yourself first!</i></p>
   <p><i>More solutions walkthrough videos are coming soon...</i></p>
-  <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">
+  <a href="https://uhelpu.github.io/UhelpU-Walkthrough/">
     <img src="./assets/website/walkthrough-preview.png" width="700">
   </a>
   <br><br>
-  <a href="https://angelicaserein.github.io/UhelpU-Walkthrough/">
+  <a href="https://uhelpu.github.io/UhelpU-Walkthrough/">
     <img src="https://img.shields.io/badge/Watch%20Walkthroughs-ffd6e7?style=for-the-badge&logo=youtube&logoColor=white&labelColor=ff8fb1" alt="Watch Walkthroughs">
   </a>
   <br><br>
